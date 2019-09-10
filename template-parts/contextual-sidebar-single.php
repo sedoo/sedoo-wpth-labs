@@ -9,7 +9,7 @@
 ?>
 
 <aside class="contextual-sidebar">
-    <?php if(wp_is_mobile){
+    <?php if(wp_is_mobile()){
     
     } else { ?>
     <div class="reading-time">
