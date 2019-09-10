@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px"
+	 height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<g id="layout">
+	<g opacity="0.3">
+		<rect fill="none" width="20" height="20"/>
+		<g>
+			<rect x="2.93" y="7.98" width="4.04" height="4.04"/>
+			<rect x="13.02" y="7.98" width="4.04" height="4.04"/>
+			<rect x="7.98" y="7.98" width="4.05" height="4.04"/>
+			<rect x="7.98" y="13.02" width="4.05" height="4.04"/>
+			<path d="M17.08,2.92H2.92c-1.1,0-2,0.9-2,2v12.15c0,1.1,0.9,2,2,2h14.15c1.1,0,2-0.9,2-2V4.92C19.08,3.82,18.18,2.92,17.08,2.92z
+				 M18.07,17.57c0,0.28-0.22,0.5-0.5,0.5H2.43c-0.28,0-0.5-0.22-0.5-0.5V4.43c0-0.28,0.22-0.5,0.5-0.5h15.13
+				c0.28,0,0.5,0.22,0.5,0.5V17.57z"/>
+			<rect x="13.02" y="13.02" width="4.04" height="4.04"/>
+			<rect x="2.93" y="13.02" width="4.04" height="4.04"/>
+			<rect x="1.88" y="3.77" width="16.41" height="3"/>
+		</g>
+		
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="4.96" y1="2.02" x2="4.96" y2="5.52"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="15.04" y1="2.02" x2="15.04" y2="5.52"/>
+	</g>
+</g>
+<g id="nav__x2B__footer">
+</g>
+<g id="Menu_ouvert">
+</g>
+</svg>

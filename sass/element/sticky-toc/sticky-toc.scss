@@ -1,0 +1,100 @@
+aside[id="stickyMenu"]{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 500;
+    width: 18%;
+    box-shadow: $basic-box-shadow; 
+    height: 100%;
+    background: $light-grey;
+    @include display-flex;
+    @include flex-column;
+    @include justify-content-center;
+    padding: 5% 1%;
+    @include transform(translateX(-100%));
+    
+    &.open{
+        @include transform(none);
+        
+        .bobinette{
+            
+            
+            &::after{
+                @include transform(rotateZ(180deg));
+            }
+        }
+    }
+    
+    &:hover:not(.open){
+        @include transform(translateX(-95%));
+    }
+    
+    p{
+        font-family: $main-title-family;
+        text-transform: uppercase;
+        font-size: $h3-size;
+        
+        &::after{
+            content: "";
+            width: 30px;
+            height: 3px;
+            background: $dark;
+            display: block;
+            margin: 10px 0 20px;
+        }
+    }
+    
+    [id="tocList"]{
+        li{
+            a{
+                font-family: $second-title-family;
+                font-size: $h3-size;
+                border-bottom: dotted 1px $dark-grey;
+                padding: 20px 0;
+                display: block;
+                margin-bottom: 10px;
+            }
+            
+            li{ 
+                padding-left: 20px;
+                a{
+                    font-family: $main-font-family;
+                    font-size: $font-size;
+                    border: 0;
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+}
+
+.bobinette{
+    background-color: $light-grey;
+    position: fixed;
+    left: 0;
+    top: calc(50% - 15px);
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    box-shadow: 4px 0 2px rgba(0,0,0,0.3);
+    @include display-flex;
+    @include flex-column;
+    @include justify-content-center;
+    @include align-items-center;
+    @include basic-transition;
+    @include transform(translateX(1145%));
+    
+    &::after{
+        content: "";
+        height: 30px;
+        width: 30px;
+        background-image: url('image/chevron.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include basic-transition;
+        @include transform(none);
+    }
+    
+
+}

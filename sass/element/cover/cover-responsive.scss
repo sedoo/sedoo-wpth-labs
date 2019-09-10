@@ -1,0 +1,14 @@
+@media screen and (max-width: 1024px) and (orientation: portrait){
+    .home{
+        header[id="cover"]{
+            .wrapper{
+                max-width: 600px;
+                
+                h1{
+                    font-size: $h1-size;
+                }
+                
+            }
+        }
+    }
+}

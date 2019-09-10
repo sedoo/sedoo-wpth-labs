@@ -1,0 +1,313 @@
+/* RESET CSS */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+    @include basic-transition;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* FIN RESET */
+html{
+    font-size: 62.5%
+}
+
+::selection, -moz-::selection{
+    background: $dark;
+    color: $light-full;
+}
+
+/* BODY & JQUERY CHANGE CLASSES */
+body{
+    font-family: $main-font-family;
+    line-height: 1.4;
+    color: $dark;
+    font-size: $font-size;
+    letter-spacing: $letter-spacing;
+    
+    &.menu-expanded{
+        overflow: hidden;
+        
+        .site-content, .site-footer{
+            @extend .blur;
+            @include basic-transition-delay;
+        }
+        nav[id="primary-navigation"]{
+            .menu-menu-primaire-container{
+                @include transform(none);
+                opacity: 1;
+                
+                .sub-menu{
+                    opacity: 1;
+                    @include transform(none);
+                    
+                    li{
+                        opacity: 1;
+                        @include transform(none);                     
+                    }
+                }
+            }
+        }
+        aside[id="stickyMenu"]{
+            z-index: 5;
+        }
+        ul[id="shortcuts"]{
+            z-index: 5;
+        }
+        
+        #burger-navigation {
+            .burger{
+                .burger-icon{
+                    span{
+                        &:first-child{
+                            @include transform(rotateZ(45deg) translate(6px, 5px));
+                        }
+                        &:nth-child(2){
+                            width: 0%;
+                        }
+                        &:last-child{
+                            @include transform(rotateZ(-45deg) translate(6px, -5px));
+                        }
+                    }
+                }
+            }
+
+
+            .overlay{
+                opacity: 1;
+                @include transform(none);
+                z-index: 200;
+            }
+        }
+    }
+    &.overlay-expanded{
+        overflow: hidden;
+        
+        .site-content, .site-footer{
+            @extend .blur;
+            @include basic-transition-delay;
+        }        
+    }
+}
+div[id="page"]{
+    padding: 110px 20px 20px;
+}
+/* WRAPPER */
+.wrapper{
+    max-width: $max-container-width;
+    @include center-block;
+    padding: 70px 20px;
+}
+.wrapper-layout{
+    max-width: $max-archive-width;
+    @include center-block;
+    padding: 70px 20px;
+}
+.wrapper-content{
+    @extend .wrapper;
+    max-width: $max-typographic-width;
+}
+.fullwidth{
+    max-width: 1800px;
+    @include center-block;
+    padding: 70px 20px;
+}
+/* IMAGE */
+img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+/* ACCESIBILITY */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    word-wrap: normal !important;
+}
+
+
+/* TYPOGRAPHIC ELEMENT & CLASSES */
+h1, .h1{
+    font-size: $h1-size;
+    text-transform: $uppercase;
+    font-family: $main-title-family;
+    
+    &::after{
+        content: "";
+        display: block;
+        height: 5px;
+        width: 55px;
+        background: $dark;
+        margin: 20px 0;
+    }
+}
+h2, .h2{
+    font-family:$second-title-family;
+    font-size: $h2-size;
+    color: var(--main-color);
+    margin: 20px 0 5px;
+}
+h3, .h3{
+    font-family: $main-title-family;
+    font-size: $h3-size;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+h4{
+    font-size: $h4-size;
+    font-weight: $bold;
+}
+p{
+    margin: 10px 0;
+    text-align: left;
+}
+b{
+    font-family: $main-title-family;
+    display: block;
+}
+strong{
+    font-family: $main-title-family;    
+}
+button{
+    font-family: $main-title-family;
+    color: $dark;
+    outline: 0;
+    box-shadow: 0;
+    border: none;
+    background: none;
+}
+p, a, td, th, address, li{
+    hyphens: none;
+    letter-spacing: 1px;
+}
+.quote{
+    font-size: calc(#{$h3-size} * 1.8);
+}
+a{
+    color: $dark;
+    text-decoration: none;
+    cursor: pointer;
+    @include basic-transition;
+    
+    &:hover{
+        color: $brown-dt;
+    }
+    
+}
+strong, b{
+    font-weight: $bold;
+}
+i{
+    font-style: italic;
+}
+button{
+    cursor: pointer;
+}
+.highlight{
+    background: $dark;
+    color: $light-full;
+    box-decoration-break: clone;
+    display: inline;
+    padding: 5px 10px;
+}
+
+.highlight-dark{
+    background: $light-full;
+    color: $dark;
+    padding: 5px 10px;
+}
+
+
+
+/****************************
+****** BLOCK GUTENBERG ******
+****************************/
+.btn{
+    display: block;
+    margin: 50px auto;
+    border-radius: 0;
+    background: $dark;
+    color: $light-full;
+    text-align: center;
+    padding: 10px 40px;
+    box-shadow: $down-box-shadow;
+    position: relative;
+    z-index: 1;
+    max-width: 300px;
+
+    &:hover{
+        background: $light-full;
+        color: $dark;
+    }
+}  
+
+.blur{
+    filter: blur(5px);
+}
+
+
+/* COLONES */
+.wp-block-columns{
+    @include justify-content-between;
+    
+    &.has-2-columns{
+        .wp-block-column{
+            flex-basis: calc(50% - 5%);
+        }
+    }
+}
+
+/* TABLE */
+.wp-block-table{
+    margin: 30px 0;
+    width: 100%;
+    
+    td{
+        padding: 10px;
+    }
+}

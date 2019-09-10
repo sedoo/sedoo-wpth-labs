@@ -1,0 +1,60 @@
+ul[id="shortcuts"]{
+    position: fixed;
+    right: 0;
+    top: 40%;
+    max-width: 200px;
+    width: 100%;
+    @include transform(translateX(150px));
+    z-index: 100;
+    
+    li{
+        padding: 10px;
+        width: 100%;
+        @include basic-transition;
+        box-shadow: $basic-box-shadow;
+        background: $dark;
+        cursor: pointer;
+        
+        &:hover{
+            @include transform(translateX(-150px));
+            background: $light-full;
+            
+            button{
+                color: $dark;
+                
+                svg{
+                    filter: invert(100%);
+                }
+            }
+        }
+        
+        &:nth-child(even){
+            filter: saturate(50%);
+            
+            &:hover{
+                filter: saturate(100%);
+            }
+        }
+        button{
+            font-family: $main-title-family;
+            text-transform: $uppercase;
+            color: $light-full;
+            text-decoration: none;
+            outline: 0;
+            background: none;
+            border-radius: 0;
+            border: none;
+            padding: 0;
+            @include display-flex;
+            @include align-items-center;
+            width: 100%;
+            
+            svg{
+                width: 30px;
+                height: 30px;
+                margin-right: 20px;
+            }
+            
+        }
+    }
+}

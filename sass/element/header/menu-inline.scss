@@ -1,0 +1,104 @@
+ul[id="primary-menu"]{
+    position: relative;
+    
+    
+    .menu-item{
+        display: inline-block;
+        
+        &:hover{
+            
+            .sub-menu{
+                opacity: 1;
+                max-height: 500px;
+                z-index: 300;
+                @include transform(scale(1, 1));
+                
+                .menu-item{
+                    opacity: 1;
+                    @include transform(none);
+                }
+            }
+        }
+        
+        .sub-menu{
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            @include basic-transition;
+            background: $dark;
+            left: 0;
+            top: 50px;
+            padding: 20px;
+            @include display-grid;
+            @include grid-template-column(repeat(3, 1fr));
+            @include grid-gap(20px);
+            z-index: -1;
+            @include transform(scale(1, 0));
+            transform-origin: top center;
+            box-shadow: $down-box-shadow;
+            
+            .menu-item{
+                display: block;
+                line-height: 1.1;
+                padding: 0;
+                opacity: 0;
+                @include transform(translateX(20px));
+                @include basic-transition;
+                @include basic-transition-delay;
+                
+                a{
+                    color: $light-full;
+                    padding: 0;
+                    font-family: $second-title-family;
+                    text-transform: $text-transform-none;
+                    font-size: $h3-size;
+                    
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 30px;
+                        height: 1px;
+                        background: $light-full;
+                        margin: 5px 0;
+                    }
+                }
+            
+                .sub-menu{
+                    position: relative;
+                    background: none;
+                    height: auto;
+                    display: block;
+                    padding: 0;
+                    top: 0;
+                    
+                    .menu-item{
+                        display: block;
+                        margin-bottom: 0;
+                        
+                        a{
+                            font-weight: $light;
+                            text-transform: $text-transform-none;
+                            font-family: $main-font-family;
+                            font-size: $tiny-size;
+                            
+                            &::after{
+                                display: none;
+                            }
+                        }
+                        
+                        .sub-menu{
+                            padding-left: 20px;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through 5 {
+    .menu-item:nth-of-type(#{$i}) a {
+      @include transition-delay(($i - 1));
+    }
+}

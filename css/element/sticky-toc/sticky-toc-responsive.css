@@ -1,0 +1,4 @@
+@media screen and (max-width: 1024px) {
+  aside[id="stickyMenu"] {
+    width: 90%;
+    background: red; } }

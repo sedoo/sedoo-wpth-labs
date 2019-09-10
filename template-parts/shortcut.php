@@ -1,0 +1,64 @@
+<?php
+/**
+ * The template for displaying the shortcuts
+ *
+ */
+
+?>
+
+<ul id="shortcuts">
+    <li class="location-btn">
+        <button>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+                <g>
+                    <path fill="#FFFFFF" d="M15,0C8.72,0,3.63,5.1,3.63,11.37C3.63,17.66,15,29.88,15,29.88s11.37-12.22,11.37-18.51
+        C26.37,5.1,21.28,0,15,0z M15,15.91c-2.51,0-4.54-2.03-4.54-4.54c0-2.5,2.03-4.53,4.54-4.53c2.5,0,4.53,2.03,4.53,4.53
+        C19.53,13.88,17.5,15.91,15,15.91z" />
+                    <rect fill="none" width="30" height="30" />
+                </g>
+            </svg>
+            Localisation
+        </button>
+    </li>
+    <li class="annuaire-btn">
+        <button>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+                <g>
+                    <rect fill="none" width="30" height="30" />
+                    <path fill="#FFFFFF" d="M18.28,16.98c1.13-0.94,1.84-2.36,1.84-3.94c0-2.83-2.29-5.13-5.13-5.13c-2.83,0-5.13,2.3-5.13,5.13
+        c0,1.58,0.72,3,1.84,3.94c-2.99,1.28-5.08,4.24-5.08,7.69h16.72C23.36,21.21,21.27,18.25,18.28,16.98z" />
+                    <path fill="#FFFFFF" d="M9.98,16.68c-0.76-1.05-1.18-2.32-1.18-3.64c0-2.6,1.61-4.82,3.88-5.75c-0.94-1.19-2.37-1.96-4-1.96
+        c-2.83,0-5.13,2.29-5.13,5.13c0,1.58,0.72,3,1.84,3.94c-2.99,1.28-5.08,4.24-5.08,7.69h5.62C6.57,19.86,7.99,17.92,9.98,16.68z" />
+                    <path fill="#FFFFFF" d="M21.2,13.04c0,1.32-0.42,2.59-1.18,3.64c1.99,1.25,3.41,3.18,4.04,5.41h5.62c0-3.45-2.09-6.41-5.08-7.69
+        c1.13-0.94,1.84-2.35,1.84-3.94c0-2.83-2.3-5.13-5.13-5.13c-1.63,0-3.06,0.77-4,1.96C19.59,8.22,21.2,10.44,21.2,13.04z" />
+                </g>
+            </svg>
+            Annuaire
+        </button>
+    </li>
+    <li class="search-form-btn">
+        <button>
+            
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+                <g>
+                    <path fill="#FFFFFF" d="M18.67,2.08c-5.18,0-9.4,4.21-9.4,9.4c0,1.87,0.55,3.61,1.5,5.07l-7.74,7.74c-0.78,0.78-0.78,2.05,0,2.83
+    c0.39,0.39,0.9,0.59,1.41,0.59s1.02-0.2,1.41-0.59l7.74-7.74c1.46,0.94,3.2,1.5,5.07,1.5c5.18,0,9.39-4.21,9.39-9.4
+    S23.85,2.08,18.67,2.08z M18.67,16.87c-2.98,0-5.4-2.42-5.4-5.4s2.42-5.4,5.4-5.4c2.97,0,5.39,2.42,5.39,5.4
+    S21.65,16.87,18.67,16.87z" />
+                    <rect fill="none" width="30" height="30" />
+                </g>
+            </svg>
+            Recherche
+        </button>
+    </li>
+</ul>
+
+<?php
+
+
+    get_template_part( 'template-parts/search-form', 'page' );
+    get_template_part( 'template-parts/location', 'page' );
+    get_template_part( 'template-parts/annuaire', 'page' );
+
+
+?>
