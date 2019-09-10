@@ -1,0 +1,44 @@
+@media screen and (max-width:1024px){
+    .single-event{
+        .contextual-sidebar{
+            .event{
+                margin-bottom: 50px;
+
+                >div{
+                    @include display-flex;
+                    @include align-items-center;
+                }
+
+                .btn{
+                    height: 200px;
+                    @include display-flex;
+                    @include flex-column;
+                    @include justify-content-center;
+                    margin: 0 20px 0 0;
+
+                    &::before{
+                        display: block;
+                        width: 70px;
+                        height: 70px;
+                        margin: 0 auto 10px;
+
+                    }
+                }
+                .event-informations{
+                    p{
+                        &:first-child{
+                            font-family: $main-title-family;
+                            text-transform: $uppercase;
+                            font-size: $h3-size;
+                            margin-bottom: 5px;
+                        }
+                        &:nth-child(2){
+                            font-family: $second-title-family;
+                            font-size: $h3-size;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

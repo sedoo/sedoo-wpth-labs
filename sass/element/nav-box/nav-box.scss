@@ -1,0 +1,141 @@
+.nav-box{
+    position: fixed;
+    top: 70%;
+    width: 0%;
+    max-width: 300px;
+    @include basic-transition;
+    z-index: 300;
+    
+    &:hover{
+        width: 100%;
+        
+        .label{
+            opacity: 1;
+            @include transform(translateX(0));
+        }
+    }
+    
+    &.previous{
+        left: 0;
+        .label{
+            @include transform(scale(-1, 1) translateX(-140px));
+            left: -140px;
+        }
+        .nav-box-chevron{
+            @include transform(scale(-1, 1));
+        }
+        
+        .card-nav{
+            @include transform(translateX(-100%));
+            
+            img, p{
+                @include transform(translateX(-100%));
+            }
+        }
+        &:hover{
+            .label{
+                @include transform(scale(-1, 1) translateX(0));
+            }
+            .card-nav{
+                @include transform(none);
+                img,p{
+                    @include transform(none);
+                }
+            }
+        }
+    }
+    &.next{
+        right: 0;
+        
+        .label{
+            @include transform(translateX(110px));
+            left: -110px;
+        }
+        .nav-box-chevron{
+            right: 0;
+        }
+        .card-nav{
+            @include transform(translateX(100%));
+            
+            img,p {
+                @include transform(translateX(100%));
+            }
+        }
+        &:hover{
+            .label{
+                @include transform(translateX(0));
+            }
+            .card-nav{
+                @include transform(none);
+                img,p{
+                    @include transform(none);
+                }
+            }
+        }
+    }
+    
+    .nav-box-chevron{
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        cursor: pointer;
+        z-index: 400;
+        box-shadow: $basic-box-shadow;
+        color: $light-full;
+        font-size: 6rem;
+        margin: 0;
+        text-align: center;
+        @include display-flex;
+        @include justify-content-center;
+        @include flex-column;
+        @include align-items-center;
+        background: $dark;
+    }
+    .label{
+        font-size: $tiny-size;
+        white-space: nowrap;
+        color: $light-full;
+        position: absolute;
+        @include basic-transition;
+        opacity: 0;
+        @include basic-transition-delay;
+    }
+    .card-nav{
+        background: $light-full;
+        box-shadow: $basic-box-shadow;
+        @include basic-transition;
+        z-index: 350;
+        max-width: 300px;
+        padding-bottom: 20px;
+        
+        p{
+            margin: 0;
+            padding: 10px 20px;
+            font-family: $main-title-family;
+            color: $dark-grey;
+            @include basic-transition-delay;
+            text-transform: $uppercase;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            max-height: 90px;   
+            @include basic-transition;
+            @include transition-delay(0.1);
+        }
+        
+    }
+    .nav-box-img{
+        @include display-flex;
+        @include align-items-center;
+        width: 100%;
+        height: 120px;
+        overflow: hidden;
+        
+        img{
+            @include basic-transition;
+            @include transition-delay(0.1s);
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.archive{
+    &.category-surfaces-continentales{
+        header[id="cover"]{
+            background: url("image/motif-theia-bleu-01.svg");
+        }
+    }
+    &.category-terre-solide{
+        header[id="cover"]{
+            background: url("image/motif-formater-bleu-01.svg");
+        }
+    }
+    &.category-ocean{
+        header[id="cover"]{
+            background: url("image/motif-odatis-bleu-01.svg");
+        }
+    }
+    &.category-atmosphere{
+        header[id="cover"]{
+            background: url("image/motif-aeris-bleu-01.svg");
+        }
+    }
+    &.category-dynamis{
+        header[id="cover"]{
+            background: $dynamis;
+        }
+    }
+    &.category-inter-poles{
+        header[id="cover"]{
+            background: $interpoles;
+        }
+    }    
+    &.category-europe-international{
+        header[id="cover"]{
+            background: $dark;
+        }
+    } 
+}

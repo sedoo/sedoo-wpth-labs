@@ -1,0 +1,8 @@
+@media screen and (max-width: 1024px){
+    .close{
+        label{
+            opacity: 1;
+            @include transform(none);
+        }
+    }
+}

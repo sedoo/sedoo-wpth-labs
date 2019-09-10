@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="55px"
+	 height="50px" viewBox="-10 0 75 50" enable-background="new 0 0 75 50" xml:space="preserve">
+    <style>
+        .wheel-to-scroll path, .wheel-to-scroll line{
+            stroke: #9d9fa2;
+            fill:none;
+            stroke-linecap:round;
+            stroke-linejoin:round;
+        }
+        .wheel-to-scroll polygon{
+            fill: #9d9fa2;
+            stroke:none;
+        }
+        path.wheel{
+            fill:red;
+            stroke:none;
+        }
+        .next.arrow{
+            animation: left-right 0.5s ease;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .previous.arrow{
+            animation: right-left 0.5s ease;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }       
+        @keyframes left-right{
+            from{
+                transform: translateX(5px);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+        @keyframes right-left{
+            from{
+                transform: translateX(-5px);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+    </style>
+    <g class="wheel-to-scroll">
+        <path stroke-miterlimit="10" d="M40.46,34.58c0,7.15-5.83,13-12.96,13s-12.96-5.85-12.96-13V15.42
+        c0-7.15,5.83-13,12.96-13s12.96,5.85,12.96,13V34.58z"/>
+        <path class="wheel" d="M29,17.67c0,1.1-0.67,2-1.5,2s-1.5-0.9-1.5-2V13c0-1.1,0.67-2,1.5-2s1.5,0.9,1.5,2V17.67z"/>
+        <g class="arrow next">
+            <line x1="43.46" y1="25" x2="50.4" y2="25"/>
+            <polygon points="48.41,26.7 50.1,25 48.41,23.31 49.85,23.31 51.54,25 49.85,26.7"/>
+        </g>
+        <g class="arrow previous">
+            <line x1="11.54" y1="25" x2="4.6" y2="25"/>
+            <polygon points="6.59,23.31 4.9,25 6.59,26.7 5.15,26.7 3.46,25 5.15,23.31"/>
+        </g>
+    </g>
+</svg>

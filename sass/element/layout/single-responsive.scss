@@ -1,0 +1,52 @@
+@media screen and (max-width: 1024px){
+    .single{
+        header[id="cover"]{
+            height: 45vh;
+        }
+        .wrapper-layout{
+            @include flex-wrap;
+        }
+        main{
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+    .contextual-sidebar{
+        width: 100%;
+        margin-left: 0;
+        padding-bottom: 0;
+
+        .post-author{
+            margin-bottom: 0;
+            h2{
+                margin-top: 0;
+            }
+            > div{
+                @include display-flex;
+                @include justify-content-between;
+
+                div{
+                    &:first-child{
+                    width: calc(33.3% - 20px);
+                    }
+                    &:last-child{
+                        width: calc(66.6% - 20px);
+                        
+                        p{
+                            &:first-child{
+                                margin-bottom: 5px;
+                            }
+                            b{
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+
+                    .img-author{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

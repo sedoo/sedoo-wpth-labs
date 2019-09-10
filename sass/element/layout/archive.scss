@@ -1,0 +1,10 @@
+.post-wrapper{
+    @include display-grid;
+    @include grid-template-column(repeat(3, 1fr));
+    @include grid-gap(20px);
+}
+.archives{
+    &.wrapper{
+        max-width: $max-archive-width;
+    }
+}

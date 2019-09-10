@@ -1,0 +1,140 @@
+header[id="masthead"]{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $light-full;
+    z-index: 100; 
+    padding: 10px 20px;
+    box-sizing: border-box;
+    
+    .wrapper{
+        @include display-flex;
+        @include justify-content-between;
+        @include align-items-center;
+        padding: 0;
+        
+        
+        .site-branding{
+            max-width: 200px;
+        }
+        
+        .nav-container{
+            @include display-flex;
+            @include justify-content-end;
+            @include align-items-center;
+        }
+    }
+}
+
+nav[id="primary-navigation"]{
+    @include display-flex;
+    @include align-items-center;
+    
+    ul{
+        list-style: none;
+
+        li{
+            display: inline-block;
+            vertical-align: middle;
+
+            a{
+                text-transform: $uppercase;
+                font-size: $font-size;
+                font-weight: $bold;
+                padding: 30px 20px;
+                font-family: $main-title-family;
+            }
+            
+            &:hover{
+                a{
+                    color: $light-full;
+                    background: $dark;
+                }
+            }
+        }
+    }
+    .burger{
+        display: none;
+    }
+}
+
+nav[id="burger-navigation"]{
+    margin-left: 50px;
+}
+
+.burger{
+    padding: 10px;
+    @include display-flex;
+    @include align-items-center;
+    border: none;
+    border-left: $basic-border;
+    border-right: $basic-border;
+    background: transparent;
+    position: relative;
+    z-index: 250;
+
+    &::before, &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: $dark;
+        @include basic-transition;
+    }
+
+    &::after{
+        bottom: 0;
+        right: 0;
+        top: auto;
+        left: auto;
+    }
+
+    &:hover{
+        &::before, &::after{
+            width: 50%;
+        }   
+
+        .burger-icon{
+            span{
+                &:nth-child(2){
+                    @include transform(translateX(100%));
+                }
+            }
+        }
+    }
+
+
+    label{
+        text-transform: $uppercase;
+        font-size: $font-size;
+        font-weight: $bold;
+        z-index: -1;
+    }
+
+    .burger-icon{
+        width: 30px;
+        margin-right: 10px;
+
+        span{
+            background: $dark;
+            width: 100%;
+            height: 5px;
+            margin-bottom: 3px;
+            display: block;
+            border-radius: 10px;
+            @include basic-transition;
+            @include basic-transition-delay;
+
+            &:nth-child(2){
+                width: 50%;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

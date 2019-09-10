@@ -1,0 +1,64 @@
+.event-loop{
+    @include display-grid;
+    @include grid-template-column(repeat(2, 1fr));
+    @include grid-gap(40px);
+    margin-bottom: 50px;
+}
+
+div[id="em-wrapper"]{
+    h2{
+        padding: 0 10px;
+        background: $dark;
+        color: $light-full;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
+
+.event-post{
+    > div{
+        > p{
+            font-family: $second-title-family;
+            font-size: $h3-size;
+            font-style: italic;
+            text-decoration: none;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            width: 100%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+    h3{
+        font-size: $h3-size;
+        text-transform: $uppercase;
+        margin-bottom: 10px;
+        @include basic-transition;
+        height: 70px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .event-img{
+        width: 100%;
+        height: 170px;
+        overflow: hidden;
+        @include display-flex;
+        @include flex-column;
+        @include justify-content-center;
+        @include align-items-center;
+        
+        &:hover{
+            img{
+                @include transform(scale(1.2));
+                opacity: 0.7;
+            }
+        }
+        
+        img{
+            @include basic-transition;
+        }
+    }
+}

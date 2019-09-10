@@ -1,0 +1,33 @@
+.single-event{
+    .wrapper{
+        header{
+            .post-meta{
+                font-family: $second-title-family;
+                font-size: calc(#{$font-size} * 2);
+                font-style: italic;
+            }
+        }
+    }
+    .btn{
+        margin-top: 0;
+        font-family: $main-font-family;
+        
+        &::before{
+            display: inline-block;
+            content: "";
+            width: 20px;
+            height: 20px;
+            background: url("image/add-event.svg") center center no-repeat;
+            background-size: cover;
+            vertical-align: middle;
+            margin-right: 10px;
+            @include basic-transition;
+        }
+        
+        &:hover{
+            &::before{
+                filter: invert(100%);
+            }
+        }
+    }
+}
