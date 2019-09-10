@@ -225,13 +225,15 @@
     margin: 0 auto 70px;
     
     h2{
-        margin-bottom: 30px;
-        display: inline-block;
+        display: inline;
         padding: 0 10px;
         background: $dark;
         color: $light-full;
+        box-decoration-break: clone;
+        line-height: 1;
     }
     .post-loop{
+        margin-top: 30px;
         @include display-flex;
         @include justify-content-between;
 

@@ -50,3 +50,14 @@
         }
     }
 }
+@media screen and (max-width:1024px) and (orientation:portrait){
+    .read-more-article{
+        .post-loop{
+            .post-preview{
+                .post-img{
+                    height: 180px;
+                }
+            }
+        }
+    }
+}

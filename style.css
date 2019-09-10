@@ -348,6 +348,13 @@ button {
 .wrapper-content img, .wrapper-layout img {
   margin: 40px auto; }
 
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .wp-block-columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
+
 header[id="masthead"] {
   position: fixed;
   top: 0;
@@ -1160,12 +1167,15 @@ footer[id="colophon"] {
   max-width: 1600px;
   margin: 0 auto 70px; }
   .read-more-article h2 {
-    margin-bottom: 30px;
-    display: inline-block;
+    display: inline;
     padding: 0 10px;
     background: #000;
-    color: #fff; }
+    color: #fff;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    line-height: 1; }
   .read-more-article .post-loop {
+    margin-top: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2140,6 +2150,19 @@ aside[id="stickyMenu"] {
     -ms-transform: none;
     transform: none; } }
 
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .overlay.location .wrapper, .overlay.location .wrapper-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .overlay.location .wrapper div:not(.close), .overlay.location .wrapper-content div:not(.close) {
+      width: 100%; }
+      .overlay.location .wrapper div:not(.close).leaflet-container, .overlay.location .wrapper-content div:not(.close).leaflet-container {
+        height: 300px !important;
+        margin-left: 0;
+        margin-top: 50px; } }
+
 @media screen and (max-width: 1024px) {
   .post:nth-child(4n), .post:nth-child(8n) {
     grid-column: auto;
@@ -2201,6 +2224,10 @@ aside[id="stickyMenu"] {
             margin-bottom: 0; }
         .contextual-sidebar .post-author > div div .img-author {
           width: 100%; } }
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .read-more-article .post-loop .post-preview .post-img {
+    height: 180px; } }
 
 @media screen and (max-width: 1024px) {
   .event-post {
