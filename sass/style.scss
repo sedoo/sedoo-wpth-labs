@@ -3,10 +3,12 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 1.0.0
+Version: 0.1.0
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
-Text Domain: labs
+Text Domain: sedoo-wpth-labs
+GitHub Theme URI: sedoo/sedoo-wppl-labtools
+GitHub Branch: master
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -21,7 +23,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-
+ 
 
 @import "general/general.scss";
 @import "general/general-typography-layout.scss";
