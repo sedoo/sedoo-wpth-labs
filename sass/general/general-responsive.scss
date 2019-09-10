@@ -1,3 +1,5 @@
-@media screen and (max-width: 1024px){
-    
+@media screen and (max-width: 1024px) and (orientation: portrait){
+    .wp-block-columns{
+        @include flex-column;
+    }
 }

@@ -166,6 +166,10 @@ require get_template_directory() . '/inc/custom-add-options.php';
  */
 require get_template_directory() . '/inc/custom-widget.php';
 /**
+ * Include ACF Fields
+ */
+require get_template_directory() . '/inc/custom-acf-fields.php';
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

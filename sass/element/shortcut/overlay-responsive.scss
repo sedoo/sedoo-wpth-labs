@@ -6,3 +6,21 @@
         }
     }
 }
+@media screen and (max-width:1024px) and (orientation:portrait){
+    .overlay{
+        &.location{
+            .wrapper{
+                @include flex-column;
+                
+                div:not(.close){
+                    width: 100%;
+                    &.leaflet-container{
+                        height: 300px!important;
+                        margin-left: 0;
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
