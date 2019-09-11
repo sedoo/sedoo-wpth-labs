@@ -1,6 +1,8 @@
 @media screen and (max-width: 1024px) and (orientation: portrait){
     .home{
         header[id="cover"]{
+            padding: 100px 0;
+            
             .wrapper{
                 max-width: 600px;
                 
@@ -8,6 +10,35 @@
                     font-size: $h1-size;
                 }
                 
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .home{
+        header[id="cover"]{
+            padding: 70px 0;
+            
+            .wrapper{
+                max-width: 500px;
+            }
+        }
+    }
+}
+@media screen and (max-width:767px) and (orientation:portrait){
+    .home{
+        header[id="cover"]{
+            .wrapper{
+                max-width: 400px;
+            }
+        }
+    }
+}
+@media screen and (max-width:500px) {
+    .home{
+        header[id="cover"]{
+            .wrapper{
+                max-width: 280px;
             }
         }
     }

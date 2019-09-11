@@ -16,6 +16,9 @@
             transform-origin: top center;
             
             ul[id="primary-menu"]{
+                height: 90vh;
+                overflow: scroll;
+                
                 li{
                     display: block;
                     margin-bottom: 20px;
@@ -50,7 +53,7 @@
                             
                             .sub-menu{
                                 padding-left: 20px;
-                                
+                        
                                 li{
                                     a{
                                         font-size: $font-size;
@@ -65,6 +68,22 @@
         }
         .burger{
             @include display-flex;
+        }
+    }
+}
+@media screen and (max-width: 767px) and (orientation:portrait){
+    header[id="masthead"]{
+        .wrapper{
+            .site-branding{
+                max-width: 150px;
+            }
+        }
+    }
+}
+@media screen and (max-width:500px){
+    nav[id="primary-navigation"]{
+        .menu-menu-primaire-container{  
+            padding: 100px 20px 50px;
         }
     }
 }

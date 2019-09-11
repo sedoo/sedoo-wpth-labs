@@ -1,5 +1,11 @@
-@media screen and (max-width:1024px){
-    .event-post{
-        max-width: 430px;
+@media screen and (max-width:767px) and (orientation:portrait){
+    .event-loop{
+        @include grid-template-column(100%);
+        
+        .event-post{
+            h3{
+                height: auto;
+            }
+        }
     }
 }

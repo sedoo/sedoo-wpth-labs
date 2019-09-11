@@ -1,5 +1,10 @@
 @media screen and (max-width: 1024px){
     .post-wrapper{
-        @include grid-template-column(50% 50%);
+        @include grid-template-column(repeat(2, calc(50% - 20px)));
+    }
+}
+@media screen and (max-width: 767px) and (orientation:portrait){
+    .post-wrapper{
+        @include grid-template-column(100%);
     }
 }

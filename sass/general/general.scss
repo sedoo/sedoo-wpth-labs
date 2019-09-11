@@ -66,9 +66,10 @@ body{
     color: $dark;
     font-size: $font-size;
     letter-spacing: $letter-spacing;
+    hyphens: none;
     
     &.menu-expanded{
-        overflow: hidden;
+        position: fixed;
         
         .site-content, .site-footer{
             @extend .blur;
@@ -152,7 +153,7 @@ div[id="page"]{
 .fullwidth{
     max-width: 1800px;
     @include center-block;
-    padding: 70px 20px;
+    padding: 70px 0;
 }
 /* IMAGE */
 img{
@@ -222,7 +223,6 @@ button{
     background: none;
 }
 p, a, td, th, address, li{
-    hyphens: none;
     letter-spacing: 1px;
 }
 .quote{

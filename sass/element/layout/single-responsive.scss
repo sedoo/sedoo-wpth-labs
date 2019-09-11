@@ -44,6 +44,7 @@
 
                     .img-author{
                         width: 100%;
+                        height: 100%;
                     }
                 }
             }
@@ -56,6 +57,67 @@
             .post-preview{
                 .post-img{
                     height: 180px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:767px){
+    .read-more-article{
+        .post-loop{
+            .post-preview{
+                .post-img{
+                    height: 180px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) and (orientation:portrait){
+    .single{
+        main{
+            article{
+                padding: 30px;
+            }
+        }
+    }
+    .read-more-article{
+        .post-loop{
+            .post-preview{
+                width: 100%;
+                
+                h3{
+                    height: auto;
+                }
+            }
+        }
+    }
+    .contextual-sidebar{
+        .post-author{
+            > div{
+                > div{
+                    &:first-child,&:last-child{
+                        width: calc(50% - 20px);
+                        
+                        .img-author{
+                            width: 100%;
+                            height: 170px;
+                        }                        
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:500px){
+    .contextual-sidebar{
+        .post-author{
+            > div{
+                display: block;
+                > div{
+                    &:first-child,&:last-child{
+                        width: 100%;
+                    } 
                 }
             }
         }

@@ -1,5 +1,29 @@
 @media screen and (max-width: 1024px) and (orientation: portrait){
     .wp-block-columns{
         @include flex-column;
+        
+        .wp-block-column{
+            margin-left: 0;
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .wp-block-columns{
+        @include flex-column;
+        
+        .wp-block-column{
+            margin-left: 0;
+        }
+    }
+    html{
+        font-size: 58%;
+    }
+}
+@media screen and (max-width:767px) and (orientation:portrait){
+    div[id="page"]{
+        padding-top: 40px;
+    }
+    .wrapper-layout{
+        padding: 70px 8px;
     }
 }

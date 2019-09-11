@@ -24,3 +24,25 @@
         }
     }
 }
+@media screen and (max-width: 767px){
+    .overlay{
+        &.annuaire{
+            iframe{
+                padding: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width:500px){
+    .location{
+        .wrapper{
+            > div:not(.close){
+                &.information-location{
+                    img{
+                        max-width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}

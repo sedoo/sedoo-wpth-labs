@@ -34,13 +34,15 @@ get_header();
             </div>
 		</main><!-- #main -->
         <aside id="stickyMenu" class="open">
-            <p>Sommaire</p>
-            <nav role="sommaire">
-                <ol id="tocList">
-                </ol>
-            </nav>
-            <button class="bobinette">
-            </button>
+            <div>
+                <p>Sommaire</p>
+                <nav role="sommaire">
+                    <ol id="tocList">
+                    </ol>
+                </nav>
+                <button class="bobinette">
+                </button>
+            </div>
         </aside>
 	</div><!-- #primary -->
 
