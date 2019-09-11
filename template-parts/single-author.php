@@ -5,7 +5,7 @@
  */
     $select_lauteur_array = get_field( 'select_lauteur' ); 
 ?>
-
+<?php if ( get_field('select_lauteur')){ ?>
 <div class="post-author">
     <h2>Auteur de la publication</h2>
     <div>
@@ -25,3 +25,4 @@
         </div>
    </div>
 </div>
+<?php } ?>

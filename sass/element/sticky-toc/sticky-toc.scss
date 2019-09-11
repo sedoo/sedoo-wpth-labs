@@ -4,6 +4,7 @@ aside[id="stickyMenu"]{
     top: 0;
     z-index: 500;
     width: 18%;
+    min-width: 300px;
     box-shadow: $basic-box-shadow; 
     height: 100%;
     background: $light-grey;
@@ -24,44 +25,47 @@ aside[id="stickyMenu"]{
             }
         }
     }
-    
+
     &:hover:not(.open){
         @include transform(translateX(-95%));
     }
+    > div{
+        position: relative;
     
-    p{
-        font-family: $main-title-family;
-        text-transform: uppercase;
-        font-size: $h3-size;
-        
-        &::after{
-            content: "";
-            width: 30px;
-            height: 3px;
-            background: $dark;
-            display: block;
-            margin: 10px 0 20px;
-        }
-    }
-    
-    [id="tocList"]{
-        li{
-            a{
-                font-family: $second-title-family;
-                font-size: $h3-size;
-                border-bottom: dotted 1px $dark-grey;
-                padding: 20px 0;
+        p{
+            font-family: $main-title-family;
+            text-transform: uppercase;
+            font-size: $h3-size;
+
+            &::after{
+                content: "";
+                width: 30px;
+                height: 3px;
+                background: $dark;
                 display: block;
-                margin-bottom: 10px;
+                margin: 10px 0 20px;
             }
-            
-            li{ 
-                padding-left: 20px;
+        }
+
+        [id="tocList"]{
+            li{
                 a{
-                    font-family: $main-font-family;
-                    font-size: $font-size;
-                    border: 0;
-                    padding: 5px 0;
+                    font-family: $second-title-family;
+                    font-size: $h3-size;
+                    border-bottom: dotted 1px $dark-grey;
+                    padding: 20px 0;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+
+                li{ 
+                    padding-left: 20px;
+                    a{
+                        font-family: $main-font-family;
+                        font-size: $font-size;
+                        border: 0;
+                        padding: 5px 0;
+                    }
                 }
             }
         }
@@ -70,8 +74,8 @@ aside[id="stickyMenu"]{
 
 .bobinette{
     background-color: $light-grey;
-    position: fixed;
-    left: 0;
+    position: absolute;
+    right: -14%;
     top: calc(50% - 15px);
     height: 40px;
     width: 40px;
@@ -82,7 +86,6 @@ aside[id="stickyMenu"]{
     @include justify-content-center;
     @include align-items-center;
     @include basic-transition;
-    @include transform(translateX(1145%));
     
     &::after{
         content: "";
@@ -92,7 +95,6 @@ aside[id="stickyMenu"]{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        @include basic-transition;
         @include transform(none);
     }
     

@@ -42,3 +42,24 @@
         }
     }
 }
+@media screen and (max-width:500px){
+    .single-event{
+        .contextual-sidebar{
+            .event{
+                >div{
+                    @include flex-column;
+                    
+                    .btn{
+                        width: 100%;
+                        max-width: 100%;
+                        margin-right: 0;
+                        margin-bottom: 30px;
+                    }
+                    .event-informations{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
