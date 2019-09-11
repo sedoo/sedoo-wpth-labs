@@ -14,11 +14,32 @@
         }
         
         .bobinette{
-            @include transform(translateX(2295%));
+            right: -5%;
             
             &::after{
                 @include transform(rotateZ(180deg));
             }
+        }
+    }
+}
+@media screen and (max-width: 1024px) and (orientation:portrait){
+    aside[id="stickyMenu"]{
+        .bobinette{
+            right: -6%;
+        }
+    }
+}
+@media screen and (max-width:767px){
+    aside[id="stickyMenu"]{
+        .bobinette{
+            right: -6%;
+        }
+    }
+}
+@media screen and (max-width:767px) and (orientation:portrait){
+    aside[id="stickyMenu"]{
+        .bobinette{
+            right: -5%;
         }
     }
 }

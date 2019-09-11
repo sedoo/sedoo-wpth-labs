@@ -1,5 +1,6 @@
 ul[id="primary-menu"]{
     position: relative;
+    overflow-y: visible;
     
     
     .menu-item{
@@ -27,7 +28,7 @@ ul[id="primary-menu"]{
             @include basic-transition;
             background: $dark;
             left: 0;
-            top: 50px;
+            top: 100%;
             padding: 20px;
             @include display-grid;
             @include grid-template-column(repeat(3, 1fr));
@@ -59,7 +60,7 @@ ul[id="primary-menu"]{
                         width: 30px;
                         height: 1px;
                         background: $light-full;
-                        margin: 5px 0;
+                        margin: 5px 0 10px;
                     }
                 }
             
@@ -80,9 +81,14 @@ ul[id="primary-menu"]{
                             text-transform: $text-transform-none;
                             font-family: $main-font-family;
                             font-size: $tiny-size;
+                            margin-bottom: 5px;
                             
                             &::after{
                                 display: none;
+                            }
+                            
+                            &:hover{
+                                @include transform(translateX(15px));
                             }
                         }
                         
