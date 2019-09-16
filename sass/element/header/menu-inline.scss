@@ -50,9 +50,9 @@ ul[id="primary-menu"]{
                 a{
                     color: $light-full;
                     padding: 0;
-                    font-family: $second-title-family;
+                    font-family: $main-title-family;
                     text-transform: $text-transform-none;
-                    font-size: $h3-size;
+                    font-size: $h4-size;
                     
                     &::after{
                         content: "";

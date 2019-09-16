@@ -3,11 +3,11 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.3.0
+Version: 0.3.2
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
-GitHub Theme URI: sedoo/sedoo-wppl-labtools
+GitHub Theme URI: sedoo/sedoo-wpth-labs
 GitHub Branch: master
 
 This theme, like WordPress, is licensed under the GPL.
@@ -703,9 +703,9 @@ ul[id="primary-menu"] {
         ul[id="primary-menu"] .menu-item .sub-menu .menu-item a {
           color: #fff;
           padding: 0;
-          font-family: "Cormorant Infant", serif;
+          font-family: "Montserrat", sans-serif;
           text-transform: none;
-          font-size: 2.5rem; }
+          font-size: 2rem; }
           ul[id="primary-menu"] .menu-item .sub-menu .menu-item a::after {
             content: "";
             display: block;
@@ -1997,7 +1997,7 @@ aside[id="stickyMenu"] {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   height: 100%;
-  background: #F2F2F2;
+  background: #9d9fa2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2009,9 +2009,9 @@ aside[id="stickyMenu"] {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 5% 1%;
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%); }
+  -webkit-transform: translateX(-95%);
+  -ms-transform: translateX(-95%);
+  transform: translateX(-95%); }
   aside[id="stickyMenu"].open {
     -webkit-transform: none;
     -ms-transform: none;
@@ -2021,9 +2021,9 @@ aside[id="stickyMenu"] {
       -ms-transform: rotate(180deg);
       transform: rotateZ(180deg); }
   aside[id="stickyMenu"]:hover:not(.open) {
-    -webkit-transform: translateX(-95%);
-    -ms-transform: translateX(-95%);
-    transform: translateX(-95%); }
+    -webkit-transform: translateX(-90%);
+    -ms-transform: translateX(-90%);
+    transform: translateX(-90%); }
   aside[id="stickyMenu"] > div {
     position: relative; }
     aside[id="stickyMenu"] > div p {
@@ -2053,7 +2053,7 @@ aside[id="stickyMenu"] {
         padding: 5px 0; }
 
 .bobinette {
-  background-color: #F2F2F2;
+  background-color: #9d9fa2;
   position: absolute;
   right: -14%;
   top: calc(50% - 15px);

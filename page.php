@@ -33,6 +33,9 @@ get_header();
                 ?>
             </div>
 		</main><!-- #main -->
+        <?php // table_content ( value )
+        if (get_field( 'table_content' )):
+        ?>
         <aside id="stickyMenu" class="open">
             <div>
                 <p>Sommaire</p>
@@ -44,8 +47,9 @@ get_header();
                 </button>
             </div>
         </aside>
+        <?php endif; ?>
 	</div><!-- #primary -->
-
 <?php
+
 get_sidebar();
 get_footer();
