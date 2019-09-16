@@ -16,6 +16,10 @@ nav[id="burger-navigation"] {
         @include transform(translateY(-100%));
         z-index: -100;
         
+        .menu-menu-primaire-container{
+            width: 100%;
+        }
+        
         .slick-track{
             @include display-flex;
         }
@@ -44,12 +48,13 @@ nav[id="burger-navigation"] {
                     padding-left: 0;
 
                     .menu-item {
-                        padding: 20px 0;
+                        padding: 10px 0;
                         position: relative;
                         width: 100%;
 
                         a {
                             @extend .h3;
+                            margin-top: 0;
                             margin-bottom: 0;
                             width: 70%;
                             white-space: nowrap;
@@ -85,8 +90,9 @@ nav[id="burger-navigation"] {
                                 }
                                 
                                 a{
-                                    font-weight: $light;
+                                    font-family: $main-font-family;
                                     text-transform: $text-transform-none;
+                                    font-size: $font-size;
                                     
                                     &::after{
                                         display: none;
@@ -122,13 +128,19 @@ nav[id="burger-navigation"] {
         .slick-dots{
             position: fixed;
             bottom: 50px;
+            @include display-flex;
+            @include justify-content-center;
+            @include align-items-center;
+            width: 100%;
+            left: 0;
             
             li{
                 background: $dark;
                 border-radius: 100%;
                 @include basic-transition;
-                width: 10px;
-                height: 10px;
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
                 
                 &:hover{
                     background: $brown-dt;
@@ -137,6 +149,9 @@ nav[id="burger-navigation"] {
                 &.slick-active{
                     background: transparent;
                     border: 3px solid $brown-dt;
+                }
+                button{
+                    display: none;
                 }
             }
         }

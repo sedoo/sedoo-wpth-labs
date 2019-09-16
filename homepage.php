@@ -27,8 +27,7 @@ get_header();
                 <?php the_content(); ?>
             </div>
             <?php endwhile; endif; ?>
-            <section role="listNews" class="post-wrapper">
-               <?php
+            <?php
                 global $post;
                 $argsListPost = array(
                     'posts_per_page'   => 4,
@@ -51,6 +50,13 @@ get_header();
                 );
 
                 $postsList = get_posts ($argsListPost);
+            
+                if ($postsList){
+                    
+                
+            ?>
+            <section role="listNews" class="post-wrapper">
+                <?php
 
                 foreach ($postsList as $post) :
                   setup_postdata( $post );
@@ -65,6 +71,7 @@ get_header();
             <a href="/actualites-2" class="btn">Voir toutes les actualités</a>
 
             <?php 
+                }
                 the_posts_navigation();
                 wp_reset_postdata();
             ?>

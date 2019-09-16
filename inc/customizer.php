@@ -53,3 +53,271 @@ function labs_by_sedoo_customize_preview_js() {
 	wp_enqueue_script( 'labs-by-sedoo-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'labs_by_sedoo_customize_preview_js' );
+
+
+
+
+/******************************************************************
+* CONVERTISSEUR DE COULEUR HEX > RGB
+*
+* source : https://bavotasan.com/2011/convert-hex-color-to-rgb-using-php/
+*/
+
+function hex2rgb($hex) {
+		$hex = str_replace("#", "", $hex);
+
+		if(strlen($hex) == 3) {
+			$r = hexdec(substr($hex,0,1).substr($hex,0,1));
+			$g = hexdec(substr($hex,1,1).substr($hex,1,1));
+			$b = hexdec(substr($hex,2,1).substr($hex,2,1));
+		} else {
+			$r = hexdec(substr($hex,0,2));
+			$g = hexdec(substr($hex,2,2));
+			$b = hexdec(substr($hex,4,2));
+		}
+		$rgb = array($r, $g, $b);
+		//return implode(",", $rgb); // returns the rgb values separated by commas
+		return $rgb; // returns an array with the rgb values
+  }
+
+
+
+
+/**************************************************************************************************************
+*  Ajout du controleur de couleur personnalisée dans le customizer
+*
+*  source : https://codex.wordpress.org/Plugin_API/Action_Reference/customize_register
+*/
+
+function labs_by_sedoo_customize_color( $wp_customize )
+{
+   //All our sections, settings, and controls will be added here
+
+   //1. Define a new section (if desired) to the Theme Customizer
+ 	$wp_customize->add_section('labs_by_sedoo_color_scheme', array(
+        'title'    => __('Theme options', 'theme-aeris'),
+        'description' => '',
+        'priority' => 30,
+    ));
+
+
+    //  =================================
+    //  = Select Box pour theme color   =
+    //  =================================
+     $wp_customize->add_setting('labs_by_sedoo_main_color', array(
+        'default'        => 'custom',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'theme_mod',
+ 
+    ));
+
+	//  ==================================
+    //  = Text Input Main color code     =
+    //  ==================================
+    $wp_customize->add_setting('labs_by_sedoo_color_code', array(
+        'default'        => '#CCC',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'theme_mod',
+ 
+    ));
+
+	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'labs_by_sedoo_color_code', array(
+        'label'      => __('Couleur principale', 'labs_by_sedoo'),
+        'section'    => 'labs_by_sedoo_color_scheme',
+        'settings'   => 'labs_by_sedoo_color_code',
+    )));
+
+
+
+    //  =======================================
+    //  = Text Input text color code     =
+    //  =======================================
+    $wp_customize->add_setting('labs_by_sedoo_text_color_code', array(
+        'default'        => '#FFF',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'theme_mod',
+ 
+    ));
+
+	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'labs_by_sedoo_text_color_code', array(
+        'label'      => __('Couleur des textes sur les blocks utilisant la couleur dominante', 'labs_by_sedoo'),
+        'section'    => 'labs_by_sedoo_color_scheme',
+        'settings'   => 'labs_by_sedoo_text_color_code',
+    )) );
+
+    //  =======================================
+    //  = Text Input Link hover color code     =
+    //  =======================================
+//    $wp_customize->add_setting('labs_by_sedoo_link_hover_color_code', array(
+//        'default'        => '#009FDE',
+//        'capability'     => 'edit_theme_options',
+//        'type'           => 'theme_mod',
+// 
+//    ));
+//
+//	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'labs_by_sedoo_link_hover_color_code', array(
+//        'label'      => __('Couleur de survol des liens', 'labs_by_sedoo'),
+//        'section'    => 'labs_by_sedoo_color_scheme',
+//        'settings'   => 'labs_by_sedoo_link_hover_color_code',
+//    )) );
+
+
+    //  =============================
+    //  = Checkbox breadcrumb       =
+    //  =============================
+    $wp_customize->add_setting('labs_by_sedoo_breadcrumb', array(
+        'default'        => 'false',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'theme_mod',
+ 
+    ));
+
+	$wp_customize->add_control('labs_by_sedoo_breadcrumb', array(
+        'label'      => __('Afficher le fil d\'ariane sur les pages', 'labs_by_sedoo'),
+        'section'    => 'labs_by_sedoo_color_scheme',
+        'settings'   => 'labs_by_sedoo_breadcrumb',
+        'type'       => 'checkbox',
+    ));
+
+	//  =============================
+    //  = Text Input copyright     =
+    //  =============================
+    $wp_customize->add_setting('labs_by_sedoo_copyright', array(
+        'default'        => 'Pôle Aeris '.date('Y').' - Service de données OMP (SEDOO)',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'theme_mod',
+ 
+    ));
+
+	$wp_customize->add_control('labs_by_sedoo_copyright', array(
+        'label'      => __('© Copyright', 'labs_by_sedoo'),
+        'section'    => 'labs_by_sedoo_color_scheme',
+        'settings'   => 'labs_by_sedoo_copyright',
+    ));
+
+}
+add_action( 'customize_register', 'labs_by_sedoo_customize_color' );
+
+
+/*****
+* 
+* Main code couleur en fonction du choix utilisateur
+* 
+*/
+
+function labs_by_sedoo_main_color(){
+    $code_color = get_theme_mod( 'labs_by_sedoo_color_code' );
+
+    return $code_color;
+}
+
+/*****
+* 
+* chargement du code couleur selectionné ou saisi
+* 
+*/
+
+function labs_by_sedoo_color_style() {
+	
+	// if (get_theme_mod('labs_by_sedoo_main_color') == "custom" ) {
+	// 	$code_color = get_theme_mod( 'labs_by_sedoo_color_code' );
+	// }
+	// else {
+	// 	$code_color	= get_theme_mod( 'labs_by_sedoo_main_color' );
+	// }
+
+    $code_color=labs_by_sedoo_main_color();
+
+	$rgb_color = hex2rgb($code_color); // array 0 => r , 1 => g, 2 => b
+    
+	?>
+         <style type="text/css">
+			h1,
+			h2,
+			h3,
+			blockquote,
+			.main-navigation ul ul li:first-child,
+			.main-navigation .nav-menu > .current_page_item > a,
+			.main-navigation .nav-menu > .current-menu-item > a,
+			.main-navigation .nav-menu > .current_page_ancestor > a,
+			.main-navigation .nav-menu > .current-menu-ancestor > a,
+            [role="listNews"] article > header {
+            /* .Aeris-seeAllButton { */
+				border-color: <?php echo $code_color;?>; 
+			}
+
+			a,
+			.main-navigation .nav-menu > li > a:hover,
+			.main-navigation .nav-menu > li > a:focus,
+			.main-navigation .nav-menu > .current_page_item > a,
+			.main-navigation .nav-menu > .current-menu-item > a,
+			.main-navigation .nav-menu > .current_page_ancestor > a,
+			.main-navigation .nav-menu > .current-menu-ancestor > a,
+            .footer-menu ul[id="primary-menu"] .menu-item a
+			{
+				color: <?php echo $code_color;?>;
+			}
+
+			aside .widget-title,
+			.bkg,
+			[role="listNews"] article.format-quote > header > blockquote,
+            [role="listProgram"] > header > h2,
+            .Aeris-seeAllButton,            
+            #cookie-notice .button,
+            body .tag a:hover
+             {
+                background: <?php echo $code_color;?>;
+                color:<?php echo get_theme_mod( 'labs_by_sedoo_text_color_code' );?>;
+			}
+            
+			a:hover,
+			a:focus,
+			a:active {
+				color: <?php echo get_theme_mod( 'labs_by_sedoo_link_hover_color_code' );?>;
+			}
+
+            .site-branding h1 a,
+            .site-branding h1 span,
+            #cookie-notice .button:hover {
+                background-color: rgba(<?php echo $rgb_color[0].",".$rgb_color[1].",".$rgb_color[2].",.5)"; ?>;
+                color:<?php echo get_theme_mod( 'labs_by_sedoo_text_color_code' );?>;
+            }
+            
+            [id="page"] > footer {
+                background-color:<?php echo get_theme_mod( 'labs_by_sedoo_footer_background_color_code');?>;
+                
+            }
+            [id="page"] > footer,
+            [id="page"] > footer a, 
+            [id="page"] > footer h2 {
+                color:<?php echo get_theme_mod( 'labs_by_sedoo_footer_text_color_code');?>;
+            }
+
+         </style>
+    <?php
+
+}
+add_action( 'wp_head', 'labs_by_sedoo_color_style');
+
+// Fonction renvoyant les valeurs du customizer "Options du thème / Ambiance & Display mode
+function labs_by_sedoo_bodyAttribute() {
+    
+    if( get_theme_mod( 'labs_by_sedoo_ambiance' ) == "dark") {
+        // wp_enqueue_style('labs_by_sedoo_ambiance', get_bloginfo('template_directory') . '/css/dark.css');
+        $classes['ambiance'] = "darkTheme";
+    } else {
+        $classes['ambiance'] = "lightTheme";
+    }
+
+	// le if == "value1" est une vieillerie, non supprimable !! tous les vieux sites sont parametrés avec cette valeur... bref, j'avais codé comme un con...
+	if(( get_theme_mod( 'labs_by_sedoo_box' ) == "value1") || (get_theme_mod( 'labs_by_sedoo_box' ) == "box")) {
+        $classes['box'] = "boxes";
+	    // wp_enqueue_style('theme-aeris-box', get_bloginfo('template_directory') . '/css/boxes.css');
+    }else {
+        $classes['box'] = "nobox";
+    }
+    return $classes;
+}
+
+
+?>
