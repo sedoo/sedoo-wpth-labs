@@ -7,12 +7,12 @@ aside[id="stickyMenu"]{
     min-width: 300px;
     box-shadow: $basic-box-shadow; 
     height: 100%;
-    background: $light-grey;
+    background: $dark-grey;
     @include display-flex;
     @include flex-column;
     @include justify-content-center;
     padding: 5% 1%;
-    @include transform(translateX(-100%));
+    @include transform(translateX(-95%));
     
     &.open{
         @include transform(none);
@@ -27,7 +27,7 @@ aside[id="stickyMenu"]{
     }
 
     &:hover:not(.open){
-        @include transform(translateX(-95%));
+        @include transform(translateX(-90%));
     }
     > div{
         position: relative;
@@ -73,7 +73,7 @@ aside[id="stickyMenu"]{
 }
 
 .bobinette{
-    background-color: $light-grey;
+    background-color: $dark-grey;
     position: absolute;
     right: -14%;
     top: calc(50% - 15px);

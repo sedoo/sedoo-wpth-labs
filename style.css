@@ -3,11 +3,11 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.3.1
+Version: 0.3.2
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
-GitHub Theme URI: sedoo/sedoo-wpth-labs
+GitHub Theme URI: sedoo/sedoo-wppl-labtools
 GitHub Branch: master
 
 This theme, like WordPress, is licensed under the GPL.
@@ -183,7 +183,6 @@ div[id="page"] {
 /* IMAGE */
 img {
   max-width: 100%;
-  width: 100%;
   height: auto; }
 
 /* ACCESIBILITY */
@@ -525,6 +524,8 @@ nav[id="burger-navigation"] .overlay {
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
   z-index: -100; }
+  nav[id="burger-navigation"] .overlay .menu-menu-primaire-container {
+    width: 100%; }
   nav[id="burger-navigation"] .overlay .slick-track {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -550,10 +551,11 @@ nav[id="burger-navigation"] .overlay {
         list-style: none;
         padding-left: 0; }
         nav[id="burger-navigation"] .overlay .slick-slide .menu-item .sub-menu .menu-item {
-          padding: 20px 0;
+          padding: 10px 0;
           position: relative;
           width: 100%; }
           nav[id="burger-navigation"] .overlay .slick-slide .menu-item .sub-menu .menu-item a {
+            margin-top: 0;
             margin-bottom: 0;
             width: 70%;
             white-space: nowrap;
@@ -593,8 +595,9 @@ nav[id="burger-navigation"] .overlay {
                 -o-transition-delay: 0.5s;
                 transition-delay: 0.5s; }
               nav[id="burger-navigation"] .overlay .slick-slide .menu-item .sub-menu .menu-item .sub-menu .menu-item a {
-                font-weight: 300;
-                text-transform: none; }
+                font-family: "Poppins", sans-serif;
+                text-transform: none;
+                font-size: 1.6rem; }
                 nav[id="burger-navigation"] .overlay .slick-slide .menu-item .sub-menu .menu-item .sub-menu .menu-item a::after {
                   display: none; }
             nav[id="burger-navigation"] .overlay .slick-slide .menu-item .sub-menu .menu-item .sub-menu:hover {
@@ -612,20 +615,34 @@ nav[id="burger-navigation"] .overlay {
             transform: none; }
   nav[id="burger-navigation"] .overlay .slick-dots {
     position: fixed;
-    bottom: 50px; }
+    bottom: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    left: 0; }
     nav[id="burger-navigation"] .overlay .slick-dots li {
       background: #000;
       border-radius: 100%;
       -webkit-transition: 0.5s ease all;
       -o-transition: 0.5s ease all;
       transition: 0.5s ease all;
-      width: 10px;
-      height: 10px; }
+      width: 15px;
+      height: 15px;
+      margin-right: 10px; }
       nav[id="burger-navigation"] .overlay .slick-dots li:hover {
         background: #6e432e; }
       nav[id="burger-navigation"] .overlay .slick-dots li.slick-active {
         background: transparent;
         border: 3px solid #6e432e; }
+      nav[id="burger-navigation"] .overlay .slick-dots li button {
+        display: none; }
 
 ul[id="primary-menu"] {
   position: relative;
@@ -686,9 +703,9 @@ ul[id="primary-menu"] {
         ul[id="primary-menu"] .menu-item .sub-menu .menu-item a {
           color: #fff;
           padding: 0;
-          font-family: "Cormorant Infant", serif;
+          font-family: "Montserrat", sans-serif;
           text-transform: none;
-          font-size: 2.5rem; }
+          font-size: 2rem; }
           ul[id="primary-menu"] .menu-item .sub-menu .menu-item a::after {
             content: "";
             display: block;
@@ -1980,7 +1997,7 @@ aside[id="stickyMenu"] {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   height: 100%;
-  background: #F2F2F2;
+  background: #9d9fa2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1992,9 +2009,9 @@ aside[id="stickyMenu"] {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 5% 1%;
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%); }
+  -webkit-transform: translateX(-95%);
+  -ms-transform: translateX(-95%);
+  transform: translateX(-95%); }
   aside[id="stickyMenu"].open {
     -webkit-transform: none;
     -ms-transform: none;
@@ -2004,9 +2021,9 @@ aside[id="stickyMenu"] {
       -ms-transform: rotate(180deg);
       transform: rotateZ(180deg); }
   aside[id="stickyMenu"]:hover:not(.open) {
-    -webkit-transform: translateX(-95%);
-    -ms-transform: translateX(-95%);
-    transform: translateX(-95%); }
+    -webkit-transform: translateX(-90%);
+    -ms-transform: translateX(-90%);
+    transform: translateX(-90%); }
   aside[id="stickyMenu"] > div {
     position: relative; }
     aside[id="stickyMenu"] > div p {
@@ -2036,7 +2053,7 @@ aside[id="stickyMenu"] {
         padding: 5px 0; }
 
 .bobinette {
-  background-color: #F2F2F2;
+  background-color: #9d9fa2;
   position: absolute;
   right: -14%;
   top: calc(50% - 15px);
