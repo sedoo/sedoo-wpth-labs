@@ -189,13 +189,12 @@ h1, .h1{
 h2, .h2{
     font-family:$second-title-family;
     font-size: $h2-size;
-    color: var(--main-color);
+    color: $dark;
     margin: 20px 0 5px;
 }
 h3, .h3{
     font-family: $main-title-family;
     font-size: $h3-size;
-    color: var(--main-color);
     margin-bottom: 10px;
 }
 h4{

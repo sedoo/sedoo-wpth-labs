@@ -29,5 +29,13 @@
     img{
         margin: 40px auto;
     }
+    a{
+        text-decoration: underline;
+    
+        &:hover{
+            color: $light-full;
+            text-decoration: none;
+        }
+    }
 
 }

@@ -68,7 +68,7 @@ get_header();
                 endforeach;
                 ?>	
             </section>
-            <a href="/actualites-2" class="btn">Voir toutes les actualités</a>
+            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="btn">Voir toutes les actualités</a>
 
             <?php 
                 }

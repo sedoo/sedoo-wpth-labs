@@ -79,17 +79,17 @@ while ( have_posts() ) : the_post();
     // The Loop
     if ( $the_query->have_posts() ) {  
     ?>
-    <div class="read-more-article">
+    <footer class="read-more-article">
         <h2>D'autres actualités sur le même thème :</h2>
         <!-- Boucle d'article sur le même thème -->
-        <div class="event-loop d-flex">
+        <div class="post-loop event-loop">
 
             <?php                
             while ( $the_query->have_posts() ) {
                 $the_query->the_post();
                 global $EM_Event;
                 ?>
-            <a class="event-post d-flex flex-column justify-content-between" href="<?php the_permalink(); ?>">
+            <a class="post-preview event-post" href="<?php the_permalink(); ?>">
                 <div>
                     <p><?php $dateEvent = new DateTime($EM_Event->event_start_date);
                             setlocale(LC_TIME, $locale);
@@ -101,7 +101,9 @@ while ( have_posts() ) : the_post();
 
                 <?php if (get_the_post_thumbnail()) {
                     ?>
-                <div class="event-img" style="background-image:url(<?php the_post_thumbnail_url(); ?>)"></div>
+                <div class="post-img event-img">
+                    <?php the_post_thumbnail(); ?>
+                </div>
 
                 <?php 
                     
@@ -114,7 +116,7 @@ while ( have_posts() ) : the_post();
             }
         ?>
         </div>
-    </div>
+    </footer>
     <?php
     } else {
         // no posts found

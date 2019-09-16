@@ -66,11 +66,11 @@ ul[id="primary-menu"]{
             
                 .sub-menu{
                     position: relative;
-                    background: none;
                     height: auto;
                     display: block;
                     padding: 0;
                     top: 0;
+                    box-shadow: none;
                     
                     .menu-item{
                         display: block;
