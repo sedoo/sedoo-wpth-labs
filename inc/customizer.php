@@ -245,7 +245,8 @@ function labs_by_sedoo_color_style() {
              .search-form .search-submit:hover,
              .search-form .search-field:focus,
              .search-form .search-field:active,
-             body a.btn:hover
+             body a.btn:hover,
+             .page-template-template-evenements .event-post:hover
 			{
 				color: <?php echo $code_color;?>;
 			}
@@ -267,7 +268,8 @@ function labs_by_sedoo_color_style() {
              .copyright .wrapper.site-info a:hover,
              .contextual-sidebar .reading-time .eta-container .progress-bar > div,
              body a.btn,
-             .search-form .search-submit
+             .search-form .search-submit,
+             div[id="em-wrapper"] h2
             {
                 background: <?php echo $code_color;?>;
 			}
