@@ -16,6 +16,10 @@
     }
     
     &:hover{
+        a{
+            background: none!important;
+        }
+        
         .entry-header{
             img{
                 @include transform(scale(1.2));

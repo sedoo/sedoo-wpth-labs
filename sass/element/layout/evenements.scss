@@ -16,6 +16,10 @@ div[id="em-wrapper"]{
 }
 
 .event-post{
+    text-decoration: none;
+    color: $dark;
+    
+    
     > div{
         > p{
             font-family: $second-title-family;
@@ -50,16 +54,31 @@ div[id="em-wrapper"]{
         @include justify-content-center;
         @include align-items-center;
         
-        &:hover{
-            img{
-                @include transform(scale(1.2));
-                opacity: 0.7;
-            }
-        }
-        
         img{
             @include basic-transition;
             width: 100%;
+        }
+    }
+    
+    &:hover{
+        background: none;
+        
+        .event-img{
+            img{
+                @include transform(scale(1.2));
+                opacity: 0.7; 
+            }
+        }
+    }
+}
+
+.page-template-template-evenements{
+    .event-post{
+        text-decoration: none;
+        color: $dark;
+        
+        &:hover{
+            background: none;
         }
     }
 }
