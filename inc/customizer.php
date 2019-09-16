@@ -244,7 +244,8 @@ function labs_by_sedoo_color_style() {
              .copyright .wrapper.site-info a,
              .search-form .search-submit:hover,
              .search-form .search-field:focus,
-             .search-form .search-field:active
+             .search-form .search-field:active,
+             body a.btn:hover
 			{
 				color: <?php echo $code_color;?>;
 			}
@@ -265,7 +266,7 @@ function labs_by_sedoo_color_style() {
              -moz-::selection,
              .copyright .wrapper.site-info a:hover,
              .contextual-sidebar .reading-time .eta-container .progress-bar > div,
-             .btn,
+             body a.btn,
              .search-form .search-submit
             {
                 background: <?php echo $code_color;?>;

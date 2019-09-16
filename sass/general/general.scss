@@ -265,7 +265,7 @@ button{
 /****************************
 ****** BLOCK GUTENBERG ******
 ****************************/
-.btn{
+body a.btn{
     display: block;
     margin: 50px auto;
     border-radius: 0;
@@ -277,10 +277,10 @@ button{
     position: relative;
     z-index: 1;
     max-width: 300px;
+    text-decoration: none!important;
 
     &:hover{
-        background: $light-full;
-        color: $dark;
+        background: $light-full!important;
     }
 }  
 

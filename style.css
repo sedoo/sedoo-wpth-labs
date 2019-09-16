@@ -283,7 +283,7 @@ button {
 /****************************
 ****** BLOCK GUTENBERG ******
 ****************************/
-.btn {
+body a.btn {
   display: block;
   margin: 50px auto;
   border-radius: 0;
@@ -295,10 +295,10 @@ button {
   box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 1;
-  max-width: 300px; }
-  .btn:hover {
-    background: #fff;
-    color: #000; }
+  max-width: 300px;
+  text-decoration: none !important; }
+  body a.btn:hover {
+    background: #fff !important; }
 
 .blur, body.menu-expanded .site-content, body.menu-expanded .site-footer, body.overlay-expanded .site-content, body.overlay-expanded .site-footer {
   -webkit-filter: blur(5px);
