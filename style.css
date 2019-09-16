@@ -972,6 +972,8 @@ footer[id="colophon"] {
   max-height: 50px;
   margin-right: 20px;
   margin-bottom: 20px; }
+  .partners-list ul li img {
+    max-height: 50px; }
 
 .copyright .wrapper.site-info, .copyright .site-info.wrapper-content {
   padding: 50px 0;

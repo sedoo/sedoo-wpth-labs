@@ -260,7 +260,7 @@ function labs_by_sedoo_color_style() {
             .post:nth-child(8n)::before,
             .social-list li a:hover::before,
             .read-more-article h2,
-            .nav-box .nav-box-chevron
+            .nav-box .nav-box-chevron,
              .wrapper-content a:hover,
              .wrapper-layout a:hover,
              ::selection,
