@@ -183,7 +183,6 @@ div[id="page"] {
 /* IMAGE */
 img {
   max-width: 100%;
-  width: 100%;
   height: auto; }
 
 /* ACCESIBILITY */
@@ -525,6 +524,8 @@ nav[id="burger-navigation"] .overlay {
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
   z-index: -100; }
+  nav[id="burger-navigation"] .overlay .menu-menu-primaire-container {
+    width: 100%; }
   nav[id="burger-navigation"] .overlay .slick-track {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -550,10 +551,11 @@ nav[id="burger-navigation"] .overlay {
         list-style: none;
         padding-left: 0; }
         nav[id="burger-navigation"] .overlay .slick-slide .menu-item .sub-menu .menu-item {
-          padding: 20px 0;
+          padding: 10px 0;
           position: relative;
           width: 100%; }
           nav[id="burger-navigation"] .overlay .slick-slide .menu-item .sub-menu .menu-item a {
+            margin-top: 0;
             margin-bottom: 0;
             width: 70%;
             white-space: nowrap;
@@ -593,8 +595,9 @@ nav[id="burger-navigation"] .overlay {
                 -o-transition-delay: 0.5s;
                 transition-delay: 0.5s; }
               nav[id="burger-navigation"] .overlay .slick-slide .menu-item .sub-menu .menu-item .sub-menu .menu-item a {
-                font-weight: 300;
-                text-transform: none; }
+                font-family: "Poppins", sans-serif;
+                text-transform: none;
+                font-size: 1.6rem; }
                 nav[id="burger-navigation"] .overlay .slick-slide .menu-item .sub-menu .menu-item .sub-menu .menu-item a::after {
                   display: none; }
             nav[id="burger-navigation"] .overlay .slick-slide .menu-item .sub-menu .menu-item .sub-menu:hover {
@@ -612,20 +615,34 @@ nav[id="burger-navigation"] .overlay {
             transform: none; }
   nav[id="burger-navigation"] .overlay .slick-dots {
     position: fixed;
-    bottom: 50px; }
+    bottom: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    left: 0; }
     nav[id="burger-navigation"] .overlay .slick-dots li {
       background: #000;
       border-radius: 100%;
       -webkit-transition: 0.5s ease all;
       -o-transition: 0.5s ease all;
       transition: 0.5s ease all;
-      width: 10px;
-      height: 10px; }
+      width: 15px;
+      height: 15px;
+      margin-right: 10px; }
       nav[id="burger-navigation"] .overlay .slick-dots li:hover {
         background: #6e432e; }
       nav[id="burger-navigation"] .overlay .slick-dots li.slick-active {
         background: transparent;
         border: 3px solid #6e432e; }
+      nav[id="burger-navigation"] .overlay .slick-dots li button {
+        display: none; }
 
 ul[id="primary-menu"] {
   position: relative;

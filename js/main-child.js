@@ -89,16 +89,21 @@ jQuery(document).ready(function ($) {
       }
     }));
     
-    
+    var slideCount = jQuery("#burger-menu").length;
+    if (slideCount <= 1.7) {
+      // clone element
+      jQuery("#burger-menu.slider").children().clone(true, true).appendTo("#burger-menu.slider");
+    }
     // Initialisation du carousel pour le menu
   $('#burger-menu').slick({
+      infinite: true,
       centerMode: true,
       centerPadding: '40px',
       slidesToShow: 1.7,
       dots: true,
       prevArrow: false,
       nextArrow: false,
-      mobileFirst: false,
+      mobileFirst: true,
       responsive: [
         {
           breakpoint: 1200,
