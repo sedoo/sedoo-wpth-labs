@@ -232,48 +232,55 @@ function labs_by_sedoo_color_style() {
     
 	?>
          <style type="text/css">
-			h1,
-			h2,
-			h3,
-			blockquote,
-			.main-navigation ul ul li:first-child,
-			.main-navigation .nav-menu > .current_page_item > a,
-			.main-navigation .nav-menu > .current-menu-item > a,
-			.main-navigation .nav-menu > .current_page_ancestor > a,
-			.main-navigation .nav-menu > .current-menu-ancestor > a,
-            [role="listNews"] article > header {
-            /* .Aeris-seeAllButton { */
-				border-color: <?php echo $code_color;?>; 
-			}
-
-			a,
-			.main-navigation .nav-menu > li > a:hover,
-			.main-navigation .nav-menu > li > a:focus,
-			.main-navigation .nav-menu > .current_page_item > a,
-			.main-navigation .nav-menu > .current-menu-item > a,
-			.main-navigation .nav-menu > .current_page_ancestor > a,
-			.main-navigation .nav-menu > .current-menu-ancestor > a,
-            .footer-menu ul[id="primary-menu"] .menu-item a
+             
+            .post:hover .group-content .entry-content h2,
+             ul[id="shortcuts"] li:hover button,
+             nav[id="burger-navigation"] .overlay .slick-slide .menu-item a:hover,
+             .footer-menu ul[id="primary-menu"] .menu-item a,
+             .footer-categories li a:hover,
+             .read-more-article .post-loop .post-preview:hover h3,
+             .wrapper-content a, 
+             .wrapper-layout a,
+             .copyright .wrapper.site-info a,
+             .search-form .search-submit:hover,
+             .search-form .search-field:focus,
+             .search-form .search-field:active
 			{
 				color: <?php echo $code_color;?>;
 			}
 
-			aside .widget-title,
-			.bkg,
-			[role="listNews"] article.format-quote > header > blockquote,
-            [role="listProgram"] > header > h2,
-            .Aeris-seeAllButton,            
-            #cookie-notice .button,
-            body .tag a:hover
-             {
+			nav[id="primary-navigation"] ul li:hover a,
+            ul[id="primary-menu"] .menu-item .sub-menu,
+            ul[id="shortcuts"] li,
+            .post .entry-header p,
+            .post-horizontal .entry-header p,
+            .post:nth-child(4n)::before,
+            .post:nth-child(8n)::before,
+            .social-list li a:hover::before,
+            .read-more-article h2,
+            .nav-box .nav-box-chevron
+             .wrapper-content a:hover,
+             .wrapper-layout a:hover,
+             ::selection,
+             -moz-::selection,
+             .copyright .wrapper.site-info a:hover,
+             .contextual-sidebar .reading-time .eta-container .progress-bar > div,
+             .btn,
+             .search-form .search-submit
+            {
                 background: <?php echo $code_color;?>;
-                color:<?php echo get_theme_mod( 'labs_by_sedoo_text_color_code' );?>;
 			}
             
+             .social-list li a:hover::before,
+             .search-form .search-field:focus,
+             .search-form .search-field:active{
+                 border-color: <?php echo $code_color;?>;
+             }
+             
 			a:hover,
 			a:focus,
 			a:active {
-				color: <?php echo get_theme_mod( 'labs_by_sedoo_link_hover_color_code' );?>;
+				color: <?php echo $code_color;?>;
 			}
 
             .site-branding h1 a,
@@ -282,17 +289,10 @@ function labs_by_sedoo_color_style() {
                 background-color: rgba(<?php echo $rgb_color[0].",".$rgb_color[1].",".$rgb_color[2].",.5)"; ?>;
                 color:<?php echo get_theme_mod( 'labs_by_sedoo_text_color_code' );?>;
             }
-            
-            [id="page"] > footer {
-                background-color:<?php echo get_theme_mod( 'labs_by_sedoo_footer_background_color_code');?>;
-                
+             
+            ul[id="shortcuts"] li:hover button path{
+                fill: <?php echo $code_color;?>!important;
             }
-            [id="page"] > footer,
-            [id="page"] > footer a, 
-            [id="page"] > footer h2 {
-                color:<?php echo get_theme_mod( 'labs_by_sedoo_footer_text_color_code');?>;
-            }
-
          </style>
     <?php
 
