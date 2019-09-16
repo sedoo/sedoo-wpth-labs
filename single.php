@@ -49,10 +49,12 @@ while ( have_posts() ) : the_post();
                     <section>
                         <?php the_content(); ?>
                     </section>
+                    <?php if (get_field("sources")){ ?>
                     <footer class="sources">
                         <h2>Sources :</h2>
                         <p><?php the_field("sources") ?></p>
                     </footer>
+                    <?php } ?>
                 </article>
             </main><!-- #main -->
             <?php get_template_part('template-parts/contextual-sidebar-single'); ?>

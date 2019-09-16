@@ -36,12 +36,13 @@ aside[id="stickyMenu"]{
             font-family: $main-title-family;
             text-transform: uppercase;
             font-size: $h3-size;
+            color: $light-full;
 
             &::after{
                 content: "";
                 width: 30px;
                 height: 3px;
-                background: $dark;
+                background: $light-full;
                 display: block;
                 margin: 10px 0 20px;
             }
@@ -52,10 +53,15 @@ aside[id="stickyMenu"]{
                 a{
                     font-family: $second-title-family;
                     font-size: $h3-size;
-                    border-bottom: dotted 1px $dark-grey;
+                    border-bottom: dotted 1px $light-full;
                     padding: 20px 0;
                     display: block;
                     margin-bottom: 10px;
+                    color: $light-full;
+                    
+                    &:hover{
+                        @include transform(translateX(20px));
+                    }
                 }
 
                 li{ 

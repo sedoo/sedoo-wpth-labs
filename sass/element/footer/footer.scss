@@ -42,6 +42,10 @@ footer[id="colophon"]{
                 font-size: $h3-size;
                 text-transform: $uppercase;
                 text-decoration: none;
+                
+                &:hover{
+                    opacity: 0.6;
+                }
             }
 
             &:first-child{
@@ -165,6 +169,15 @@ footer[id="colophon"]{
             text-align: right;
             width: 50%;
             margin-left: auto;
+        }
+        a{
+            text-decoration: underline;
+            margin-right: 10px;
+            
+            &:hover{
+                text-decoration: none;
+                color: $light-full;
+            }
         }
     }
 }

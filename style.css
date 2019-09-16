@@ -3,7 +3,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.3.3
+Version: 0.3.4
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -210,13 +210,12 @@ h1, .h1 {
 h2, .h2, nav[id="burger-navigation"] .overlay .slick-slide .menu-item a {
   font-family: "Cormorant Infant", serif;
   font-size: 4.5rem;
-  color: var(--main-color);
+  color: #000;
   margin: 20px 0 5px; }
 
 h3, .h3, nav[id="burger-navigation"] .overlay .slick-slide .menu-item .sub-menu .menu-item a, footer[id="colophon"] .wrapper h2, footer[id="colophon"] .wrapper-content h2, .post .group-content .entry-content h2, .post .group-content .entry-content h3, .post-horizontal .group-content .entry-content h2, .post-horizontal .group-content .entry-content h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
-  color: var(--main-color);
   margin-bottom: 10px; }
 
 h4 {
@@ -346,6 +345,12 @@ button {
 
 .wrapper-content img, .wrapper-layout img {
   margin: 40px auto; }
+
+.wrapper-content a, .wrapper-layout a {
+  text-decoration: underline; }
+  .wrapper-content a:hover, .wrapper-layout a:hover {
+    color: #fff;
+    text-decoration: none; }
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .wp-block-columns {
@@ -715,11 +720,12 @@ ul[id="primary-menu"] {
             margin: 5px 0 10px; }
         ul[id="primary-menu"] .menu-item .sub-menu .menu-item .sub-menu {
           position: relative;
-          background: none;
           height: auto;
           display: block;
           padding: 0;
-          top: 0; }
+          top: 0;
+          -webkit-box-shadow: none;
+          box-shadow: none; }
           ul[id="primary-menu"] .menu-item .sub-menu .menu-item .sub-menu .menu-item {
             display: block;
             margin-bottom: 0; }
@@ -888,6 +894,8 @@ footer[id="colophon"] {
     font-size: 2.5rem;
     text-transform: uppercase;
     text-decoration: none; }
+    .footer-menu ul[id="primary-menu"] .menu-item a:hover {
+      opacity: 0.6; }
   .footer-menu ul[id="primary-menu"] .menu-item:first-child {
     padding-top: 0; }
   .footer-menu ul[id="primary-menu"] .menu-item .sub-menu {
@@ -973,6 +981,12 @@ footer[id="colophon"] {
     text-align: right;
     width: 50%;
     margin-left: auto; }
+  .copyright .wrapper.site-info a, .copyright .site-info.wrapper-content a {
+    text-decoration: underline;
+    margin-right: 10px; }
+    .copyright .wrapper.site-info a:hover, .copyright .site-info.wrapper-content a:hover {
+      text-decoration: none;
+      color: #fff; }
 
 .post-wrapper {
   display: -ms-grid;
@@ -1314,7 +1328,7 @@ div[id="em-wrapper"] h2 {
 
 .event-post .event-img {
   width: 100%;
-  height: 170px;
+  height: 240px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1337,7 +1351,8 @@ div[id="em-wrapper"] h2 {
   .event-post .event-img img {
     -webkit-transition: 0.5s ease all;
     -o-transition: 0.5s ease all;
-    transition: 0.5s ease all; }
+    transition: 0.5s ease all;
+    width: 100%; }
 
 .single-event .wrapper header .post-meta, .single-event .wrapper-content header .post-meta {
   font-family: "Cormorant Infant", serif;
@@ -1470,7 +1485,8 @@ div[id="em-wrapper"] h2 {
     font-weight: 800;
     text-transform: uppercase;
     font-size: 1.2rem;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif; }
 
 .post .group-content .entry-content, .post-horizontal .group-content .entry-content {
   margin-bottom: 70px; }
@@ -1545,9 +1561,6 @@ ul[id="shortcuts"] {
       background: #fff; }
       ul[id="shortcuts"] li:hover button {
         color: #000; }
-        ul[id="shortcuts"] li:hover button svg {
-          -webkit-filter: invert(100%);
-          filter: invert(100%); }
     ul[id="shortcuts"] li:nth-child(even) {
       -webkit-filter: saturate(50%);
       filter: saturate(50%); }
@@ -2029,21 +2042,27 @@ aside[id="stickyMenu"] {
     aside[id="stickyMenu"] > div p {
       font-family: "Montserrat", sans-serif;
       text-transform: uppercase;
-      font-size: 2.5rem; }
+      font-size: 2.5rem;
+      color: #fff; }
       aside[id="stickyMenu"] > div p::after {
         content: "";
         width: 30px;
         height: 3px;
-        background: #000;
+        background: #fff;
         display: block;
         margin: 10px 0 20px; }
     aside[id="stickyMenu"] > div [id="tocList"] li a {
       font-family: "Cormorant Infant", serif;
       font-size: 2.5rem;
-      border-bottom: dotted 1px #9d9fa2;
+      border-bottom: dotted 1px #fff;
       padding: 20px 0;
       display: block;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      color: #fff; }
+      aside[id="stickyMenu"] > div [id="tocList"] li a:hover {
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px); }
     aside[id="stickyMenu"] > div [id="tocList"] li li {
       padding-left: 20px; }
       aside[id="stickyMenu"] > div [id="tocList"] li li a {
