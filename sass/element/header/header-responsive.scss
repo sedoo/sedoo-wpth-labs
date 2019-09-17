@@ -15,7 +15,7 @@
             @include transform(scale(1,0));
             transform-origin: top center;
             
-            ul[id="primary-menu"]{
+            ul[id="primary-menu"], ul[id="burger-menu"]{
                 height: 90vh;
                 overflow: scroll;
                 

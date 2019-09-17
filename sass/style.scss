@@ -30,6 +30,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "general/general-responsive.scss";
 @import "element/element.scss";
 
-//#wpadminbar{
-//    display: none;
-//}
+#wpadminbar{
+    display: none;
+}
