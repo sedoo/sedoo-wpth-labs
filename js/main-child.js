@@ -95,39 +95,43 @@ jQuery(document).ready(function ($) {
       jQuery("#burger-menu.slider").children().clone(true, true).appendTo("#burger-menu.slider");
     }
     // Initialisation du carousel pour le menu
-  $('#burger-menu').slick({
-      infinite: true,
-      centerMode: true,
-      centerPadding: '40px',
-      slidesToShow: 1.7,
-      dots: true,
-      prevArrow: false,
-      nextArrow: false,
-      mobileFirst: true,
-      responsive: [
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 1.7,
-            centerPadding: '40px',
-          }
-        },
-        {
-          breakpoint: 1100,
-          settings: {
-            slidesToShow: 1,
-            centerPadding: '20px',
-          }
-        },
-        {
-          breakpoint: 100,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '10px',
-            slidesToShow: 1
-          }
-        }
-      ]
-  });
+    if (window.matchMedia("(min-width: 767px)").matches) {
+        $('#burger-menu').slick({
+          infinite: true,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1.7,
+          dots: true,
+          prevArrow: false,
+          nextArrow: false,
+          mobileFirst: true,
+          responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 1.7,
+                centerPadding: '40px',
+              }
+            },
+            {
+              breakpoint: 1100,
+              settings: {
+                slidesToShow: 1,
+                centerPadding: '20px',
+              }
+            },
+            {
+              breakpoint: 100,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '10px',
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+    }else{
+                   
+    }
 });
