@@ -247,6 +247,7 @@ function labs_by_sedoo_color_style() {
              .search-form .search-field:active,
              body a.btn:hover,
              .page-template-template-evenements .event-post:hover
+             
 			{
 				color: <?php echo $code_color;?>;
 			}
@@ -269,7 +270,8 @@ function labs_by_sedoo_color_style() {
              .contextual-sidebar .reading-time .eta-container .progress-bar > div,
              body a.btn,
              .search-form .search-submit,
-             div[id="em-wrapper"] h2
+             div[id="em-wrapper"] h2,
+             .wp-block-quote p::first-letter
             {
                 background: <?php echo $code_color;?>;
 			}

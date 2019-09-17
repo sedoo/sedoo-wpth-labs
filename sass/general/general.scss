@@ -309,3 +309,63 @@ body a.btn{
         padding: 10px;
     }
 }
+
+/* QUOTE */
+.wp-block-quote{
+    max-width: calc(100% - 150px);
+    margin: 70px auto;
+    position: relative;
+    
+    &::before{
+        content: "“";
+        font-size: calc(#{$h1-size} * 1.5);
+        font-family: $second-title-family;
+        position: absolute;
+        top: -70px;
+        left: -70px;
+    }
+    
+    &::after{
+        content: "”";
+        font-size: calc(#{$h1-size} * 1.5);
+        font-family: $second-title-family;
+        position: absolute;
+        bottom: -70px;
+        right: -70px;
+    }
+    
+    p{
+        font-size: calc(#{$h2-size} / 1.4);
+        font-family: $second-title-family;
+        font-style: oblique;
+        
+        &::first-letter{
+            padding: 10px;
+            background: $dark;
+            color: $light-full;
+            float: left;
+            font-size: $h1-size;
+            position: relative;
+            margin-top: -10px;
+            display: block;
+            font-style: normal;
+        }
+    }
+    cite{
+        font-family: $main-title-family;
+        font-size: $tiny-size;
+        display: block;
+        
+        &::before, &::after{
+            content: "-";
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &::before{
+            margin-right: 10px;
+        }
+        &::after{
+            margin-left: 10px;
+        }
+    }
+}
