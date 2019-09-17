@@ -31,13 +31,21 @@
                 <?php the_custom_logo(); ?>
             </div><!-- .site-branding -->
             <div class="nav-container">
+                <?php if(wp_is_mobile()): ?>
                 <nav id="primary-navigation" class="main-navigation">
-                    <?php if (has_nav_menu('primary-menu')) {
+                    <?php 
+                    if (has_nav_menu('burger-menu')){
+                        wp_nav_menu( array(
+                            'theme_location' => 'burger-menu',
+                            'menu_id'        => 'burger-menu',
+                        ) );
+                    } else{
                         wp_nav_menu( array(
                             'theme_location' => 'primary-menu',
                             'menu_id'        => 'primary-menu',
-                        ) );
-                    } ?>
+                        ) );                      
+                    }  
+                    ?>
                     <button class="burger">
                         <div class="burger-icon">
                             <span></span>
@@ -47,6 +55,25 @@
                         <label for="burger">Menu</label>
                     </button>
                 </nav>
+                <?php else : ?>
+                <?php if (has_nav_menu('primary-menu')) { ?>
+                <nav id="primary-navigation" class="main-navigation">
+                    <?php
+                        wp_nav_menu( array(
+                            'theme_location' => 'primary-menu',
+                            'menu_id'        => 'primary-menu',
+                        ) );
+                    ?>
+                    <button class="burger">
+                        <div class="burger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <label for="burger">Menu</label>
+                    </button>
+                </nav>
+                <?php } ?>
                 <?php if (has_nav_menu('burger-menu')) {?>
                     <nav id="burger-navigation" class="second-navigation">
                         <button class="burger">
@@ -66,7 +93,10 @@
                             ?>
                         </div>
                     </nav><!-- #site-navigation -->
-                <?php } ?>
+                <?php 
+                    }
+                   endif;
+                ?>
             </div>
         </div>
 	</header><!-- #masthead -->
