@@ -1,0 +1,84 @@
+.author-header{
+    h1{
+        margin-bottom: 0;
+        
+        &::after{
+            display: none;
+        }
+    }
+    .h2{
+        margin-top: 0;
+        font-style: $italic;
+    }
+    
+    &::after{
+        content: "";
+        display: block;
+        height: 5px;
+        width: 55px;
+        background: $dark;
+        margin: 20px 0 50px;
+    }
+}
+.author-card{
+    @include display-flex;
+    @include justify-content-between;
+    
+    > div {
+        width: calc(50% - 20px);
+        
+        &:first-child{
+            > div{
+                &:first-child{
+                    height: 350px;
+                    overflow: hidden;
+                    
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                        margin: 0;
+                        height: 100%;
+                    }
+                }
+                
+                &:last-child{
+                    background: $dark;
+                    color: $light-full;
+                    padding: 20px;
+                    width: 80%;
+                    margin: -100px auto 0;
+                    box-shadow: $down-box-shadow;
+                    z-index: 2;
+                    @include transform(translateX(-25%));  
+
+                    p{
+                        margin-bottom: 5px;
+                        
+                        a{
+                            color: $light-full;
+                            text-decoration: underline;
+                            
+                            &:hover{
+                                background: $light-full;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:last-child{
+            h2{
+                margin-top: 0;
+            }
+        }
+    }
+    
+
+}
+.author{
+    b{
+        display: inline-block;
+        margin-right: 5px;
+    }
+}

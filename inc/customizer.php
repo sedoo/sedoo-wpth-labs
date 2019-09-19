@@ -246,8 +246,8 @@ function labs_by_sedoo_color_style() {
              .search-form .search-field:focus,
              .search-form .search-field:active,
              body a.btn:hover,
-             .page-template-template-evenements .event-post:hover
-             
+             .page-template-template-evenements .event-post:hover,
+             .author-card > div:first-child > div:last-child p a:hover
 			{
 				color: <?php echo $code_color;?>;
 			}
@@ -271,14 +271,18 @@ function labs_by_sedoo_color_style() {
              body a.btn,
              .search-form .search-submit,
              div[id="em-wrapper"] h2,
-             .wp-block-quote p::first-letter
+             .wp-block-quote p::first-letter,
+             .author-card > div:first-child > div:not(.img-author)
             {
                 background: <?php echo $code_color;?>;
 			}
             
              .social-list li a:hover::before,
              .search-form .search-field:focus,
-             .search-form .search-field:active{
+             .search-form .search-field:active,
+             aside[id="stickyMenu"],
+             .bobinette
+             {
                  border-color: <?php echo $code_color;?>;
              }
              
@@ -288,16 +292,16 @@ function labs_by_sedoo_color_style() {
 				color: <?php echo $code_color;?>;
 			}
 
-            .site-branding h1 a,
-            .site-branding h1 span,
-            #cookie-notice .button:hover {
-                background-color: rgba(<?php echo $rgb_color[0].",".$rgb_color[1].",".$rgb_color[2].",.5)"; ?>;
-                color:<?php echo get_theme_mod( 'labs_by_sedoo_text_color_code' );?>;
+            # {
+                background-color: rgba(<?php echo $rgb_color[0].",".$rgb_color[1].",".$rgb_color[2].",.9)"; ?>;
             }
              
             ul[id="shortcuts"] li:hover button path{
                 fill: <?php echo $code_color;?>!important;
             }
+             .bobinette svg polyline{
+                 stroke: <?php echo $code_color; ?>;
+             }
          </style>
     <?php
 
