@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.3.7
+Version: 0.3.8
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -263,7 +263,7 @@ strong, b {
   font-weight: 800; }
 
 i {
-  font-style: italic; }
+  font-style: oblique; }
 
 button {
   cursor: pointer; }
@@ -324,7 +324,7 @@ body a.btn {
 /* QUOTE */
 .wp-block-quote {
   max-width: calc(100% - 150px);
-  margin: 70px auto;
+  margin: 90px auto;
   position: relative; }
   .wp-block-quote::before {
     content: "“";
@@ -881,7 +881,8 @@ header[id="cover"] {
     max-width: 700px;
     margin: 0 auto;
     padding: 0;
-    text-align: left; }
+    text-align: left;
+    z-index: 1; }
     .home header[id="cover"] .wrapper h1, .home header[id="cover"] .wrapper-content h1 {
       padding: 0;
       line-height: 1.1;
@@ -1136,7 +1137,7 @@ footer[id="colophon"] {
           -ms-flex-order: 3;
           order: 3;
           font-size: 1.2rem;
-          font-style: italic; }
+          font-style: oblique; }
     .single main article section {
       margin-bottom: 70px; }
       .single main article section p:first-child::first-letter {
@@ -1356,7 +1357,7 @@ div[id="em-wrapper"] h2 {
   .event-post > div > p {
     font-family: "Cormorant Infant", serif;
     font-size: 2.5rem;
-    font-style: italic;
+    font-style: oblique;
     text-decoration: none;
     margin-bottom: 10px;
     white-space: nowrap;
@@ -1417,7 +1418,7 @@ div[id="em-wrapper"] h2 {
 .single-event .wrapper header .post-meta, .single-event .wrapper-content header .post-meta {
   font-family: "Cormorant Infant", serif;
   font-size: calc(1.6rem * 2);
-  font-style: italic; }
+  font-style: oblique; }
 
 .single-event .btn {
   margin-top: 0;
@@ -1762,6 +1763,8 @@ ul[id="shortcuts"] {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none; }
+  .location.open.overlay .wrapper .leaflet-container .leaflet-control-zoom, .location.open.overlay .wrapper-content .leaflet-container .leaflet-control-zoom {
+    width: auto; }
 
 .location .wrapper, .location .wrapper-content {
   display: -webkit-box;
@@ -2072,7 +2075,7 @@ aside[id="stickyMenu"] {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   height: 100%;
-  background: #9d9fa2;
+  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2086,12 +2089,13 @@ aside[id="stickyMenu"] {
   padding: 5% 1%;
   -webkit-transform: translateX(-95%);
   -ms-transform: translateX(-95%);
-  transform: translateX(-95%); }
+  transform: translateX(-95%);
+  border-right: 3px solid #000; }
   aside[id="stickyMenu"].open {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none; }
-    aside[id="stickyMenu"].open .bobinette::after {
+    aside[id="stickyMenu"].open .bobinette svg {
       -webkit-transform: rotateZ(180deg);
       -ms-transform: rotate(180deg);
       transform: rotateZ(180deg); }
@@ -2104,23 +2108,20 @@ aside[id="stickyMenu"] {
     aside[id="stickyMenu"] > div p {
       font-family: "Montserrat", sans-serif;
       text-transform: uppercase;
-      font-size: 2.5rem;
-      color: #fff; }
+      font-size: 2.5rem; }
       aside[id="stickyMenu"] > div p::after {
         content: "";
         width: 30px;
         height: 3px;
-        background: #fff;
         display: block;
         margin: 10px 0 20px; }
     aside[id="stickyMenu"] > div [id="tocList"] li a {
       font-family: "Cormorant Infant", serif;
       font-size: 2.5rem;
-      border-bottom: dotted 1px #fff;
+      border-bottom: dotted 1px #000;
       padding: 20px 0;
       display: block;
-      margin-bottom: 10px;
-      color: #fff; }
+      margin-bottom: 10px; }
       aside[id="stickyMenu"] > div [id="tocList"] li a:hover {
         -webkit-transform: translateX(20px);
         -ms-transform: translateX(20px);
@@ -2134,9 +2135,9 @@ aside[id="stickyMenu"] {
         padding: 5px 0; }
 
 .bobinette {
-  background-color: #9d9fa2;
+  background-color: #fff;
   position: absolute;
-  right: -14%;
+  right: -60.5px;
   top: calc(50% - 15px);
   height: 40px;
   width: 40px;
@@ -2158,18 +2159,83 @@ aside[id="stickyMenu"] {
   align-items: center;
   -webkit-transition: 0.5s ease all;
   -o-transition: 0.5s ease all;
-  transition: 0.5s ease all; }
-  .bobinette::after {
-    content: "";
+  transition: 0.5s ease all;
+  border: 3px solid #000;
+  border-left: 0; }
+  .bobinette svg {
     height: 30px;
     width: 30px;
-    background-image: url("image/chevron.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none; }
+    .bobinette svg polyline {
+      fill: none;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-misterlimit: 10;
+      stroke: #000; }
+
+.author-header h1 {
+  margin-bottom: 0; }
+  .author-header h1::after {
+    display: none; }
+
+.author-header .h2, .author-header nav[id="burger-navigation"] .overlay .slick-slide .menu-item a, nav[id="burger-navigation"] .overlay .slick-slide .menu-item .author-header a {
+  margin-top: 0;
+  font-style: oblique; }
+
+.author-header::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 55px;
+  background: #000;
+  margin: 20px 0 50px; }
+
+.author-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .author-card > div {
+    width: calc(50% - 20px); }
+    .author-card > div:first-child > div:first-child {
+      height: 350px;
+      overflow: hidden; }
+      .author-card > div:first-child > div:first-child img {
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        margin: 0;
+        height: 100%; }
+    .author-card > div:first-child > div:last-child {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      width: 80%;
+      margin: -100px auto 0;
+      -webkit-box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      -webkit-transform: translateX(-25%);
+      -ms-transform: translateX(-25%);
+      transform: translateX(-25%); }
+      .author-card > div:first-child > div:last-child p {
+        margin-bottom: 5px; }
+        .author-card > div:first-child > div:last-child p a {
+          color: #fff;
+          text-decoration: underline; }
+          .author-card > div:first-child > div:last-child p a:hover {
+            background: #fff;
+            text-decoration: none; }
+    .author-card > div:last-child h2 {
+      margin-top: 0; }
+
+.author b {
+  display: inline-block;
+  margin-right: 5px; }
 
 /* RESPONSIVE */
 @media screen and (max-width: 1024px) {

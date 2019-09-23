@@ -94,6 +94,10 @@
                 opacity: 1;
                 @include transition-delay(0.6s);
                 @include transform(none);
+                
+                .leaflet-control-zoom{
+                    width: auto;
+                }
             }
         }   
 

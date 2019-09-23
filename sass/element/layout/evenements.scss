@@ -24,7 +24,7 @@ div[id="em-wrapper"]{
         > p{
             font-family: $second-title-family;
             font-size: $h3-size;
-            font-style: italic;
+            font-style: $italic;
             text-decoration: none;
             margin-bottom: 10px;
             white-space: nowrap;
