@@ -44,5 +44,11 @@ if( function_exists('acf_add_options_page') ) {
             'parent_slug'	=> 'theme-general-settings',
         ));
     }
-    
+    if( $options_theme && in_array('mentions-footer', $options_theme) ) {
+    	acf_add_options_sub_page(array(
+            'page_title' 	=> 'Pages Mentions Footer',
+            'menu_title'	=> 'Pages Mentions Footer',
+            'parent_slug'	=> 'theme-general-settings',
+        ));
+    }   
 }

@@ -7,12 +7,13 @@ aside[id="stickyMenu"]{
     min-width: 300px;
     box-shadow: $basic-box-shadow; 
     height: 100%;
-    background: $dark-grey;
+    background: $light-full;
     @include display-flex;
     @include flex-column;
     @include justify-content-center;
     padding: 5% 1%;
     @include transform(translateX(-95%));
+    border-right: 3px solid $dark;
     
     &.open{
         @include transform(none);
@@ -20,7 +21,7 @@ aside[id="stickyMenu"]{
         .bobinette{
             
             
-            &::after{
+            svg{
                 @include transform(rotateZ(180deg));
             }
         }
@@ -36,13 +37,11 @@ aside[id="stickyMenu"]{
             font-family: $main-title-family;
             text-transform: uppercase;
             font-size: $h3-size;
-            color: $light-full;
 
             &::after{
                 content: "";
                 width: 30px;
                 height: 3px;
-                background: $light-full;
                 display: block;
                 margin: 10px 0 20px;
             }
@@ -53,11 +52,10 @@ aside[id="stickyMenu"]{
                 a{
                     font-family: $second-title-family;
                     font-size: $h3-size;
-                    border-bottom: dotted 1px $light-full;
+                    border-bottom: dotted 1px $dark;
                     padding: 20px 0;
                     display: block;
                     margin-bottom: 10px;
-                    color: $light-full;
                     
                     &:hover{
                         @include transform(translateX(20px));
@@ -79,9 +77,9 @@ aside[id="stickyMenu"]{
 }
 
 .bobinette{
-    background-color: $dark-grey;
+    background-color: $light-full;
     position: absolute;
-    right: -14%;
+    right: -60.5px;
     top: calc(50% - 15px);
     height: 40px;
     width: 40px;
@@ -92,16 +90,21 @@ aside[id="stickyMenu"]{
     @include justify-content-center;
     @include align-items-center;
     @include basic-transition;
+    border: 3px solid $dark;
+    border-left: 0;
     
-    &::after{
-        content: "";
+    svg{
         height: 30px;
         width: 30px;
-        background-image: url('image/chevron.svg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         @include transform(none);
+        
+        polyline{
+            fill: none;
+            stroke-width: 4;
+            stroke-linecap: round;
+            stroke-misterlimit: 10;
+            stroke: $dark;
+        }
     }
     
 

@@ -241,7 +241,7 @@ strong, b{
     font-weight: $bold;
 }
 i{
-    font-style: italic;
+    font-style: $italic;
 }
 button{
     cursor: pointer;
@@ -313,7 +313,7 @@ body a.btn{
 /* QUOTE */
 .wp-block-quote{
     max-width: calc(100% - 150px);
-    margin: 70px auto;
+    margin: 90px auto;
     position: relative;
     
     &::before{
@@ -337,7 +337,7 @@ body a.btn{
     p{
         font-size: calc(#{$h2-size} / 1.4);
         font-family: $second-title-family;
-        font-style: oblique;
+        font-style: $italic;
         
         &::first-letter{
             padding: 10px;

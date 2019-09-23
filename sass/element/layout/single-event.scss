@@ -4,7 +4,7 @@
             .post-meta{
                 font-family: $second-title-family;
                 font-size: calc(#{$font-size} * 2);
-                font-style: italic;
+                font-style: $italic;
             }
         }
     }
