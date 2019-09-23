@@ -10,7 +10,6 @@ ul[id="primary-menu"]{
             
             .sub-menu{
                 opacity: 1;
-                max-height: 500px;
                 z-index: 300;
                 @include transform(scale(1, 1));
                 

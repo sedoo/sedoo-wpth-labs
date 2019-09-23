@@ -32,6 +32,9 @@
                 <div>
                     <p><b><?php the_field('contact_laboratoire', 'option'); ?></b></p>
                     <a href="tel:<?php the_field('telephone_contact', 'option'); ?>"><?php the_field('telephone_contact', 'option'); ?></a>
+                    <?php if(get_field('fax_contact', 'option')) { ?>
+                        <p>Fax : <?php the_field('fax_contact', 'option'); ?></p>
+                    <?php } ?>
                     <a href="mailto:<?php the_field('mail_contact', 'option'); ?>"><?php the_field('mail_contact', 'option'); ?></a>
                 </div>
             </div>
@@ -80,7 +83,7 @@
                     <?php endif; ?>
                 </div>
                 <div class="partners-list">
-                    <h2>Partenaires</h2>
+                    <h2>Tutelles</h2>
 
                     <?php if( have_rows('partenaires', 'option') ): ?>
 
