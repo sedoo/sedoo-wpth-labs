@@ -116,7 +116,7 @@
         </div>
         <div class="copyright">
             <div class="site-info wrapper">
-                <p>© 2019 - Data Terra, tous droits réservés.</p>
+                <p>© Copyright <?php echo get_theme_mod('labs_by_sedoo_copyright');?></p>
                 <p>
                     <?php if(get_field("politique_de_confidentialite", "option")){ ?>
                         <a href="<?php the_field('politique_de_confidentialite', 'option'); ?>">Politique de confidentialité</a>
