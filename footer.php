@@ -117,9 +117,17 @@
         <div class="copyright">
             <div class="site-info wrapper">
                 <p>© 2019 - Data Terra, tous droits réservés.</p>
-                <p><a href="#">Politique de confidentialité</a>•
-                <a href="#">Mentions légales</a>•
-                <a href="#">Sitemap</a></p>
+                <p>
+                    <?php if(get_field("politique_de_confidentialite", "option")){ ?>
+                        <a href="<?php the_field('politique_de_confidentialite', 'option'); ?>">Politique de confidentialité</a>
+                    <?php } ?>
+                    <?php if(get_field("mentions_legales", "option")){ ?>
+                        • <a href="<?php the_field('mentions_legales', 'option'); ?>">Mentions légales</a>
+                    <?php } ?>
+                    <?php if(get_field("sitemap", 'option')) { ?>
+                        • <a href="<?php the_field('sitemap', 'option'); ?>">Sitemap</a>
+                    <?php } ?>
+                </p>
             </div><!-- .site-info -->
         </div>
 	</footer><!-- #colophon -->
