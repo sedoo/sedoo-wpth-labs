@@ -20,7 +20,10 @@
             <p><b><?php the_field('nom_laboratoire', 'option'); ?></b></p>
             <address><?php the_field('adresse', 'option'); ?></address>
             <p><b><?php the_field('contact_laboratoire', 'option'); ?></b></p>
-            <p><a href="tel:<?php the_field('telephone_contact', 'option'); ?>"><?php the_field('telephone_contact', 'option'); ?></a></p>
+            <p>Tel : <a href="tel:<?php the_field('telephone_contact', 'option'); ?>"><?php the_field('telephone_contact', 'option'); ?></a></p>
+            <?php if(get_field('fax_contact', 'option')) { ?>
+                <p>Fax : <?php the_field('fax_contact', 'option'); ?></p>
+            <?php } ?>
             <p><a href="mailto:<?php the_field('mail_contact', 'option'); ?>"><?php the_field('mail_contact', 'option'); ?></a></p>
         </div>
         <?php the_field('map_shortcode', 'option'); ?>

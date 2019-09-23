@@ -116,6 +116,78 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
+	'key' => 'group_5d88a31444f4e',
+	'title' => 'Liens Mentions Footer',
+	'fields' => array(
+		array(
+			'key' => 'field_5d88a326e8d22',
+			'label' => 'Politique de confidentialité',
+			'name' => 'politique_de_confidentialite',
+			'type' => 'url',
+			'instructions' => 'Saisir l\'url vers la page "Politique de confidentialité"',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5d88a374e8d24',
+			'label' => 'Mentions légales',
+			'name' => 'mentions_legales',
+			'type' => 'url',
+			'instructions' => 'Saisir le lien vers la page "Mentions légales"',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5d88a364e8d23',
+			'label' => 'Sitemap',
+			'name' => 'sitemap',
+			'type' => 'url',
+			'instructions' => 'Saisir l\'url vers la page "Sitemap"',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-pages-mentions-footer',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
 	'key' => 'group_5d6e45131ccd4',
 	'title' => 'Location Settings',
 	'fields' => array(
@@ -207,6 +279,25 @@ acf_add_local_field_group(array(
 			'type' => 'text',
 			'instructions' => 'Saisir le téléphone du contact au sein du laboratoire',
 			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5d88c18b0b677',
+			'label' => 'Fax',
+			'name' => 'fax_contact',
+			'type' => 'text',
+			'instructions' => 'Saisir le numéro de fax',
+			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
 				'width' => '',
@@ -379,10 +470,11 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'contact' => 'Contact et localisation',
-				'reseaux' => 'Réseaux sociaux',
+				'contact' => 'Contact et Localisation',
+				'reseaux' => 'Réseaux Sociaux',
 				'partenaires' => 'Partenaires',
 				'annuaire' => 'Annuaire',
+				'mentions-footer' => 'Pages Mentions Footer',
 			),
 			'allow_custom' => 0,
 			'default_value' => array(
