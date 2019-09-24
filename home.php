@@ -49,9 +49,6 @@ $categories = get_the_terms( $post->ID, 'category');
 			endif; ?>
 		
 		</main><!-- #main -->
-		<?php 
-		// get_sidebar();
-		?>
 	</div><!-- #content-area -->
 <?php
 get_footer();
