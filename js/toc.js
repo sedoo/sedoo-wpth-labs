@@ -12,7 +12,7 @@ jQuery(document).ready(function(){
     //jQuery('.navLeft .current-menu-item').after(navSommaire);
 
 	// Sur chaque :header
-	jQuery('.wrapper-layout h2, .wrapper-layout h3').each(function(){
+	jQuery('.wrapper-layout h2, .wrapper-layout h3, .wrapper-content h2, .wrapper-content h3').each(function(){
 
         // création des ancres, insertion avant les headers
         jQuery( '<a id="toc' + i + '"></a>' ).insertBefore( jQuery(this) );
