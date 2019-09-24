@@ -18,22 +18,27 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
             <div class="wrapper-layout">
-                <?php if (have_posts()): the_post(); ?>
+                <?php //if (have_posts()): the_post(); ?>
                 <div class="author-header">
-                    <h1>
+                    <h1> 
                         <?php 
-                            echo get_the_author_meta('user_firstname');
+                            //echo get_the_author_meta('user_firstname', get_the_author_meta('ID'));
                         ?> 
                         <?php
-                            echo get_the_author_meta('user_lastname');    
+                            //echo get_the_author_meta('user_lastname');    
                         ?>
+                        John Doe
                     </h1>
-                    <p class="h2"><?php the_field('poste', 'user_'.get_the_author_meta('ID'));?></p>
+                    <p class="h2"><?php //the_field('poste', 'user_'.get_the_author_meta('ID'));?>
+                        Chercheur IRAP<br>
+                        <small>Galaxies, Astrophysique des Hautes Energies et Cosmologie</small>
+                    </p>
+                    
                 </div>
                 <div class="author-card">
                     <div>
                         <div class="img-author">
-                            <img src="<?php the_field('photo_auteur', 'user_'.get_the_author_meta('ID'));?>"/>
+                            <img src="<?php echo get_template_directory_uri() . '/image/john-doe.jpg'; ?>"/>
                         </div>
                         <div>
                             <p><b>Email :</b>
@@ -54,7 +59,9 @@ get_header();
                     </div>
                     <div>
                         <h2>À propos de l'auteur</h2>
-                        <p><?php echo get_the_author_meta('user_description'); ?></p>
+                        <p><?php //echo get_the_author_meta('user_description'); ?>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque turpis et arcu fermentum, eu scelerisque odio accumsan. Mauris neque sem, pulvinar nec felis ultricies, varius sagittis neque. Ut molestie neque id dui tincidunt venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus vitae sollicitudin dui. Phasellus ac tempus dui. Morbi iaculis nulla ac nisl scelerisque euismod. Quisque nec massa id arcu finibus scelerisque ac quis mauris. Pellentesque imperdiet tincidunt lacus, ac porttitor nibh pulvinar semper. Sed aliquam auctor augue, vel fermentum nulla varius quis. Sed fermentum nunc a quam pulvinar imperdiet. Etiam luctus pretium convallis. Praesent sed congue orci. Proin fermentum sem id nunc dignissim mollis. Sed viverra lacus vel felis placerat ornare. Cras tincidunt non sem eget vehicula. 
+                        </p>
                     </div>
                 </div>
                 <section class="author-content wrapper-content">
@@ -134,7 +141,8 @@ get_header();
                         <h2>Réseaux Métiers</h2>
                     </div>
                 </section>
-                <?php endif; ?>
+                                
+                <?php //endif; ?>
                 
             </div>
 		</main><!-- #main -->

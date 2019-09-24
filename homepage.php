@@ -55,7 +55,9 @@ get_header();
                     
                 
             ?>
+            <h2><?php echo __('Les dernières actualités', 'sedoo-wpth-labs') ?></h2>
             <section role="listNews" class="post-wrapper">
+                
                 <?php
 
                 foreach ($postsList as $post) :
@@ -68,7 +70,7 @@ get_header();
                 endforeach;
                 ?>	
             </section>
-            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="btn">Voir toutes les actualités</a>
+            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="btn"><?php echo __('Voir toutes les actualités', 'sedoo-wpth-labs'); ?></a>
 
             <?php 
                 }

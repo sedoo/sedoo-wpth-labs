@@ -247,7 +247,9 @@ function labs_by_sedoo_color_style() {
              .search-form .search-field:active,
              body a.btn:hover,
              .page-template-template-evenements .event-post:hover,
-             .author-card > div:first-child > div:last-child p a:hover
+             .author-card > div:first-child > div:last-child p a:hover,
+             .search-annuaire input[type="search"]:focus,
+             .search-annuaire button:hover
 			{
 				color: <?php echo $code_color;?>;
 			}
@@ -272,7 +274,8 @@ function labs_by_sedoo_color_style() {
              .search-form .search-submit,
              div[id="em-wrapper"] h2,
              .wp-block-quote p::first-letter,
-             .author-card > div:first-child > div:not(.img-author)
+             .author-card > div:first-child > div:not(.img-author),
+             .search-annuaire button
             {
                 background: <?php echo $code_color;?>;
 			}
@@ -281,7 +284,8 @@ function labs_by_sedoo_color_style() {
              .search-form .search-field:focus,
              .search-form .search-field:active,
              aside[id="stickyMenu"],
-             .bobinette
+             .bobinette,
+             .search-annuaire input[type="search"]:focus
              {
                  border-color: <?php echo $code_color;?>;
              }

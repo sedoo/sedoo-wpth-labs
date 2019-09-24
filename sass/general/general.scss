@@ -260,7 +260,11 @@ button{
     padding: 5px 10px;
 }
 
-
+small{
+    font-size: 0.5em;
+    font-family: $main-font-family;
+    font-style: normal;
+}
 
 /****************************
 ****** BLOCK GUTENBERG ******
