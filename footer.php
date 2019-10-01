@@ -137,6 +137,8 @@
 </div><!-- #page -->
 <?php get_template_part( 'template-parts/shortcut', 'page' ); ?>
 <?php wp_footer(); ?>
-
+<script>
+new Darkmode().showWidget();   
+</script>
 </body>
 </html>

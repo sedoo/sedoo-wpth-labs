@@ -1,5 +1,5 @@
 @media screen and (max-width: 1024px){
-    .single{
+    .single-post{
         header[id="cover"]{
             height: 45vh;
         }
@@ -74,7 +74,7 @@
     }
 }
 @media screen and (max-width: 767px) and (orientation:portrait){
-    .single{
+    .single-post{
         main{
             article{
                 padding: 30px;
