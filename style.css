@@ -888,7 +888,10 @@ header[id="cover"] {
     top: 25px;
     left: 25px;
     width: calc(100% - 50px);
-    height: calc(100% - 50px); }
+    height: calc(100% - 50px);
+    background: -webkit-radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    background: -o-radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)); }
   .home header[id="cover"] .wrapper, .home header[id="cover"] .wrapper-content {
     max-width: 700px;
     margin: 0 auto;
@@ -1425,14 +1428,16 @@ div[id="em-wrapper"] h2 {
   .page-template-template-evenements .event-post:hover {
     background: none; }
 
-.single-event .wrapper header .post-meta, .single-event .wrapper-content header .post-meta {
+.single-event .wrapper-layout header .post-meta {
   font-family: "Cormorant Infant", serif;
   font-size: calc(1.6rem * 2);
-  font-style: oblique; }
+  font-style: oblique;
+  margin-bottom: 0; }
 
 .single-event .btn {
   margin-top: 0;
-  font-family: "Poppins", sans-serif; }
+  font-family: "Poppins", sans-serif;
+  max-width: 100%; }
   .single-event .btn::before {
     display: inline-block;
     content: "";
@@ -1448,6 +1453,31 @@ div[id="em-wrapper"] h2 {
   .single-event .btn:hover::before {
     -webkit-filter: invert(100%);
     filter: invert(100%); }
+
+.contextual-sidebar .event-informations p, .contextual-sidebar .event-informations address {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .contextual-sidebar .event-informations p a, .contextual-sidebar .event-informations address a {
+    display: block;
+    width: 95%; }
+  .contextual-sidebar .event-informations p::before, .contextual-sidebar .event-informations address::before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    margin-right: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url("image/location.svg");
+    position: relative;
+    top: 1px; }
+  .contextual-sidebar .event-informations p.event-date::before, .contextual-sidebar .event-informations address.event-date::before {
+    background: url("image/date.svg"); }
+  .contextual-sidebar .event-informations p.event-time::before, .contextual-sidebar .event-informations address.event-time::before {
+    background: url("image/time.svg"); }
 
 .post {
   width: 100%;

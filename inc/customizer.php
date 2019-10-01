@@ -249,7 +249,8 @@ function labs_by_sedoo_color_style() {
              .page-template-template-evenements .event-post:hover,
              .author-card > div:first-child > div:last-child p a:hover,
              .search-annuaire input[type="search"]:focus,
-             .search-annuaire button:hover
+             .search-annuaire button:hover,
+             .single-event .wrapper-layout header .post-meta
 			{
 				color: <?php echo $code_color;?>;
 			}
