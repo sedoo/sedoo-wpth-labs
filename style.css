@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.4.1
+Version: 0.4.2
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -888,7 +888,10 @@ header[id="cover"] {
     top: 25px;
     left: 25px;
     width: calc(100% - 50px);
-    height: calc(100% - 50px); }
+    height: calc(100% - 50px);
+    background: -webkit-radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    background: -o-radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)); }
   .home header[id="cover"] .wrapper, .home header[id="cover"] .wrapper-content {
     max-width: 700px;
     margin: 0 auto;
@@ -1061,10 +1064,10 @@ footer[id="colophon"] {
 .archives.wrapper, .archives.wrapper-content {
   max-width: 1400px; }
 
-.single header[id="cover"] {
+.single-post header[id="cover"], .single-event header[id="cover"] {
   margin-bottom: -140px; }
 
-.single .wrapper-layout {
+.single-post .wrapper-layout, .single-event .wrapper-layout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1072,7 +1075,7 @@ footer[id="colophon"] {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
-.single main {
+.single-post main, .single-event main {
   width: calc(66.6% - 20px);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1080,7 +1083,7 @@ footer[id="colophon"] {
   overflow: visible;
   z-index: 1;
   margin-bottom: 70px; }
-  .single main::before, .single main::after {
+  .single-post main::before, .single-post main::after, .single-event main::before, .single-event main::after {
     content: "";
     position: absolute;
     left: 0;
@@ -1094,20 +1097,20 @@ footer[id="colophon"] {
     height: 310px;
     -webkit-filter: blur(11px);
     filter: blur(11px); }
-  .single main::after {
+  .single-post main::after, .single-event main::after {
     top: auto;
     bottom: -5px;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0), black);
     background: -o-linear-gradient(rgba(0, 0, 0, 0), black);
     background: linear-gradient(rgba(0, 0, 0, 0), black); }
-  .single main article {
+  .single-post main article, .single-event main article {
     background: #fff;
     padding: 65px 50px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     height: 100%; }
-    .single main article header {
+    .single-post main article header, .single-event main article header {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1115,11 +1118,11 @@ footer[id="colophon"] {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column; }
-      .single main article header h1 {
+      .single-post main article header h1, .single-event main article header h1 {
         -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
         order: 2; }
-      .single main article header div {
+      .single-post main article header div, .single-event main article header div {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1129,7 +1132,7 @@ footer[id="colophon"] {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between; }
-        .single main article header div .post-category {
+        .single-post main article header div .post-category, .single-event main article header div .post-category {
           -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
           order: 1;
@@ -1139,15 +1142,15 @@ footer[id="colophon"] {
           padding: 5px;
           font-family: "Montserrat", sans-serif;
           font-size: 1.2rem; }
-        .single main article header div .post-meta {
+        .single-post main article header div .post-meta, .single-event main article header div .post-meta {
           -webkit-box-ordinal-group: 4;
           -ms-flex-order: 3;
           order: 3;
           font-size: 1.2rem;
           font-style: oblique; }
-    .single main article section {
+    .single-post main article section, .single-event main article section {
       margin-bottom: 70px; }
-      .single main article section p:first-child::first-letter {
+      .single-post main article section p:first-child::first-letter, .single-event main article section p:first-child::first-letter {
         font-size: 4.5rem;
         font-family: "Montserrat", sans-serif;
         float: left;
@@ -1425,14 +1428,16 @@ div[id="em-wrapper"] h2 {
   .page-template-template-evenements .event-post:hover {
     background: none; }
 
-.single-event .wrapper header .post-meta, .single-event .wrapper-content header .post-meta {
+.single-event .wrapper-layout header .post-meta {
   font-family: "Cormorant Infant", serif;
   font-size: calc(1.6rem * 2);
-  font-style: oblique; }
+  font-style: oblique;
+  margin-bottom: 0; }
 
 .single-event .btn {
   margin-top: 0;
-  font-family: "Poppins", sans-serif; }
+  font-family: "Poppins", sans-serif;
+  max-width: 100%; }
   .single-event .btn::before {
     display: inline-block;
     content: "";
@@ -1448,6 +1453,31 @@ div[id="em-wrapper"] h2 {
   .single-event .btn:hover::before {
     -webkit-filter: invert(100%);
     filter: invert(100%); }
+
+.contextual-sidebar .event-informations p, .contextual-sidebar .event-informations address {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .contextual-sidebar .event-informations p a, .contextual-sidebar .event-informations address a {
+    display: block;
+    width: 95%; }
+  .contextual-sidebar .event-informations p::before, .contextual-sidebar .event-informations address::before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    margin-right: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url("image/location.svg");
+    position: relative;
+    top: 1px; }
+  .contextual-sidebar .event-informations p.event-date::before, .contextual-sidebar .event-informations address.event-date::before {
+    background: url("image/date.svg"); }
+  .contextual-sidebar .event-informations p.event-time::before, .contextual-sidebar .event-informations address.event-time::before {
+    background: url("image/time.svg"); }
 
 .post {
   width: 100%;
@@ -2498,12 +2528,12 @@ aside[id="stickyMenu"] {
     grid-template-columns: 100%; } }
 
 @media screen and (max-width: 1024px) {
-  .single header[id="cover"] {
+  .single-post header[id="cover"] {
     height: 45vh; }
-  .single .wrapper-layout {
+  .single-post .wrapper-layout {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-  .single main {
+  .single-post main {
     width: 100%;
     margin-bottom: 0; }
   .contextual-sidebar {
@@ -2542,7 +2572,7 @@ aside[id="stickyMenu"] {
     height: 180px; } }
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
-  .single main article {
+  .single-post main article {
     padding: 30px; }
   .read-more-article .post-loop .post-preview {
     width: 100%; }
@@ -2790,3 +2820,211 @@ aside[id="stickyMenu"] {
             ul[id="burger-menu"] .menu-item .sub-menu .menu-item .sub-menu .menu-item .sub-menu {
               padding-left: 20px;
               top: 0; } }
+
+body.darkmode--activated {
+  /* HEADER */
+  /* SHORTCUTS */
+  /* LAYOUT */
+  /* FOOTER */
+  /* CUSTOMIZER */ }
+  body.darkmode--activated header[id="masthead"] {
+    background: #000; }
+    body.darkmode--activated header[id="masthead"] .wrapper .site-branding, body.darkmode--activated header[id="masthead"] .wrapper-content .site-branding {
+      -webkit-filter: invert(100%) grayscale(100%);
+      filter: invert(100%) grayscale(100%); }
+    body.darkmode--activated header[id="masthead"] .wrapper nav[id="primary-navigation"] ul, body.darkmode--activated header[id="masthead"] .wrapper-content nav[id="primary-navigation"] ul {
+      mix-blend-mode: normal; }
+      body.darkmode--activated header[id="masthead"] .wrapper nav[id="primary-navigation"] ul li a, body.darkmode--activated header[id="masthead"] .wrapper-content nav[id="primary-navigation"] ul li a {
+        color: #fff;
+        mix-blend-mode: normal; }
+    body.darkmode--activated header[id="masthead"] .wrapper nav[id="burger-navigation"] .burger, body.darkmode--activated header[id="masthead"] .wrapper-content nav[id="burger-navigation"] .burger {
+      border-color: #fff; }
+      body.darkmode--activated header[id="masthead"] .wrapper nav[id="burger-navigation"] .burger::before, body.darkmode--activated header[id="masthead"] .wrapper-content nav[id="burger-navigation"] .burger::before, body.darkmode--activated header[id="masthead"] .wrapper nav[id="burger-navigation"] .burger::after, body.darkmode--activated header[id="masthead"] .wrapper-content nav[id="burger-navigation"] .burger::after {
+        background: #fff; }
+      body.darkmode--activated header[id="masthead"] .wrapper nav[id="burger-navigation"] .burger label, body.darkmode--activated header[id="masthead"] .wrapper-content nav[id="burger-navigation"] .burger label {
+        color: #fff; }
+      body.darkmode--activated header[id="masthead"] .wrapper nav[id="burger-navigation"] .burger .burger-icon span, body.darkmode--activated header[id="masthead"] .wrapper-content nav[id="burger-navigation"] .burger .burger-icon span {
+        background: #fff; }
+  body.darkmode--activated.menu-expanded nav[id="burger-navigation"] .overlay {
+    background: rgba(0, 0, 0, 0.8); }
+    body.darkmode--activated.menu-expanded nav[id="burger-navigation"] .overlay .slick-slide .menu-item a {
+      color: #fff; }
+      body.darkmode--activated.menu-expanded nav[id="burger-navigation"] .overlay .slick-slide .menu-item a::after {
+        background: #fff; }
+  body.darkmode--activated ul[id="shortcuts"] li {
+    -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+    body.darkmode--activated ul[id="shortcuts"] li:hover {
+      background: #000; }
+      body.darkmode--activated ul[id="shortcuts"] li:hover button {
+        color: #fff; }
+      body.darkmode--activated ul[id="shortcuts"] li:hover svg path, body.darkmode--activated ul[id="shortcuts"] li:hover svg circle, body.darkmode--activated ul[id="shortcuts"] li:hover svg line, body.darkmode--activated ul[id="shortcuts"] li:hover svg polyline {
+        fill: #fff !important; }
+  body.darkmode--activated .close label {
+    color: #fff; }
+  body.darkmode--activated .close button span {
+    background: #fff; }
+  body.darkmode--activated .overlay {
+    background: rgba(0, 0, 0, 0.8); }
+    body.darkmode--activated .overlay.location .wrapper .information-location img, body.darkmode--activated .overlay.location .wrapper-content .information-location img {
+      -webkit-filter: invert(100%) grayscale(100%);
+      filter: invert(100%) grayscale(100%); }
+    body.darkmode--activated .overlay.location .wrapper .information-location p, body.darkmode--activated .overlay.location .wrapper-content .information-location p, body.darkmode--activated .overlay.location .wrapper .information-location address, body.darkmode--activated .overlay.location .wrapper-content .information-location address, body.darkmode--activated .overlay.location .wrapper .information-location a, body.darkmode--activated .overlay.location .wrapper-content .information-location a {
+      color: #fff; }
+    body.darkmode--activated .overlay.search-form h2 {
+      color: #fff; }
+    body.darkmode--activated .overlay.search-form .search-form .search-field {
+      border-color: #fff;
+      color: #fff; }
+  body.darkmode--activated img {
+    mix-blend-mode: normal; }
+  body.darkmode--activated .post {
+    background: #000;
+    -webkit-box-shadow: 0 7px 5px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 7px 5px rgba(255, 255, 255, 0.3); }
+    body.darkmode--activated .post .entry-content h2, body.darkmode--activated .post .entry-content p, body.darkmode--activated .post .entry-footer h2, body.darkmode--activated .post .entry-footer p {
+      color: #fff; }
+  body.darkmode--activated.single-post main::before, body.darkmode--activated.single-event main::before {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(rgba(0, 0, 0, 0)));
+    background: -webkit-linear-gradient(#fff, rgba(0, 0, 0, 0));
+    background: -o-linear-gradient(#fff, rgba(0, 0, 0, 0));
+    background: linear-gradient(#fff, rgba(0, 0, 0, 0)); }
+  body.darkmode--activated.single-post main::after, body.darkmode--activated.single-event main::after {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#fff));
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), #fff);
+    background: -o-linear-gradient(rgba(0, 0, 0, 0), #fff);
+    background: linear-gradient(rgba(0, 0, 0, 0), #fff); }
+  body.darkmode--activated.single-post main article, body.darkmode--activated.single-event main article {
+    background: #000;
+    color: #fff; }
+  body.darkmode--activated.single-post .contextual-sidebar .reading-time .eta-container .eta, body.darkmode--activated.single-event .contextual-sidebar .reading-time .eta-container .eta {
+    color: #fff; }
+  body.darkmode--activated aside[id="stickyMenu"] {
+    background: #000; }
+    body.darkmode--activated aside[id="stickyMenu"] .bobinette {
+      background: #000; }
+    body.darkmode--activated aside[id="stickyMenu"] > div p {
+      color: #fff; }
+    body.darkmode--activated aside[id="stickyMenu"] > div [id="tocList"] li a {
+      color: #fff; }
+  body.darkmode--activated .nav-box .nav-box-chevron {
+    mix-blend-mode: normal;
+    -webkit-box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5); }
+  body.darkmode--activated .nav-box .card-nav {
+    background: #000;
+    -webkit-box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5); }
+    body.darkmode--activated .nav-box .card-nav p {
+      color: #fff; }
+  body.darkmode--activated .wp-block-quote {
+    color: #fff; }
+  body.darkmode--activated footer[id="colophon"] .infos-pratiques img {
+    -webkit-filter: invert(100%) grayscale(100%);
+    filter: invert(100%) grayscale(100%); }
+  body.darkmode--activated .social-list li a::before {
+    border-color: #fff; }
+  body.darkmode--activated .social-list li a::after {
+    -webkit-filter: invert(100%);
+    filter: invert(100%); }
+  body.darkmode--activated .partners-list ul li img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
+  body.darkmode--activated .post:hover .group-content .entry-content h2,
+  body.darkmode--activated ul[id="shortcuts"] li:hover button,
+  body.darkmode--activated nav[id="burger-navigation"] .overlay .slick-slide .menu-item a:hover,
+  body.darkmode--activated .footer-menu ul[id="primary-menu"] .menu-item a,
+  body.darkmode--activated .footer-categories li a:hover,
+  body.darkmode--activated .read-more-article .post-loop .post-preview:hover h3,
+  body.darkmode--activated .wrapper-content a,
+  body.darkmode--activated .wrapper-layout a,
+  body.darkmode--activated .copyright .wrapper.site-info a,
+  body.darkmode--activated .copyright .site-info.wrapper-content a,
+  body.darkmode--activated .search-form .search-submit:hover,
+  body.darkmode--activated .search-form .search-field:focus,
+  body.darkmode--activated .search-form .search-field:active,
+  body.darkmode--activated body a.btn:hover,
+  body.darkmode--activated .page-template-template-evenements .event-post:hover,
+  body.darkmode--activated .author-card > div:first-child > div:last-child p a:hover,
+  body.darkmode--activated .search-annuaire input[type="search"]:focus,
+  body.darkmode--activated .search-annuaire button:hover,
+  body.darkmode--activated nav[id="primary-navigation"] ul li:hover a,
+  body.darkmode--activated ul[id="primary-menu"] .menu-item .sub-menu,
+  body.darkmode--activated ul[id="shortcuts"] li,
+  body.darkmode--activated .post-horizontal .entry-header p,
+  body.darkmode--activated .post:nth-child(4n)::before,
+  body.darkmode--activated .post:nth-child(8n)::before,
+  body.darkmode--activated .social-list li a:hover::before,
+  body.darkmode--activated .read-more-article h2,
+  body.darkmode--activated .wrapper-content a:hover,
+  body.darkmode--activated .wrapper-layout a:hover,
+  body.darkmode--activated ::-moz-selection,
+  body.darkmode--activated -moz-::-moz-selection,
+  body.darkmode--activated .copyright .wrapper.site-info a:hover,
+  body.darkmode--activated .copyright .site-info.wrapper-content a:hover,
+  body.darkmode--activated body a.btn,
+  body.darkmode--activated .search-form .search-submit,
+  body.darkmode--activated div[id="em-wrapper"] h2,
+  body.darkmode--activated .wp-block-quote p::first-letter,
+  body.darkmode--activated .author-card > div:first-child > div:not(.img-author),
+  body.darkmode--activated .search-annuaire button,
+  body.darkmode--activated .social-list li a:hover::before,
+  body.darkmode--activated .search-form .search-field:focus,
+  body.darkmode--activated .search-form .search-field:active,
+  body.darkmode--activated .search-annuaire input[type="search"]:focus,
+  body.darkmode--activated a:hover,
+  body.darkmode--activated a:focus,
+  body.darkmode--activated a:active,
+  body.darkmode--activated ul[id="shortcuts"] li:hover button path,
+  body.darkmode--activated .bobinette svg polyline,
+  body.darkmode--activated .contextual-sidebar .post-author .img-author {
+    mix-blend-mode: difference; }
+  body.darkmode--activated .post:hover .group-content .entry-content h2,
+  body.darkmode--activated ul[id="shortcuts"] li:hover button,
+  body.darkmode--activated nav[id="burger-navigation"] .overlay .slick-slide .menu-item a:hover,
+  body.darkmode--activated .footer-menu ul[id="primary-menu"] .menu-item a,
+  body.darkmode--activated .footer-categories li a:hover,
+  body.darkmode--activated .read-more-article .post-loop .post-preview:hover h3,
+  body.darkmode--activated .wrapper-content a,
+  body.darkmode--activated .wrapper-layout a,
+  body.darkmode--activated .copyright .wrapper.site-info a,
+  body.darkmode--activated .copyright .site-info.wrapper-content a,
+  body.darkmode--activated .search-form .search-submit:hover,
+  body.darkmode--activated .search-form .search-field:focus,
+  body.darkmode--activated .search-form .search-field:active,
+  body.darkmode--activated body a.btn:hover,
+  body.darkmode--activated .page-template-template-evenements .event-post:hover,
+  body.darkmode--activated .author-card > div:first-child > div:last-child p a:hover,
+  body.darkmode--activated .search-annuaire input[type="search"]:focus,
+  body.darkmode--activated .search-annuaire button:hover,
+  body.darkmode--activated nav[id="primary-navigation"] ul li:hover a,
+  body.darkmode--activated ul[id="primary-menu"] .menu-item .sub-menu,
+  body.darkmode--activated ul[id="shortcuts"] li,
+  body.darkmode--activated .post-horizontal .entry-header p,
+  body.darkmode--activated .post:nth-child(4n)::before,
+  body.darkmode--activated .post:nth-child(8n)::before,
+  body.darkmode--activated .social-list li a:hover::before,
+  body.darkmode--activated .read-more-article h2,
+  body.darkmode--activated .wrapper-content a:hover,
+  body.darkmode--activated .wrapper-layout a:hover,
+  body.darkmode--activated ::selection,
+  body.darkmode--activated -moz-::selection,
+  body.darkmode--activated .copyright .wrapper.site-info a:hover,
+  body.darkmode--activated .copyright .site-info.wrapper-content a:hover,
+  body.darkmode--activated body a.btn,
+  body.darkmode--activated .search-form .search-submit,
+  body.darkmode--activated div[id="em-wrapper"] h2,
+  body.darkmode--activated .wp-block-quote p::first-letter,
+  body.darkmode--activated .author-card > div:first-child > div:not(.img-author),
+  body.darkmode--activated .search-annuaire button,
+  body.darkmode--activated .social-list li a:hover::before,
+  body.darkmode--activated .search-form .search-field:focus,
+  body.darkmode--activated .search-form .search-field:active,
+  body.darkmode--activated .search-annuaire input[type="search"]:focus,
+  body.darkmode--activated a:hover,
+  body.darkmode--activated a:focus,
+  body.darkmode--activated a:active,
+  body.darkmode--activated ul[id="shortcuts"] li:hover button path,
+  body.darkmode--activated .bobinette svg polyline,
+  body.darkmode--activated .contextual-sidebar .post-author .img-author {
+    mix-blend-mode: difference; }
