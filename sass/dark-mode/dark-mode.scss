@@ -64,7 +64,7 @@ body.darkmode--activated{
     /* SHORTCUTS */
     ul[id="shortcuts"]{
         li{
-            box-shadow: 0 0 5px rbga(0,0,0,0.3);
+            box-shadow: 0 0 5px rgba(255,255,255,0.3);
             
             &:hover{
                 background: $dark;
@@ -205,15 +205,24 @@ body.darkmode--activated{
                 filter: invert(100%) grayscale(100%);
             }
         }
-        .social-list{
+    }
+    .social-list{
+        li{
+            a{
+                &::before{
+                    border-color: $light-full;
+                }
+                &::after{
+                    filter: invert(100%);
+                }
+            }
+        }
+    }   
+    .partners-list{
+        ul{
             li{
-                a{
-                    &::before{
-                        border-color: $light-full;
-                    }
-                    &::after{
-                        filter: invert(100%);
-                    }
+                img{
+                    filter: grayscale(100%);
                 }
             }
         }

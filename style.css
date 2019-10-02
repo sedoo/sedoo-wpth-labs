@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.4.1
+Version: 0.4.2
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -2852,8 +2852,8 @@ body.darkmode--activated {
       body.darkmode--activated.menu-expanded nav[id="burger-navigation"] .overlay .slick-slide .menu-item a::after {
         background: #fff; }
   body.darkmode--activated ul[id="shortcuts"] li {
-    -webkit-box-shadow: 0 0 5px rbga(0, 0, 0, 0.3);
-    box-shadow: 0 0 5px rbga(0, 0, 0, 0.3); }
+    -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
     body.darkmode--activated ul[id="shortcuts"] li:hover {
       background: #000; }
       body.darkmode--activated ul[id="shortcuts"] li:hover button {
@@ -2922,11 +2922,14 @@ body.darkmode--activated {
   body.darkmode--activated footer[id="colophon"] .infos-pratiques img {
     -webkit-filter: invert(100%) grayscale(100%);
     filter: invert(100%) grayscale(100%); }
-  body.darkmode--activated footer[id="colophon"] .social-list li a::before {
+  body.darkmode--activated .social-list li a::before {
     border-color: #fff; }
-  body.darkmode--activated footer[id="colophon"] .social-list li a::after {
+  body.darkmode--activated .social-list li a::after {
     -webkit-filter: invert(100%);
     filter: invert(100%); }
+  body.darkmode--activated .partners-list ul li img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
   body.darkmode--activated .post:hover .group-content .entry-content h2,
   body.darkmode--activated ul[id="shortcuts"] li:hover button,
   body.darkmode--activated nav[id="burger-navigation"] .overlay .slick-slide .menu-item a:hover,
