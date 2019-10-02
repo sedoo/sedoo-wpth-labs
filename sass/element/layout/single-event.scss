@@ -1,16 +1,18 @@
 .single-event{
-    .wrapper{
+    .wrapper-layout{
         header{
             .post-meta{
                 font-family: $second-title-family;
                 font-size: calc(#{$font-size} * 2);
                 font-style: $italic;
+                margin-bottom: 0;
             }
         }
     }
     .btn{
         margin-top: 0;
         font-family: $main-font-family;
+        max-width: 100%;
         
         &::before{
             display: inline-block;
@@ -28,6 +30,44 @@
             &::before{
                 filter: invert(100%);
             }
+        }
+    }
+}
+.contextual-sidebar{
+    .event-informations{
+        p, address{
+            font-size: $font-size;
+            line-height: 1.5;
+            @include display-flex;
+            
+            a{
+                display: block;
+                width: 95%;
+            }
+            
+            &::before{
+                width: 20px;
+                height: 20px;
+                content: "";
+                margin-right: 10px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background: url("image/location.svg");
+                position: relative;
+                top: 1px;
+            }
+            
+            &.event-date{
+                &::before{
+                    background: url("image/date.svg");
+                }
+            }
+            &.event-time{
+                &::before{
+                    background: url("image/time.svg");
+                }
+            }            
         }
     }
 }
