@@ -92,6 +92,10 @@
     @include display-flex;
     @include flex-column;
     padding: 65px 0;
+    
+    .btn{
+        max-width: 100%;
+    }
 
     h2, .ez-toc-title{
         font-family: $main-title-family;
@@ -206,7 +210,17 @@
                 object-position: center;
             }
         }
+        a:not(.btn){
+            color: $dark;
+            text-decoration: none;
+            margin-bottom: 0;
+
+            p{
+                margin-bottom: 0;
+            }
+        }
     }
+
     p{
         margin-top: 0;
         font-size: calc(#{$font-size} / 1.2);

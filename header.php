@@ -75,6 +75,7 @@
                 </nav>
                 <?php } ?>
                 <?php if (has_nav_menu('burger-menu')) {?>
+<!--
                     <nav id="burger-navigation" class="second-navigation">
                         <button class="burger">
                             <div class="burger-icon">
@@ -92,7 +93,8 @@
                             ) );
                             ?>
                         </div>
-                    </nav><!-- #site-navigation -->
+                    </nav>
+-->
                 <?php 
                     }
                    endif;

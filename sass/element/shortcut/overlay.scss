@@ -1,21 +1,22 @@
-.close{
+.close {
     position: absolute;
     top: 20px;
     right: 20px;
     cursor: pointer;
     @include basic-transition;
-    
-    &:hover{
-        label{
+
+    &:hover {
+        label {
             opacity: 1;
             @include transform(none);
         }
-        button{
+
+        button {
             @include transform(rotateZ(360deg));
         }
     }
-    
-    label{
+
+    label {
         font-family: $main-title-family;
         text-transform: $uppercase;
         vertical-align: middle;
@@ -26,11 +27,11 @@
         @include basic-transition;
         color: $dark;
     }
-    
-    button{
+
+    button {
         @include basic-transition;
-        
-        span{
+
+        span {
             background: $dark;
             height: 3px;
             width: 20px;
@@ -41,19 +42,19 @@
             @include basic-transition-delay;
             position: relative;
 
-            &:first-child{
+            &:first-child {
                 @include transform(rotateZ(45deg));
                 top: 6px;
             }
 
-            &:last-child{
+            &:last-child {
                 @include transform(rotateZ(-45deg));
             }
         }
     }
 }
 
-.overlay{
+.overlay {
     position: fixed;
     width: 100%;
     height: 0%;
@@ -66,124 +67,169 @@
     left: 0;
     z-index: -1;
     @include basic-transition;
-    
-    &.open{
+
+    &.open {
         height: 100%;
         z-index: 500;
     }
-    
-    .wrapper{
-        max-width: 800px;
+
+    .wrapper {
+        max-width: 1000px;
         width: 100%;
-        
-        > div:not(.close){
+
+        > div:not(.close) {
             @include basic-transition-delay;
         }
     }
 }
 
-.location{
-    &.open.overlay{
-        .wrapper{
-            .information-location{
-                opacity: 1;
-                @include basic-transition-delay;
-                @include transform(none);
-            }
-            .leaflet-container{
-                opacity: 1;
-                @include transition-delay(0.6s);
-                @include transform(none);
-                
-                .leaflet-control-zoom{
-                    width: auto;
+.location {
+    &.open.overlay {
+        .wrapper {
+            .location-repeat {
+                .information-location {
+                    opacity: 1;
+                    @include basic-transition-delay;
+                    @include transform(none);
+                }
+
+                .leaflet-container {
+                    opacity: 1;
+                    @include transition-delay(0.6s);
+                    @include transform(none);
+
+                    .leaflet-control-zoom {
+                        width: auto;
+                    }
                 }
             }
-        }   
+        }
 
     }
 
-    .wrapper{
+    .custom-logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        max-width: 200px;
+        z-index: 5;
+    }
+
+    .wrapper {
         @include display-flex;
         @include justify-content-between;
-        @include align-items-center;
+        @include flex-column;
+        max-width: 100%;
+        height: 100%;
+
+        .location-repeat {
+            @include display-flex;
+            @include justify-content-between;
+            @include align-items-center;
+            height: 100vh;
+            padding: 20px 0;
+            width: 100%;
         
-        div:not(.close){
-            width: calc(50% - 20px);
-            
-            &.information-location{
+            .information-location {
                 opacity: 0;
                 @include transform(translateX(-100px));
                 @include basic-transition;
+                width: calc(40% - 20px);
+                @include display-flex;
+                @include justify-content-center;
                 
-                img{
-                    max-width: 300px;
-                    margin-bottom: 20px;
+                > div{
+                    max-width: 350px;
+                    width: 100%;
                 }
+                
             }
-            
-            &.leaflet-container{
+            .leaflet-container {
+                width: calc(60% - 20px);
                 opacity: 0;
                 @include transform(translateX(-100px));
-                height: 100%!important;
+                height: 100% !important;
                 margin-left: 20px;
                 @include basic-transition;
+                top: 0;
+                right: 0;
+                height: 100%;
+                position: relative;
+                overflow: visible;
+                
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                small{
+                    position: absolute;
+                    bottom: -20px;
+                    left: 0;
+                    font-size: 1em;
+                }
             }
         }
     }
 }
 
-
-.annuaire{
-    &.open{
-        iframe{
+.annuaire {
+    &.open {
+        iframe {
             height: 100vh;
             opacity: 1;
             @include transition-delay(0.3s);
         }
     }
-    
-    iframe{
+
+    iframe {
         padding: 50px;
         width: 100%;
         height: 0vh;
         @include basic-transition;
         opacity: 0;
-        
-        html{
-            overflow-x: hidden!important;
+
+        html {
+            overflow-x: hidden !important;
         }
     }
-    
+
 }
 
-.search-form{
-    &.open.overlay{
-        h2, .search-field, .search-submit{
+.search-form {
+    &.open.overlay {
+
+        h2,
+        .search-field,
+        .search-submit {
             opacity: 1;
             @include transform(none);
         }
-        h2{
+
+        h2 {
             @include transition-delay(0.3s);
         }
-        .search-field{
+
+        .search-field {
             @include transition-delay(0.45s);
         }
-        .search-submit{
+
+        .search-submit {
             @include transition-delay(0.6s);
         }
     }
-    
-    h2{
+
+    h2 {
         font-family: $main-title-family;
         text-transform: uppercase;
         font-size: $h1-size;
         margin-bottom: 50px;
         opacity: 0;
         @include basic-transition;
-        @include transform(translateX(-100px));      
+        @include transform(translateX(-100px));
     }
-    .search-field{
+
+    .search-field {
         border-top: none;
         border-left: none;
         border-right: none;
@@ -193,13 +239,14 @@
         width: 100%;
         font-size: calc(#{$h1-size} / 1.5);
         padding: 0 10px;
-        margin-bottom: 30px; 
+        margin-bottom: 30px;
         opacity: 0;
         @include basic-transition;
         @include transform(translateX(-100px));
         font-family: $main-font-family;
     }
-    .search-submit{
+
+    .search-submit {
         outline: 0;
         border: 0;
         color: $light-full;
@@ -218,8 +265,8 @@
         font-size: $font-size;
         background: $dark;
         cursor: pointer;
-        
-        &:hover{
+
+        &:hover {
             color: $dark;
             background: $light-full;
             @include transition-delay(0);
