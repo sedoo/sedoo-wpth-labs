@@ -1,5 +1,5 @@
 @media screen and (max-width: 1024px){
-    .single-post{
+    .single-post, .single-event{
         header[id="cover"]{
             height: 45vh;
         }
@@ -74,7 +74,7 @@
     }
 }
 @media screen and (max-width: 767px) and (orientation:portrait){
-    .single-post{
+    .single-post, .single-event{
         main{
             article{
                 padding: 30px;
@@ -118,6 +118,19 @@
                     &:first-child,&:last-child{
                         width: 100%;
                     } 
+                }
+            }
+        }
+    }
+    .read-more-article{
+        .post-loop{
+            @include flex-column;
+            .post-preview{
+                width: 100%;
+                margin-bottom: 50px;
+                
+                h3{
+                    height: auto;
                 }
             }
         }

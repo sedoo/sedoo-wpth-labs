@@ -104,7 +104,8 @@ body {
   letter-spacing: 3px;
   -webkit-hyphens: none;
   -ms-hyphens: none;
-  hyphens: none; }
+  hyphens: none;
+  overflow-x: hidden; }
   body.menu-expanded {
     position: fixed; }
     body.menu-expanded .site-content, body.menu-expanded .site-footer {
@@ -2631,12 +2632,12 @@ aside[id="stickyMenu"] {
     grid-template-columns: 100%; } }
 
 @media screen and (max-width: 1024px) {
-  .single-post header[id="cover"] {
+  .single-post header[id="cover"], .single-event header[id="cover"] {
     height: 45vh; }
-  .single-post .wrapper-layout {
+  .single-post .wrapper-layout, .single-event .wrapper-layout {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-  .single-post main {
+  .single-post main, .single-event main {
     width: 100%;
     margin-bottom: 0; }
   .contextual-sidebar {
@@ -2675,7 +2676,7 @@ aside[id="stickyMenu"] {
     height: 180px; } }
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
-  .single-post main article {
+  .single-post main article, .single-event main article {
     padding: 30px; }
   .read-more-article .post-loop .post-preview {
     width: 100%; }
@@ -2691,7 +2692,17 @@ aside[id="stickyMenu"] {
   .contextual-sidebar .post-author > div {
     display: block; }
     .contextual-sidebar .post-author > div > div:first-child, .contextual-sidebar .post-author > div > div:last-child {
-      width: 100%; } }
+      width: 100%; }
+  .read-more-article .post-loop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .read-more-article .post-loop .post-preview {
+      width: 100%;
+      margin-bottom: 50px; }
+      .read-more-article .post-loop .post-preview h3 {
+        height: auto; } }
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .event-loop {
