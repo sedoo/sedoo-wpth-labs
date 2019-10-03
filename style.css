@@ -1167,6 +1167,8 @@ footer[id="colophon"] {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 65px 0; }
+  .contextual-sidebar .btn {
+    max-width: 100%; }
   .contextual-sidebar h2, .contextual-sidebar .ez-toc-title {
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
@@ -1273,6 +1275,12 @@ footer[id="colophon"] {
         object-fit: cover;
         -o-object-position: center;
         object-position: center; }
+    .contextual-sidebar .post-author a:not(.btn) {
+      color: #000;
+      text-decoration: none;
+      margin-bottom: 0; }
+      .contextual-sidebar .post-author a:not(.btn) p {
+        margin-bottom: 0; }
   .contextual-sidebar p {
     margin-top: 0;
     font-size: calc(1.6rem / 1.2); }
@@ -1438,7 +1446,7 @@ div[id="em-wrapper"] h2 {
   margin-top: 0;
   font-family: "Poppins", sans-serif;
   max-width: 100%; }
-  .single-event .btn::before {
+  .single-event .btn:first-child::before {
     display: inline-block;
     content: "";
     width: 20px;
@@ -1450,7 +1458,7 @@ div[id="em-wrapper"] h2 {
     -webkit-transition: 0.5s ease all;
     -o-transition: 0.5s ease all;
     transition: 0.5s ease all; }
-  .single-event .btn:hover::before {
+  .single-event .btn:first-child:hover::before {
     -webkit-filter: invert(100%);
     filter: invert(100%); }
 

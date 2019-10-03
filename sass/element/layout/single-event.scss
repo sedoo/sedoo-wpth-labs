@@ -14,21 +14,23 @@
         font-family: $main-font-family;
         max-width: 100%;
         
-        &::before{
-            display: inline-block;
-            content: "";
-            width: 20px;
-            height: 20px;
-            background: url("image/add-event.svg") center center no-repeat;
-            background-size: cover;
-            vertical-align: middle;
-            margin-right: 10px;
-            @include basic-transition;
-        }
-        
-        &:hover{
+        &:first-child{
             &::before{
-                filter: invert(100%);
+                display: inline-block;
+                content: "";
+                width: 20px;
+                height: 20px;
+                background: url("image/add-event.svg") center center no-repeat;
+                background-size: cover;
+                vertical-align: middle;
+                margin-right: 10px;
+                @include basic-transition;
+            }
+
+            &:hover{
+                &::before{
+                    filter: invert(100%);
+                }
             }
         }
     }
