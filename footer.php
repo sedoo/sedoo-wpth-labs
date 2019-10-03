@@ -16,15 +16,7 @@
 	<footer id="colophon" class="site-footer">
         <div class="wrapper">
             <div class="infos-pratiques">
-                <?php 
-
-                    $image = get_field('logo_laboratoire', 'option');
-
-                    if( !empty($image) ): ?>
-
-                        <img class="grey-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-                <?php endif; ?>
+                <?php the_custom_logo(); ?>
                 <div>
                     <p><b><?php the_field('nom_laboratoire', 'option'); ?></b></p>
                     <address><?php the_field('adresse', 'option'); ?></address>
@@ -138,7 +130,7 @@
 <?php get_template_part( 'template-parts/shortcut', 'page' ); ?>
 <?php 
     wp_footer(); 
-    $map = get_field('map', 'option');
+//    $map = get_field('map', 'option');
 ?>   
 <script>
     /* INIT DARKMODE */
@@ -146,14 +138,14 @@
     
     /* INIT LEAFLET MAP */
     
-    var mymap = L.map('map-location').setView([<?php echo $map['lat']; ?>, <?php echo $map['lng']; ?>], <?php echo $map['zoom']; ?>);
-
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: 'mapbox.streets',
-        accessToken: 'pk.eyJ1IjoicnZhbGxhdXIiLCJhIjoiY2sxOThhNzF4MXRkazNucGZ4OXlybm9zeSJ9.b5ny4TzVcN6m5skhw151Ig'
-    }).addTo(mymap);
+//    var mymap = L.map('map-location').setView([<?php echo $map['lat']; ?>, <?php echo $map['lng']; ?>], <?php echo $map['zoom']; ?>);
+//
+//    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+//        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+//        maxZoom: 18,
+//        id: 'mapbox.streets',
+//        accessToken: 'pk.eyJ1IjoicnZhbGxhdXIiLCJhIjoiY2sxOThhNzF4MXRkazNucGZ4OXlybm9zeSJ9.b5ny4TzVcN6m5skhw151Ig'
+//    }).addTo(mymap);
 </script>
 </body>
 </html>
