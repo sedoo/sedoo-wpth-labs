@@ -136,9 +136,24 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <?php get_template_part( 'template-parts/shortcut', 'page' ); ?>
-<?php wp_footer(); ?>
+<?php 
+    wp_footer(); 
+    $map = get_field('map', 'option');
+?>   
 <script>
-new Darkmode().showWidget();   
+    /* INIT DARKMODE */
+    new Darkmode().showWidget();   
+    
+    /* INIT LEAFLET MAP */
+    
+    var mymap = L.map('map-location').setView([<?php echo $map['lat']; ?>, <?php echo $map['lng']; ?>], <?php echo $map['zoom']; ?>);
+
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox.streets',
+        accessToken: 'pk.eyJ1IjoicnZhbGxhdXIiLCJhIjoiY2sxOThhNzF4MXRkazNucGZ4OXlybm9zeSJ9.b5ny4TzVcN6m5skhw151Ig'
+    }).addTo(mymap);
 </script>
 </body>
 </html>

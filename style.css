@@ -1779,7 +1779,7 @@ ul[id="shortcuts"] {
     height: 100%;
     z-index: 500; }
   .overlay .wrapper, .overlay .wrapper-content {
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%; }
     .overlay .wrapper > div:not(.close), .overlay .wrapper-content > div:not(.close) {
       -webkit-transition-delay: 0.5s;
@@ -1838,7 +1838,12 @@ ul[id="shortcuts"] {
       margin-left: 20px;
       -webkit-transition: 0.5s ease all;
       -o-transition: 0.5s ease all;
-      transition: 0.5s ease all; }
+      transition: 0.5s ease all;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      z-index: -1; }
 
 .annuaire.open iframe {
   height: 100vh;
@@ -2481,7 +2486,8 @@ aside[id="stickyMenu"] {
       .overlay.location .wrapper div:not(.close).leaflet-container, .overlay.location .wrapper-content div:not(.close).leaflet-container {
         height: 300px !important;
         margin-left: 0;
-        margin-top: 50px; } }
+        margin-top: 50px;
+        position: relative; } }
 
 @media screen and (max-width: 767px) {
   .overlay.annuaire iframe {

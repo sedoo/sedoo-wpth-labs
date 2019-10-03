@@ -26,7 +26,10 @@
             <?php } ?>
             <p><a href="mailto:<?php the_field('mail_contact', 'option'); ?>"><?php the_field('mail_contact', 'option'); ?></a></p>
         </div>
-        <?php the_field('map_shortcode', 'option'); ?>
+        <div id="map-location"></div>
+        
+   
+        
         <div class="close">
             <label for="closeLocation">Fermer</label>
             <button id="closeLocation">
