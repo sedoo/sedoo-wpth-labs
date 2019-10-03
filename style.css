@@ -2969,9 +2969,9 @@ body.darkmode--activated {
     background: #fff; }
   body.darkmode--activated .overlay {
     background: rgba(0, 0, 0, 0.8); }
-    body.darkmode--activated .overlay.location .wrapper .information-location img, body.darkmode--activated .overlay.location .wrapper-content .information-location img {
-      -webkit-filter: invert(100%) grayscale(100%);
-      filter: invert(100%) grayscale(100%); }
+    body.darkmode--activated .overlay.location .custom-logo {
+      -webkit-filter: grayscale(100%) invert(100%);
+      filter: grayscale(100%) invert(100%); }
     body.darkmode--activated .overlay.location .wrapper .information-location p, body.darkmode--activated .overlay.location .wrapper-content .information-location p, body.darkmode--activated .overlay.location .wrapper .information-location address, body.darkmode--activated .overlay.location .wrapper-content .information-location address, body.darkmode--activated .overlay.location .wrapper .information-location a, body.darkmode--activated .overlay.location .wrapper-content .information-location a {
       color: #fff; }
     body.darkmode--activated .overlay.search-form h2 {
@@ -3009,7 +3009,8 @@ body.darkmode--activated {
     body.darkmode--activated aside[id="stickyMenu"] > div p {
       color: #fff; }
     body.darkmode--activated aside[id="stickyMenu"] > div [id="tocList"] li a {
-      color: #fff; }
+      color: #fff;
+      border-color: #fff; }
   body.darkmode--activated .nav-box .nav-box-chevron {
     mix-blend-mode: normal;
     -webkit-box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
@@ -3022,6 +3023,8 @@ body.darkmode--activated {
       color: #fff; }
   body.darkmode--activated .wp-block-quote {
     color: #fff; }
+  body.darkmode--activated .author-card > div:first-child > div:last-child {
+    mix-blend-mode: normal !important; }
   body.darkmode--activated footer[id="colophon"] .infos-pratiques img {
     -webkit-filter: invert(100%) grayscale(100%);
     filter: invert(100%) grayscale(100%); }
