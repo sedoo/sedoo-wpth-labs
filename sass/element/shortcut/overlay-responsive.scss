@@ -1,4 +1,11 @@
 @media screen and (max-width: 1024px){
+    .overlay{
+        &.location{
+            .wrapper{
+                padding: 40px 20px;
+            }
+        }
+    }
     .close{
         label{
             opacity: 1;
@@ -18,6 +25,7 @@
                         height: 300px!important;
                         margin-left: 0;
                         margin-top: 50px;
+                        position: relative;
                     }
                 }
             }
@@ -26,6 +34,68 @@
 }
 @media screen and (max-width: 767px){
     .overlay{
+        &.location{      
+            .custom-logo{
+                display: none;
+            }
+            .wrapper{
+                .slick-list{
+                    padding: 0!important;
+                    width: 100%;
+                    
+                    .slick-track{
+                        @include display-flex;
+
+                        .slick-slide{
+                            width: 100%;
+                            padding: 0 20px;
+                        }
+                    }
+                }
+                .slick-dots{
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 20px;
+                    left: 0;
+                    
+                    li{
+                        position: relative;
+                        margin-right: 30px;
+                        
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        
+                        button{
+                            padding: 0;
+                            
+                            &::after{
+                                content: "";
+                                width: 15px;
+                                height: 15px;
+                                background: $dark;
+                                display: block;
+                                position: absolute;
+                                top: 3px;
+                                left: -3px;
+                                border-radius: 100%;
+                            }
+                        }
+                    }
+                }
+                
+                .location-repeat{
+                    @include flex-column;
+                    height: auto;
+                    
+                    .information-location, .leaflet-container{
+                        width: 100%;
+                    }
+                }
+            }
+        }
         &.annuaire{
             iframe{
                 padding: 20px;

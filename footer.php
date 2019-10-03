@@ -16,15 +16,7 @@
 	<footer id="colophon" class="site-footer">
         <div class="wrapper">
             <div class="infos-pratiques">
-                <?php 
-
-                    $image = get_field('logo_laboratoire', 'option');
-
-                    if( !empty($image) ): ?>
-
-                        <img class="grey-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-                <?php endif; ?>
+                <?php the_custom_logo(); ?>
                 <div>
                     <p><b><?php the_field('nom_laboratoire', 'option'); ?></b></p>
                     <address><?php the_field('adresse', 'option'); ?></address>
@@ -136,9 +128,12 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <?php get_template_part( 'template-parts/shortcut', 'page' ); ?>
-<?php wp_footer(); ?>
+<?php 
+    wp_footer(); 
+?>   
 <script>
-new Darkmode().showWidget();   
+    /* INIT DARKMODE */
+    new Darkmode().showWidget();   
 </script>
 </body>
 </html>

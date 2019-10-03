@@ -67,6 +67,7 @@ body{
     font-size: $font-size;
     letter-spacing: $letter-spacing;
     hyphens: none;
+    overflow-x: hidden;
     
     &.menu-expanded{
         position: fixed;

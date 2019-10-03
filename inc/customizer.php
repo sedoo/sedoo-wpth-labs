@@ -276,7 +276,8 @@ function labs_by_sedoo_color_style() {
              div[id="em-wrapper"] h2,
              .wp-block-quote p::first-letter,
              .author-card > div:first-child > div:not(.img-author),
-             .search-annuaire button
+             .search-annuaire button,
+             .overlay.location .wrapper .slick-dots .slick-active button::after
             {
                 background: <?php echo $code_color;?>;
 			}
