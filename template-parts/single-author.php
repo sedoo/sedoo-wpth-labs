@@ -3,16 +3,27 @@
  * Template part for displaying author
  *
  */
+    $ajout_auteur = get_field('ajouteur_auteur');
     $select_lauteur_array = get_field( 'select_lauteur' ); 
 ?>
-<?php if ( get_field('select_lauteur')){ ?>
+
+<?php if ( get_field('select_lauteur') && ($ajout_auteur === 'interne')) { ?>
 <div class="post-author">
     <h2>Auteur de la publication</h2>
     <div>
         <div>
             <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>">
                 <?php if ( get_field( 'photo_auteur', 'user_'.$select_lauteur_array['ID']) ) { ?>
-                <div class="img-author" style="background-image: url(<?php the_field( 'photo_auteur', 'user_'.$select_lauteur_array['ID'] ); ?>);">
+                <div class="img-author">
+                    <?php 
+
+                    $image = get_field('photo_auteur', 'user_'.$select_lauteur_array['ID']);
+
+                    if( !empty($image) ): ?>
+
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                    <?php endif; ?>                
                 </div>
                 <?php } ?>
             </a>
@@ -27,6 +38,44 @@
                 <?php echo $select_lauteur_array['user_description'];?>
             </p> 
             <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>" class="btn">En savoir plus sur l'auteur</a>
+        </div>
+   </div>
+</div>
+<?php } ?>
+
+
+
+<?php if ($ajout_auteur === 'externe'){ ?>
+<div class="post-author">
+    <h2>Auteur de la publication</h2>
+    <div>
+        <?php if( get_field('photo_auteur_exterieur')){ ?>
+        <div>
+            <div class="img-author">
+                <?php 
+
+                $image = get_field('photo_auteur_exterieur');
+
+                if( !empty($image) ): ?>
+
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                <?php endif; ?>
+            </div>
+        </div>
+        <?php } ?>
+        <div>
+            <p><b><?php the_field('nom_de_lauteur_exterieur'); ?></b></p>
+            <p><?php the_field('poste_de_lauteur'); ?></p>
+            <?php if( get_field('a_propos_auteur') ){ ?>
+            <h3>À propos de l'auteur</h3>
+            <p class="author-description">
+                <?php the_field('a_propos_auteur'); ?>
+            </p> 
+            <?php } ?>
+            <?php if( get_field('site_internet_auteur') ){ ?>
+                <a href="<?php the_field('site_internet_auteur'); ?>" class="btn" target="_blank">En savoir plus sur l'auteur</a>
+            <?php } ?>
         </div>
    </div>
 </div>
