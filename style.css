@@ -1275,7 +1275,8 @@ footer[id="colophon"] {
         -o-object-fit: cover;
         object-fit: cover;
         -o-object-position: center;
-        object-position: center; }
+        object-position: center;
+        width: 100%; }
     .contextual-sidebar .post-author a:not(.btn) {
       color: #000;
       text-decoration: none;
