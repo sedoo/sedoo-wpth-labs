@@ -29,6 +29,23 @@ footer[id="colophon"]{
     a{
         display: block;
     }
+    .row-infos{
+        
+        &::after{
+            content: "";
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: $dark;
+            margin: 20px 0;
+        }
+        
+        &:last-child{
+            &::after{
+                display: none;
+            }
+        }
+    }
 }
 .footer-menu{
     ul[id="primary-menu"]{
