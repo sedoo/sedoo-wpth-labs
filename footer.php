@@ -47,10 +47,9 @@
                 <?php wp_list_categories(array('title_li' => '')); ?>
             </ul>
             <div class="social-partenaires">
-                <div class="social-list">
-                    <h2>Suivez nous sur les réseaux sociaux</h2>
-                    <?php if( have_rows('reseaux_sociaux', 'option') ): ?>
-
+                 <?php if( have_rows('reseaux_sociaux', 'option') ): ?>
+                    <div class="social-list">
+                        <h2>Suivez nous sur les réseaux sociaux</h2>
                         <ul class="inline-list">
 
                         <?php while( have_rows('reseaux_sociaux', 'option') ): the_row(); 
@@ -71,16 +70,12 @@
                         <?php endwhile; ?>
 
                         </ul>
-
-                    <?php endif; ?>
-                </div>
-                <div class="partners-list">
-                    <h2>Tutelles</h2>
-
-                    <?php if( have_rows('partenaires', 'option') ): ?>
-
+                    </div>
+                <?php endif; ?>
+                <?php if( have_rows('partenaires', 'option') ): ?>
+                    <div class="partners-list">
+                        <h2>Tutelles</h2>
                         <ul id="partners-sidebar" class="primary-sidebar widget-area inline-list" role="complementary">
-
                         <?php while( have_rows('partenaires', 'option') ): the_row(); 
 
                             // vars
@@ -104,9 +99,8 @@
                         <?php endwhile; ?>
 
                         </ul>
-
-                    <?php endif; ?>
-                </div>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
         <div class="copyright">
