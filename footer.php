@@ -139,9 +139,11 @@
 <?php 
     wp_footer(); 
 ?>   
+<!--
 <script>
     /* INIT DARKMODE */
     new Darkmode().showWidget();   
 </script>
+-->
 </body>
 </html>
