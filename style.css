@@ -373,6 +373,10 @@ body a.btn {
     .wp-block-quote cite::after {
       margin-left: 10px; }
 
+/* BLOCK IMAGE */
+.wp-block-img a:hover {
+  background: none !important; }
+
 .wrapper-content h2, .wrapper-layout h2 {
   margin-top: 50px;
   margin-bottom: 20px; }
@@ -946,9 +950,6 @@ footer[id="colophon"] {
   margin-bottom: 30px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%); }
-
-.infos-pratiques a {
-  display: block; }
 
 .infos-pratiques .row-infos::after {
   content: "";
@@ -2406,7 +2407,7 @@ aside[id="stickyMenu"] {
 
 /* RESPONSIVE */
 @media screen and (max-width: 1024px) {
-  nav[id="primary-navigation"] .menu-menu-primaire-container {
+  nav[id="primary-navigation"] > div {
     position: fixed;
     top: 0;
     left: 0;
@@ -2431,18 +2432,18 @@ aside[id="stickyMenu"] {
     -webkit-transform-origin: top center;
     -ms-transform-origin: top center;
     transform-origin: top center; }
-    nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="primary-menu"], nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="burger-menu"] {
+    nav[id="primary-navigation"] > div ul[id="primary-menu"], nav[id="primary-navigation"] > div ul[id="burger-menu"] {
       height: 90vh;
       overflow: scroll; }
-      nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="primary-menu"] li, nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="burger-menu"] li {
+      nav[id="primary-navigation"] > div ul[id="primary-menu"] li, nav[id="primary-navigation"] > div ul[id="burger-menu"] li {
         display: block;
         margin-bottom: 20px; }
-        nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="primary-menu"] li a, nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="burger-menu"] li a {
+        nav[id="primary-navigation"] > div ul[id="primary-menu"] li a, nav[id="primary-navigation"] > div ul[id="burger-menu"] li a {
           font-size: 2.5rem;
           margin-bottom: 10px;
           padding: 0;
           display: block; }
-        nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="primary-menu"] li .sub-menu, nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="burger-menu"] li .sub-menu {
+        nav[id="primary-navigation"] > div ul[id="primary-menu"] li .sub-menu, nav[id="primary-navigation"] > div ul[id="burger-menu"] li .sub-menu {
           position: relative;
           top: auto;
           left: auto;
@@ -2451,17 +2452,17 @@ aside[id="stickyMenu"] {
           box-shadow: none;
           z-index: 0;
           padding: 0; }
-          nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="primary-menu"] li .sub-menu .menu-item, nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="burger-menu"] li .sub-menu .menu-item {
+          nav[id="primary-navigation"] > div ul[id="primary-menu"] li .sub-menu .menu-item, nav[id="primary-navigation"] > div ul[id="burger-menu"] li .sub-menu .menu-item {
             -webkit-box-shadow: none;
             box-shadow: none; }
-            nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="primary-menu"] li .sub-menu .menu-item a, nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="burger-menu"] li .sub-menu .menu-item a {
+            nav[id="primary-navigation"] > div ul[id="primary-menu"] li .sub-menu .menu-item a, nav[id="primary-navigation"] > div ul[id="burger-menu"] li .sub-menu .menu-item a {
               color: #000;
               margin-bottom: 10px; }
-              nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="primary-menu"] li .sub-menu .menu-item a::after, nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="burger-menu"] li .sub-menu .menu-item a::after {
+              nav[id="primary-navigation"] > div ul[id="primary-menu"] li .sub-menu .menu-item a::after, nav[id="primary-navigation"] > div ul[id="burger-menu"] li .sub-menu .menu-item a::after {
                 background: #000; }
-            nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="primary-menu"] li .sub-menu .menu-item .sub-menu, nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="burger-menu"] li .sub-menu .menu-item .sub-menu {
+            nav[id="primary-navigation"] > div ul[id="primary-menu"] li .sub-menu .menu-item .sub-menu, nav[id="primary-navigation"] > div ul[id="burger-menu"] li .sub-menu .menu-item .sub-menu {
               padding-left: 20px; }
-              nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="primary-menu"] li .sub-menu .menu-item .sub-menu li a, nav[id="primary-navigation"] .menu-menu-primaire-container ul[id="burger-menu"] li .sub-menu .menu-item .sub-menu li a {
+              nav[id="primary-navigation"] > div ul[id="primary-menu"] li .sub-menu .menu-item .sub-menu li a, nav[id="primary-navigation"] > div ul[id="burger-menu"] li .sub-menu .menu-item .sub-menu li a {
                 font-size: 1.6rem;
                 margin-bottom: 10px; }
   nav[id="primary-navigation"] .burger {
@@ -2474,7 +2475,7 @@ aside[id="stickyMenu"] {
     max-width: 150px; } }
 
 @media screen and (max-width: 500px) {
-  nav[id="primary-navigation"] .menu-menu-primaire-container {
+  nav[id="primary-navigation"] > div {
     padding: 100px 20px 50px; } }
 
 @media screen and (max-width: 1024px) {

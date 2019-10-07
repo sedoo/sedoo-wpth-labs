@@ -1,6 +1,6 @@
 @media screen and (max-width: 1024px){
     nav[id="primary-navigation"]{
-        .menu-menu-primaire-container{
+        > div{
             position: fixed;
             top: 0;
             left: 0;
@@ -82,7 +82,7 @@
 }
 @media screen and (max-width:500px){
     nav[id="primary-navigation"]{
-        .menu-menu-primaire-container{  
+        > div{  
             padding: 100px 20px 50px;
         }
     }

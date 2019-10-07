@@ -374,3 +374,12 @@ body a.btn{
         }
     }
 }
+
+/* BLOCK IMAGE */
+.wp-block-img{
+    a{
+        &:hover{
+            background: none!important;
+        }
+    }
+}
