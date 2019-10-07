@@ -373,6 +373,10 @@ body a.btn {
     .wp-block-quote cite::after {
       margin-left: 10px; }
 
+/* BLOCK IMAGE */
+.wp-block-img a:hover {
+  background: none !important; }
+
 .wrapper-content h2, .wrapper-layout h2 {
   margin-top: 50px;
   margin-bottom: 20px; }
@@ -946,9 +950,6 @@ footer[id="colophon"] {
   margin-bottom: 30px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%); }
-
-.infos-pratiques a {
-  display: block; }
 
 .infos-pratiques .row-infos::after {
   content: "";

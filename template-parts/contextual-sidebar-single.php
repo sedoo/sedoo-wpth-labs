@@ -3,9 +3,9 @@
  * Template part for the contextual sidebar in single
  *
  */
-    if ( ! is_active_sidebar( 'sommaire-single' ) ) {
-            return;
-    }
+//    if ( ! is_active_sidebar( 'sommaire-single' ) ) {
+//            return;
+//    }
 ?>
 
 <aside class="contextual-sidebar">
