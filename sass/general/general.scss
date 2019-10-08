@@ -162,7 +162,7 @@ img{
     height: auto;
 }
 /* ACCESIBILITY */
-.screen-reader-text {
+.screen-reader-text, [target="_blank"]::before {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
     height: 1px;
@@ -170,7 +170,12 @@ img{
     overflow: hidden;
     word-wrap: normal !important;
 }
-
+[target="_blank"]{
+    &::before{
+        content: "Lien sortant";
+    }
+    
+}
 
 /* TYPOGRAPHIC ELEMENT & CLASSES */
 h1, .h1{
