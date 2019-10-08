@@ -77,7 +77,7 @@ body{
             @include basic-transition-delay;
         }
         nav[id="primary-navigation"]{
-            .menu-menu-primaire-container{
+            > div{
                 @include transform(none);
                 opacity: 1;
                 
