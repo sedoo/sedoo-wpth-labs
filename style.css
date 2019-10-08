@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.5.1
+Version: 0.5.2
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -112,17 +112,17 @@ body {
       -webkit-transition-delay: 0.5s;
       -o-transition-delay: 0.5s;
       transition-delay: 0.5s; }
-    body.menu-expanded nav[id="primary-navigation"] .menu-menu-primaire-container {
+    body.menu-expanded nav[id="primary-navigation"] > div {
       -webkit-transform: none;
       -ms-transform: none;
       transform: none;
       opacity: 1; }
-      body.menu-expanded nav[id="primary-navigation"] .menu-menu-primaire-container .sub-menu {
+      body.menu-expanded nav[id="primary-navigation"] > div .sub-menu {
         opacity: 1;
         -webkit-transform: none;
         -ms-transform: none;
         transform: none; }
-        body.menu-expanded nav[id="primary-navigation"] .menu-menu-primaire-container .sub-menu li {
+        body.menu-expanded nav[id="primary-navigation"] > div .sub-menu li {
           opacity: 1;
           -webkit-transform: none;
           -ms-transform: none;
@@ -381,9 +381,10 @@ body a.btn {
   margin-top: 50px;
   margin-bottom: 20px; }
 
-.wrapper-content h3, .wrapper-layout h3 {
+.wrapper-content h2 + h3, .wrapper-layout h2 + h3 {
   margin-top: -10px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  color: red !important; }
 
 .wrapper-content h4, .wrapper-layout h4 {
   margin-top: -5px;
@@ -2243,7 +2244,10 @@ aside[id="stickyMenu"] {
         font-family: "Poppins", sans-serif;
         font-size: 1.6rem;
         border: 0;
-        padding: 5px 0; }
+        padding: 5px 0;
+        margin-bottom: 0; }
+        aside[id="stickyMenu"] > div [id="tocList"] li li a:first-child {
+          margin-top: 5px; }
 
 .bobinette {
   background-color: #fff;
