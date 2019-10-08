@@ -162,7 +162,7 @@ img{
     height: auto;
 }
 /* ACCESIBILITY */
-.screen-reader-text {
+.screen-reader-text, [target="_blank"]::before {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
     height: 1px;
@@ -170,7 +170,12 @@ img{
     overflow: hidden;
     word-wrap: normal !important;
 }
-
+[target="_blank"]{
+    &::before{
+        content: "Lien sortant";
+    }
+    
+}
 
 /* TYPOGRAPHIC ELEMENT & CLASSES */
 h1, .h1{
@@ -376,10 +381,23 @@ body a.btn{
 }
 
 /* BLOCK IMAGE */
-.wp-block-img{
+.wp-block-image{
     a{
         &:hover{
             background: none!important;
         }
+    }
+}
+
+/* WP CTA */
+.wp-block-button{
+
+    .wp-block-button__link{
+        text-decoration: none;
+        color: $light-full;
+        border-radius: 0;
+        color: $light-full!important;
+        padding: 10px 20px;
+        box-shadow: $basic-box-shadow;
     }
 }
