@@ -1,12 +1,10 @@
 .wrapper-content, .wrapper-layout{
     h2{
-        margin-top: 50px; 
         margin-bottom: 20px;       
     }
     h2 + h3{
         margin-top: -10px; 
         margin-bottom: 20px;
-        color: red!important;
     }
     h4{
         margin-top: -5px;
@@ -14,6 +12,13 @@
     }
     p{
         margin-bottom: 20px;
+    }
+    p + h2{
+        margin-top: 50px;
+    }
+    
+    p + h3{
+        margin-top: 50px;
     }
     
     ul{
