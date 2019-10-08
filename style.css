@@ -380,6 +380,16 @@ body a.btn {
 .wp-block-image a:hover {
   background: none !important; }
 
+/* WP CTA */
+.wp-block-button .wp-block-button__link {
+  text-decoration: none;
+  color: #fff;
+  border-radius: 0;
+  color: #fff !important;
+  padding: 10px 20px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+
 .wrapper-content h2, .wrapper-layout h2 {
   margin-bottom: 20px; }
   .wrapper-content h2:first-child, .wrapper-layout h2:first-child {

@@ -388,3 +388,16 @@ body a.btn{
         }
     }
 }
+
+/* WP CTA */
+.wp-block-button{
+
+    .wp-block-button__link{
+        text-decoration: none;
+        color: $light-full;
+        border-radius: 0;
+        color: $light-full!important;
+        padding: 10px 20px;
+        box-shadow: $basic-box-shadow;
+    }
+}
