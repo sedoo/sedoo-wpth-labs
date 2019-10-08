@@ -1,9 +1,8 @@
 .wrapper-content, .wrapper-layout{
     h2{
-        margin-top: 50px; 
         margin-bottom: 20px;       
     }
-    h3{
+    h2 + h3{
         margin-top: -10px; 
         margin-bottom: 20px;
     }
@@ -13,6 +12,13 @@
     }
     p{
         margin-bottom: 20px;
+    }
+    p + h2{
+        margin-top: 50px;
+    }
+    
+    p + h3{
+        margin-top: 50px;
     }
     
     ul{
