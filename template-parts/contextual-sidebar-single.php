@@ -3,9 +3,7 @@
  * Template part for the contextual sidebar in single
  *
  */
-//    if ( ! is_active_sidebar( 'sommaire-single' ) ) {
-//            return;
-//    }
+
 ?>
 
 <aside class="contextual-sidebar">
@@ -21,10 +19,17 @@
             </div>
         </div>
     </div>
+    <?php     
+        if ( ! is_active_sidebar( 'sommaire-single' ) ) {
+        return;
+    ?>
     <div class="summary">
 	   <?php dynamic_sidebar( 'sommaire-single' ); ?>
     </div>
-    <?php } ?>
+    <?php 
+           } 
+        } 
+    ?>
     <?php
         get_template_part( 'template-parts/single-author', 'page' );
     ?>        

@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.5.2
+Version: 0.5.3
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -188,13 +188,16 @@ img {
   height: auto; }
 
 /* ACCESIBILITY */
-.screen-reader-text {
+.screen-reader-text, [target="_blank"]::before {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   height: 1px;
   width: 1px;
   overflow: hidden;
   word-wrap: normal !important; }
+
+[target="_blank"]::before {
+  content: "Lien sortant"; }
 
 /* TYPOGRAPHIC ELEMENT & CLASSES */
 h1, .h1 {
@@ -374,15 +377,23 @@ body a.btn {
       margin-left: 10px; }
 
 /* BLOCK IMAGE */
-.wp-block-img a:hover {
+.wp-block-image a:hover {
   background: none !important; }
+
+/* WP CTA */
+.wp-block-button .wp-block-button__link {
+  text-decoration: none;
+  color: #fff;
+  border-radius: 0;
+  color: #fff !important;
+  padding: 10px 20px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
 
 .wrapper-content h2, .wrapper-layout h2 {
   margin-bottom: 20px; }
-
-.wrapper-content h2 + h3, .wrapper-layout h2 + h3 {
-  margin-top: -10px;
-  margin-bottom: 20px; }
+  .wrapper-content h2:first-child, .wrapper-layout h2:first-child {
+    margin-top: 0; }
 
 .wrapper-content h4, .wrapper-layout h4 {
   margin-top: -5px;
@@ -390,12 +401,6 @@ body a.btn {
 
 .wrapper-content p, .wrapper-layout p {
   margin-bottom: 20px; }
-
-.wrapper-content p + h2, .wrapper-layout p + h2 {
-  margin-top: 50px; }
-
-.wrapper-content p + h3, .wrapper-layout p + h3 {
-  margin-top: 50px; }
 
 .wrapper-content ul, .wrapper-layout ul {
   list-style: disc;
@@ -413,6 +418,29 @@ body a.btn {
   .wrapper-content a:hover, .wrapper-layout a:hover {
     color: #fff;
     text-decoration: none; }
+
+.wrapper-content main article section h2:first-of-type, .wrapper-layout main article section h2:first-of-type {
+  margin-top: 0; }
+
+.wrapper-content h2 + a + h3, .wrapper-content h2 + h3, .wrapper-layout h2 + a + h3, .wrapper-layout h2 + h3 {
+  margin-top: -20px;
+  margin-bottom: 20px; }
+
+.wrapper-content h3 + a + h4, .wrapper-content h3 + h4, .wrapper-layout h3 + a + h4, .wrapper-layout h3 + h4 {
+  margin-top: -20px;
+  margin-bottom: 20px; }
+
+.wrapper-content p + h2, .wrapper-content p + a + h2, .wrapper-layout p + h2, .wrapper-layout p + a + h2 {
+  margin-top: 50px; }
+
+.wrapper-content p + a + h3, .wrapper-content p + h3, .wrapper-layout p + a + h3, .wrapper-layout p + h3 {
+  margin-top: 50px; }
+
+.wrapper-content ul + a + h3, .wrapper-content ul + h3, .wrapper-layout ul + a + h3, .wrapper-layout ul + h3 {
+  margin-top: 50px; }
+
+.wrapper-content p + ul, .wrapper-layout p + ul {
+  margin-bottom: 30px; }
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .wp-block-columns {
@@ -2231,7 +2259,7 @@ aside[id="stickyMenu"] {
       font-family: "Cormorant Infant", serif;
       font-size: 2.5rem;
       border-bottom: dotted 1px #000;
-      padding: 20px 0;
+      padding: 10px 0;
       display: block;
       margin-bottom: 10px;
       display: -webkit-box;
