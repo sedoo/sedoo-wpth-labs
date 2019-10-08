@@ -37,23 +37,25 @@
             text-decoration: none;
         }
     }
-    
-    h2 ~ h3:first-of-type{
+    main article section h2:first-of-type{
+        margin-top: 0;
+    }
+    h2 + a + h3, h2 + h3{
         margin-top: -20px; 
         margin-bottom: 20px;
     }
-    h3 ~ h4:first-of-type{
+    h3 + a + h4, h3 + h4{
         margin-top: -20px;
         margin-bottom: 20px;
     }
-    p ~ h2:first-of-type{
+    p + h2, p + a + h2{
         margin-top: 50px;
     }
     
-    p ~ h3:first-of-type{
+    p + a + h3, p + h3{
         margin-top: 50px;
     }
-    ul ~ h3:first-of-type{
+    ul + a + h3, ul + h3{
         margin-top: 50px;
     }
     p + ul{

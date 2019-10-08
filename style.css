@@ -377,7 +377,7 @@ body a.btn {
       margin-left: 10px; }
 
 /* BLOCK IMAGE */
-.wp-block-img a:hover {
+.wp-block-image a:hover {
   background: none !important; }
 
 .wrapper-content h2, .wrapper-layout h2 {
@@ -409,21 +409,24 @@ body a.btn {
     color: #fff;
     text-decoration: none; }
 
-.wrapper-content h2 ~ h3:first-of-type, .wrapper-layout h2 ~ h3:first-of-type {
+.wrapper-content main article section h2:first-of-type, .wrapper-layout main article section h2:first-of-type {
+  margin-top: 0; }
+
+.wrapper-content h2 + a + h3, .wrapper-content h2 + h3, .wrapper-layout h2 + a + h3, .wrapper-layout h2 + h3 {
   margin-top: -20px;
   margin-bottom: 20px; }
 
-.wrapper-content h3 ~ h4:first-of-type, .wrapper-layout h3 ~ h4:first-of-type {
+.wrapper-content h3 + a + h4, .wrapper-content h3 + h4, .wrapper-layout h3 + a + h4, .wrapper-layout h3 + h4 {
   margin-top: -20px;
   margin-bottom: 20px; }
 
-.wrapper-content p ~ h2:first-of-type, .wrapper-layout p ~ h2:first-of-type {
+.wrapper-content p + h2, .wrapper-content p + a + h2, .wrapper-layout p + h2, .wrapper-layout p + a + h2 {
   margin-top: 50px; }
 
-.wrapper-content p ~ h3:first-of-type, .wrapper-layout p ~ h3:first-of-type {
+.wrapper-content p + a + h3, .wrapper-content p + h3, .wrapper-layout p + a + h3, .wrapper-layout p + h3 {
   margin-top: 50px; }
 
-.wrapper-content ul ~ h3:first-of-type, .wrapper-layout ul ~ h3:first-of-type {
+.wrapper-content ul + a + h3, .wrapper-content ul + h3, .wrapper-layout ul + a + h3, .wrapper-layout ul + h3 {
   margin-top: 50px; }
 
 .wrapper-content p + ul, .wrapper-layout p + ul {
