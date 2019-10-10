@@ -149,6 +149,5 @@ jQuery(document).ready(function ($) {
         $(this).html(link);
     });
     
-     
 });
 

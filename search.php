@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area wrapper">
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
@@ -23,7 +23,7 @@ get_header();
 					?>
 				</h1>
 			</header><!-- .page-header -->
-
+            <section class="grid">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -46,7 +46,7 @@ get_header();
 
 		endif;
 		?>
-
+            </section>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 

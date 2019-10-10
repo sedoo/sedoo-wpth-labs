@@ -18,6 +18,26 @@
     html{
         font-size: 58%;
     }
+    h1, .h1{
+        font-size: $h1-size-mobile;
+    }
+    h2, .h2{
+        font-size: $h2-size-mobile;
+    }
+    h3, .h3{
+        font-size: $h3-size-mobile;
+    }
+    h4{
+        font-size: $h4-size-mobile;
+    }
+    .wp-block-quote{
+        &::before, &::after{
+            font-size: calc(#{$h1-size-mobile} * 1.5);
+        }
+        p{
+            font-size: calc(#{$h2-size-mobile} / 1.4);
+        }
+    }
 }
 @media screen and (max-width:767px) and (orientation:portrait){
     div[id="page"]{

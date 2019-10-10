@@ -9,27 +9,25 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="post grid-item">
+    <a href="<?php the_permalink(); ?>"></a>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			labs_by_sedoo_posted_on();
-			labs_by_sedoo_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+        <figure>
+            <?php 
+            if (get_the_post_thumbnail()) {
+                the_post_thumbnail(array(400, 235));
+            } ?>
+        </figure>
+        <p>
+        <?php     $categories = get_the_category();
+            if ( ! empty( $categories ) ) {
+            echo esc_html( $categories[0]->name );   
+        }; ?>
+        </p>
 	</header><!-- .entry-header -->
-
-	<?php labs_by_sedoo_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php labs_by_sedoo_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+    <div class="group-content">
+        <div class="entry-content">
+            <h2><?php the_title(); ?></h2>
+        </div><!-- .entry-content -->
+    </div>
+</article><!-- #post-->

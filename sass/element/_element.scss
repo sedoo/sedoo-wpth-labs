@@ -17,6 +17,7 @@
 @import "layout/author"; 
 @import "block-gutenberg/search-annuaire"; 
 @import "layout/page"; 
+@import "layout/search"; 
 
 
 /* RESPONSIVE */
@@ -34,3 +35,5 @@
 @import "nav-box/nav-box-responsive"; 
 @import "header/menu-inline-responsive"; 
 @import "header/burger-expanded-responsive"; 
+@import "layout/search-responsive"; 
+@import "layout/author-responsive"; 
