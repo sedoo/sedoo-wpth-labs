@@ -1,0 +1,38 @@
+.search{
+
+    .grid{
+        column-count: 3;
+        column-gap: 40px;
+    }
+    .post{
+        margin-bottom: 40px;
+        break-inside: avoid;
+        
+        &:nth-child(4n), &:nth-child(8n){
+            @include flex-column;
+            
+            &::before{
+                display: none;
+            }
+            
+            .entry-header{
+                height: 235px;
+            }
+            
+            .entry-header, .group-content{
+                width: 100%;
+                margin: 0;
+                
+                .entry-content{
+                    text-align: left;
+                }
+            }
+        }
+        
+        .group-content{
+            .entry-content{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
