@@ -55,10 +55,7 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: 0.5s ease all;
-  -o-transition: 0.5s ease all;
-  transition: 0.5s ease all; }
+  box-sizing: border-box; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -289,6 +286,21 @@ small {
   font-size: 0.5em;
   font-family: "Poppins", sans-serif;
   font-style: normal; }
+
+.single .tag {
+  margin: 10px 0 20px; }
+  .single .tag a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    margin-right: 15px; }
+    .single .tag a::before {
+      content: "#";
+      display: inline-block;
+      vertical-align: middle; }
 
 /****************************
 ****** BLOCK GUTENBERG ******
@@ -1184,10 +1196,13 @@ footer[id="colophon"] {
           order: 1;
           text-transform: uppercase;
           font-weight: 800;
-          border: 3px solid #000;
-          padding: 5px;
           font-family: "Montserrat", sans-serif;
           font-size: 1.2rem; }
+          .single-post main article header div .post-category::before, .single-event main article header div .post-category::before {
+            content: "#";
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: -3px; }
         .single-post main article header div .post-meta, .single-event main article header div .post-meta {
           -webkit-box-ordinal-group: 4;
           -ms-flex-order: 3;
@@ -1631,7 +1646,8 @@ div[id="em-wrapper"] h2 {
       -o-transition: 0.5s ease all;
       transition: 0.5s ease all;
       height: 100%;
-      margin: 0; }
+      margin: 0;
+      width: 100%; }
   .post .entry-header p, .post-horizontal .entry-header p {
     position: absolute;
     top: 10px;

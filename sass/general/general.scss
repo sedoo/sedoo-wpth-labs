@@ -24,7 +24,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
     box-sizing: border-box;
-    @include basic-transition;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -270,6 +269,27 @@ small{
     font-size: 0.5em;
     font-family: $main-font-family;
     font-style: normal;
+}
+.single{
+    .tag {
+        margin: 10px 0 20px;
+
+        a{
+            text-decoration: none;
+            color: $dark;
+            text-transform: $uppercase;
+            font-weight: $bold;
+            font-family: $main-title-family;
+            font-size: $tiny-size;
+            margin-right: 15px;
+
+            &::before{
+                content: "#";
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
 }
 
 /****************************
