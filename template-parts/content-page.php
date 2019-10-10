@@ -6,15 +6,23 @@
  *
  * @package labs_by_Sedoo
  */
-
+$themes = get_the_terms( $post->ID, 'sedoo-theme-labo');  
+$themeSlugRewrite = "sedoo-theme-labo";
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+        <?php 
+        if( function_exists('sedoo_labtools_show_categories') ){
+        sedoo_labtools_show_categories($themes, $themeSlugRewrite);
+        }
+        ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
-
+    
 	<div class="entry-content">
+        
+        
 		<?php
 		the_content();
 
