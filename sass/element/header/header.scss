@@ -31,6 +31,10 @@ nav[id="primary-navigation"]{
     @include display-flex;
     @include align-items-center;
     
+    > div{
+        @include basic-transition;
+    }
+    
     ul{
         list-style: none;
 

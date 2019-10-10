@@ -26,7 +26,7 @@ while ( have_posts() ) : the_post();
         if (get_the_post_thumbnail()) {
         ?>
             <header id="cover">
-                <?php the_post_thumbnail(); ?>
+                <?php the_post_thumbnail(array(1600, 800)); ?>
             </header>
         <?php 
         }

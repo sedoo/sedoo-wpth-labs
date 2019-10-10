@@ -43,3 +43,11 @@
         }
     }
 }
+@media screen and (max-width:500px){
+    aside[id="stickyMenu"]{
+        .bobinette{
+            right: -12%;
+            top: 70%;
+        }
+    }
+}

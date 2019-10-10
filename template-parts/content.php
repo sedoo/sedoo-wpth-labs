@@ -16,7 +16,7 @@
         <figure>
             <?php 
             if (get_the_post_thumbnail()) {
-                the_post_thumbnail();
+                the_post_thumbnail(array(400, 235));
             } ?>
         </figure>
         <p>

@@ -71,7 +71,7 @@ get_header();
                 ?>	
             </section>
             <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="btn"><?php echo __('Voir toutes les actualités', 'sedoo-wpth-labs'); ?></a>
-
+            
             <?php 
                 }
                 the_posts_navigation();

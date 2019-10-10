@@ -1,0 +1,58 @@
+@media screen and (max-width: 1024px){
+    .author-card{
+        > div{
+            &:first-child{
+                > div{
+                    &:last-child{
+                        @include transform(translateX(-0%));
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px) and (orientation: portrait){
+    .author-card{
+        > div{
+            &:first-child{
+                > div{
+                    &:last-child{
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:767px){
+    .author-card{
+        @include flex-column;
+        
+        > div{
+            width: 100%;
+            
+            &:first-child{
+                margin-bottom: 40px;
+                
+                > div{
+                    &:last-child{
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:500px){
+    .author-card{
+        > div{
+            &:first-child{
+                > div{
+                    &:last-child{
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
