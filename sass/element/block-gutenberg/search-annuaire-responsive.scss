@@ -1,0 +1,9 @@
+@media screen and (max-width: 500px){
+    .search-annuaire{
+        padding: 20px;
+        
+        h2, input[type='search']{
+            font-size: $h1-size-mobile;
+        }
+    }
+}

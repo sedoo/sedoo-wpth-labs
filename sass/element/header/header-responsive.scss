@@ -86,12 +86,29 @@
     header[id="masthead"]{
         .wrapper{
             .site-branding{
-                max-width: 150px;
+                max-width: 100%;
+                
+                img{
+                    height: 50px;
+                    width: auto;
+                }
             }
         }
     }
 }
 @media screen and (max-width:500px){
+    header[id="masthead"]{
+        .wrapper{
+            .site-branding{
+                max-width: 100%;
+                
+                img{
+                    height: 50px;
+                    width: auto;
+                }
+            }
+        }
+    }
     nav[id="primary-navigation"]{
         > div{  
             padding: 100px 20px 50px;
