@@ -14,12 +14,13 @@ aside[id="stickyMenu"]{
     padding: 5% 1%;
     @include transform(translateX(-95%));
     border-right: 3px solid $dark;
+    @include basic-transition;
     
     &.open{
         @include transform(none);
         
         .bobinette{
-            
+            @include basic-transition;
             
             svg{
                 @include transform(rotateZ(180deg));

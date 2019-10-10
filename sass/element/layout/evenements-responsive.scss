@@ -1,3 +1,17 @@
+@media screen and (max-width:767px){
+    .event-post{
+        > div{
+            > p{
+                font-size: $h3-size-mobile;
+            }
+        }
+        h3{
+            font-size: $h3-size-mobile;
+        }
+    }
+
+}
+
 @media screen and (max-width:767px) and (orientation:portrait){
     .event-loop{
         @include grid-template-column(100%);

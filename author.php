@@ -146,7 +146,7 @@ get_header();
                 
             </div>
 		</main><!-- #main -->
-        <aside id="stickyMenu">
+        <aside id="stickyMenu" class="open">
             <div>
                 <p>Sommaire</p>
                 <nav role="sommaire">

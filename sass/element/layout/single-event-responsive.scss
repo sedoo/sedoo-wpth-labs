@@ -42,6 +42,24 @@
         }
     }
 }
+@media screen and (max-width:767px){
+    .single-event{
+        .contextual-sidebar{
+            .event{
+                .event-informations{
+                    p{
+                        &:first-child{
+                            font-size: $h3-size-mobile;
+                        }
+                        &:nth-child(2){
+                            font-size: $h3-size-mobile;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width:500px){
     .single-event{
         .contextual-sidebar{

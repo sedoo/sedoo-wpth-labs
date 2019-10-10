@@ -69,12 +69,7 @@ body{
     overflow-x: hidden;
     
     &.menu-expanded{
-        position: fixed;
         
-        .site-content, .site-footer{
-            @extend .blur;
-            @include basic-transition-delay;
-        }
         nav[id="primary-navigation"]{
             > div{
                 @include transform(none);
@@ -84,7 +79,7 @@ body{
                     opacity: 1;
                     @include transform(none);
                     
-                    li{
+                    .menu-item{
                         opacity: 1;
                         @include transform(none);                     
                     }
