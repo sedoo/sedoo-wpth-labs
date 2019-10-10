@@ -16,7 +16,7 @@
                 max-width: 600px;
                 
                 h1{
-                    font-size: $h1-size;
+                    font-size: $h1-size-mobile;
                 }
                 
             }
@@ -30,6 +30,10 @@
             
             .wrapper{
                 max-width: 500px;
+                
+                 h1{
+                    font-size: $h1-size-mobile;
+                }               
             }
         }
     }
@@ -39,6 +43,7 @@
         header[id="cover"]{
             .wrapper{
                 max-width: 400px;
+                padding: 0 20px;
             }
         }
     }

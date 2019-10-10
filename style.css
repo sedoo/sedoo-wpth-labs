@@ -482,7 +482,7 @@ body a.btn {
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
   div[id="page"] {
-    padding-top: 40px; }
+    padding-top: 70px; }
   .wrapper-layout {
     padding: 70px 8px; } }
 
@@ -2574,9 +2574,17 @@ aside[id="stickyMenu"] {
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
   header[id="masthead"] .wrapper .site-branding, header[id="masthead"] .wrapper-content .site-branding {
-    max-width: 150px; } }
+    max-width: 100%; }
+    header[id="masthead"] .wrapper .site-branding img, header[id="masthead"] .wrapper-content .site-branding img {
+      height: 50px;
+      width: auto; } }
 
 @media screen and (max-width: 500px) {
+  header[id="masthead"] .wrapper .site-branding, header[id="masthead"] .wrapper-content .site-branding {
+    max-width: 100%; }
+    header[id="masthead"] .wrapper .site-branding img, header[id="masthead"] .wrapper-content .site-branding img {
+      height: 50px;
+      width: auto; }
   nav[id="primary-navigation"] > div {
     padding: 100px 20px 50px; } }
 
@@ -2906,17 +2914,20 @@ aside[id="stickyMenu"] {
     .home header[id="cover"] .wrapper, .home header[id="cover"] .wrapper-content {
       max-width: 600px; }
       .home header[id="cover"] .wrapper h1, .home header[id="cover"] .wrapper-content h1 {
-        font-size: 5rem; } }
+        font-size: 2.5rem; } }
 
 @media screen and (max-width: 767px) {
   .home header[id="cover"] {
     padding: 70px 0; }
     .home header[id="cover"] .wrapper, .home header[id="cover"] .wrapper-content {
-      max-width: 500px; } }
+      max-width: 500px; }
+      .home header[id="cover"] .wrapper h1, .home header[id="cover"] .wrapper-content h1 {
+        font-size: 2.5rem; } }
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .home header[id="cover"] .wrapper, .home header[id="cover"] .wrapper-content {
-    max-width: 400px; } }
+    max-width: 400px;
+    padding: 0 20px; } }
 
 @media screen and (max-width: 500px) {
   .home header[id="cover"] .wrapper, .home header[id="cover"] .wrapper-content {
@@ -3109,6 +3120,12 @@ aside[id="stickyMenu"] {
 @media screen and (max-width: 500px) {
   .author-card > div:first-child > div:last-child {
     width: 90%; } }
+
+@media screen and (max-width: 500px) {
+  .search-annuaire {
+    padding: 20px; }
+    .search-annuaire h2, .search-annuaire input[type='search'] {
+      font-size: 2.5rem; } }
 
 body.darkmode--activated {
   /* HEADER */
@@ -3320,3 +3337,6 @@ body.darkmode--activated {
   body.darkmode--activated .bobinette svg polyline,
   body.darkmode--activated .contextual-sidebar .post-author .img-author {
     mix-blend-mode: difference; }
+
+#wpadminbar {
+  display: none; }
