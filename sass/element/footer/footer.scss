@@ -198,5 +198,30 @@ footer[id="colophon"]{
                 color: $light-full;
             }
         }
+        
+        nav[id="mentions-menu"]{
+            ul{
+                text-align: right;
+                li{
+                    display: inline-block;
+                    
+                    &::after{
+                        content: "";
+                        width: 5px;
+                        height: 5px;
+                        background: $dark;
+                        margin: 0 10px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        border-radius: 100%;
+                    }
+                    &:last-child{
+                        &::after{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
