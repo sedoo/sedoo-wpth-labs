@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.5.8
+Version: 0.5.9
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -281,9 +281,9 @@ small {
   font-family: "Poppins", sans-serif;
   font-style: normal; }
 
-.single .tag {
+.page .tag {
   margin: 10px 0 20px; }
-  .single .tag a {
+  .page .tag a {
     text-decoration: none;
     color: #000;
     text-transform: uppercase;
@@ -291,7 +291,7 @@ small {
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
     margin-right: 15px; }
-    .single .tag a::before {
+    .page .tag a::before {
       content: "#";
       display: inline-block;
       vertical-align: middle; }
@@ -1121,6 +1121,21 @@ footer[id="colophon"] {
     .copyright .wrapper.site-info a:hover, .copyright .site-info.wrapper-content a:hover {
       text-decoration: none;
       color: #fff; }
+  .copyright .wrapper.site-info nav[id="mentions-menu"] ul, .copyright .site-info.wrapper-content nav[id="mentions-menu"] ul {
+    text-align: right; }
+    .copyright .wrapper.site-info nav[id="mentions-menu"] ul li, .copyright .site-info.wrapper-content nav[id="mentions-menu"] ul li {
+      display: inline-block; }
+      .copyright .wrapper.site-info nav[id="mentions-menu"] ul li::after, .copyright .site-info.wrapper-content nav[id="mentions-menu"] ul li::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        background: #000;
+        margin: 0 10px;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 100%; }
+      .copyright .wrapper.site-info nav[id="mentions-menu"] ul li:last-child::after, .copyright .site-info.wrapper-content nav[id="mentions-menu"] ul li:last-child::after {
+        display: none; }
 
 .post-wrapper {
   display: -ms-grid;
@@ -2720,8 +2735,9 @@ aside[id="stickyMenu"] {
     padding: 20px; } }
 
 @media screen and (max-width: 500px) {
-  .location .wrapper > div:not(.close).information-location img, .location .wrapper-content > div:not(.close).information-location img {
-    max-width: 200px; } }
+  .location.open.overlay .wrapper .location-repeat .leaflet-container, .location.open.overlay .wrapper-content .location-repeat .leaflet-container {
+    margin-top: 20px;
+    height: 230px !important; } }
 
 @media screen and (max-width: 1024px) {
   .post:nth-child(4n), .post:nth-child(8n) {

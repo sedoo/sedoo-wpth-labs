@@ -104,13 +104,12 @@
     }
 }
 @media screen and (max-width:500px){
-    .location{
+    .location.open.overlay{
         .wrapper{
-            > div:not(.close){
-                &.information-location{
-                    img{
-                        max-width: 200px;
-                    }
+            .location-repeat{
+                .leaflet-container{
+                    margin-top: 20px;
+                    height: 230px!important;
                 }
             }
         }
