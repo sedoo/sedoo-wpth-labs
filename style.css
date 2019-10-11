@@ -2735,8 +2735,9 @@ aside[id="stickyMenu"] {
     padding: 20px; } }
 
 @media screen and (max-width: 500px) {
-  .location .wrapper > div:not(.close).information-location img, .location .wrapper-content > div:not(.close).information-location img {
-    max-width: 200px; } }
+  .location.open.overlay .wrapper .location-repeat .leaflet-container, .location.open.overlay .wrapper-content .location-repeat .leaflet-container {
+    margin-top: 20px;
+    height: 230px !important; } }
 
 @media screen and (max-width: 1024px) {
   .post:nth-child(4n), .post:nth-child(8n) {
