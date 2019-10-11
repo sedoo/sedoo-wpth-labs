@@ -120,17 +120,14 @@
         <div class="copyright">
             <div class="site-info wrapper">
                 <p>© Copyright <?php echo get_theme_mod('labs_by_sedoo_copyright');?></p>
-                <p>
-                    <?php if(get_field("politique_de_confidentialite", "option")){ ?>
-                        <a href="<?php the_field('politique_de_confidentialite', 'option'); ?>">Politique de confidentialité</a>
-                    <?php } ?>
-                    <?php if(get_field("mentions_legales", "option")){ ?>
-                        • <a href="<?php the_field('mentions_legales', 'option'); ?>">Mentions légales</a>
-                    <?php } ?>
-                    <?php if(get_field("sitemap", 'option')) { ?>
-                        • <a href="<?php the_field('sitemap', 'option'); ?>">Sitemap</a>
-                    <?php } ?>
-                </p>
+                <nav id="mentions-menu">
+                    <?php if (has_nav_menu('mentions-menu')) { 
+                        wp_nav_menu( array(
+                            'theme_location' => 'mentions-menu',
+                            'menu_id'        => 'mentions-menu',
+                        ) );
+                    } ?>
+                </nav>
             </div><!-- .site-info -->
         </div>
 	</footer><!-- #colophon -->

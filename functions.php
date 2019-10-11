@@ -46,6 +46,7 @@ if ( ! function_exists( 'labs_by_sedoo_setup' ) ) :
 		register_nav_menus( array(
 			'primary-menu' => esc_html__( 'primary-menu', 'data-terra' ),
 			'burger-menu' => esc_html__( 'burger-menu', 'data-terra' ),
+            'mentions-menu' => esc_html__( 'mentions-menu', 'data-terra' )
 		) );
 
 		/*
