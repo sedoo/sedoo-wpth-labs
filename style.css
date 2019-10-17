@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.5.9
+Version: 0.6.0
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -395,6 +395,15 @@ body a.btn {
   padding: 10px 20px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+
+/* TABLE */
+.wp-block-table tr:first-of-type td {
+  background: #000;
+  color: #fff;
+  padding: 20px 10px; }
+
+.wp-block-table tr:nth-of-type(odd) {
+  background: #F2F2F2; }
 
 .wrapper-content h2, .wrapper-layout h2 {
   margin-bottom: 20px; }
@@ -2521,7 +2530,8 @@ aside[id="stickyMenu"] {
 /* RESPONSIVE */
 @media screen and (max-width: 1300px) {
   nav[id="primary-navigation"] ul li a {
-    font-size: calc(1.6rem / 1.2); } }
+    font-size: calc(1.6rem / 1.2);
+    padding: 20px 10px; } }
 
 @media screen and (max-width: 1024px) {
   nav[id="primary-navigation"] > div {
@@ -2586,6 +2596,12 @@ aside[id="stickyMenu"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; } }
+
+@media screen and (max-width: 767px) {
+  .burger {
+    padding: 8px; }
+    .burger .burger-icon span {
+      height: 3px; } }
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
   header[id="masthead"] .wrapper .site-branding, header[id="masthead"] .wrapper-content .site-branding {
@@ -2934,7 +2950,17 @@ aside[id="stickyMenu"] {
 
 @media screen and (max-width: 767px) {
   .home header[id="cover"] {
-    padding: 70px 0; }
+    padding: 50px 0; }
+    .home header[id="cover"]::before {
+      top: 10px;
+      left: 10px;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px); }
+    .home header[id="cover"]::after {
+      top: 15px;
+      left: 15px;
+      width: calc(100% - 30px);
+      height: calc(100% - 30px); }
     .home header[id="cover"] .wrapper, .home header[id="cover"] .wrapper-content {
       max-width: 500px; }
       .home header[id="cover"] .wrapper h1, .home header[id="cover"] .wrapper-content h1 {
@@ -2946,8 +2972,22 @@ aside[id="stickyMenu"] {
     padding: 0 20px; } }
 
 @media screen and (max-width: 500px) {
+  .home header[id="cover"]::before {
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px); }
+  .home header[id="cover"]::after {
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px); }
   .home header[id="cover"] .wrapper, .home header[id="cover"] .wrapper-content {
-    max-width: 280px; } }
+    max-width: 280px; }
+    .home header[id="cover"] .wrapper h1, .home header[id="cover"] .wrapper-content h1 {
+      font-size: calc(2.5rem * 0.8); }
+    .home header[id="cover"] .wrapper h2, .home header[id="cover"] .wrapper-content h2 {
+      font-size: calc(3rem * 0.8); } }
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
   ul[id="shortcuts"] {
@@ -2956,10 +2996,9 @@ aside[id="stickyMenu"] {
     left: 0;
     bottom: 0;
     max-width: 100%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[3];
-    grid-template-columns: repeat(3, 1fr);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none; }

@@ -5,8 +5,7 @@
         left: 0;
         bottom: 0;
         max-width: 100%;
-        @include display-grid;
-        @include grid-template-column(repeat(3, 1fr));
+        @include display-flex;
         @include transform(none);
         
         li{
