@@ -1159,6 +1159,8 @@ footer[id="colophon"] {
 .archives section + h2 {
   margin-top: 70px;
   margin-bottom: 40px; }
+  .archives section + h2:first-child {
+    margin-top: 0; }
 
 .single-post header[id="cover"], .single-event header[id="cover"] {
   margin-bottom: -140px; }

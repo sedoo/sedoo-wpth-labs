@@ -11,5 +11,9 @@
     section + h2{
         margin-top: 70px;
         margin-bottom: 40px;
+        
+        &:first-child{
+            margin-top: 0;
+        }
     }
 }
