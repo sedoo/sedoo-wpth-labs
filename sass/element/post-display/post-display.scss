@@ -173,9 +173,21 @@
 .post-wrapper{
     .event-post{
         text-decoration: none;
+        
+        .event-img{
+            img{
+                object-fit: cover;
+                height: 100%
+            }
+        }
+        
         h3{
             color: $dark;
             text-decoration: none;
+        }
+        
+        &:hover{
+            background: none;
         }
     }
 }
