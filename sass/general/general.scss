@@ -420,13 +420,13 @@ body a.btn{
 /* TABLE */
 .wp-block-table{
     tr{
-        &:first-of-type{
-            td{
-                background: $dark;
-                color: $light-full;
-                padding: 20px 10px;
-            }
-        }
+//        &:first-of-type{
+//            td{
+//                background: $dark;
+//                color: $light-full;
+//                padding: 20px 10px;
+//            }
+//        }
         &:nth-of-type(odd){
             background: $light-grey;
         }
