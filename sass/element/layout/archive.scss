@@ -16,4 +16,10 @@
             margin-top: 0;
         }
     }
+    .event-img{
+        img{
+            object-fit: cover;
+            height: 100%;
+        }
+    }
 }
