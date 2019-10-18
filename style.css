@@ -1156,6 +1156,10 @@ footer[id="colophon"] {
 .archives.wrapper, .archives.wrapper-content {
   max-width: 1400px; }
 
+.archives section + h2 {
+  margin-top: 70px;
+  margin-bottom: 40px; }
+
 .single-post header[id="cover"], .single-event header[id="cover"] {
   margin-bottom: -140px; }
 
