@@ -4,6 +4,7 @@
             li{
                 a{
                     font-size: calc(#{$font-size} / 1.2);
+                    padding: 20px 10px;
                 }
             }
         }   
@@ -80,6 +81,17 @@
         .burger{
             @include display-flex;
         }
+    }
+}
+@media screen and (max-width: 767px){
+    .burger{
+        padding: 8px;
+         .burger-icon{
+            span{
+                height: 3px;
+                
+            }
+        }       
     }
 }
 @media screen and (max-width: 767px) and (orientation:portrait){

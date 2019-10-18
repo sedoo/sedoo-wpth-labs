@@ -3,7 +3,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.5.9
+Version: 0.6.0
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -31,6 +31,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "element/element.scss";
 @import "dark-mode/dark-mode.scss";
 
-#wpadminbar{
-    display: none;
-}
+//#wpadminbar{
+//    display: none;
+//}

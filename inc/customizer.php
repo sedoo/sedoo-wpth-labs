@@ -278,7 +278,8 @@ function labs_by_sedoo_color_style() {
              .author-card > div:first-child > div:not(.img-author),
              .search-annuaire button,
              .overlay.location .wrapper .slick-dots .slick-active button::after,
-             .wp-block-button .wp-block-button__link
+             .wp-block-button .wp-block-button__link,
+             .wp-block-table tr:first-of-type td
             {
                 background: <?php echo $code_color;?>;
 			}
