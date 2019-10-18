@@ -281,9 +281,9 @@ small {
   font-family: "Poppins", sans-serif;
   font-style: normal; }
 
-.page .tag {
+.page .tag, .single .tag {
   margin: 10px 0 20px; }
-  .page .tag a {
+  .page .tag a, .single .tag a {
     text-decoration: none;
     color: #000;
     text-transform: uppercase;
@@ -291,7 +291,7 @@ small {
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
     margin-right: 15px; }
-    .page .tag a::before {
+    .page .tag a::before, .single .tag a::before {
       content: "#";
       display: inline-block;
       vertical-align: middle; }
@@ -3392,6 +3392,3 @@ body.darkmode--activated {
   body.darkmode--activated .bobinette svg polyline,
   body.darkmode--activated .contextual-sidebar .post-author .img-author {
     mix-blend-mode: difference; }
-
-#wpadminbar {
-  display: none; }

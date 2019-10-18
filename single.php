@@ -20,13 +20,16 @@ if (is_array($categories) || is_object($categories))
 }
 
 while ( have_posts() ) : the_post();
+
+$themes = get_the_terms( $post->ID, 'sedoo-theme-labo');  
+$themeSlugRewrite = "sedoo-theme-labo";
 ?>
 	<div id="primary" class="content-area <?php echo esc_html( $categories[0]->slug );?>">
         <?php
-        if (get_the_post_thumbnail()) {
+            if ( has_post_thumbnail() ) {
         ?>
             <header id="cover">
-                <?php the_post_thumbnail(array(1600, 800)); ?>
+                <?php the_post_thumbnail('cover'); ?>
             </header>
         <?php 
         }
@@ -37,12 +40,11 @@ while ( have_posts() ) : the_post();
                     <header>
                         <h1><?php the_title(); ?></h1>
                         <div>
-                            <p class="post-category">
-                                <?php     
-                                    if ( ! empty( $categories ) ) {
-                                    echo esc_html( $categories[0]->name );   
-                                }; ?>
-                            </p>
+                            <?php 
+                            if( function_exists('sedoo_labtools_show_categories') ){
+                            sedoo_labtools_show_categories($themes, $themeSlugRewrite);
+                            }
+                            ?>
                             <p class="post-meta">Publié le <?php the_date(); ?></p>
                         </div>
                     </header>
