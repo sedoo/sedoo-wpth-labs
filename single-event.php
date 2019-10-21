@@ -80,7 +80,7 @@ while ( have_posts() ) : the_post();
     if ( $the_query->have_posts() ) {  
     ?>
     <footer class="read-more-article">
-        <h2>D'autres événements sur le même thème :</h2>
+        <h2><?php echo __("D'autres événements sur le même thème : ", 'sedoo-wpth-labs'); ?></h2>
         <!-- Boucle d'article sur le même thème -->
         <div class="post-loop event-loop">
 

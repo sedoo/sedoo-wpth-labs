@@ -34,9 +34,9 @@
                     </div>
                     <div>
                         <p><b><?php echo $contact_labo; ?></b></p>
-                        <p>Tel : <a href="tel:<?php echo $tel_contact; ?>"><?php echo $tel_contact; ?></a></p>
+                        <p><?php echo __('Tel : ', 'sedoo-wpth-labs'); ?><a href="tel:<?php echo $tel_contact; ?>"><?php echo $tel_contact; ?></a></p>
                         <?php if($fax_contact) { ?>
-                            <p>Fax : <?php echo $fax_contact; ?></p>
+                            <p><?php echo __('Fax : ', 'sedoo-wpth-labs'); ?><?php echo $fax_contact; ?></p>
                         <?php } ?>
                         <p><a href="mailto:<?php echo $mail_contact; ?>"><?php echo $mail_contact; ?></a></p>
                     </div>
@@ -58,12 +58,15 @@
                 }?>
             </div>
             <ul class="footer-categories">
-                <?php wp_list_categories(array('title_li' => '')); ?>
+                <?php wp_list_categories(array(
+                    'title_li' => '',
+                    'exclude' => '1'
+                )); ?>
             </ul>
             <div class="social-partenaires">
                  <?php if( have_rows('reseaux_sociaux', 'option') ): ?>
                     <div class="social-list">
-                        <h2>Suivez nous sur les réseaux sociaux</h2>
+                        <h2><?php echo __('Suivez-nous sur les réseaux sociaux', 'sedoo-wpth-labs'); ?></h2>
                         <ul class="inline-list">
 
                         <?php while( have_rows('reseaux_sociaux', 'option') ): the_row(); 
@@ -88,7 +91,7 @@
                 <?php endif; ?>
                 <?php if( have_rows('partenaires', 'option') ): ?>
                     <div class="partners-list">
-                        <h2>Tutelles</h2>
+                        <h2><?php echo __('Tutelles', 'sedoo-wpth-labs'); ?></h2>
                         <ul id="partners-sidebar" class="primary-sidebar widget-area inline-list" role="complementary">
                         <?php while( have_rows('partenaires', 'option') ): the_row(); 
 

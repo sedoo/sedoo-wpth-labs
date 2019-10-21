@@ -45,7 +45,7 @@ $themeSlugRewrite = "sedoo-theme-labo";
                             sedoo_labtools_show_categories($themes, $themeSlugRewrite);
                             }
                             ?>
-                            <p class="post-meta">Publié le <?php the_date(); ?></p>
+                            <p class="post-meta"><?php echo __('Publié le : ', 'sedoo-wpth-labs'); ?><?php the_date(); ?></p>
                         </div>
                     </header>
                     <section>
@@ -53,7 +53,7 @@ $themeSlugRewrite = "sedoo-theme-labo";
                     </section>
                     <?php if (get_field("sources")){ ?>
                     <footer class="sources">
-                        <h2>Sources :</h2>
+                        <h2><?php echo __('Sources : ', 'sedoo-wpth-labs'); ?></h2>
                         <p><?php the_field("sources") ?></p>
                     </footer>
                     <?php } ?>
@@ -83,7 +83,7 @@ $themeSlugRewrite = "sedoo-theme-labo";
 
             if ( $the_query->have_posts() ) {  
             ?>
-                <h2>D'autres actualités sur le même thème :</h2>
+                <h2><?php echo __("D'autres actualités sur le même thème : ", 'sedoo-wpth-labs'); ?></h2>
                 <div class="post-loop">
                 <?php                
                     while ( $the_query->have_posts() ) {

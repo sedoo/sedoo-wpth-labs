@@ -18,7 +18,7 @@ $options_theme = get_field('ajout_options', 'option');
                     <rect fill="none" width="30" height="30" />
                 </g>
             </svg>
-            Localisation
+            <?php echo __('Localisation', 'sedoo-wpth-labs'); ?>
         </button>
     </li>
     <?php } ?>
@@ -36,7 +36,7 @@ $options_theme = get_field('ajout_options', 'option');
         c1.13-0.94,1.84-2.35,1.84-3.94c0-2.83-2.3-5.13-5.13-5.13c-1.63,0-3.06,0.77-4,1.96C19.59,8.22,21.2,10.44,21.2,13.04z" />
                 </g>
             </svg>
-            Annuaire
+            <?php echo __('Annuaire', 'sedoo-wpth-labs'); ?>
         </button>
     </li>
     <?php } ?>
@@ -52,7 +52,7 @@ $options_theme = get_field('ajout_options', 'option');
                     <rect fill="none" width="30" height="30" />
                 </g>
             </svg>
-            Recherche
+            <?php echo __('Recherche', 'sedoo-wpth-labs'); ?>
         </button>
     </li>
 </ul>

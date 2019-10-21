@@ -37,7 +37,7 @@
                 ?>
                 <p><?php the_date('j / M / Y') ?></p>
             <?php endif; ?>
-            <a href="<?php the_permalink(); ?>">Lire la suite →</a>
+            <a href="<?php the_permalink(); ?>"><?php echo __('Lire la suite →', 'sedoo-wpth-labs'); ?></a>
         </footer><!-- .entry-footer -->
     </div>
 </article><!-- #post-->

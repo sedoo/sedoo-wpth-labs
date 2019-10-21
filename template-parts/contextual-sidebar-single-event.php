@@ -8,7 +8,7 @@
 
 <aside class="contextual-sidebar">
     <div class="event">
-        <h2>Infos sur l'événement</h2>
+        <h2><?php echo __("Infos sur l'événement", 'sedoo-wpth-labs'); ?></h2>
         <div>
             <?php global $EM_Event;
             echo $EM_Event->output_single();
