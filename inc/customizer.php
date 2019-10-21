@@ -305,7 +305,7 @@ function labs_by_sedoo_color_style() {
                 background-color: rgba(<?php echo $rgb_color[0].",".$rgb_color[1].",".$rgb_color[2].",.9)"; ?>;
             }
              
-            ul[id="shortcuts"] li:hover button path{
+            ul[id="shortcuts"] li:hover button path, ul[id="shortcuts"] li:hover button rect:not(.size), ul[id="shortcuts"] li:hover button line{
                 fill: <?php echo $code_color;?>!important;
             }
              .bobinette svg polyline{

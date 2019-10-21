@@ -42,6 +42,49 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
+	'key' => 'group_5dadb18624429',
+	'title' => 'Calendar Settings',
+	'fields' => array(
+		array(
+			'key' => 'field_5dadb1927d6d8',
+			'label' => 'Shortcode Calendrier',
+			'name' => 'shortcode_calendrier',
+			'type' => 'wysiwyg',
+			'instructions' => 'Ajouter le shortcode vers le calendrier',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'tabs' => 'visual',
+			'toolbar' => 'full',
+			'media_upload' => 1,
+			'delay' => 0,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-calendrier',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
 	'key' => 'group_5d6faffd00cb6',
 	'title' => 'Champs additionnels auteurs',
 	'fields' => array(
@@ -838,7 +881,7 @@ acf_add_local_field_group(array(
 				'reseaux' => 'Réseaux Sociaux',
 				'partenaires' => 'Partenaires',
 				'annuaire' => 'Annuaire',
-				'mentions-footer' => 'Pages Mentions Footer',
+				'calendar' => 'Calendrier',
 			),
 			'allow_custom' => 0,
 			'default_value' => array(

@@ -2130,6 +2130,11 @@ ul[id="shortcuts"] {
     -o-transition-delay: 0;
     transition-delay: 0; }
 
+.calendar .wrapper, .calendar .wrapper-content {
+  max-width: 1400px;
+  width: 100%;
+  padding: 30px 0; }
+
 .nav-box {
   position: fixed;
   top: 70%;
