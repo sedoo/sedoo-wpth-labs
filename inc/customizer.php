@@ -250,7 +250,8 @@ function labs_by_sedoo_color_style() {
              .author-card > div:first-child > div:last-child p a:hover,
              .search-annuaire input[type="search"]:focus,
              .search-annuaire button:hover,
-             .single-event .wrapper-layout header .post-meta
+             .single-event .wrapper-layout header .post-meta,
+             .posts-navigation:hover
 			{
 				color: <?php echo $code_color;?>;
 			}
@@ -278,7 +279,8 @@ function labs_by_sedoo_color_style() {
              .author-card > div:first-child > div:not(.img-author),
              .search-annuaire button,
              .overlay.location .wrapper .slick-dots .slick-active button::after,
-             .wp-block-button .wp-block-button__link
+             .wp-block-button .wp-block-button__link,
+             .posts-navigation
             {
                 background: <?php echo $code_color;?>;
 			}
