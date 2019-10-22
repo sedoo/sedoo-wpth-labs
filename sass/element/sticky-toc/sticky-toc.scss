@@ -33,6 +33,15 @@ aside[id="stickyMenu"]{
     }
     > div{
         position: relative;
+        height: 100%;
+        
+        > div{
+            height: 100%;
+            overflow: hidden;
+            @include display-flex;
+            @include flex-column;
+            @include justify-content-center;
+        }
     
         p{
             font-family: $main-title-family;
@@ -47,8 +56,12 @@ aside[id="stickyMenu"]{
                 margin: 10px 0 20px;
             }
         }
-
+        nav{
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
         [id="tocList"]{
+            padding-right: 20px;
             li{
                 a{
                     font-family: $second-title-family;
@@ -83,6 +96,10 @@ aside[id="stickyMenu"]{
                 }
             }
         }
+    }
+    
+    ::-webkit-scrollbar{
+        display: none;
     }
 }
 
