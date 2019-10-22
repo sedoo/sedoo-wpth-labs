@@ -8,6 +8,7 @@
  *
  * @package labs_by_Sedoo
  */
+$options_list_footer = get_field('list_choice', 'option');
 
 ?>
 
@@ -58,10 +59,79 @@
                 }?>
             </div>
             <ul class="footer-categories">
-                <?php wp_list_categories(array(
-                    'title_li' => '',
-                    'exclude' => '1'
-                )); ?>
+                <?php if( $options_list_footer === 'categories'){
+                    wp_list_categories(array(
+                        'title_li' => '',
+                        'exclude' => '1'
+                    )); 
+                }
+                ?>
+                <?php if( $options_list_footer === 'thematic'){
+                    // Get the taxonomy's terms
+                    $terms = get_terms(
+                        array(
+                            'taxonomy'   => 'sedoo-theme-labo',
+                            'hide_empty' => false
+                        )
+                    );
+
+                    // Check if any term exists
+                    if ( ! empty( $terms ) && is_array( $terms ) ) {
+                        // Run a loop and print them all
+                        foreach ( $terms as $term ) { ?>
+                            <li class="cat-item">
+                                <a href="<?php echo esc_url( get_term_link( $term ) ) ?>">
+                                <?php echo $term->name; ?>
+                                </a>
+                            </li>
+                <?php
+                        }
+                    } 
+                }
+                ?>
+                <?php if( $options_list_footer === 'custom'){
+
+                    $terms = get_field('custom_list_category', 'option');
+
+                    if( $terms ): ?>
+
+                        <?php foreach( $terms as $term ): ?>
+
+                            <li class="cat-item">
+                                <a href="<?php echo get_term_link( $term ); ?>">
+                                    <?php echo $term->name; ?>
+                                </a>
+                            </li>
+
+                        <?php endforeach;
+                    endif; 
+            
+                
+                    $terms = get_field('custom_list_thematic', 'option');
+
+                    if( $terms ): ?>
+
+                        <?php foreach( $terms as $term ): ?>
+
+                            <li class="cat-item">
+                                <a href="<?php echo get_term_link( $term ); ?>">
+                                    <?php echo $term->name; ?>
+                                </a>
+                            </li>
+
+                        <?php endforeach;
+                    endif; 
+                    ?>
+
+                
+                <li class="cat-item">
+                    <a href="<?php echo get_field('link_events_page', 'option'); ?>">
+                        <?php echo __('Événements'); ?>
+                    </a>
+                </li>
+                <?php    
+                }
+                ?>
             </ul>
             <div class="social-partenaires">
                  <?php if( have_rows('reseaux_sociaux', 'option') ): ?>

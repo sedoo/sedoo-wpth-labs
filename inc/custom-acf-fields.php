@@ -85,6 +85,144 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
+	'key' => 'group_5daec22cb625a',
+	'title' => 'Categories / Thematics settings',
+	'fields' => array(
+		array(
+			'key' => 'field_5daec24761777',
+			'label' => 'Choix de listing',
+			'name' => 'list_choice',
+			'type' => 'radio',
+			'instructions' => 'Quel listing souhaitez-vous afficher dans la 3ième colonne du footer ?',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'categories' => 'Liste des catégories d\'article uniquement',
+				'thematic' => 'Liste des thématiques uniquement',
+				'custom' => 'Liste personnalisée de catégories et de thématiques',
+			),
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'default_value' => '',
+			'layout' => 'vertical',
+			'return_format' => 'value',
+			'save_other_choice' => 0,
+		),
+		array(
+			'key' => 'field_5daec488e5ca7',
+			'label' => 'Listing personnalisé categories',
+			'name' => 'custom_list_category',
+			'type' => 'taxonomy',
+			'instructions' => 'Cocher les taxonomies que vous souhaitez afficher dans la liste',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5daec24761777',
+						'operator' => '==',
+						'value' => 'custom',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'taxonomy' => 'category',
+			'field_type' => 'checkbox',
+			'add_term' => 1,
+			'save_terms' => 0,
+			'load_terms' => 0,
+			'return_format' => 'object',
+			'multiple' => 0,
+			'allow_null' => 0,
+		),
+		array(
+			'key' => 'field_5daecc0200e3c',
+			'label' => 'Listing personnalisé thématiques',
+			'name' => 'custom_list_thematic',
+			'type' => 'taxonomy',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5daec24761777',
+						'operator' => '==',
+						'value' => 'custom',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'taxonomy' => 'sedoo-theme-labo',
+			'field_type' => 'checkbox',
+			'add_term' => 1,
+			'save_terms' => 0,
+			'load_terms' => 0,
+			'return_format' => 'object',
+			'multiple' => 0,
+			'allow_null' => 0,
+		),
+		array(
+			'key' => 'field_5daecc3d00e3d',
+			'label' => 'Lien vers page événements',
+			'name' => 'link_events_page',
+			'type' => 'page_link',
+			'instructions' => 'Indiquer le lien vers la page d\'événements',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5daec24761777',
+						'operator' => '==',
+						'value' => 'custom',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => array(
+				0 => 'event',
+			),
+			'taxonomy' => '',
+			'allow_null' => 0,
+			'allow_archives' => 1,
+			'multiple' => 0,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-listing-categories-thematiques',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
 	'key' => 'group_5d6faffd00cb6',
 	'title' => 'Champs additionnels auteurs',
 	'fields' => array(
@@ -882,6 +1020,7 @@ acf_add_local_field_group(array(
 				'partenaires' => 'Partenaires',
 				'annuaire' => 'Annuaire',
 				'calendar' => 'Calendrier',
+				'category-list' => 'Listing categories / thématiques',
 			),
 			'allow_custom' => 0,
 			'default_value' => array(

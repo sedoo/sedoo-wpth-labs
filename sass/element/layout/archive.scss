@@ -38,3 +38,8 @@
         background: $light-full;
     }
 }
+.archive{
+    .site-branding{
+        @extend .wrapper;
+    }
+}
