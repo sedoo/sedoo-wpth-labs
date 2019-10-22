@@ -405,6 +405,75 @@ body a.btn {
 .wp-block-table tr:nth-of-type(odd) {
   background: #F2F2F2; }
 
+/* CALENDAR */
+.wpfc-calendar-wrapper h2 {
+  font-size: 4.5rem !important; }
+
+.wpfc-calendar-wrapper .fc-toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .wpfc-calendar-wrapper .fc-toolbar .fc-left {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1; }
+  .wpfc-calendar-wrapper .fc-toolbar .fc-center {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2; }
+  .wpfc-calendar-wrapper .fc-toolbar .fc-right {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3; }
+  .wpfc-calendar-wrapper .fc-toolbar .fc-clear {
+    display: none; }
+
+.wpfc-calendar-wrapper .fc-head {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.6rem !important; }
+
+.wpfc-calendar-wrapper .fc-body {
+  font-family: "Poppins", sans-serif; }
+  .wpfc-calendar-wrapper .fc-body thead td {
+    font-size: 1.6rem !important; }
+
+.wpfc-calendar-wrapper .fc button {
+  border: 3px solid #000;
+  text-transform: uppercase;
+  color: #000;
+  background: none;
+  height: auto;
+  padding: 5px 10px;
+  border-radius: 0;
+  font-family: "Montserrat", sans-serif; }
+  .wpfc-calendar-wrapper .fc button .ui-icon {
+    background-image: url("image/chevron.svg");
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    background-position: center;
+    background-size: cover; }
+  .wpfc-calendar-wrapper .fc button.fc-prev-button .ui-icon {
+    -webkit-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1); }
+
+.wpfc-calendar-wrapper .fc .fc-button-group button:not(:last-child) {
+  margin-right: 10px; }
+
+.wpfc-calendar-wrapper .ui-widget-content {
+  border-color: #9d9fa2;
+  background: #F2F2F2; }
+  .wpfc-calendar-wrapper .ui-widget-content.ui-state-highlight {
+    border-width: 5px;
+    border-style: solid; }
+
 .wrapper-content h2, .wrapper-layout h2 {
   margin-bottom: 20px; }
   .wrapper-content h2:first-child, .wrapper-layout h2:first-child {
@@ -2130,10 +2199,27 @@ ul[id="shortcuts"] {
     -o-transition-delay: 0;
     transition-delay: 0; }
 
+.calendar.open .wrapper .wpfc-calendar-wrapper, .calendar.open .wrapper-content .wpfc-calendar-wrapper {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1); }
+
 .calendar .wrapper, .calendar .wrapper-content {
   max-width: 1400px;
   width: 100%;
   padding: 30px 0; }
+  .calendar .wrapper .wpfc-calendar-wrapper, .calendar .wrapper-content .wpfc-calendar-wrapper {
+    opacity: 0;
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transition: 0.5s ease all;
+    -o-transition: 0.5s ease all;
+    transition: 0.5s ease all;
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s; }
 
 .nav-box {
   position: fixed;

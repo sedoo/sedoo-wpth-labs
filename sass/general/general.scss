@@ -430,3 +430,82 @@ body a.btn{
         }
     }
 }
+
+/* CALENDAR */
+.wpfc-calendar-wrapper{
+    h2{
+        font-size: $h2-size!important;
+    }
+    .fc-toolbar{
+        @include display-flex;
+        @include justify-content-between;
+        @include align-items-center;
+        
+        .fc-left{
+            order: 1;
+        }
+        .fc-center{
+            order: 2;
+        }
+        .fc-right{
+            order: 3;
+        }
+        .fc-clear{
+            display: none;
+        }
+    }
+    .fc-head{
+        font-family: $main-title-family;
+        text-transform: $uppercase;
+        font-size: $font-size!important;
+    }
+    .fc-body{
+        font-family: $main-font-family;
+        
+        thead{    
+            td{
+                font-size: $font-size!important;
+            }
+        }
+    }
+    .fc{
+        button{
+            border: $basic-border;
+            text-transform: uppercase;
+            color: $dark;
+            background: none;
+            height: auto;
+            padding: 5px 10px;
+            border-radius: 0;
+            font-family: $main-title-family;
+            
+            .ui-icon{
+                background-image: url("image/chevron.svg");
+                filter: invert(100%);
+                background-position: center;
+                background-size: cover;
+            }
+            &.fc-prev-button{
+                 .ui-icon{
+                    @include transform(scale(-1, 1));
+                }               
+            }
+        }
+        
+        .fc-button-group{
+            button:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+    }
+    .ui-widget-content{
+        border-color: $dark-grey;
+        background: $light-grey;
+        
+        &.ui-state-highlight{
+            border-width: 5px;
+            border-style: solid;
+            
+        }
+    }
+}

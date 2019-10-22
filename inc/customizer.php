@@ -251,7 +251,8 @@ function labs_by_sedoo_color_style() {
              .search-annuaire input[type="search"]:focus,
              .search-annuaire button:hover,
              .single-event .wrapper-layout header .post-meta,
-             .posts-navigation:hover
+             .posts-navigation:hover,
+             .wpfc-calendar-wrapper .fc .ui-state-active
 			{
 				color: <?php echo $code_color;?>;
 			}
@@ -280,7 +281,8 @@ function labs_by_sedoo_color_style() {
              .search-annuaire button,
              .overlay.location .wrapper .slick-dots .slick-active button::after,
              .wp-block-button .wp-block-button__link,
-             .posts-navigation
+             .posts-navigation,
+             .ui-widget-header
             {
                 background: <?php echo $code_color;?>;
 			}
@@ -290,7 +292,10 @@ function labs_by_sedoo_color_style() {
              .search-form .search-field:active,
              aside[id="stickyMenu"],
              .bobinette,
-             .search-annuaire input[type="search"]:focus
+             .search-annuaire input[type="search"]:focus,
+             .ui-widget-header,
+             .wpfc-calendar-wrapper .fc .ui-state-active,
+             .ui-widget-content.ui-state-highlight
              {
                  border-color: <?php echo $code_color;?>;
              }
