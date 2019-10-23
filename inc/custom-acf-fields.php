@@ -174,6 +174,33 @@ acf_add_local_field_group(array(
 			'allow_null' => 0,
 		),
 		array(
+			'key' => 'field_5daffd6c5d378',
+			'label' => 'Page événements',
+			'name' => 'ajout_evenements',
+			'type' => 'true_false',
+			'instructions' => 'Ajouter lien vers la page événements ?',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5daec24761777',
+						'operator' => '==',
+						'value' => 'custom',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
 			'key' => 'field_5daecc3d00e3d',
 			'label' => 'Lien vers page événements',
 			'name' => 'link_events_page',
@@ -183,9 +210,9 @@ acf_add_local_field_group(array(
 			'conditional_logic' => array(
 				array(
 					array(
-						'field' => 'field_5daec24761777',
+						'field' => 'field_5daffd6c5d378',
 						'operator' => '==',
-						'value' => 'custom',
+						'value' => '1',
 					),
 				),
 			),

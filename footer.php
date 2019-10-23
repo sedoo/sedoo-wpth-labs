@@ -123,12 +123,13 @@ $options_list_footer = get_field('list_choice', 'option');
                     endif; 
                     ?>
 
-                
-                <li class="cat-item">
-                    <a href="<?php echo get_field('link_events_page', 'option'); ?>">
-                        <?php echo __('Événements'); ?>
-                    </a>
-                </li>
+                    <?php if(get_field('ajout_evenements', 'option') === true) { ?>
+                        <li class="cat-item">
+                            <a href="<?php echo get_field('link_events_page', 'option'); ?>">
+                                <?php echo __('Événements'); ?>
+                            </a>
+                        </li>
+                    <?php } ?>
                 <?php    
                 }
                 ?>
