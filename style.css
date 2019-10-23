@@ -1194,8 +1194,7 @@ footer[id="colophon"] {
     width: 50%;
     margin-left: auto; }
   .copyright .wrapper.site-info a, .copyright .site-info.wrapper-content a, .copyright .archive .site-info.site-branding a, .archive .copyright .site-info.site-branding a {
-    text-decoration: underline;
-    margin-right: 10px; }
+    text-decoration: underline; }
     .copyright .wrapper.site-info a:hover, .copyright .site-info.wrapper-content a:hover, .copyright .archive .site-info.site-branding a:hover, .archive .copyright .site-info.site-branding a:hover {
       text-decoration: none;
       color: #fff; }
@@ -1212,8 +1211,16 @@ footer[id="colophon"] {
         display: inline-block;
         vertical-align: middle;
         border-radius: 100%; }
-      .copyright .wrapper.site-info nav[id="mentions-menu"] ul li:last-child::after, .copyright .site-info.wrapper-content nav[id="mentions-menu"] ul li:last-child::after, .copyright .archive .site-info.site-branding nav[id="mentions-menu"] ul li:last-child::after, .archive .copyright .site-info.site-branding nav[id="mentions-menu"] ul li:last-child::after {
-        display: none; }
+      .copyright .wrapper.site-info nav[id="mentions-menu"] ul li:last-child, .copyright .site-info.wrapper-content nav[id="mentions-menu"] ul li:last-child, .copyright .archive .site-info.site-branding nav[id="mentions-menu"] ul li:last-child, .archive .copyright .site-info.site-branding nav[id="mentions-menu"] ul li:last-child {
+        margin-right: 0; }
+        .copyright .wrapper.site-info nav[id="mentions-menu"] ul li:last-child::after, .copyright .site-info.wrapper-content nav[id="mentions-menu"] ul li:last-child::after, .copyright .archive .site-info.site-branding nav[id="mentions-menu"] ul li:last-child::after, .archive .copyright .site-info.site-branding nav[id="mentions-menu"] ul li:last-child::after {
+          display: none; }
+  .copyright .wrapper.site-info .intranet, .copyright .site-info.wrapper-content .intranet, .copyright .archive .site-info.site-branding .intranet, .archive .copyright .site-info.site-branding .intranet {
+    text-align: right;
+    margin-top: 50px; }
+    .copyright .wrapper.site-info .intranet img, .copyright .site-info.wrapper-content .intranet img, .copyright .archive .site-info.site-branding .intranet img, .archive .copyright .site-info.site-branding .intranet img {
+      vertical-align: middle;
+      margin-right: 5px; }
 
 .post-wrapper {
   display: -ms-grid;

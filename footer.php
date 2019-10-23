@@ -202,6 +202,11 @@ $options_list_footer = get_field('list_choice', 'option');
                         ) );
                     } ?>
                 </nav>
+                <?php if(get_field('lien_intranet', 'option')){ ?>
+                    <p class="intranet"><a href="<?php the_field('lien_intranet', 'option'); ?>" target="_blank">
+                        <img src="<?php echo get_template_directory_uri() . '/image/key.svg'; ?>" alt="" /> Intranet
+                    </a></p>
+                <?php } ?>
             </div><!-- .site-info -->
         </div>
 	</footer><!-- #colophon -->

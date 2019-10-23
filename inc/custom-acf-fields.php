@@ -1048,6 +1048,7 @@ acf_add_local_field_group(array(
 				'annuaire' => 'Annuaire',
 				'calendar' => 'Calendrier',
 				'category-list' => 'Listing categories / thématiques',
+				'intranet' => 'Intranet',
 			),
 			'allow_custom' => 0,
 			'default_value' => array(
