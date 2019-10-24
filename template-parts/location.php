@@ -40,7 +40,7 @@
         
     </div>
     <div class="close">
-        <label for="closeLocation">Fermer</label>
+        <label for="closeLocation"><?php echo __('Fermer', 'sedoo-wpth-labs'); ?></label>
         <button id="closeLocation">
             <span></span>
             <span></span>

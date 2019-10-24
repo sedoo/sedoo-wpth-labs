@@ -17,7 +17,17 @@
             <?php 
             if (has_post_thumbnail()) {
                 the_post_thumbnail('thumbnail-loop');
-            } ?>
+            } else {
+                if (catch_that_image() ==  "no_image" ){
+                   the_custom_logo();
+                } else {
+                    echo '<img src="';
+                    echo catch_that_image();
+                    echo '" alt="" />'; 
+                }
+                
+            }?>
+            
         </figure>
         <p>
         <?php     $categories = get_the_category();
@@ -37,7 +47,7 @@
                 ?>
                 <p><?php the_date('j / M / Y') ?></p>
             <?php endif; ?>
-            <a href="<?php the_permalink(); ?>">Lire la suite →</a>
+            <a href="<?php the_permalink(); ?>"><?php echo __('Lire la suite →', 'sedoo-wpth-labs'); ?></a>
         </footer><!-- .entry-footer -->
     </div>
 </article><!-- #post-->

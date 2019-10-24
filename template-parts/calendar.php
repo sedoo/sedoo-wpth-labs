@@ -5,8 +5,10 @@
  */
 
 ?>
-<div class="overlay annuaire">
-    <iframe src="<?php the_field('lien_annuaire', 'option'); ?>"></iframe>
+<div class="overlay calendar">
+    <div class="wrapper">  
+        <?php the_field('shortcode_calendrier', 'option'); ?>
+    </div>
     <div class="close">
         <label for="closeLocation"><?php echo __('Fermer', 'sedoo-wpth-labs'); ?></label>
         <button id="closeLocation">

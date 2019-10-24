@@ -191,7 +191,6 @@ footer[id="colophon"]{
         }
         a{
             text-decoration: underline;
-            margin-right: 10px;
             
             &:hover{
                 text-decoration: none;
@@ -199,8 +198,8 @@ footer[id="colophon"]{
             }
         }
         
-        nav[id="mentions-menu"]{
-            ul{
+        nav[id="mentions-menu"], ul{
+            ul, &.intranet{
                 text-align: right;
                 li{
                     display: inline-block;
@@ -216,11 +215,22 @@ footer[id="colophon"]{
                         border-radius: 100%;
                     }
                     &:last-child{
+                        margin-right: 0;
+                        
                         &::after{
                             display: none;
                         }
                     }
                 }
+            }
+        }
+        .intranet{
+            text-align: right;
+            margin-top: 50px;
+            
+            img{
+                vertical-align: middle;
+                margin-right: 5px;
             }
         }
     }

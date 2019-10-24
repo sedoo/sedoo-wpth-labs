@@ -44,11 +44,25 @@ if( function_exists('acf_add_options_page') ) {
             'parent_slug'	=> 'theme-informations',
         ));
     }
-    if( $options_theme && in_array('mentions-footer', $options_theme) ) {
+    if( $options_theme && in_array('calendar', $options_theme) ) {
     	acf_add_options_sub_page(array(
-            'page_title' 	=> 'Pages Mentions Footer',
-            'menu_title'	=> 'Pages Mentions Footer',
+            'page_title' 	=> 'Theme Calendar',
+            'menu_title'	=> 'Calendrier',
             'parent_slug'	=> 'theme-informations',
         ));
     }   
+    if( $options_theme && in_array('category-list', $options_theme) ) {
+    	acf_add_options_sub_page(array(
+            'page_title' 	=> 'Listing Categories',
+            'menu_title'	=> 'Listing Categories / Thématiques',
+            'parent_slug'	=> 'theme-informations',
+        ));
+    }  
+    if( $options_theme && in_array('intranet', $options_theme) ) {
+    	acf_add_options_sub_page(array(
+            'page_title' 	=> 'Intranet',
+            'menu_title'	=> 'Lien Intranet / Webmail',
+            'parent_slug'	=> 'theme-informations',
+        ));
+    } 
 }

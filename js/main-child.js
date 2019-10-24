@@ -53,7 +53,18 @@ jQuery(document).ready(function ($) {
         $(".overlay.annuaire").removeClass("open");
         $("body").removeClass("no-scroll");
 
-    });    
+    });   
+    // Pop over à l'ouverture du calendrier
+    $(".calendar-btn").click(function () {
+        $(".overlay.calendar").addClass("open");
+        $("body").addClass("no-scroll");
+    });
+    $(".overlay .close").click(function () {
+        $(".overlay.calendar").removeClass("open");
+        $("body").removeClass("no-scroll");
+
+    });  
+    
     
     // Toggle dépliage Sommaire
     $(".bobinette").click(function () {

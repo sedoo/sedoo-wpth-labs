@@ -52,7 +52,7 @@
                             <span></span>
                             <span></span>
                         </div>
-                        <label for="burger">Menu</label>
+                        <label for="burger"><?php echo __('Menu', 'sedoo-wpth-labs'); ?></label>
                     </button>
                 </nav>
                 <?php else : ?>
@@ -70,7 +70,7 @@
                             <span></span>
                             <span></span>
                         </div>
-                        <label for="burger">Menu</label>
+                        <label for="burger"><?php echo __('Menu', 'sedoo-wpth-labs'); ?></label>
                     </button>
                 </nav>
                 <?php } ?>
