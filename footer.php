@@ -202,11 +202,25 @@ $options_list_footer = get_field('list_choice', 'option');
                         ) );
                     } ?>
                 </nav>
-                <?php if(get_field('lien_intranet', 'option')){ ?>
-                    <p class="intranet"><a href="<?php the_field('lien_intranet', 'option'); ?>" target="_blank">
-                        <img src="<?php echo get_template_directory_uri() . '/image/key.svg'; ?>" alt="" /> Intranet
-                    </a></p>
-                <?php } ?>
+                <?php if(get_field('lien_intranet', 'option') or get_field('lien_webmail' , 'option')) { ?>
+                <ul class="intranet">
+                    <?php if(get_field('lien_intranet', 'option')){ ?>
+                    <li>
+                        <a href="<?php the_field('lien_intranet', 'option'); ?>" target="_blank">
+                            <img src="<?php echo get_template_directory_uri() . '/image/key.svg'; ?>" alt="" /><?php echo __("Intranet", 'sedoo-wpth-labs'); ?>
+                        </a>
+                    </li>
+                    <?php } ?>
+                    <?php if(get_field('lien_webmail', 'option')){ ?>
+                    <li>
+                        <a href="<?php the_field('lien_webmail', 'option'); ?>" target="_blank">
+                            <img src="<?php echo get_template_directory_uri() . '/image/mail.svg'; ?>" alt="" /><?php echo __("Webmail", 'sedoo-wpth-labs'); ?>
+                        </a>
+                    </li>
+                    <?php } ?>                        
+                </ul>
+                <?php } ?>  
+
             </div><!-- .site-info -->
         </div>
 	</footer><!-- #colophon -->

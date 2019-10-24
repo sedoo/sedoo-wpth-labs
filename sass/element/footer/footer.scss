@@ -198,8 +198,8 @@ footer[id="colophon"]{
             }
         }
         
-        nav[id="mentions-menu"]{
-            ul{
+        nav[id="mentions-menu"], ul{
+            ul, &.intranet{
                 text-align: right;
                 li{
                     display: inline-block;

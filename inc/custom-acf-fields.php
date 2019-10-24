@@ -327,7 +327,7 @@ acf_add_local_field_group(array(
 
 acf_add_local_field_group(array(
 	'key' => 'group_5db006731378c',
-	'title' => 'Lien Intranet',
+	'title' => 'Liens Intranet / Webmail',
 	'fields' => array(
 		array(
 			'key' => 'field_5db00678342e8',
@@ -345,13 +345,29 @@ acf_add_local_field_group(array(
 			'default_value' => '',
 			'placeholder' => '',
 		),
+		array(
+			'key' => 'field_5db153392f87c',
+			'label' => 'Lien webmail',
+			'name' => 'lien_webmail',
+			'type' => 'url',
+			'instructions' => 'Saisir le lien vers le webmail',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
 	),
 	'location' => array(
 		array(
 			array(
 				'param' => 'options_page',
 				'operator' => '==',
-				'value' => 'acf-options-lien-intranet',
+				'value' => 'acf-options-lien-intranet-webmail',
 			),
 		),
 	),

@@ -61,7 +61,7 @@ if( function_exists('acf_add_options_page') ) {
     if( $options_theme && in_array('intranet', $options_theme) ) {
     	acf_add_options_sub_page(array(
             'page_title' 	=> 'Intranet',
-            'menu_title'	=> 'Lien Intranet',
+            'menu_title'	=> 'Lien Intranet / Webmail',
             'parent_slug'	=> 'theme-informations',
         ));
     } 
