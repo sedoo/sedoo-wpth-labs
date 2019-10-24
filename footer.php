@@ -8,6 +8,7 @@
  *
  * @package labs_by_Sedoo
  */
+$options_list_footer = get_field('list_choice', 'option');
 
 ?>
 
@@ -34,9 +35,9 @@
                     </div>
                     <div>
                         <p><b><?php echo $contact_labo; ?></b></p>
-                        <p>Tel : <a href="tel:<?php echo $tel_contact; ?>"><?php echo $tel_contact; ?></a></p>
+                        <p><?php echo __('Tel : ', 'sedoo-wpth-labs'); ?><a href="tel:<?php echo $tel_contact; ?>"><?php echo $tel_contact; ?></a></p>
                         <?php if($fax_contact) { ?>
-                            <p>Fax : <?php echo $fax_contact; ?></p>
+                            <p><?php echo __('Fax : ', 'sedoo-wpth-labs'); ?><?php echo $fax_contact; ?></p>
                         <?php } ?>
                         <p><a href="mailto:<?php echo $mail_contact; ?>"><?php echo $mail_contact; ?></a></p>
                     </div>
@@ -58,12 +59,85 @@
                 }?>
             </div>
             <ul class="footer-categories">
-                <?php wp_list_categories(array('title_li' => '')); ?>
+                <?php if( $options_list_footer === 'categories'){
+                    wp_list_categories(array(
+                        'title_li' => '',
+                        'exclude' => '1'
+                    )); 
+                }
+                ?>
+                <?php if( $options_list_footer === 'thematic'){
+                    // Get the taxonomy's terms
+                    $terms = get_terms(
+                        array(
+                            'taxonomy'   => 'sedoo-theme-labo',
+                            'hide_empty' => false
+                        )
+                    );
+
+                    // Check if any term exists
+                    if ( ! empty( $terms ) && is_array( $terms ) ) {
+                        // Run a loop and print them all
+                        foreach ( $terms as $term ) { ?>
+                            <li class="cat-item">
+                                <a href="<?php echo esc_url( get_term_link( $term ) ) ?>">
+                                <?php echo $term->name; ?>
+                                </a>
+                            </li>
+                <?php
+                        }
+                    } 
+                }
+                ?>
+                <?php if( $options_list_footer === 'custom'){
+
+                    $terms = get_field('custom_list_category', 'option');
+
+                    if( $terms ): ?>
+
+                        <?php foreach( $terms as $term ): ?>
+
+                            <li class="cat-item">
+                                <a href="<?php echo get_term_link( $term ); ?>">
+                                    <?php echo $term->name; ?>
+                                </a>
+                            </li>
+
+                        <?php endforeach;
+                    endif; 
+            
+                
+                    $terms = get_field('custom_list_thematic', 'option');
+
+                    if( $terms ): ?>
+
+                        <?php foreach( $terms as $term ): ?>
+
+                            <li class="cat-item">
+                                <a href="<?php echo get_term_link( $term ); ?>">
+                                    <?php echo $term->name; ?>
+                                </a>
+                            </li>
+
+                        <?php endforeach;
+                    endif; 
+                    ?>
+
+                    <?php if(get_field('ajout_evenements', 'option') === true) { ?>
+                        <li class="cat-item">
+                            <a href="<?php echo get_field('link_events_page', 'option'); ?>">
+                                <?php echo __('Événements'); ?>
+                            </a>
+                        </li>
+                    <?php } ?>
+                <?php    
+                }
+                ?>
             </ul>
             <div class="social-partenaires">
                  <?php if( have_rows('reseaux_sociaux', 'option') ): ?>
                     <div class="social-list">
-                        <h2>Suivez nous sur les réseaux sociaux</h2>
+                        <h2><?php echo __('Suivez-nous sur les réseaux sociaux', 'sedoo-wpth-labs'); ?></h2>
                         <ul class="inline-list">
 
                         <?php while( have_rows('reseaux_sociaux', 'option') ): the_row(); 
@@ -88,7 +162,7 @@
                 <?php endif; ?>
                 <?php if( have_rows('partenaires', 'option') ): ?>
                     <div class="partners-list">
-                        <h2>Tutelles</h2>
+                        <h2><?php echo __('Tutelles', 'sedoo-wpth-labs'); ?></h2>
                         <ul id="partners-sidebar" class="primary-sidebar widget-area inline-list" role="complementary">
                         <?php while( have_rows('partenaires', 'option') ): the_row(); 
 
@@ -128,6 +202,25 @@
                         ) );
                     } ?>
                 </nav>
+                <?php if(get_field('lien_intranet', 'option') or get_field('lien_webmail' , 'option')) { ?>
+                <ul class="intranet">
+                    <?php if(get_field('lien_intranet', 'option')){ ?>
+                    <li>
+                        <a href="<?php the_field('lien_intranet', 'option'); ?>" target="_blank">
+                            <img src="<?php echo get_template_directory_uri() . '/image/key.svg'; ?>" alt="" /><?php echo __("Intranet", 'sedoo-wpth-labs'); ?>
+                        </a>
+                    </li>
+                    <?php } ?>
+                    <?php if(get_field('lien_webmail', 'option')){ ?>
+                    <li>
+                        <a href="<?php the_field('lien_webmail', 'option'); ?>" target="_blank">
+                            <img src="<?php echo get_template_directory_uri() . '/image/mail.svg'; ?>" alt="" /><?php echo __("Webmail", 'sedoo-wpth-labs'); ?>
+                        </a>
+                    </li>
+                    <?php } ?>                        
+                </ul>
+                <?php } ?>  
+
             </div><!-- .site-info -->
         </div>
 	</footer><!-- #colophon -->

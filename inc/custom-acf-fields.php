@@ -42,6 +42,214 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
+	'key' => 'group_5dadb18624429',
+	'title' => 'Calendar Settings',
+	'fields' => array(
+		array(
+			'key' => 'field_5dadb1927d6d8',
+			'label' => 'Shortcode Calendrier',
+			'name' => 'shortcode_calendrier',
+			'type' => 'wysiwyg',
+			'instructions' => 'Ajouter le shortcode vers le calendrier',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'tabs' => 'visual',
+			'toolbar' => 'full',
+			'media_upload' => 1,
+			'delay' => 0,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-calendrier',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
+	'key' => 'group_5daec22cb625a',
+	'title' => 'Categories / Thematics settings',
+	'fields' => array(
+		array(
+			'key' => 'field_5daec24761777',
+			'label' => 'Choix de listing',
+			'name' => 'list_choice',
+			'type' => 'radio',
+			'instructions' => 'Quel listing souhaitez-vous afficher dans la 3ième colonne du footer ?',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'categories' => 'Liste des catégories d\'article uniquement',
+				'thematic' => 'Liste des thématiques uniquement',
+				'custom' => 'Liste personnalisée de catégories et de thématiques',
+			),
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'default_value' => '',
+			'layout' => 'vertical',
+			'return_format' => 'value',
+			'save_other_choice' => 0,
+		),
+		array(
+			'key' => 'field_5daec488e5ca7',
+			'label' => 'Listing personnalisé categories',
+			'name' => 'custom_list_category',
+			'type' => 'taxonomy',
+			'instructions' => 'Cocher les taxonomies que vous souhaitez afficher dans la liste',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5daec24761777',
+						'operator' => '==',
+						'value' => 'custom',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'taxonomy' => 'category',
+			'field_type' => 'checkbox',
+			'add_term' => 1,
+			'save_terms' => 0,
+			'load_terms' => 0,
+			'return_format' => 'object',
+			'multiple' => 0,
+			'allow_null' => 0,
+		),
+		array(
+			'key' => 'field_5daecc0200e3c',
+			'label' => 'Listing personnalisé thématiques',
+			'name' => 'custom_list_thematic',
+			'type' => 'taxonomy',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5daec24761777',
+						'operator' => '==',
+						'value' => 'custom',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'taxonomy' => 'sedoo-theme-labo',
+			'field_type' => 'checkbox',
+			'add_term' => 1,
+			'save_terms' => 0,
+			'load_terms' => 0,
+			'return_format' => 'object',
+			'multiple' => 0,
+			'allow_null' => 0,
+		),
+		array(
+			'key' => 'field_5daffd6c5d378',
+			'label' => 'Page événements',
+			'name' => 'ajout_evenements',
+			'type' => 'true_false',
+			'instructions' => 'Ajouter lien vers la page événements ?',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5daec24761777',
+						'operator' => '==',
+						'value' => 'custom',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
+			'key' => 'field_5daecc3d00e3d',
+			'label' => 'Lien vers page événements',
+			'name' => 'link_events_page',
+			'type' => 'page_link',
+			'instructions' => 'Indiquer le lien vers la page d\'événements',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5daffd6c5d378',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => array(
+				0 => 'event',
+			),
+			'taxonomy' => '',
+			'allow_null' => 0,
+			'allow_archives' => 1,
+			'multiple' => 0,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-listing-categories-thematiques',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
 	'key' => 'group_5d6faffd00cb6',
 	'title' => 'Champs additionnels auteurs',
 	'fields' => array(
@@ -68,7 +276,7 @@ acf_add_local_field_group(array(
 			'key' => 'field_5d6fb025d56e2',
 			'label' => 'Photo auteur',
 			'name' => 'photo_auteur',
-			'type' => 'image',
+			'type' => 'image_aspect_ratio_crop',
 			'instructions' => 'Téléverser la photo de l\'auteur',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -77,6 +285,8 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
+			'aspect_ratio_width' => 433,
+			'aspect_ratio_height' => 200,
 			'return_format' => 'array',
 			'preview_size' => 'full',
 			'library' => 'all',
@@ -102,6 +312,62 @@ acf_add_local_field_group(array(
 				'param' => 'user_form',
 				'operator' => '==',
 				'value' => 'register',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
+	'key' => 'group_5db006731378c',
+	'title' => 'Liens Intranet / Webmail',
+	'fields' => array(
+		array(
+			'key' => 'field_5db00678342e8',
+			'label' => 'Lien Intranet',
+			'name' => 'lien_intranet',
+			'type' => 'url',
+			'instructions' => 'Saisir le lien vers l\'intranet du Labo',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5db153392f87c',
+			'label' => 'Lien webmail',
+			'name' => 'lien_webmail',
+			'type' => 'url',
+			'instructions' => 'Saisir le lien vers le webmail',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-lien-intranet-webmail',
 			),
 		),
 	),
@@ -442,7 +708,7 @@ acf_add_local_field_group(array(
 			'key' => 'field_5d96f05c8037d',
 			'label' => 'Photo auteur extérieur',
 			'name' => 'photo_auteur_exterieur',
-			'type' => 'image',
+			'type' => 'image_aspect_ratio_crop',
 			'instructions' => 'Téléverser la photo de l\'auteur',
 			'required' => 1,
 			'conditional_logic' => array(
@@ -459,8 +725,10 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
+			'aspect_ratio_width' => 433,
+			'aspect_ratio_height' => 200,
 			'return_format' => 'array',
-			'preview_size' => 'full',
+			'preview_size' => 'medium',
 			'library' => 'all',
 			'min_width' => '',
 			'min_height' => '',
@@ -769,6 +1037,54 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
+	'key' => 'group_5dad7b0c8b7ea',
+	'title' => 'Temps de lecture',
+	'fields' => array(
+		array(
+			'key' => 'field_5dad7b236e8e8',
+			'label' => 'Temps de Lecture',
+			'name' => 'temps_lecture',
+			'type' => 'checkbox',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'lecture' => 'afficher',
+			),
+			'allow_custom' => 0,
+			'default_value' => array(
+			),
+			'layout' => 'vertical',
+			'toggle' => 0,
+			'return_format' => 'value',
+			'save_custom' => 0,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'post',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'side',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
 	'key' => 'group_5d6e44395feac',
 	'title' => 'Theme informations',
 	'fields' => array(
@@ -790,7 +1106,9 @@ acf_add_local_field_group(array(
 				'reseaux' => 'Réseaux Sociaux',
 				'partenaires' => 'Partenaires',
 				'annuaire' => 'Annuaire',
-				'mentions-footer' => 'Pages Mentions Footer',
+				'calendar' => 'Calendrier',
+				'category-list' => 'Listing categories / thématiques',
+				'intranet' => 'Intranet',
 			),
 			'allow_custom' => 0,
 			'default_value' => array(

@@ -47,7 +47,7 @@ get_header();
         ?>
         <aside id="stickyMenu" class="open">
             <div>
-                <p>Sommaire</p>
+                <p><?php echo __('Sommaire', 'sedoo-wpth-labs'); ?></p>
                 <nav role="sommaire">
                     <ol id="tocList">
                         
