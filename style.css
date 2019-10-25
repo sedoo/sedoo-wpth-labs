@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.6.5
+Version: 0.6.6
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -473,6 +473,10 @@ body a.btn {
   .wpfc-calendar-wrapper .ui-widget-content.ui-state-highlight {
     border-width: 5px;
     border-style: solid; }
+
+/* INTERACTIVE MAP */
+[id="desc_overlay"] h2, [id="desc_overlay"] p {
+  color: #fff; }
 
 .wrapper-content h2, .wrapper-layout h2 {
   margin-bottom: 20px; }
