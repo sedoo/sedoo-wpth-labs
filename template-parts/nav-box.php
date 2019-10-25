@@ -43,4 +43,5 @@ $post_name = mb_strlen( $title ) > $max_length ? mb_substr( $title, 0, $max_leng
         </div>
         <?php } ?>
     </div>
-<?php } ?>
+<?php }
+wp_reset_postdata();?>

@@ -94,15 +94,22 @@ $themeSlugRewrite = "sedoo-theme-labo";
                             <div>
                                 <h3><?php the_title(); ?></h3>
                             </div>
-
-                            <?php if (get_the_post_thumbnail()) {
-                            ?>
                             <div class="post-img">
-                                <?php the_post_thumbnail(); ?>
+                                <?php if (get_the_post_thumbnail()) {
+                                    the_post_thumbnail();
+                                } else {
+                                    if (catch_that_image() ==  "no_image" ){
+                                        $custom_logo_id = get_theme_mod( 'custom_logo' );
+                                        $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); ?>
+                                        <img class="object-fit-contain" src="<?php echo $image[0]; ?>" alt="" />
+                                    <?php } else {
+                                        echo '<img src="';
+                                        echo catch_that_image();
+                                        echo '" alt="" />'; 
+                                    }
+                                }
+                                ?>
                             </div>
-                            <?php 
-                            }
-                            ?>
                         </a>
                     <?php
                     }
