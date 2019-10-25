@@ -710,7 +710,7 @@ acf_add_local_field_group(array(
 			'name' => 'photo_auteur_exterieur',
 			'type' => 'image_aspect_ratio_crop',
 			'instructions' => 'Téléverser la photo de l\'auteur',
-			'required' => 1,
+			'required' => 0,
 			'conditional_logic' => array(
 				array(
 					array(
