@@ -306,8 +306,8 @@ function labs_by_sedoo_color_style() {
 				color: <?php echo $code_color;?>;
 			}
 
-            # {
-                background-color: rgba(<?php echo $rgb_color[0].",".$rgb_color[1].",".$rgb_color[2].",.9)"; ?>;
+            #desc_overlay {
+                background-color: rgba(<?php echo $rgb_color[0].",".$rgb_color[1].",".$rgb_color[2].",.8)"; ?>;
             }
              
             ul[id="shortcuts"] li:hover button path, ul[id="shortcuts"] li:hover button rect:not(.size), ul[id="shortcuts"] li:hover button line{
