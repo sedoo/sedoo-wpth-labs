@@ -12,6 +12,7 @@
         <div>
             <?php global $EM_Event;
             echo $EM_Event->output_single();
+            
             ?>
         </div>
     </div> 

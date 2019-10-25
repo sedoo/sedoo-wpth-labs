@@ -25,17 +25,19 @@
 }
 
 .posts-navigation{
-    display: block;
-    margin: 50px auto;
-    text-align: center;
-    background: $dark;
-    color: $light-full!important;
-    padding: 20px;
-    max-width: 30%;
-    box-shadow: $basic-box-shadow;
-    
-    &:hover{
-        background: $light-full;
+    a{
+        display: block;
+        margin: 50px auto;
+        text-align: center;
+        background: $dark;
+        color: $light-full;
+        padding: 20px;
+        max-width: 30%;
+        box-shadow: $basic-box-shadow;
+
+        &:hover{
+            background: $light-full;
+        }
     }
 }
 .archive{

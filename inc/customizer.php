@@ -251,7 +251,7 @@ function labs_by_sedoo_color_style() {
              .search-annuaire input[type="search"]:focus,
              .search-annuaire button:hover,
              .single-event .wrapper-layout header .post-meta,
-             .posts-navigation:hover,
+             .posts-navigation a:hover,
              .wpfc-calendar-wrapper .fc .ui-state-active
 			{
 				color: <?php echo $code_color;?>;
@@ -281,7 +281,7 @@ function labs_by_sedoo_color_style() {
              .search-annuaire button,
              .overlay.location .wrapper .slick-dots .slick-active button::after,
              .wp-block-button .wp-block-button__link,
-             .posts-navigation,
+             .posts-navigation a,
              .ui-widget-header
             {
                 background: <?php echo $code_color;?>;
