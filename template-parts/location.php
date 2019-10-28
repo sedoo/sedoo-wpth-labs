@@ -4,6 +4,7 @@
  *
  */
 
+if ( get_field('display_shortcut', 'option') == 'oui'){ ?>
 ?>
 <div class="overlay location">
     <?php the_custom_logo(); ?>
@@ -31,9 +32,11 @@
                     <p><a href="mailto:<?php echo $mail_contact; ?>"><?php echo $mail_contact; ?></a></p>
                 </div>
             </div>
-            <div class="leaflet-container">
-                <?php echo $map; ?>
-            </div>
+            <?php if(get_field('display_map') == 'oui') { ?>
+                <div class="leaflet-container">
+                    <?php echo $map; ?>
+                </div>
+            <?php } ?>
         </div>
         <?php endwhile; ?>
         <?php endif; ?>
@@ -47,3 +50,4 @@
         </button>
     </div>
 </div>
+<?php } ?>

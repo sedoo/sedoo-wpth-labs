@@ -3,7 +3,8 @@
  * The template for displaying the searchform screen
  *
  */
-
+$options_theme = get_field('ajout_options', 'option');
+if( $options_theme && in_array('annuaire', $options_theme) ) {
 ?>
 <div class="overlay annuaire">
     <iframe src="<?php the_field('lien_annuaire', 'option'); ?>"></iframe>
@@ -15,3 +16,4 @@
         </button>
     </div>
 </div>
+<?php } ?>

@@ -386,6 +386,25 @@ acf_add_local_field_group(array(
 	'title' => 'Location Settings',
 	'fields' => array(
 		array(
+			'key' => 'field_5db6f28ec9561',
+			'label' => 'Affichage à droite',
+			'name' => 'display_shortcut',
+			'type' => 'true_false',
+			'instructions' => 'Souhaitez-vous affichez les informations de contact et la carte sur le bord droite de l\'écran ?',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
 			'key' => 'field_5d95af7a91861',
 			'label' => 'Information géographiques du Laboratoire',
 			'name' => 'location_repeater',
@@ -518,8 +537,27 @@ acf_add_local_field_group(array(
 					'append' => '',
 				),
 				array(
+					'key' => 'field_5db6f2234981c',
+					'label' => 'Affichage carte',
+					'name' => 'display_map',
+					'type' => 'true_false',
+					'instructions' => 'Souhaitez-vous afficher la carte ?',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'message' => '',
+					'default_value' => 0,
+					'ui' => 1,
+					'ui_on_text' => '',
+					'ui_off_text' => '',
+				),
+				array(
 					'center_lat' => 53.5507112,
-					'center_lng' => 10.0006485,
+					'center_lng' => 10.0001335,
 					'zoom' => 12,
 					'key' => 'field_5d6e465a92f74',
 					'label' => 'Map',
@@ -527,7 +565,15 @@ acf_add_local_field_group(array(
 					'type' => 'open_street_map',
 					'instructions' => 'Renseignez l\'adresse du laboratoire',
 					'required' => 0,
-					'conditional_logic' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5db6f2234981c',
+								'operator' => '==',
+								'value' => '1',
+							),
+						),
+					),
 					'wrapper' => array(
 						'width' => '',
 						'class' => '',
