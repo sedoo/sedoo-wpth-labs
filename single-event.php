@@ -72,7 +72,7 @@ while ( have_posts() ) : the_post();
     if ( $the_query->have_posts() ) {  
     ?>
     <footer class="read-more-article">
-        <h2><?php echo __("D'autres événements sur le même thème : ", 'sedoo-wpth-labs'); ?></h2>
+        <h2><?php echo __("D'autres événements sur le même thème", 'sedoo-wpth-labs'); ?> :</h2>
         <!-- Boucle d'article sur le même thème -->
         <div class="post-loop event-loop">
             <?php                
@@ -87,6 +87,7 @@ while ( have_posts() ) : the_post();
                     <p><?php 
                             $EmEvent = get_post_meta( $post->ID);
                             $dateEvent = new DateTime($EmEvent["_event_start_date"][0]);
+                            $locale = get_locale();
                             setlocale(LC_TIME, $locale);
                             echo strftime("%d %B %Y", strtotime($dateEvent->format('d M Y')));
                         ?>

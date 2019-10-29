@@ -129,6 +129,8 @@ body{
 }
 div[id="page"]{
     padding: 110px 20px 20px;
+    overflow-y: hidden;
+    max-width: 100%;
 }
 /* WRAPPER */
 .wrapper{

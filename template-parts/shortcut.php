@@ -7,7 +7,7 @@ $options_theme = get_field('ajout_options', 'option');
 ?>
 
 <ul id="shortcuts">
-    <?php if( $options_theme && in_array('contact', $options_theme) ) { ?>
+    <?php if( get_field('display_shortcut', 'option') == 'oui' ) { ?>
     <li class="location-btn">
         <button>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
@@ -22,7 +22,7 @@ $options_theme = get_field('ajout_options', 'option');
         </button>
     </li>
     <?php } ?>
-    <?php if( $options_theme && in_array('reseaux', $options_theme) ) { ?>
+    <?php if( $options_theme && in_array('annuaire', $options_theme) ) { ?>
     <li class="annuaire-btn">
         <button>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">

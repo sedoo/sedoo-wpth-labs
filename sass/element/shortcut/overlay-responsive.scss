@@ -30,6 +30,23 @@
                 }
             }
         }
+        &.calendar{
+            .wrapper{
+                padding: 40px 20px;
+                
+                .fc-toolbar{
+                    @include flex-wrap;
+                    
+                    .fc-center{
+                        width: 100%;
+                        order: 1;
+                    }
+                    .fc-left{
+                        order: 2;
+                    }
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 767px){
@@ -99,6 +116,31 @@
         &.annuaire{
             iframe{
                 padding: 20px;
+            }
+        }
+        
+        &.calendar{
+            .wrapper{
+                padding: 40px 20px;
+                
+                .fc-toolbar{
+                    @include flex-wrap;
+                    @include flex-column;
+                    
+                    .fc-center{
+                        width: 100%;
+                        order: 2;
+                        margin: 10px 0;
+                    }
+                    .fc-left{
+                        order: 1;
+                        width: 100%;
+                    }
+                    .fc-right{
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+                }
             }
         }
     }

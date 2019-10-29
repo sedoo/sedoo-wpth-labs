@@ -81,7 +81,6 @@ jQuery(document).ready(function ($) {
                 readingTimeTarget: '.eta',
                 remoteTarget: 'article',
                 success: function(data) {
-                    console.log(data);
                 }
             });
         });

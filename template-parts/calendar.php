@@ -5,9 +5,13 @@
  */
 
 ?>
+<?php 
+$display_calendar = get_field('display_calendar', 'option');
+if($display_calendar == 'oui') { 
+?>
 <div class="overlay calendar">
     <div class="wrapper">  
-        <?php the_field('shortcode_calendrier', 'option'); ?>
+        <?php echo WP_FullCalendar::calendar($args); ?>
     </div>
     <div class="close">
         <label for="closeLocation"><?php echo __('Fermer', 'sedoo-wpth-labs'); ?></label>
@@ -17,3 +21,6 @@
         </button>
     </div>
 </div>
+<?php } else {
+    
+} ?>

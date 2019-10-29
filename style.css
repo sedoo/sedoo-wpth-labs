@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.6.6
+Version: 0.6.7
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -146,7 +146,9 @@ body {
       transition-delay: 0.5s; }
 
 div[id="page"] {
-  padding: 110px 20px 20px; }
+  padding: 110px 20px 20px;
+  overflow-y: hidden;
+  max-width: 100%; }
 
 /* WRAPPER */
 .wrapper, .wrapper-content, .archive .site-branding {
@@ -1278,7 +1280,9 @@ footer[id="colophon"] {
   position: relative;
   overflow: visible;
   z-index: 1;
-  margin-bottom: 70px; }
+  margin-bottom: 70px;
+  margin-right: auto;
+  margin-left: auto; }
   .single-post main::before, .single-post main::after, .single-event main::before, .single-event main::after {
     content: "";
     position: absolute;
@@ -1591,6 +1595,8 @@ div[id="em-wrapper"] h2 {
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     overflow: hidden; }
+  .event-post > div a + h3 {
+    margin-top: 0; }
   .event-post h3 {
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -2861,7 +2867,21 @@ aside[id="stickyMenu"] {
         height: 300px !important;
         margin-left: 0;
         margin-top: 30px;
-        position: relative; } }
+        position: relative; }
+  .overlay.calendar .wrapper, .overlay.calendar .wrapper-content, .overlay.calendar .archive .site-branding, .archive .overlay.calendar .site-branding {
+    padding: 40px 20px; }
+    .overlay.calendar .wrapper .fc-toolbar, .overlay.calendar .wrapper-content .fc-toolbar, .overlay.calendar .archive .site-branding .fc-toolbar, .archive .overlay.calendar .site-branding .fc-toolbar {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .overlay.calendar .wrapper .fc-toolbar .fc-center, .overlay.calendar .wrapper-content .fc-toolbar .fc-center, .overlay.calendar .archive .site-branding .fc-toolbar .fc-center, .archive .overlay.calendar .site-branding .fc-toolbar .fc-center {
+        width: 100%;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1; }
+      .overlay.calendar .wrapper .fc-toolbar .fc-left, .overlay.calendar .wrapper-content .fc-toolbar .fc-left, .overlay.calendar .archive .site-branding .fc-toolbar .fc-left, .archive .overlay.calendar .site-branding .fc-toolbar .fc-left {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2; } }
 
 @media screen and (max-width: 767px) {
   .overlay.location .custom-logo {
@@ -2913,7 +2933,30 @@ aside[id="stickyMenu"] {
     .overlay.location .wrapper .location-repeat .information-location, .overlay.location .wrapper-content .location-repeat .information-location, .overlay.location .archive .site-branding .location-repeat .information-location, .archive .overlay.location .site-branding .location-repeat .information-location, .overlay.location .wrapper .location-repeat .leaflet-container, .overlay.location .wrapper-content .location-repeat .leaflet-container, .overlay.location .archive .site-branding .location-repeat .leaflet-container, .archive .overlay.location .site-branding .location-repeat .leaflet-container {
       width: 100%; }
   .overlay.annuaire iframe {
-    padding: 20px; } }
+    padding: 20px; }
+  .overlay.calendar .wrapper, .overlay.calendar .wrapper-content, .overlay.calendar .archive .site-branding, .archive .overlay.calendar .site-branding {
+    padding: 40px 20px; }
+    .overlay.calendar .wrapper .fc-toolbar, .overlay.calendar .wrapper-content .fc-toolbar, .overlay.calendar .archive .site-branding .fc-toolbar, .archive .overlay.calendar .site-branding .fc-toolbar {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .overlay.calendar .wrapper .fc-toolbar .fc-center, .overlay.calendar .wrapper-content .fc-toolbar .fc-center, .overlay.calendar .archive .site-branding .fc-toolbar .fc-center, .archive .overlay.calendar .site-branding .fc-toolbar .fc-center {
+        width: 100%;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        margin: 10px 0; }
+      .overlay.calendar .wrapper .fc-toolbar .fc-left, .overlay.calendar .wrapper-content .fc-toolbar .fc-left, .overlay.calendar .archive .site-branding .fc-toolbar .fc-left, .archive .overlay.calendar .site-branding .fc-toolbar .fc-left {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+        width: 100%; }
+      .overlay.calendar .wrapper .fc-toolbar .fc-right, .overlay.calendar .wrapper-content .fc-toolbar .fc-right, .overlay.calendar .archive .site-branding .fc-toolbar .fc-right, .archive .overlay.calendar .site-branding .fc-toolbar .fc-right {
+        width: 100%;
+        margin-bottom: 30px; } }
 
 @media screen and (max-width: 500px) {
   .location.open.overlay .wrapper .location-repeat .leaflet-container, .location.open.overlay .wrapper-content .location-repeat .leaflet-container, .location.open.overlay .archive .site-branding .location-repeat .leaflet-container, .archive .location.open.overlay .site-branding .location-repeat .leaflet-container {
