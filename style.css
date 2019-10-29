@@ -2792,18 +2792,7 @@ aside[id="stickyMenu"] {
 
 @media screen and (max-width: 1024px) {
   aside[id="stickyMenu"] {
-    width: 90%;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none; }
-    aside[id="stickyMenu"].open {
-      -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-      transform: translateX(-100%); }
-      aside[id="stickyMenu"].open .bobinette::after {
-        -webkit-transform: rotateZ(0);
-        -ms-transform: rotate(0);
-        transform: rotateZ(0); }
+    width: 90%; }
     aside[id="stickyMenu"] .bobinette {
       right: -5%; }
       aside[id="stickyMenu"] .bobinette::after {
