@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.6.7
+Version: 0.6.8
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -2945,23 +2945,27 @@ aside[id="stickyMenu"] {
       flex-direction: column; }
       .overlay.calendar .wrapper .fc-toolbar .fc-center, .overlay.calendar .wrapper-content .fc-toolbar .fc-center, .overlay.calendar .archive .site-branding .fc-toolbar .fc-center, .archive .overlay.calendar .site-branding .fc-toolbar .fc-center {
         width: 100%;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1; }
+      .overlay.calendar .wrapper .fc-toolbar .fc-left, .overlay.calendar .wrapper-content .fc-toolbar .fc-left, .overlay.calendar .archive .site-branding .fc-toolbar .fc-left, .archive .overlay.calendar .site-branding .fc-toolbar .fc-left {
         -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
         order: 2;
+        width: 100%;
         margin: 10px 0; }
-      .overlay.calendar .wrapper .fc-toolbar .fc-left, .overlay.calendar .wrapper-content .fc-toolbar .fc-left, .overlay.calendar .archive .site-branding .fc-toolbar .fc-left, .archive .overlay.calendar .site-branding .fc-toolbar .fc-left {
-        -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-        order: 1;
-        width: 100%; }
       .overlay.calendar .wrapper .fc-toolbar .fc-right, .overlay.calendar .wrapper-content .fc-toolbar .fc-right, .overlay.calendar .archive .site-branding .fc-toolbar .fc-right, .archive .overlay.calendar .site-branding .fc-toolbar .fc-right {
         width: 100%;
         margin-bottom: 30px; } }
 
 @media screen and (max-width: 500px) {
+  .search-form h2 {
+    font-size: 4rem; }
   .location.open.overlay .wrapper .location-repeat .leaflet-container, .location.open.overlay .wrapper-content .location-repeat .leaflet-container, .location.open.overlay .archive .site-branding .location-repeat .leaflet-container, .archive .location.open.overlay .site-branding .location-repeat .leaflet-container {
     margin-top: 20px;
-    height: 230px !important; } }
+    height: 230px !important; }
+  .overlay.calendar .fc-day-grid-container {
+    height: 288px !important; } }
 
 @media screen and (max-width: 1024px) {
   .post:nth-child(4n), .post:nth-child(8n) {
