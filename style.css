@@ -1278,7 +1278,9 @@ footer[id="colophon"] {
   position: relative;
   overflow: visible;
   z-index: 1;
-  margin-bottom: 70px; }
+  margin-bottom: 70px;
+  margin-right: auto;
+  margin-left: auto; }
   .single-post main::before, .single-post main::after, .single-event main::before, .single-event main::after {
     content: "";
     position: absolute;
