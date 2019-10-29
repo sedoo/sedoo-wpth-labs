@@ -11,7 +11,7 @@
     
     } else { ?>
     <?php // table_content ( value )
-    if (get_field( 'temps_lecture' )):
+    if (get_field( 'temps_lecture' ) == 'oui'):
     ?>
     <div class="reading-time">
         <h2><?php echo __('Temps de lecture', 'sedoo-wpth-labs'); ?></h2>

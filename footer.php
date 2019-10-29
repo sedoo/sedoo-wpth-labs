@@ -35,9 +35,9 @@ $options_list_footer = get_field('list_choice', 'option');
                     </div>
                     <div>
                         <p><b><?php echo $contact_labo; ?></b></p>
-                        <p><?php echo __('Tel : ', 'sedoo-wpth-labs'); ?><a href="tel:<?php echo $tel_contact; ?>"><?php echo $tel_contact; ?></a></p>
+                        <p><?php echo __('Tel', 'sedoo-wpth-labs'); ?> : <a href="tel:<?php echo $tel_contact; ?>"><?php echo $tel_contact; ?></a></p>
                         <?php if($fax_contact) { ?>
-                            <p><?php echo __('Fax : ', 'sedoo-wpth-labs'); ?><?php echo $fax_contact; ?></p>
+                            <p><?php echo __('Fax', 'sedoo-wpth-labs'); ?> : <?php echo $fax_contact; ?></p>
                         <?php } ?>
                         <p><a href="mailto:<?php echo $mail_contact; ?>"><?php echo $mail_contact; ?></a></p>
                     </div>
@@ -226,9 +226,7 @@ $options_list_footer = get_field('list_choice', 'option');
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <?php get_template_part( 'template-parts/shortcut', 'page' ); ?>
-<?php 
-    wp_footer(); 
-?>   
+<?php wp_footer(); ?>   
 <!--
 <script>
     /* INIT DARKMODE */
