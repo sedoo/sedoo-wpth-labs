@@ -12,7 +12,7 @@
 <a class="event-post" href="<?php the_permalink(); ?>"> 
         <?php if(has_post_thumbnail()){ ?>
         <div class="event-img">
-            <?php the_post_thumbnail(); ?>
+            <?php the_post_thumbnail('thumbnail-plugin'); ?>
         </div>
         <?php } ?>
         <h3><?php the_title(); ?></h3>
