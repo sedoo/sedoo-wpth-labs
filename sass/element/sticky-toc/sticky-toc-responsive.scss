@@ -1,7 +1,12 @@
 @media screen and (max-width: 1024px){
     aside[id="stickyMenu"]{
         width: 90%;
+        @include transform(translateX(-100%));
 
+        &:hover:not(.open){
+            @include transform(translateX(-100%));
+        }
+        
         .bobinette{
             right: -5%;
             
