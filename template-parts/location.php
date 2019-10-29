@@ -18,6 +18,7 @@ if ( get_field('display_shortcut', 'option') == 'oui'){
             $fax_contact = get_sub_field('fax_contact', 'option');
             $mail_contact = get_sub_field('mail_contact', 'option');
             $map = get_sub_field('map', 'option');
+            $display_map = get_sub_field('display_map', 'option');
         ?>
         <div class="location-repeat">
             <div class="information-location">    
@@ -32,7 +33,7 @@ if ( get_field('display_shortcut', 'option') == 'oui'){
                     <p><a href="mailto:<?php echo $mail_contact; ?>"><?php echo $mail_contact; ?></a></p>
                 </div>
             </div>
-            <?php if(get_field('display_map') == 'oui') { ?>
+            <?php if($display_map == 'oui') { ?>
                 <div class="leaflet-container">
                     <?php echo $map; ?>
                 </div>
