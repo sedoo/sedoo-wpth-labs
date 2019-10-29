@@ -46,7 +46,12 @@ get_header();
         <?php // table_content ( value )
         if (get_field( 'table_content' )):
         ?>
-        <aside id="stickyMenu" class="open">
+        <aside id="stickyMenu" 
+               <?php if(wp_is_mobile()){ ?> 
+                    class="" 
+               <?php } else { ?> 
+                    class="open" 
+               <?php } ?>>
             <div>
                 <div>
                     <p><?php echo __('Sommaire', 'sedoo-wpth-labs'); ?></p>
