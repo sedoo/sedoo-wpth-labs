@@ -31,9 +31,20 @@
         font-size: $h4-size-mobile;
     }
     .wp-block-quote{
+        max-width: calc(100% - 20px);
+        
         &::before, &::after{
             font-size: calc(#{$h1-size-mobile} * 1.5);
         }
+        &::before{
+            top: -30px;
+            left: -30px,
+        }
+        &::after{
+            right: -30px;
+            bottom: -30px;
+        }
+        
         p{
             font-size: calc(#{$h2-size-mobile} / 1.4);
         }
