@@ -129,12 +129,12 @@
                     
                     .fc-center{
                         width: 100%;
-                        order: 2;
-                        margin: 10px 0;
+                        order: 1;
                     }
                     .fc-left{
-                        order: 1;
+                        order: 2;
                         width: 100%;
+                        margin: 10px 0;
                     }
                     .fc-right{
                         width: 100%;
@@ -146,6 +146,11 @@
     }
 }
 @media screen and (max-width:500px){
+    .search-form{
+        h2{
+            font-size: 4rem;
+        }
+    }
     .location.open.overlay{
         .wrapper{
             .location-repeat{
@@ -153,6 +158,13 @@
                     margin-top: 20px;
                     height: 230px!important;
                 }
+            }
+        }
+    }
+    .overlay{
+        &.calendar{
+            .fc-day-grid-container{
+                height: 288px!important;
             }
         }
     }
