@@ -4,7 +4,7 @@
  *
  */
 
-if ( get_field('display_shortcut', 'option') == 'oui'){ ?>
+if ( get_field('display_shortcut', 'option') == 'oui'){
 ?>
 <div class="overlay location">
     <?php the_custom_logo(); ?>

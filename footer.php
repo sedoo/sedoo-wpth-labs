@@ -226,9 +226,7 @@ $options_list_footer = get_field('list_choice', 'option');
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <?php get_template_part( 'template-parts/shortcut', 'page' ); ?>
-<?php 
-    wp_footer(); 
-?>   
+<?php wp_footer(); ?>   
 <!--
 <script>
     /* INIT DARKMODE */
