@@ -120,7 +120,7 @@
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;  
-            max-height: 90px;   
+            max-height: 80px;   
             @include basic-transition;
             @include transition-delay(0.1);
         }
