@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.7.0
+Version: 0.7.1
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -2427,7 +2427,7 @@ ul[id="shortcuts"] {
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
-      max-height: 90px;
+      max-height: 80px;
       -webkit-transition: 0.5s ease all;
       -o-transition: 0.5s ease all;
       transition: 0.5s ease all;
@@ -2716,26 +2716,26 @@ aside[id="stickyMenu"] {
 .page .post-thumbnail {
   display: none; }
 
-.page .post-wrapper {
+.page:not(.home) .post-wrapper {
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr); }
-  .page .post-wrapper .post:nth-child(4n), .page .post-wrapper .post:nth-child(8n) {
+  .page:not(.home) .post-wrapper .post:nth-child(4n), .page:not(.home) .post-wrapper .post:nth-child(8n) {
     grid-column: auto;
     display: block;
     height: auto; }
-    .page .post-wrapper .post:nth-child(4n) .entry-header, .page .post-wrapper .post:nth-child(8n) .entry-header {
+    .page:not(.home) .post-wrapper .post:nth-child(4n) .entry-header, .page:not(.home) .post-wrapper .post:nth-child(8n) .entry-header {
       width: 100%;
       height: 235px;
       margin-left: 0; }
-      .page .post-wrapper .post:nth-child(4n) .entry-header p, .page .post-wrapper .post:nth-child(8n) .entry-header p {
+      .page:not(.home) .post-wrapper .post:nth-child(4n) .entry-header p, .page:not(.home) .post-wrapper .post:nth-child(8n) .entry-header p {
         left: -10px;
         right: auto; }
-    .page .post-wrapper .post:nth-child(4n) .group-content, .page .post-wrapper .post:nth-child(8n) .group-content {
+    .page:not(.home) .post-wrapper .post:nth-child(4n) .group-content, .page:not(.home) .post-wrapper .post:nth-child(8n) .group-content {
       width: 100%;
       position: initial; }
-      .page .post-wrapper .post:nth-child(4n) .group-content .entry-content, .page .post-wrapper .post:nth-child(8n) .group-content .entry-content {
+      .page:not(.home) .post-wrapper .post:nth-child(4n) .group-content .entry-content, .page:not(.home) .post-wrapper .post:nth-child(8n) .group-content .entry-content {
         text-align: left; }
-    .page .post-wrapper .post:nth-child(4n)::before, .page .post-wrapper .post:nth-child(8n)::before {
+    .page:not(.home) .post-wrapper .post:nth-child(4n)::before, .page:not(.home) .post-wrapper .post:nth-child(8n)::before {
       display: none; }
 
 .search .grid {
