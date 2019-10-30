@@ -125,6 +125,7 @@
     }
     
     .reading-time{
+        margin-bottom: 50px;
         .eta-container{
             position: relative;
             @include display-flex;
@@ -174,7 +175,28 @@
     }
     .summary{
         margin-bottom: 50px;
-
+        
+        h2{
+            margin-top: 0;
+        }
+        
+        .ez-toc-title-container{
+            .ez-toc-title-toggle{
+                a{
+                    background: none;
+                    outline: none;
+                    border: 0;
+                    box-shadow: none;
+                    position: relative;
+                    top: -10px;
+                    
+                    i{
+                        color: $dark;
+                        @include basic-transition;
+                    }
+                }
+            }
+        }
         .ez-toc-list{
             box-sizing: border-box;
             padding: 0;
@@ -188,20 +210,46 @@
                     text-transform: uppercase;
                     margin-bottom: 10px;
                     display: block;
+                    text-decoration: none;
+                    color: $dark;
+                    font-family: $main-title-family;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    
+                    &:hover{
+                        background: none;
+                    }
                 }
 
                 li{
                     a{
                         text-transform: $text-transform-none;
+                        font-family: $second-title-family;
+                        font-size: $h4-size;
+                    }
+                    
+                    li{
+                        margin-bottom: 0;
+                        a{
+                            font-family: $main-font-family;
+                            font-size: $tiny-size;
+                            
+                        }
                     }
                 }
-
+                &:last-child{
+                    margin-bottom: 0;
+                }
             }
         }
     }
     .post-author{
         margin-bottom: 50px;
 
+        h2{
+            margin-top: 0;
+        }
+        
         .img-author{
             height: 200px;
             margin-bottom: 10px;

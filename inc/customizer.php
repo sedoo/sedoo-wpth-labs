@@ -252,7 +252,10 @@ function labs_by_sedoo_color_style() {
              .search-annuaire button:hover,
              .single-event .wrapper-layout header .post-meta,
              .posts-navigation a:hover,
-             .wpfc-calendar-wrapper .fc .ui-state-active
+             .wpfc-calendar-wrapper .fc .ui-state-active,
+             .post-wrapper .event-post:hover h3,
+             .summary .ez-toc-list li a:hover,
+             .summary .ez-toc-title-container .ez-toc-title-toggle a:hover i
 			{
 				color: <?php echo $code_color;?>;
 			}
