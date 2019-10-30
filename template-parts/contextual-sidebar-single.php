@@ -5,7 +5,7 @@
  */
 
 ?>
-
+<?php if(get_field('temps_lecture') == 1 or get_field('select_lauteur') && ($ajout_auteur === 'interne')) { ?>
 <aside class="contextual-sidebar">
     <?php if(wp_is_mobile()){
     
@@ -24,8 +24,7 @@
     </div>
     <?php endif; ?>
     <?php     
-        if ( ! is_active_sidebar( 'sommaire-single' ) ) {
-        return;
+        if ( is_active_sidebar( 'sommaire-single' ) ) {
     ?>
     <div class="summary">
 	   <?php dynamic_sidebar( 'sommaire-single' ); ?>
@@ -38,3 +37,4 @@
         get_template_part( 'template-parts/single-author', 'page' );
     ?>        
 </aside>
+<?php } else { } ?>
