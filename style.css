@@ -298,6 +298,14 @@ small {
       display: inline-block;
       vertical-align: middle; }
 
+[data-role="list-platformTag"] .tag {
+  margin-bottom: 40px; }
+  [data-role="list-platformTag"] .tag a {
+    border: 3px solid #000;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    margin-bottom: 20px; }
+
 /****************************
 ****** BLOCK GUTENBERG ******
 ****************************/
