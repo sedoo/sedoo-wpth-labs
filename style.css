@@ -2716,6 +2716,28 @@ aside[id="stickyMenu"] {
 .page .post-thumbnail {
   display: none; }
 
+.page .post-wrapper {
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr); }
+  .page .post-wrapper .post:nth-child(4n), .page .post-wrapper .post:nth-child(8n) {
+    grid-column: auto;
+    display: block;
+    height: auto; }
+    .page .post-wrapper .post:nth-child(4n) .entry-header, .page .post-wrapper .post:nth-child(8n) .entry-header {
+      width: 100%;
+      height: 235px;
+      margin-left: 0; }
+      .page .post-wrapper .post:nth-child(4n) .entry-header p, .page .post-wrapper .post:nth-child(8n) .entry-header p {
+        left: -10px;
+        right: auto; }
+    .page .post-wrapper .post:nth-child(4n) .group-content, .page .post-wrapper .post:nth-child(8n) .group-content {
+      width: 100%;
+      position: initial; }
+      .page .post-wrapper .post:nth-child(4n) .group-content .entry-content, .page .post-wrapper .post:nth-child(8n) .group-content .entry-content {
+        text-align: left; }
+    .page .post-wrapper .post:nth-child(4n)::before, .page .post-wrapper .post:nth-child(8n)::before {
+      display: none; }
+
 .search .grid {
   -webkit-column-count: 3;
   column-count: 3;
