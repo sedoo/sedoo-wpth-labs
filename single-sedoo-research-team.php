@@ -21,7 +21,7 @@ get_header();
             if (get_the_post_thumbnail()) {
             ?>
                 <header id="cover">
-                    <?php the_post_thumbnail(); ?>
+                    <?php the_post_thumbnail('cover'); ?>
                 </header>
             <?php 
             }

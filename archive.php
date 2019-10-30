@@ -37,7 +37,7 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			
 
 		else :
 
@@ -46,7 +46,7 @@ get_header();
 		endif;
 		?>
             </section>
-
+            <?php the_posts_navigation(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
