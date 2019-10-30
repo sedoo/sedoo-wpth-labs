@@ -1258,18 +1258,26 @@ footer[id="colophon"] {
   object-fit: cover;
   height: 100%; }
 
-.posts-navigation a {
-  display: block;
-  margin: 50px auto;
-  text-align: center;
-  background: #000;
-  color: #fff;
-  padding: 20px;
-  max-width: 30%;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
-  .posts-navigation a:hover {
-    background: #fff; }
+.posts-navigation {
+  margin: 50px auto; }
+  .posts-navigation .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .posts-navigation a {
+    display: block;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    max-width: initial;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin: 0 auto; }
+    .posts-navigation a:hover {
+      background: #fff; }
 
 .single-post header[id="cover"], .single-event header[id="cover"] {
   margin-bottom: -140px; }
