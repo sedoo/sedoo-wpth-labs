@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.6.9
+Version: 0.6.10
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -559,10 +559,18 @@ body a.btn {
     font-size: 2rem; }
   h4 {
     font-size: 1.8rem; }
-  .wp-block-quote::before, .wp-block-quote::after {
-    font-size: calc(2.5rem * 1.5); }
-  .wp-block-quote p {
-    font-size: calc(3rem / 1.4); } }
+  .wp-block-quote {
+    max-width: calc(100% - 20px); }
+    .wp-block-quote::before, .wp-block-quote::after {
+      font-size: calc(2.5rem * 1.5); }
+    .wp-block-quote::before {
+      top: -30px;
+      left: -30px; }
+    .wp-block-quote::after {
+      right: -30px;
+      bottom: -30px; }
+    .wp-block-quote p {
+      font-size: calc(3rem / 1.4); } }
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
   div[id="page"] {
@@ -2792,7 +2800,14 @@ aside[id="stickyMenu"] {
 
 @media screen and (max-width: 1024px) {
   aside[id="stickyMenu"] {
-    width: 90%; }
+    width: 90%;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%); }
+    aside[id="stickyMenu"]:hover:not(.open) {
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      transform: translateX(-100%); }
     aside[id="stickyMenu"] .bobinette {
       right: -5%; }
       aside[id="stickyMenu"] .bobinette::after {
