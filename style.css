@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.6.10
+Version: 0.7.0
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -1025,7 +1025,8 @@ header[id="cover"] {
   padding: 20px;
   padding: 140px 0;
   min-height: 25vh;
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
   .home header[id="cover"]::before, .home header[id="cover"]::after {
     content: "";
     border: 1px solid #fff;
@@ -1402,55 +1403,72 @@ footer[id="colophon"] {
       height: 3px;
       background: #000;
       margin-left: 10px; }
-  .contextual-sidebar .reading-time .eta-container {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .contextual-sidebar .reading-time .eta-container .eta {
-      font-family: "Cormorant Infant", serif;
-      font-size: calc(5rem * 1.5);
-      text-align: left;
-      color: #000;
+  .contextual-sidebar .reading-time {
+    margin-bottom: 50px; }
+    .contextual-sidebar .reading-time .eta-container {
       position: relative;
-      line-height: 1;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      white-space: nowrap; }
-      .contextual-sidebar .reading-time .eta-container .eta span {
-        font-size: calc(1.6rem * 1.5);
-        display: inline-block;
-        vertical-align: middle;
-        text-transform: uppercase;
-        font-family: "Montserrat", sans-serif;
-        -webkit-transform: rotateZ(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotateZ(90deg);
-        left: -10px;
-        position: relative; }
-    .contextual-sidebar .reading-time .eta-container .progress-bar {
-      background: #F2F2F2;
-      height: 55px;
-      width: 100%;
-      position: relative;
-      margin-left: 20px; }
-      .contextual-sidebar .reading-time .eta-container .progress-bar > div {
+      align-items: center; }
+      .contextual-sidebar .reading-time .eta-container .eta {
+        font-family: "Cormorant Infant", serif;
+        font-size: calc(5rem * 1.5);
+        text-align: left;
+        color: #000;
+        position: relative;
+        line-height: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        white-space: nowrap; }
+        .contextual-sidebar .reading-time .eta-container .eta span {
+          font-size: calc(1.6rem * 1.5);
+          display: inline-block;
+          vertical-align: middle;
+          text-transform: uppercase;
+          font-family: "Montserrat", sans-serif;
+          -webkit-transform: rotateZ(90deg);
+          -ms-transform: rotate(90deg);
+          transform: rotateZ(90deg);
+          left: -10px;
+          position: relative; }
+      .contextual-sidebar .reading-time .eta-container .progress-bar {
+        background: #F2F2F2;
         height: 55px;
-        width: 0%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 5;
-        background: #000; }
+        width: 100%;
+        position: relative;
+        margin-left: 20px; }
+        .contextual-sidebar .reading-time .eta-container .progress-bar > div {
+          height: 55px;
+          width: 0%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 5;
+          background: #000; }
   .contextual-sidebar .summary {
     margin-bottom: 50px; }
+    .contextual-sidebar .summary h2 {
+      margin-top: 0; }
+    .contextual-sidebar .summary .ez-toc-title-container .ez-toc-title-toggle a {
+      background: none;
+      outline: none;
+      border: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      position: relative;
+      top: -10px; }
+      .contextual-sidebar .summary .ez-toc-title-container .ez-toc-title-toggle a i {
+        color: #000;
+        -webkit-transition: 0.5s ease all;
+        -o-transition: 0.5s ease all;
+        transition: 0.5s ease all; }
     .contextual-sidebar .summary .ez-toc-list {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
@@ -1460,11 +1478,30 @@ footer[id="colophon"] {
       .contextual-sidebar .summary .ez-toc-list li a {
         text-transform: uppercase;
         margin-bottom: 10px;
-        display: block; }
+        display: block;
+        text-decoration: none;
+        color: #000;
+        font-family: "Montserrat", sans-serif;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis; }
+        .contextual-sidebar .summary .ez-toc-list li a:hover {
+          background: none; }
       .contextual-sidebar .summary .ez-toc-list li li a {
-        text-transform: none; }
+        text-transform: none;
+        font-family: "Cormorant Infant", serif;
+        font-size: 2rem; }
+      .contextual-sidebar .summary .ez-toc-list li li li {
+        margin-bottom: 0; }
+        .contextual-sidebar .summary .ez-toc-list li li li a {
+          font-family: "Poppins", sans-serif;
+          font-size: 1.2rem; }
+      .contextual-sidebar .summary .ez-toc-list li:last-child {
+        margin-bottom: 0; }
   .contextual-sidebar .post-author {
     margin-bottom: 50px; }
+    .contextual-sidebar .post-author h2 {
+      margin-top: 0; }
     .contextual-sidebar .post-author .img-author {
       height: 200px;
       margin-bottom: 10px;

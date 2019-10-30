@@ -25,6 +25,7 @@ header[id="cover"]{
         padding: 140px 0;
         min-height: 25vh;
         max-width: 100%;
+        height: auto;
 
         &::before, &::after{
             content: "";
