@@ -35,6 +35,9 @@
 @mixin justify-content-between{
     justify-content: space-between;
 }
+@mixin justify-content-around{
+    justify-content: space-around;
+}
 @mixin justify-content-center{
     justify-content: center;
 }

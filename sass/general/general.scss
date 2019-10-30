@@ -288,7 +288,18 @@ small{
         }
     }
 }
-
+[data-role="list-platformTag"]{
+    .tag{
+        margin-bottom: 40px;
+        
+        a{
+            border: $basic-border;
+            padding: 10px 20px;
+            font-size: $font-size;
+            margin-bottom: 20px;    
+        }
+    }
+}
 /****************************
 ****** BLOCK GUTENBERG ******
 ****************************/
