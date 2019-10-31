@@ -131,6 +131,9 @@ body{
         }        
     }
 }
+main{
+    overflow: hidden;
+}
 div[id="page"]{
     padding: 110px 20px 20px;
     overflow-y: hidden;

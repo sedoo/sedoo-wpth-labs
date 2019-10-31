@@ -147,6 +147,9 @@ body {
       -o-transition-delay: 0.5s;
       transition-delay: 0.5s; }
 
+main {
+  overflow: hidden; }
+
 div[id="page"] {
   padding: 110px 20px 20px;
   overflow-y: hidden;
