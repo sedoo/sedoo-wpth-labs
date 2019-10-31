@@ -148,7 +148,7 @@ body {
       transition-delay: 0.5s; }
 
 main {
-  overflow: hidden; }
+  overflow-y: hidden; }
 
 figure {
   max-width: 100% !important; }
@@ -1047,7 +1047,7 @@ header[id="cover"] {
 .home header[id="cover"] {
   position: relative;
   padding: 20px;
-  padding: 140px 0;
+  padding: 90px 0;
   min-height: 25vh;
   max-width: 100%;
   height: auto; }
@@ -2800,7 +2800,7 @@ aside[id="stickyMenu"] {
     margin-bottom: 0; }
 
 /* RESPONSIVE */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1440px) {
   nav[id="primary-navigation"] ul li a {
     font-size: calc(1.6rem / 1.2);
     padding: 20px 10px; } }
