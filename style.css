@@ -147,8 +147,8 @@ body {
       -o-transition-delay: 0.5s;
       transition-delay: 0.5s; }
 
-main {
-  overflow-y: hidden; }
+[id="content"] {
+  overflow: hidden; }
 
 figure {
   max-width: 100% !important; }
