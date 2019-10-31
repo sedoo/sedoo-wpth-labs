@@ -1828,6 +1828,8 @@ div[id="em-wrapper"] h2 {
         right: -10px; }
     .post:nth-child(8n) .entry-content {
       text-align: right; }
+      .post:nth-child(8n) .entry-content p {
+        text-align: right; }
 
 .post .entry-header, .post-horizontal .entry-header {
   position: relative;
