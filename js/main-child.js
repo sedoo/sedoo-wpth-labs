@@ -47,21 +47,21 @@ jQuery(document).ready(function ($) {
     // Pop over à l'ouverture de l'annuaire
     $(".annuaire-btn").click(function () {
         $(".overlay.annuaire").addClass("open");
-        $("body").addClass("no-scroll");
+        $("body").addClass("overlay-expanded");
     });
     $(".overlay .close").click(function () {
         $(".overlay.annuaire").removeClass("open");
-        $("body").removeClass("no-scroll");
+        $("body").removeClass("overlay-expanded");
 
     });   
     // Pop over à l'ouverture du calendrier
     $(".calendar-btn").click(function () {
         $(".overlay.calendar").addClass("open");
-        $("body").addClass("no-scroll");
+        $("body").addClass("overlay-expanded");
     });
     $(".overlay .close").click(function () {
         $(".overlay.calendar").removeClass("open");
-        $("body").removeClass("no-scroll");
+        $("body").removeClass("overlay-expanded");
 
     });  
     
