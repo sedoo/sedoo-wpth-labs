@@ -12,7 +12,7 @@
     <h2><?php echo __("Auteur de la publication", 'sedoo-wpth-labs'); ?></h2>
     <div>
         <div>
-            <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>">
+<!--            <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>">-->
                 <?php if ( get_field( 'photo_auteur', 'user_'.$select_lauteur_array['ID']) ) { ?>
                 <div class="img-author">
                     <?php 
@@ -26,18 +26,18 @@
                     <?php endif; ?>                
                 </div>
                 <?php } ?>
-            </a>
+<!--            </a>-->
         </div>
         <div>
-            <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>">
+<!--            <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>">-->
                 <p><b><?php echo $select_lauteur_array['display_name']; ?></b></p>
-            </a>
+<!--            </a>-->
             <p><?php the_field('poste', 'user_'.$select_lauteur_array['ID']) ?></p>
             <h3><?php echo __("À propos de l'auteur", 'sedoo-wpth-labs'); ?></h3>
             <p class="author-description">
                 <?php echo $select_lauteur_array['user_description'];?>
             </p> 
-            <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>" class="btn"><?php echo __("En savoir plus sur l'auteur", 'sedoo-wpth-labs'); ?></a>
+<!--            <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>" class="btn"><?php echo __("En savoir plus sur l'auteur", 'sedoo-wpth-labs'); ?></a>-->
         </div>
    </div>
 </div>
