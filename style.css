@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.7.4
+Version: 0.7.5
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -146,6 +146,12 @@ body {
       -webkit-transition-delay: 0.5s;
       -o-transition-delay: 0.5s;
       transition-delay: 0.5s; }
+
+main {
+  overflow: hidden; }
+
+figure {
+  max-width: 100% !important; }
 
 div[id="page"] {
   padding: 110px 20px 20px;
@@ -398,6 +404,14 @@ body a.btn {
 .wp-block-image a:hover {
   background: none !important; }
 
+.wp-block-image figcaption {
+  margin-top: -20px;
+  text-align: left;
+  font-style: italic; }
+  .wp-block-image figcaption br {
+    margin: 5px 0;
+    display: block; }
+
 /* WP CTA */
 .wp-block-button .wp-block-button__link {
   text-decoration: none;
@@ -409,12 +423,12 @@ body a.btn {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
 
 /* TABLE */
-.wp-block-table th {
+.wp-block-table th, table th {
   background: #000;
   color: #fff;
   padding: 20px 10px; }
 
-.wp-block-table tr:nth-of-type(odd) {
+.wp-block-table tr:nth-of-type(odd), table tr:nth-of-type(odd) {
   background: #F2F2F2; }
 
 /* CALENDAR */
@@ -1828,6 +1842,8 @@ div[id="em-wrapper"] h2 {
         right: -10px; }
     .post:nth-child(8n) .entry-content {
       text-align: right; }
+      .post:nth-child(8n) .entry-content p {
+        text-align: right; }
 
 .post .entry-header, .post-horizontal .entry-header {
   position: relative;

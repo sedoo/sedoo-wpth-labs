@@ -131,6 +131,12 @@ body{
         }        
     }
 }
+main{
+    overflow: hidden;
+}
+figure{
+    max-width: 100%!important;
+}
 div[id="page"]{
     padding: 110px 20px 20px;
     overflow-y: hidden;
@@ -419,6 +425,17 @@ body a.btn{
             background: none!important;
         }
     }
+        
+    figcaption{
+        margin-top: -20px;
+        text-align: left;
+        font-style: italic;
+        
+        br{
+            margin:5px 0;
+            display: block;
+        }
+    }
 }
 
 /* WP CTA */
@@ -435,7 +452,7 @@ body a.btn{
 }
 
 /* TABLE */
-.wp-block-table{
+.wp-block-table, table{
     th{
         background: $dark;
         color: $light-full;
