@@ -136,6 +136,7 @@
         img{
             @include basic-transition;
             @include transition-delay(0.1s);
+            width: 100%;
         }
     }
 }

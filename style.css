@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.7.10
+Version: 0.7.11
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -1362,7 +1362,8 @@ footer[id="colophon"] {
       .single-post main article header h1, .single-event main article header h1 {
         -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
-        order: 2; }
+        order: 2;
+        font-size: calc(5rem * 0.8); }
       .single-post main article header div, .single-event main article header div {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1373,6 +1374,19 @@ footer[id="colophon"] {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between; }
+        .single-post main article header div > div, .single-event main article header div > div {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          width: 70%; }
+          .single-post main article header div > div .tag, .single-event main article header div > div .tag {
+            margin: 0;
+            width: 100%; }
         .single-post main article header div .post-category, .single-event main article header div .post-category {
           -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
@@ -2484,7 +2498,8 @@ ul[id="shortcuts"] {
       transition: 0.5s ease all;
       -webkit-transition-delay: 0.1s;
       -o-transition-delay: 0.1s;
-      transition-delay: 0.1s; }
+      transition-delay: 0.1s;
+      width: 100%; }
 
 aside[id="stickyMenu"] {
   position: fixed;

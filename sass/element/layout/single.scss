@@ -48,12 +48,24 @@
 
                 h1{
                     order: 2;
+                    font-size: calc(#{$h1-size} * 0.8);
                 }
                 div{
                     @include display-flex;
                     @include align-items-center;
                     @include justify-content-between;
-                    
+                    > div{
+                        @include display-flex;
+                        @include justify-content-start;
+                        @include flex-wrap;
+                        width: 70%;
+                        
+                        .tag{
+                            margin: 0;
+                            width: 100%;
+                        }
+                        
+                    }
                     .post-category{
                         order: 1;
                         text-transform: $uppercase;
