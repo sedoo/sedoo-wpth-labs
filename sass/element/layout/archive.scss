@@ -48,7 +48,9 @@
     }
 }
 .archive{
-    .site-branding{
-        @extend .wrapper;
+    .site-content{
+        .site-branding{
+            @extend .wrapper;
+        }
     }
 }
