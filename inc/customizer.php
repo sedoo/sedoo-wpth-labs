@@ -298,7 +298,7 @@ function labs_by_sedoo_color_style() {
              .search-annuaire input[type="search"]:focus,
              .ui-widget-header,
              .wpfc-calendar-wrapper .fc .ui-state-active,
-             .ui-widget-content.ui-state-highlight
+             .wpfc-calendar-wrapper .ui-widget-content.ui-state-highlight
              {
                  border-color: <?php echo $code_color;?>;
              }

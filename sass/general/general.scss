@@ -466,6 +466,11 @@ body a.btn{
     h2{
         font-size: $h2-size!important;
     }
+    .fc-view-container{
+        *{
+            box-sizing: border-box;
+        }
+    }
     .fc-toolbar{
         @include display-flex;
         @include justify-content-between;
@@ -495,6 +500,17 @@ body a.btn{
         thead{    
             td{
                 font-size: $font-size!important;
+            }
+        }
+        .fc-day{
+            border: 1px solid $dark-grey;
+        }
+        
+        .fc-content-skeleton{
+            thead{
+                tr{
+                    background: transparent;
+                }
             }
         }
     }

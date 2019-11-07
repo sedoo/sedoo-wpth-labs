@@ -432,6 +432,10 @@ body a.btn {
 .wpfc-calendar-wrapper h2 {
   font-size: 4.5rem !important; }
 
+.wpfc-calendar-wrapper .fc-view-container * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .wpfc-calendar-wrapper .fc-toolbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -466,6 +470,10 @@ body a.btn {
   font-family: "Poppins", sans-serif; }
   .wpfc-calendar-wrapper .fc-body thead td {
     font-size: 1.6rem !important; }
+  .wpfc-calendar-wrapper .fc-body .fc-day {
+    border: 1px solid #9d9fa2; }
+  .wpfc-calendar-wrapper .fc-body .fc-content-skeleton thead tr {
+    background: transparent; }
 
 .wpfc-calendar-wrapper .fc button {
   border: 3px solid #000;
