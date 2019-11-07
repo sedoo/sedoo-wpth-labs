@@ -358,9 +358,6 @@
             }
 
             &:hover{
-                h3{
-                    color: $brown-dt;
-                }
                 .post-img{
                     img{
                         @include transform(scale(1.2));

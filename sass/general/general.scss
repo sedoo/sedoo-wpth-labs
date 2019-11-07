@@ -244,10 +244,6 @@ a{
     cursor: pointer;
     @include basic-transition;
     
-    &:hover{
-        color: $brown-dt;
-    }
-    
 }
 strong, b{
     font-weight: $bold;

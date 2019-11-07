@@ -22,7 +22,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 /*--------------------------------------------------------------*/
 /* COULEUR DATA TERRA */
-/* COULEUR POLES */
 /* Font-Family */
 /* Font-size */
 /* Font-weight ou variant */
@@ -261,8 +260,6 @@ a {
   -webkit-transition: 0.5s ease all;
   -o-transition: 0.5s ease all;
   transition: 0.5s ease all; }
-  a:hover {
-    color: #6e432e; }
 
 strong, b {
   font-weight: 800; }
@@ -869,11 +866,10 @@ nav[id="burger-navigation"] .overlay {
       width: 15px;
       height: 15px;
       margin-right: 10px; }
-      nav[id="burger-navigation"] .overlay .slick-dots li:hover {
-        background: #6e432e; }
       nav[id="burger-navigation"] .overlay .slick-dots li.slick-active {
         background: transparent;
-        border: 3px solid #6e432e; }
+        border-width: 3px;
+        border-style: solid; }
       nav[id="burger-navigation"] .overlay .slick-dots li button {
         display: none; }
 
@@ -996,27 +992,6 @@ ul[id="primary-menu"] {
   -webkit-transition-delay: 4;
   -o-transition-delay: 4;
   transition-delay: 4; }
-
-.archive.category-surfaces-continentales header[id="cover"] {
-  background: url("image/motif-theia-bleu-01.svg"); }
-
-.archive.category-terre-solide header[id="cover"] {
-  background: url("image/motif-formater-bleu-01.svg"); }
-
-.archive.category-ocean header[id="cover"] {
-  background: url("image/motif-odatis-bleu-01.svg"); }
-
-.archive.category-atmosphere header[id="cover"] {
-  background: url("image/motif-aeris-bleu-01.svg"); }
-
-.archive.category-dynamis header[id="cover"] {
-  background: #d66612; }
-
-.archive.category-inter-poles header[id="cover"] {
-  background: #727272; }
-
-.archive.category-europe-international header[id="cover"] {
-  background: #000; }
 
 header[id="cover"] {
   background-size: cover;
@@ -1649,8 +1624,6 @@ footer[id="colophon"] {
           .read-more-article .post-loop .post-preview .post-img img.object-fit-contain {
             -o-object-fit: contain;
             object-fit: contain; }
-      .read-more-article .post-loop .post-preview:hover h3 {
-        color: #6e432e; }
       .read-more-article .post-loop .post-preview:hover .post-img img {
         -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
@@ -1812,8 +1785,6 @@ div[id="em-wrapper"] h2 {
     -ms-transform: scale(1.2);
     transform: scale(1.2);
     opacity: 0.8; }
-  .post:hover .entry-content h2 {
-    color: #6e432e; }
   .post:nth-child(4n) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
