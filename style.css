@@ -311,6 +311,20 @@ small {
     font-size: 1.6rem;
     margin-bottom: 20px; }
 
+.alignleft {
+  float: left;
+  margin-right: 1em; }
+
+.alignright {
+  float: right;
+  margin-left: 1em; }
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
 /****************************
 ****** BLOCK GUTENBERG ******
 ****************************/
@@ -1410,7 +1424,7 @@ footer[id="colophon"] {
   padding: 65px 0; }
   .contextual-sidebar .btn {
     max-width: 100%; }
-  .contextual-sidebar h2, .contextual-sidebar .ez-toc-title {
+  .contextual-sidebar h2, .contextual-sidebar #ez-toc-container p.ez-toc-title {
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     font-size: calc(5rem / 2);
@@ -1424,7 +1438,7 @@ footer[id="colophon"] {
     -ms-flex-align: center;
     align-items: center;
     margin-bottom: 20px; }
-    .contextual-sidebar h2::after, .contextual-sidebar .ez-toc-title::after {
+    .contextual-sidebar h2::after, .contextual-sidebar #ez-toc-container p.ez-toc-title::after {
       content: "";
       -webkit-box-flex: 2;
       -ms-flex-positive: 2;
@@ -1483,50 +1497,53 @@ footer[id="colophon"] {
           background: #000; }
   .contextual-sidebar .summary {
     margin-bottom: 50px; }
-    .contextual-sidebar .summary h2 {
-      margin-top: 0; }
-    .contextual-sidebar .summary .ez-toc-title-container .ez-toc-title-toggle a {
+    .contextual-sidebar .summary #ez-toc-container {
       background: none;
-      outline: none;
-      border: 0;
+      border: none;
       -webkit-box-shadow: none;
-      box-shadow: none;
-      position: relative;
-      top: -10px; }
-      .contextual-sidebar .summary .ez-toc-title-container .ez-toc-title-toggle a i {
-        color: #000;
-        -webkit-transition: 0.5s ease all;
-        -o-transition: 0.5s ease all;
-        transition: 0.5s ease all; }
-    .contextual-sidebar .summary .ez-toc-list {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0; }
-      .contextual-sidebar .summary .ez-toc-list li::before {
-        display: none; }
-      .contextual-sidebar .summary .ez-toc-list li a {
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        display: block;
-        text-decoration: none;
-        color: #000;
-        font-family: "Montserrat", sans-serif;
-        overflow: hidden;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis; }
-        .contextual-sidebar .summary .ez-toc-list li a:hover {
-          background: none; }
-      .contextual-sidebar .summary .ez-toc-list li li a {
-        text-transform: none;
-        font-family: "Cormorant Infant", serif;
-        font-size: 2rem; }
-      .contextual-sidebar .summary .ez-toc-list li li li {
-        margin-bottom: 0; }
-        .contextual-sidebar .summary .ez-toc-list li li li a {
-          font-family: "Poppins", sans-serif;
-          font-size: 1.2rem; }
-      .contextual-sidebar .summary .ez-toc-list li:last-child {
-        margin-bottom: 0; }
+      box-shadow: none; }
+      .contextual-sidebar .summary #ez-toc-container .ez-toc-title-container .ez-toc-title-toggle a {
+        background: none;
+        outline: none;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        position: relative;
+        top: -10px; }
+        .contextual-sidebar .summary #ez-toc-container .ez-toc-title-container .ez-toc-title-toggle a i {
+          color: #000;
+          -webkit-transition: 0.5s ease all;
+          -o-transition: 0.5s ease all;
+          transition: 0.5s ease all; }
+      .contextual-sidebar .summary #ez-toc-container .ez-toc-list {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0; }
+        .contextual-sidebar .summary #ez-toc-container .ez-toc-list li::before {
+          display: none; }
+        .contextual-sidebar .summary #ez-toc-container .ez-toc-list li a {
+          text-transform: uppercase;
+          margin-bottom: 10px;
+          display: block;
+          text-decoration: none;
+          color: #000;
+          font-family: "Montserrat", sans-serif;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis; }
+          .contextual-sidebar .summary #ez-toc-container .ez-toc-list li a:hover {
+            background: none; }
+        .contextual-sidebar .summary #ez-toc-container .ez-toc-list li li a {
+          text-transform: none;
+          font-family: "Cormorant Infant", serif;
+          font-size: 2rem; }
+        .contextual-sidebar .summary #ez-toc-container .ez-toc-list li li li {
+          margin-bottom: 0; }
+          .contextual-sidebar .summary #ez-toc-container .ez-toc-list li li li a {
+            font-family: "Poppins", sans-serif;
+            font-size: 1.2rem; }
+        .contextual-sidebar .summary #ez-toc-container .ez-toc-list li:last-child {
+          margin-bottom: 0; }
   .contextual-sidebar .post-author {
     margin-bottom: 50px; }
     .contextual-sidebar .post-author h2 {
