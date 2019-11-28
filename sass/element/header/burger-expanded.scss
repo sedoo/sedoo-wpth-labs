@@ -142,13 +142,10 @@ nav[id="burger-navigation"] {
                 height: 15px;
                 margin-right: 10px;
                 
-                &:hover{
-                    background: $brown-dt;
-                }
-                
                 &.slick-active{
                     background: transparent;
-                    border: 3px solid $brown-dt;
+                    border-width: 3px;
+                    border-style: solid;
                 }
                 button{
                     display: none;

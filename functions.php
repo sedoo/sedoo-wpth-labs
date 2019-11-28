@@ -163,10 +163,6 @@ require get_template_directory() . '/inc/custom-register-scripts.php';
  */
 require get_template_directory() . '/inc/custom-add-options.php';
 /**
- * Widget additions.
- */
-require get_template_directory() . '/inc/custom-widget.php';
-/**
  * Include ACF Fields
  */
 require get_template_directory() . '/inc/custom-acf-fields.php';
@@ -197,3 +193,12 @@ function catch_that_image() {
   return $first_img;
 }
 
+
+
+add_action( 'after_setup_theme', 'prefix_default_image_settings' );
+
+function prefix_default_image_settings() {
+update_option( 'image_default_align', 'center' );
+update_option( 'image_default_link_type', 'none' );
+update_option( 'image_default_size', 'medium' );
+}

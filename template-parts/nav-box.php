@@ -17,7 +17,7 @@ $post_name = mb_strlen( $title ) > $max_length ? mb_substr( $title, 0, $max_leng
         
         } else { ?>
          <div class="card-nav">
-            <?php $prevthumbnail = get_the_post_thumbnail($prevPost->ID, array() );?>
+            <?php $prevthumbnail = get_the_post_thumbnail($prevPost->ID, array(300, 120) );?>
             <?php previous_post_link('%link',"<div class='nav-box-img'>$prevthumbnail</div>  <p>$post_name</p>", FALSE); ?>
          </div>
         <?php } ?>
@@ -37,7 +37,7 @@ $post_name = mb_strlen( $title ) > $max_length ? mb_substr( $title, 0, $max_leng
         
         } else { ?>
         <div class="card-nav">
-            <?php $nextthumbnail = get_the_post_thumbnail($nextPost->ID, array() );?>
+            <?php $nextthumbnail = get_the_post_thumbnail($nextPost->ID, array(300, 120) );?>
             <?php $titleItem=mb_strimwidth(get_the_title(), 0, 100, '...');  ?>
             <?php next_post_link('%link',"<div class='nav-box-img'>$nextthumbnail</div>  <p>$post_name</p>", FALSE); ?>
         </div>

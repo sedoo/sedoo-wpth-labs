@@ -10,7 +10,7 @@ while ( have_posts() ) : the_post();
     if (get_the_post_thumbnail()) {
     ?>
     <header id="cover">
-        <?php the_post_thumbnail(); ?>
+        <?php the_post_thumbnail('cover'); ?>
     </header>
     <?php 
     }
@@ -97,7 +97,7 @@ while ( have_posts() ) : the_post();
 
                 <div class="post-img event-img">
                     <?php if (get_the_post_thumbnail()) {
-                        the_post_thumbnail();
+                        the_post_thumbnail(array(790, 240, true));
                     } else {
                         if (catch_that_image() ==  "no_image" ){
                             $custom_logo_id = get_theme_mod( 'custom_logo' );

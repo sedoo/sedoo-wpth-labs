@@ -32,6 +32,9 @@
 @mixin flex-row-reverse{
     flex-direction: row-reverse;
 }
+@mixin justify-content-start{
+    justify-content: flex-start;
+}
 @mixin justify-content-between{
     justify-content: space-between;
 }
