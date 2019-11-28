@@ -254,8 +254,8 @@ function labs_by_sedoo_color_style() {
              .posts-navigation a:hover,
              .wpfc-calendar-wrapper .fc .ui-state-active,
              .post-wrapper .event-post:hover h3,
-             .summary .ez-toc-list li a:hover,
-             .summary .ez-toc-title-container .ez-toc-title-toggle a:hover i
+             .summary #ez-toc-container .ez-toc-list li a:hover,
+             .summary #ez-toc-container .ez-toc-title-container .ez-toc-title-toggle a:hover i
 			{
 				color: <?php echo $code_color;?>;
 			}
@@ -298,7 +298,7 @@ function labs_by_sedoo_color_style() {
              .search-annuaire input[type="search"]:focus,
              .ui-widget-header,
              .wpfc-calendar-wrapper .fc .ui-state-active,
-             .ui-widget-content.ui-state-highlight
+             .wpfc-calendar-wrapper .ui-widget-content.ui-state-highlight
              {
                  border-color: <?php echo $code_color;?>;
              }

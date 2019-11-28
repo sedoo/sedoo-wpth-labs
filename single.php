@@ -40,11 +40,13 @@ $themeSlugRewrite = "sedoo-theme-labo";
                     <header>
                         <h1><?php the_title(); ?></h1>
                         <div>
-                            <?php 
-                            if( function_exists('sedoo_labtools_show_categories') ){
-                            sedoo_labtools_show_categories($themes, $themeSlugRewrite);
-                            }
-                            ?>
+                            <div>
+                                <?php 
+                                if( function_exists('sedoo_labtools_show_categories') ){
+                                sedoo_labtools_show_categories($themes, $themeSlugRewrite);
+                                }
+                                ?>
+                            </div>
                             <p class="post-meta"><?php echo __('Publié le', 'sedoo-wpth-labs'); ?> : <?php the_date(); ?></p>
                         </div>
                     </header>
@@ -96,7 +98,7 @@ $themeSlugRewrite = "sedoo-theme-labo";
                             </div>
                             <div class="post-img">
                                 <?php if (get_the_post_thumbnail()) {
-                                    the_post_thumbnail();
+                                    the_post_thumbnail(array(790, 240, true));
                                 } else {
                                     if (catch_that_image() ==  "no_image" ){
                                         $custom_logo_id = get_theme_mod( 'custom_logo' );

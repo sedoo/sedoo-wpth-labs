@@ -14,7 +14,7 @@
     <figure class="event-img">
         <?php 
         if (get_the_post_thumbnail()) {
-            the_post_thumbnail();
+            the_post_thumbnail('thumbnail-plugin');
         } ?>
     </figure>
     <h3><?php the_title(); ?></h3>

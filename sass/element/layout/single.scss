@@ -48,12 +48,24 @@
 
                 h1{
                     order: 2;
+                    font-size: calc(#{$h1-size} * 0.8);
                 }
                 div{
                     @include display-flex;
                     @include align-items-center;
                     @include justify-content-between;
-                    
+                    > div{
+                        @include display-flex;
+                        @include justify-content-start;
+                        @include flex-wrap;
+                        width: 70%;
+                        
+                        .tag{
+                            margin: 0;
+                            width: 100%;
+                        }
+                        
+                    }
                     .post-category{
                         order: 1;
                         text-transform: $uppercase;
@@ -104,7 +116,7 @@
         max-width: 100%;
     }
 
-    h2, .ez-toc-title{
+    h2, #ez-toc-container p.ez-toc-title{
         font-family: $main-title-family;
         text-transform: uppercase;
         font-size: calc(#{$h1-size} / 2);
@@ -176,69 +188,72 @@
     .summary{
         margin-bottom: 50px;
         
-        h2{
-            margin-top: 0;
-        }
+        #ez-toc-container{
+            background: none;
+            border: none;
+            box-shadow: none;
         
-        .ez-toc-title-container{
-            .ez-toc-title-toggle{
-                a{
-                    background: none;
-                    outline: none;
-                    border: 0;
-                    box-shadow: none;
-                    position: relative;
-                    top: -10px;
-                    
-                    i{
-                        color: $dark;
-                        @include basic-transition;
-                    }
-                }
-            }
-        }
-        .ez-toc-list{
-            box-sizing: border-box;
-            padding: 0;
+            .ez-toc-title-container{
 
-            li{                    
-                &::before{
-                    display: none;
-                }
-
-                a{
-                    text-transform: uppercase;
-                    margin-bottom: 10px;
-                    display: block;
-                    text-decoration: none;
-                    color: $dark;
-                    font-family: $main-title-family;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    
-                    &:hover{
-                        background: none;
-                    }
-                }
-
-                li{
+                .ez-toc-title-toggle{
                     a{
-                        text-transform: $text-transform-none;
-                        font-family: $second-title-family;
-                        font-size: $h4-size;
-                    }
-                    
-                    li{
-                        margin-bottom: 0;
-                        a{
-                            font-family: $main-font-family;
-                            font-size: $tiny-size;
-                            
+                        background: none;
+                        outline: none;
+                        border: 0;
+                        box-shadow: none;
+                        position: relative;
+                        top: -10px;
+
+                        i{
+                            color: $dark;
+                            @include basic-transition;
                         }
                     }
                 }
-                &:last-child{
-                    margin-bottom: 0;
+            }
+            .ez-toc-list{
+                box-sizing: border-box;
+                padding: 0;
+
+                li{                    
+                    &::before{
+                        display: none;
+                    }
+
+                    a{
+                        text-transform: uppercase;
+                        margin-bottom: 10px;
+                        display: block;
+                        text-decoration: none;
+                        color: $dark;
+                        font-family: $main-title-family;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                        &:hover{
+                            background: none;
+                        }
+                    }
+
+                    li{
+                        a{
+                            text-transform: $text-transform-none;
+                            font-family: $second-title-family;
+                            font-size: $h4-size;
+                        }
+
+                        li{
+                            margin-bottom: 0;
+                            a{
+                                font-family: $main-font-family;
+                                font-size: $tiny-size;
+
+                            }
+                        }
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
                 }
             }
         }
@@ -346,9 +361,6 @@
             }
 
             &:hover{
-                h3{
-                    color: $brown-dt;
-                }
                 .post-img{
                     img{
                         @include transform(scale(1.2));
