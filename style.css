@@ -4,7 +4,7 @@ Theme Name: Labs by Sedoo
 Author: Sedoo - Raphael Vallauri - Pierre Vert
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 0.7.11
+Version: 0.8.0
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -232,8 +232,7 @@ p {
   text-align: left; }
 
 b {
-  font-family: "Montserrat", sans-serif;
-  display: block; }
+  font-family: "Montserrat", sans-serif; }
 
 strong {
   font-family: "Montserrat", sans-serif; }
@@ -297,7 +296,8 @@ small {
     font-weight: 800;
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
-    margin-right: 15px; }
+    margin-right: 15px;
+    display: inline-block; }
     .page .tag a::before, .single .tag a::before {
       content: "#";
       display: inline-block;
@@ -389,7 +389,7 @@ body a.btn {
     font-family: "Cormorant Infant", serif;
     font-style: oblique; }
     .wp-block-quote p::first-letter {
-      padding: 10px;
+      padding: 10px !important;
       background: #000;
       color: #fff;
       float: left;
@@ -594,6 +594,8 @@ body a.btn {
       margin-left: 0; }
   html {
     font-size: 58%; }
+  .wrapper, .wrapper-content, .archive .site-content .site-branding {
+    padding: 70px 0; }
   h1, .h1 {
     font-size: 2.5rem; }
   h2, .h2, nav[id="burger-navigation"] .overlay .slick-slide .menu-item a {
@@ -613,7 +615,12 @@ body a.btn {
       right: -30px;
       bottom: -30px; }
     .wp-block-quote p {
-      font-size: calc(3rem / 1.4); } }
+      font-size: calc(3rem / 1.4); }
+  [data-role="list-platformTag"] .tag a {
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden; } }
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
   div[id="page"] {
@@ -1684,7 +1691,7 @@ div[id="em-wrapper"] h2 {
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     overflow: hidden; }
-  .event-post > div a + h3 {
+  .event-post > div a + h3, .event-post > div h3 {
     margin-top: 0; }
   .event-post h3 {
     font-size: 2.5rem;
@@ -1994,7 +2001,7 @@ ul[id="shortcuts"] {
       ul[id="shortcuts"] li:nth-child(even):hover {
         -webkit-filter: saturate(100%);
         filter: saturate(100%); }
-    ul[id="shortcuts"] li button {
+    ul[id="shortcuts"] li button, ul[id="shortcuts"] li a {
       font-family: "Montserrat", sans-serif;
       text-transform: uppercase;
       color: #fff;
@@ -2011,7 +2018,7 @@ ul[id="shortcuts"] {
       -ms-flex-align: center;
       align-items: center;
       width: 100%; }
-      ul[id="shortcuts"] li button svg {
+      ul[id="shortcuts"] li button svg, ul[id="shortcuts"] li a svg {
         width: 30px;
         height: 30px;
         margin-right: 20px; }
@@ -2711,7 +2718,7 @@ aside[id="stickyMenu"] {
   .search-annuaire h2 {
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
-    font-size: 5rem;
+    font-size: calc(2rem * 2);
     margin: 0; }
   .search-annuaire p {
     margin-bottom: 50px; }
@@ -2848,6 +2855,9 @@ aside[id="stickyMenu"] {
       nav[id="primary-navigation"] > div ul[id="primary-menu"] li, nav[id="primary-navigation"] > div ul[id="burger-menu"] li {
         display: block;
         margin-bottom: 20px; }
+        nav[id="primary-navigation"] > div ul[id="primary-menu"] li:hover a, nav[id="primary-navigation"] > div ul[id="burger-menu"] li:hover a {
+          background: none !important;
+          color: #000; }
         nav[id="primary-navigation"] > div ul[id="primary-menu"] li a, nav[id="primary-navigation"] > div ul[id="burger-menu"] li a {
           font-size: 2.5rem;
           margin-bottom: 10px;
@@ -3256,6 +3266,12 @@ aside[id="stickyMenu"] {
     .single-event .contextual-sidebar .event > div .event-informations {
       width: 100%; } }
 
+@media screen and (max-width: 1280px) {
+  .home header[id="cover"] {
+    padding: 60px 0; }
+    .home header[id="cover"] .wrapper h1, .home header[id="cover"] .wrapper-content h1, .home header[id="cover"] .archive .site-content .site-branding h1, .archive .site-content .home header[id="cover"] .site-branding h1 {
+      font-size: 5rem; } }
+
 @media screen and (max-width: 1024px) {
   .home header[id="cover"] {
     height: auto; } }
@@ -3328,7 +3344,7 @@ aside[id="stickyMenu"] {
         -webkit-transform: none;
         -ms-transform: none;
         transform: none; }
-      ul[id="shortcuts"] li button {
+      ul[id="shortcuts"] li button, ul[id="shortcuts"] li a {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3337,16 +3353,16 @@ aside[id="stickyMenu"] {
         -ms-flex-align: center;
         align-items: center;
         font-size: calc(1.2rem / 1.3); }
-        ul[id="shortcuts"] li button svg {
+        ul[id="shortcuts"] li button svg, ul[id="shortcuts"] li a svg {
           margin-right: 0;
           margin-bottom: 8px;
           width: 25px;
           height: 25px; } }
 
 @media screen and (max-width: 500px) {
-  ul[id="shortcuts"] li button {
+  ul[id="shortcuts"] li button, ul[id="shortcuts"] li a {
     font-size: 0; }
-    ul[id="shortcuts"] li button svg {
+    ul[id="shortcuts"] li button svg, ul[id="shortcuts"] li a svg {
       margin-bottom: 0; } }
 
 @media screen and (max-width: 767px) {

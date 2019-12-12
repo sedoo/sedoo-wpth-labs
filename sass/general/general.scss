@@ -219,7 +219,6 @@ p{
 }
 b{
     font-family: $main-title-family;
-    display: block;
 }
 strong{
     font-family: $main-title-family;    
@@ -285,6 +284,7 @@ small{
             font-family: $main-title-family;
             font-size: $tiny-size;
             margin-right: 15px;
+            display: inline-block;
 
             &::before{
                 content: "#";
@@ -302,7 +302,8 @@ small{
             border: $basic-border;
             padding: 10px 20px;
             font-size: $font-size;
-            margin-bottom: 20px;    
+            margin-bottom: 20px;  
+            
         }
     }
 }
@@ -403,7 +404,7 @@ body a.btn{
         font-style: $italic;
         
         &::first-letter{
-            padding: 10px;
+            padding: 10px!important;
             background: $dark;
             color: $light-full;
             float: left;

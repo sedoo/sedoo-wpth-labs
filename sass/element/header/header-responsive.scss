@@ -12,6 +12,7 @@
 }
 @media screen and (max-width: 1024px){
     nav[id="primary-navigation"]{
+        
         > div{
             position: fixed;
             top: 0;
@@ -34,7 +35,14 @@
                 li{
                     display: block;
                     margin-bottom: 20px;
-
+                    
+                    &:hover{
+                        a{
+                            background: none!important;
+                            color: $dark;
+                        }
+                    }
+                    
                     a{
                         font-size: $h3-size;
                         margin-bottom: 10px;

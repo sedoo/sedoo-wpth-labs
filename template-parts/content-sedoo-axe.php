@@ -7,9 +7,10 @@
  * @package Data-Terra
  */
 
+$titleItem=mb_strimwidth(get_the_title(), 0, 40, '...');  
 
 ?>
-<a class="event-post" href="<?php the_permalink(); ?>"> 
+<a class="event-post" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"> 
     <div class="event-img">
         <?php if(has_post_thumbnail()){ ?>
             <?php the_post_thumbnail('thumbnail-plugin'); ?>
@@ -17,5 +18,5 @@
             <img src="<?php echo get_template_directory_uri() . '/image/empty-mode-axe.svg'; ?>" alt="" />
         <?php } ?>
     </div>
-    <h3><?php the_title(); ?></h3>
+    <h3><?php echo $titleItem; ?></h3>
 </a>    
