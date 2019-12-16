@@ -18,6 +18,9 @@
     html{
         font-size: 58%;
     }
+    .wrapper{
+        padding: 70px 0;
+    }
     h1, .h1{
         font-size: $h1-size-mobile;
     }
@@ -47,6 +50,15 @@
         
         p{
             font-size: calc(#{$h2-size-mobile} / 1.4);
+        }
+    }
+    [data-role="list-platformTag"]{
+        .tag{
+            a{
+                display: block;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
         }
     }
 }

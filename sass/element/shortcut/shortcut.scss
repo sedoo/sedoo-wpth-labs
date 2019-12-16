@@ -31,7 +31,7 @@ ul[id="shortcuts"]{
                 filter: saturate(100%);
             }
         }
-        button{
+        button, a{
             font-family: $main-title-family;
             text-transform: $uppercase;
             color: $light-full;

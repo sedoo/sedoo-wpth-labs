@@ -42,7 +42,7 @@ $options_theme = get_field('ajout_options', 'option');
     <?php } ?>
     <?php if( $options_theme && in_array('calendar', $options_theme) ) { ?>
     <li class="calendar-btn">
-        <button>
+        <a href="<?php the_field('url_calendar', 'option'); ?>">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px"
                  height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
                 <rect fill="none" width="20" height="20" class="size"/>
@@ -62,8 +62,8 @@ $options_theme = get_field('ajout_options', 'option');
 
                     <line fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="15.04" y1="2.02" x2="15.04" y2="5.52"/>
             </svg>
-            <?php echo __('Calendrier', 'sedoo-wpth-labs'); ?>
-        </button>
+            <?php echo __('Événements', 'sedoo-wpth-labs'); ?>
+        </a>
     </li>
     <?php } ?>
     <li class="search-form-btn">

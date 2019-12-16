@@ -235,6 +235,7 @@ function labs_by_sedoo_color_style() {
              
             .post:hover .group-content .entry-content h2,
              ul[id="shortcuts"] li:hover button,
+             ul[id="shortcuts"] li:hover a,
              nav[id="burger-navigation"] .overlay .slick-slide .menu-item a:hover,
              .footer-menu ul[id="primary-menu"] .menu-item a,
              .footer-categories li a:hover,
@@ -313,7 +314,9 @@ function labs_by_sedoo_color_style() {
                 background-color: rgba(<?php echo $rgb_color[0].",".$rgb_color[1].",".$rgb_color[2].",.8)"; ?>;
             }
              
-            ul[id="shortcuts"] li:hover button path, ul[id="shortcuts"] li:hover button rect:not(.size), ul[id="shortcuts"] li:hover button line{
+            ul[id="shortcuts"] li:hover path, 
+            ul[id="shortcuts"] li:hover rect:not(.size), 
+            ul[id="shortcuts"] li:hover line{
                 fill: <?php echo $code_color;?>!important;
             }
              .bobinette svg polyline{

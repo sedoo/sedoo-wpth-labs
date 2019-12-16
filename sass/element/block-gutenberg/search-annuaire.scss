@@ -6,7 +6,7 @@
     h2{
         font-family: $main-title-family;
         text-transform: uppercase;
-        font-size: $h1-size;
+        font-size: calc(#{$h4-size} * 2);
         margin: 0;
     }
     p{

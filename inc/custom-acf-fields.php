@@ -47,10 +47,10 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_5dadb1927d6d8',
-			'label' => 'Afficher calendrier ?',
-			'name' => 'display_calendar',
-			'type' => 'true_false',
-			'instructions' => 'Ajouter le shortcode vers le calendrier',
+			'label' => 'URL Calendrier',
+			'name' => 'url_calendar',
+			'type' => 'url',
+			'instructions' => 'Ajouter le lien vers la page événement',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -58,11 +58,8 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
-			'message' => '',
-			'default_value' => 0,
-			'ui' => 1,
-			'ui_on_text' => '',
-			'ui_off_text' => '',
+			'default_value' => '',
+			'placeholder' => '',
 		),
 	),
 	'location' => array(

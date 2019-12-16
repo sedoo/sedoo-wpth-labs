@@ -24,8 +24,7 @@
                     echo '<img src="';
                     echo catch_that_image();
                     echo '" alt="" />'; 
-                }
-                
+                } 
             }?>
             
         </figure>

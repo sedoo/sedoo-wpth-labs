@@ -17,15 +17,15 @@ get_header();
 			
 				<section class="wrapper-layout">
 
-                        <?php
-                        while ( have_posts() ) :
-                            the_post();
+                            <?php
+                            while ( have_posts() ) :
+                                the_post();
+                                
+                                get_template_part( 'plugins/events-manager/templates/events-list-grouped');
 
-                            get_template_part( 'template-parts/content', 'page' );
 
-
-                        endwhile; // End of the loop.
-                        ?>
+                            endwhile; // End of the loop.
+                            ?>
                     
 		        </section>
 
