@@ -1,3 +1,18 @@
+@media screen and (max-width: 1280px){
+    .home{
+        header[id="cover"]{
+            padding: 60px 0;
+            
+            .wrapper{
+                
+                h1{
+                    font-size: $h1-size;
+                }
+                
+            }
+        }
+    }    
+}
 @media screen and (max-width: 1024px) {
     .home{
         header[id="cover"]{
