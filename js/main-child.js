@@ -54,16 +54,6 @@ jQuery(document).ready(function ($) {
         $("body").removeClass("overlay-expanded");
 
     });   
-    // Pop over à l'ouverture du calendrier
-    $(".calendar-btn").click(function () {
-        $(".overlay.calendar").addClass("open");
-        $("body").addClass("overlay-expanded");
-    });
-    $(".overlay .close").click(function () {
-        $(".overlay.calendar").removeClass("open");
-        $("body").removeClass("overlay-expanded");
-
-    });  
     
     
     // Toggle dépliage Sommaire
