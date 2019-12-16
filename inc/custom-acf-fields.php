@@ -426,7 +426,7 @@ acf_add_local_field_group(array(
 					'name' => 'nom_laboratoire',
 					'type' => 'text',
 					'instructions' => 'Saisir le nom du laboratoire',
-					'required' => 1,
+					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
 						'width' => '',
@@ -445,7 +445,7 @@ acf_add_local_field_group(array(
 					'name' => 'adresse',
 					'type' => 'textarea',
 					'instructions' => 'Saisir l\'adresse du laboratoire',
-					'required' => 1,
+					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
 						'width' => '',
@@ -464,7 +464,7 @@ acf_add_local_field_group(array(
 					'name' => 'contact_laboratoire',
 					'type' => 'text',
 					'instructions' => 'Saisir le nom du contact au sein du laboratoire',
-					'required' => 1,
+					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
 						'width' => '',
@@ -483,7 +483,7 @@ acf_add_local_field_group(array(
 					'name' => 'telephone_contact',
 					'type' => 'text',
 					'instructions' => 'Saisir le téléphone du contact au sein du laboratoire',
-					'required' => 1,
+					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
 						'width' => '',
@@ -521,7 +521,7 @@ acf_add_local_field_group(array(
 					'name' => 'mail_contact',
 					'type' => 'email',
 					'instructions' => 'Saisir l\'adresse email du contact',
-					'required' => 1,
+					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
 						'width' => '',
