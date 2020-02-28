@@ -22,7 +22,7 @@ div[id="em-wrapper"]{
     
     > div{
         > p{
-            font-family: $second-title-family;
+            font-family: $main-title-family;
             font-size: $h3-size;
             font-style: $italic;
             text-decoration: none;
@@ -37,7 +37,7 @@ div[id="em-wrapper"]{
         }
     }
     h3{
-        font-size: $h3-size;
+        font-size: $h4-size;
         text-transform: $uppercase;
         margin-bottom: 10px;
         @include basic-transition;

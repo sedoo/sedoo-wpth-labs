@@ -145,7 +145,7 @@
 
 
             .eta{
-                font-family: $second-title-family;
+                font-family: $main-title-family;
                 font-size: calc(#{$h1-size} * 1.5);
                 text-align: left;
                 color: $dark;
@@ -238,7 +238,7 @@
                     li{
                         a{
                             text-transform: $text-transform-none;
-                            font-family: $second-title-family;
+                            font-family: $main-title-family;
                             font-size: $h4-size;
                         }
 
@@ -305,7 +305,7 @@
     }
     h3{
         margin: 20px 0 5px;
-        font-family: $second-title-family;
+        font-family: $main-title-family;
     }
 }
 

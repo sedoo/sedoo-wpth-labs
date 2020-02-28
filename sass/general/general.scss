@@ -50,7 +50,7 @@ table {
 }
 /* FIN RESET */
 html{
-    font-size: 62.5%
+    font-size: 62.5%;
 }
 
 ::selection, -moz-::selection{
@@ -62,7 +62,7 @@ html{
 body{
     font-family: $main-font-family;
     line-height: 1.4;
-    color: $dark;
+    color: $dark-typo;
     font-size: $font-size;
     letter-spacing: $letter-spacing;
     hyphens: none;
@@ -199,7 +199,7 @@ h1, .h1{
     }
 }
 h2, .h2{
-    font-family:$second-title-family;
+    font-family:$main-title-family;
     font-size: $h2-size;
     color: $dark;
     margin: 20px 0 5px;
@@ -210,6 +210,7 @@ h3, .h3{
     margin-bottom: 10px;
 }
 h4{
+    font-family: $main-title-family;
     font-size: $h4-size;
     font-weight: $bold;
 }
@@ -218,13 +219,13 @@ p{
     text-align: left;
 }
 b{
-    font-family: $main-title-family;
+    font-family: $main-font-family;
 }
 strong{
-    font-family: $main-title-family;    
+    font-family: $main-font-family;    
 }
 button{
-    font-family: $main-title-family;
+    font-family: $main-font-family;
     color: $dark;
     outline: 0;
     box-shadow: 0;
@@ -281,7 +282,7 @@ small{
             color: $dark;
             text-transform: $uppercase;
             font-weight: $bold;
-            font-family: $main-title-family;
+            font-family: $main-font-family;
             font-size: $tiny-size;
             margin-right: 15px;
             display: inline-block;
@@ -383,7 +384,7 @@ body a.btn{
     &::before{
         content: "“";
         font-size: calc(#{$h1-size} * 1.5);
-        font-family: $second-title-family;
+        font-family: $main-title-family;
         position: absolute;
         top: -70px;
         left: -70px;
@@ -392,7 +393,7 @@ body a.btn{
     &::after{
         content: "”";
         font-size: calc(#{$h1-size} * 1.5);
-        font-family: $second-title-family;
+        font-family: $main-title-family;
         position: absolute;
         bottom: -70px;
         right: -70px;
@@ -400,7 +401,7 @@ body a.btn{
     
     p{
         font-size: calc(#{$h2-size} / 1.4);
-        font-family: $second-title-family;
+        font-family: $main-title-family;
         font-style: $italic;
         
         &::first-letter{
