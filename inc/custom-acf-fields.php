@@ -900,6 +900,13 @@ acf_add_local_field_group(array(
 				'value' => 'event',
 			),
 		),
+		array(
+            array(
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'tribe_events',
+            ),
+        ),
 	),
 	'menu_order' => 0,
 	'position' => 'side',
