@@ -277,7 +277,7 @@ small{
     .tag {
         margin: 10px 0 20px;
 
-        a{
+        a, span{
             text-decoration: none;
             color: $dark;
             text-transform: $uppercase;
@@ -295,11 +295,11 @@ small{
         }
     }
 }
-[data-role="list-platformTag"]{
+[data-role="list-platformTag"], .tribe-events-single{
     .tag{
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
         
-        a{
+        a, span {
             border: $basic-border;
             padding: 10px 20px;
             font-size: $font-size;
@@ -346,6 +346,7 @@ body a.btn{
 
     &:hover{
         background: $light-full!important;
+        color:#000;
     }
 }  
 

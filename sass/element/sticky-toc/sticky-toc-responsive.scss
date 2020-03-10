@@ -1,26 +1,26 @@
 @media screen and (max-width: 1024px){
     aside[id="stickyMenu"]{
-        width: 90%;
-        @include transform(translateX(-100%));
+        // width: 90%;
+        // @include transform(translateX(-100%));
 
-        &:hover:not(.open){
-            @include transform(translateX(-100%));
-        }
+        // &:hover:not(.open){
+        //     @include transform(translateX(-100%));
+        // }
         
-        .bobinette{
-            right: -5%;
+        // .bobinette{
+        //     right: -5%;
             
-            &::after{
-                @include transform(rotateZ(180deg));
-            }
-        }
+        //     &::after{
+        //         @include transform(rotateZ(180deg));
+        //     }
+        // }
     }
 }
-@media screen and (max-width: 1024px) and (orientation:portrait){
+@media screen and (max-width: 700px){
     aside[id="stickyMenu"]{
-        .bobinette{
-            right: -6%;
-        }
+        width: 100%;
+        border-right: none;
+        margin-bottom:30px;
     }
 }
 @media screen and (max-width:767px){

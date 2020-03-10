@@ -1,0 +1,12 @@
+.tribe-block__organizer__details h3,
+.tribe-block__venue h3,
+.tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__name h3 {
+    font-size: $h3-size;
+}
+
+.tribe-block__organizer__details p,
+.tribe-block__venue__meta *,
+.tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__phone,
+.tribe-block__events-link .tribe-block__btn--link a {
+    font-size: $font-size;
+}

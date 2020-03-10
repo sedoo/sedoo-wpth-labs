@@ -353,7 +353,7 @@ small {
 .page .tag, .single .tag {
   margin: 10px 0 20px;
 }
-.page .tag a, .single .tag a {
+.page .tag a, .page .tag span, .single .tag a, .single .tag span {
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
@@ -363,16 +363,13 @@ small {
   margin-right: 15px;
   display: inline-block;
 }
-.page .tag a::before, .single .tag a::before {
+.page .tag a::before, .page .tag span::before, .single .tag a::before, .single .tag span::before {
   content: "#";
   display: inline-block;
   vertical-align: middle;
 }
 
-[data-role=list-platformTag] .tag {
-  margin-bottom: 40px;
-}
-[data-role=list-platformTag] .tag a {
+[data-role=list-platformTag] .tag a, [data-role=list-platformTag] .tag span, .tribe-events-single .tag a, .tribe-events-single .tag span {
   border: 3px solid #000;
   padding: 10px 20px;
   font-size: 1.4rem;
@@ -407,8 +404,8 @@ body a.btn {
   color: #fff;
   text-align: center;
   padding: 10px 40px;
-  -webkit-box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 1;
   max-width: 300px;
@@ -416,6 +413,7 @@ body a.btn {
 }
 body a.btn:hover {
   background: #fff !important;
+  color: #000;
 }
 
 .blur, body.overlay-expanded .site-content, body.overlay-expanded .site-footer {
@@ -1126,8 +1124,8 @@ ul[id=primary-menu] .menu-item .sub-menu {
   -webkit-transform-origin: top center;
       -ms-transform-origin: top center;
           transform-origin: top center;
-  -webkit-box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 ul[id=primary-menu] .menu-item .sub-menu .menu-item {
   display: block;
@@ -2131,8 +2129,8 @@ div[id=em-wrapper] h2 {
 .post {
   width: 100%;
   padding: 20px;
-  -webkit-box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -2176,8 +2174,8 @@ div[id=em-wrapper] h2 {
   height: 100%;
   background: #000;
   z-index: -1;
-  -webkit-box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 .post:nth-child(4n) .entry-header {
   height: 100%;
@@ -2923,15 +2921,25 @@ ul[id=shortcuts] li button svg, ul[id=shortcuts] li a svg {
   width: 100%;
 }
 
+.wrapper.tocActive, .tocActive.wrapper-content, .archive .site-content .tocActive.site-branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tocActive main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 320px;
+          flex: 1 1 320px;
+}
+.tocActive .wrapper-content {
+  padding: 0 30px 70px;
+}
+
 aside[id=stickyMenu] {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 500;
-  width: 18%;
-  min-width: 300px;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 250px;
   height: 100%;
   background: #fff;
   display: -webkit-box;
@@ -2944,38 +2952,18 @@ aside[id=stickyMenu] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5% 1%;
-  -webkit-transform: translateX(-95%);
-      -ms-transform: translateX(-95%);
-          transform: translateX(-95%);
-  border-right: 3px solid #000;
+  border-right: 1px dotted #000;
   -webkit-transition: 0.5s ease all;
   -o-transition: 0.5s ease all;
   transition: 0.5s ease all;
-}
-aside[id=stickyMenu].open {
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
-}
-aside[id=stickyMenu].open .bobinette {
-  -webkit-transition: 0.5s ease all;
-  -o-transition: 0.5s ease all;
-  transition: 0.5s ease all;
-}
-aside[id=stickyMenu].open .bobinette svg {
-  -webkit-transform: rotateZ(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotateZ(180deg);
-}
-aside[id=stickyMenu]:hover:not(.open) {
-  -webkit-transform: translateX(-90%);
-      -ms-transform: translateX(-90%);
-          transform: translateX(-90%);
 }
 aside[id=stickyMenu] > div {
   position: relative;
   height: 100%;
+  /*nav{
+      overflow-y: scroll;
+      overflow-x: hidden;
+  }*/
 }
 aside[id=stickyMenu] > div > div {
   height: 100%;
@@ -2994,7 +2982,7 @@ aside[id=stickyMenu] > div > div {
 aside[id=stickyMenu] > div p {
   font-family: "Next", sans-serif;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 aside[id=stickyMenu] > div p::after {
   content: "";
@@ -3003,42 +2991,32 @@ aside[id=stickyMenu] > div p::after {
   display: block;
   margin: 10px 0 20px;
 }
-aside[id=stickyMenu] > div nav {
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
 aside[id=stickyMenu] > div [id=tocList] {
-  padding-right: 20px;
+  padding-right: 30px;
 }
 aside[id=stickyMenu] > div [id=tocList] li a {
   font-family: "Next", sans-serif;
-  font-size: 2rem;
-  border-bottom: dotted 1px #000;
+  font-size: 1.4rem;
   padding: 10px 0;
   display: block;
   margin-bottom: 10px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
   overflow: hidden;
 }
-aside[id=stickyMenu] > div [id=tocList] li a:hover {
-  -webkit-transform: translateX(20px);
-      -ms-transform: translateX(20px);
-          transform: translateX(20px);
-}
 aside[id=stickyMenu] > div [id=tocList] li li {
-  padding-left: 20px;
+  padding: 3px 10px;
 }
 aside[id=stickyMenu] > div [id=tocList] li li a {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   border: 0;
-  padding: 5px 0;
+  padding: 0;
   margin-bottom: 0;
 }
 aside[id=stickyMenu] > div [id=tocList] li li a:first-child {
   margin-top: 5px;
+}
+aside[id=stickyMenu] > div [id=tocList] li:not(:last-child) a {
+  border-bottom: dotted 1px #000;
 }
 aside[id=stickyMenu] ::-webkit-scrollbar {
   display: none;
@@ -3135,8 +3113,8 @@ aside[id=stickyMenu] ::-webkit-scrollbar {
   padding: 20px;
   width: 80%;
   margin: -100px auto 0;
-  -webkit-box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   z-index: 2;
   -webkit-transform: translateX(-25%);
       -ms-transform: translateX(-25%);
@@ -3407,30 +3385,11 @@ aside[id=stickyMenu] ::-webkit-scrollbar {
     padding: 100px 20px 50px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 700px) {
   aside[id=stickyMenu] {
-    width: 90%;
-    -webkit-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  aside[id=stickyMenu]:hover:not(.open) {
-    -webkit-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  aside[id=stickyMenu] .bobinette {
-    right: -5%;
-  }
-  aside[id=stickyMenu] .bobinette::after {
-    -webkit-transform: rotateZ(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotateZ(180deg);
-  }
-}
-@media screen and (max-width: 1024px) and (orientation: portrait) {
-  aside[id=stickyMenu] .bobinette {
-    right: -6%;
+    width: 100%;
+    border-right: none;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -3672,7 +3631,7 @@ aside[id=stickyMenu] ::-webkit-scrollbar {
 }
 @media screen and (max-width: 1024px) {
   .single-post header[id=cover], .single-event header[id=cover] {
-    height: 45vh;
+    height: 30vh;
   }
   .single-post .wrapper-layout, .single-event .wrapper-layout {
     -ms-flex-wrap: wrap;
@@ -4043,8 +4002,8 @@ aside[id=stickyMenu] ::-webkit-scrollbar {
     -webkit-transform-origin: top center;
         -ms-transform-origin: top center;
             transform-origin: top center;
-    -webkit-box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   }
   ul[id=burger-menu] .menu-item .sub-menu .menu-item {
     display: block;
@@ -4164,4 +4123,16 @@ aside[id=stickyMenu] ::-webkit-scrollbar {
   .search-annuaire h2, .search-annuaire input[type=search] {
     font-size: 2rem;
   }
+}
+.tribe-block__organizer__details h3,
+.tribe-block__venue h3,
+.tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__name h3 {
+  font-size: 2rem;
+}
+
+.tribe-block__organizer__details p,
+.tribe-block__venue__meta *,
+.tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__phone,
+.tribe-block__events-link .tribe-block__btn--link a {
+  font-size: 1.4rem;
 }

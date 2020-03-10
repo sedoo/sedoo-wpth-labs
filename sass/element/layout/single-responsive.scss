@@ -1,7 +1,7 @@
 @media screen and (max-width: 1024px){
     .single-post, .single-event{
         header[id="cover"]{
-            height: 45vh;
+            height: 30vh;
         }
         .wrapper-layout{
             @include flex-wrap;

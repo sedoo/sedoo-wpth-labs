@@ -12,7 +12,7 @@ $title = get_the_title( $prev );
 $post_name = mb_strlen( $title ) > $max_length ? mb_substr( $title, 0, $max_length ) . ' ..' : $title;
 ?>
     <div class="nav-box previous">
-         <a href="<?php echo get_the_permalink($prevPost); ?>" class="nav-box-chevron"><img src="<?php echo get_template_directory_uri() . '/image/chevron.svg'; ?>" alt="<"/><span class="label">Article précédent</span></a>
+         <a href="<?php echo get_the_permalink($prevPost); ?>" class="nav-box-chevron"><img src="<?php echo get_template_directory_uri() . '/images/chevron.svg'; ?>" alt="<"/><span class="label">Article précédent</span></a>
         <?php if (wp_is_mobile()){
         
         } else { ?>
@@ -32,7 +32,7 @@ $title = get_the_title( $next );
 $post_name = mb_strlen( $title ) > $max_length ? mb_substr( $title, 0, $max_length ) . ' ..' : $title;
 ?>
     <div class="nav-box next">
-        <a href="<?php echo get_the_permalink($nextPost); ?>" class="nav-box-chevron"><span class="label">Article suivant</span><img src="<?php echo get_template_directory_uri() . '/image/chevron.svg'; ?>" alt=">"/></a>
+        <a href="<?php echo get_the_permalink($nextPost); ?>" class="nav-box-chevron"><span class="label">Article suivant</span><img src="<?php echo get_template_directory_uri() . '/images/chevron.svg'; ?>" alt=">"/></a>
         <?php if (wp_is_mobile()){
         
         } else { ?>
