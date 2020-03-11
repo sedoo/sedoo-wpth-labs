@@ -64,13 +64,13 @@ aside[id="stickyMenu"]{
             text-transform: uppercase;
             font-size: $font-size;
 
-            &::after{
-                content: "";
-                width: 30px;
-                height: 3px;
-                display: block;
-                margin: 10px 0 20px;
-            }
+            // &::after{
+            //     content: "";
+            //     width: 30px;
+            //     height: 3px;
+            //     display: block;
+            //     margin: 10px 0 20px;
+            // }
         }
         /*nav{
             overflow-y: scroll;
@@ -111,9 +111,10 @@ aside[id="stickyMenu"]{
                     }
                 }
 
-                &:not(:last-child) a {
-                    border-bottom: dotted 1px $dark;
-                }
+                
+            }
+            > li:not(:last-child) > a {
+                border-bottom: dotted 1px $dark;
             }
         }
     }
