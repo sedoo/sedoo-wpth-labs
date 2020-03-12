@@ -378,8 +378,8 @@ body a.btn{
 
 /* QUOTE */
 .wp-block-quote{
-    max-width: calc(100% - 150px);
-    margin: 90px auto;
+    max-width: 80%;
+    margin: 50px auto;
     position: relative;
     
     &::before{
@@ -387,8 +387,8 @@ body a.btn{
         font-size: calc(#{$h1-size} * 1.5);
         font-family: $main-title-family;
         position: absolute;
-        top: -70px;
-        left: -70px;
+        top: -40px;
+        left: -40px;
     }
     
     &::after{
@@ -396,26 +396,14 @@ body a.btn{
         font-size: calc(#{$h1-size} * 1.5);
         font-family: $main-title-family;
         position: absolute;
-        bottom: -70px;
-        right: -70px;
+        bottom: -40px;
+        right: -40px;
     }
     
     p{
-        font-size: calc(#{$h2-size} / 1.4);
+        font-size: $h4-size;
         font-family: $main-title-family;
         font-style: $italic;
-        
-        &::first-letter{
-            padding: 10px!important;
-            background: $dark;
-            color: $light-full;
-            float: left;
-            font-size: $h1-size;
-            position: relative;
-            margin-top: -10px;
-            display: block;
-            font-style: normal;
-        }
     }
     cite{
         font-family: $main-title-family;

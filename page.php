@@ -13,7 +13,11 @@
  */
 
 get_header();
-
+$query_object = get_queried_object();
+// if ($query_object->post_type) {
+    $page_id = get_queried_object_id();
+// }
+$title = get_the_title($page_id);
 ?>
     <?php
     if (get_the_post_thumbnail()) {
@@ -24,9 +28,17 @@ get_header();
     <?php 
     }
     ?>
+    <?php 
+    // Show title first on mobile
+        if (get_field( 'table_content' )) {
+    ?>
+        <h1 class="onTop"><?php echo $title;?></h1>
+    <?php
+    }
+    ?>
 	<div id="primary" class="content-area wrapper <?php if (get_field( 'table_content' )) {echo " tocActive";}?>">
-        <?php // table_content ( value )
-        if (get_field( 'table_content' )):
+        <?php 
+            if (get_field( 'table_content' )):
         ?>
         <aside id="stickyMenu" class="open">
             <div>

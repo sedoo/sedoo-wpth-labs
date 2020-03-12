@@ -17,31 +17,25 @@
     }
 }
 @media screen and (max-width: 700px){
+    .tocActive {
+        h1 {
+            &.entry-title {
+                display:none;
+            }
+        }
+    }
+    
     aside[id="stickyMenu"]{
         width: 100%;
         border-right: none;
         margin-bottom:30px;
     }
 }
-@media screen and (max-width:767px){
-    aside[id="stickyMenu"]{
-        .bobinette{
-            right: -6%;
-        }
-    }
-}
-@media screen and (max-width:767px) and (orientation:portrait){
-    aside[id="stickyMenu"]{
-        .bobinette{
-            right: -5%;
-        }
-    }
-}
-@media screen and (max-width:500px){
-    aside[id="stickyMenu"]{
-        .bobinette{
-            right: -12%;
-            top: 70%;
+
+@media screen and (min-width: 700px){
+    h1 {
+        &.onTop {
+        display:none;
         }
     }
 }
