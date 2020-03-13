@@ -3,7 +3,8 @@
         ul{
             li{
                 a{
-                    font-size: calc(#{$font-size} / 1.2);
+                    // font-size: calc(#{$font-size} / 1.2);
+                    font-size:$font-size;
                     padding: 20px 10px;
                 }
             }

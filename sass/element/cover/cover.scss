@@ -29,7 +29,7 @@ header[id="cover"]{
 
         &::before, &::after{
             content: "";
-            border: 1px solid $light-full;
+            border: none;//1px solid $light-full;
             position: absolute;
             top: 20px;
             left: 20px;
@@ -38,8 +38,9 @@ header[id="cover"]{
         }
 
         &::after{
-            border-style: dotted;
-            border-width: 2px;
+            // border-style: dotted;
+            // border-width: 2px;
+            border:none;
             top: 25px;
             left: 25px;
             width: calc(100% - 50px);

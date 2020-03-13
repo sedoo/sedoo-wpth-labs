@@ -7,7 +7,7 @@
  * @package Data-Terra
  */
 
-
+$postType=get_post_type();
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -19,7 +19,9 @@
                 the_post_thumbnail('thumbnail-loop');
             } else {
                 if (catch_that_image() ==  "no_image" ){
-                   the_custom_logo();
+                   ?>
+                   <img src="<?php echo get_template_directory_uri() .'/images/empty-mode-'.$postType.'.svg'; ?>" alt="" />
+                   <?php
                 } else {
                     echo '<img src="';
                     echo catch_that_image();
@@ -37,7 +39,7 @@
 	</header><!-- .entry-header -->
     <div class="group-content">
         <div class="entry-content">
-            <h2><?php the_title(); ?></h2>
+            <h3><?php the_title(); ?></h3>
             <?php the_excerpt(); ?>
         </div><!-- .entry-content -->
         <footer class="entry-footer">

@@ -57,9 +57,9 @@ jQuery(document).ready(function ($) {
     
     
     // Toggle dépliage Sommaire
-    $(".bobinette").click(function () {
-        $("#stickyMenu").toggleClass("open");
-    });
+    // $(".bobinette").click(function () {
+    //     $("#stickyMenu").toggleClass("open");
+    // });
     // reading time
     $(function() {
 

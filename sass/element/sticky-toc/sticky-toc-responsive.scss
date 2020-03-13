@@ -1,47 +1,49 @@
 @media screen and (max-width: 1024px){
     aside[id="stickyMenu"]{
-        width: 90%;
-        @include transform(translateX(-100%));
+        // width: 90%;
+        // @include transform(translateX(-100%));
 
-        &:hover:not(.open){
-            @include transform(translateX(-100%));
-        }
+        // &:hover:not(.open){
+        //     @include transform(translateX(-100%));
+        // }
         
-        .bobinette{
-            right: -5%;
+        // .bobinette{
+        //     right: -5%;
             
-            &::after{
-                @include transform(rotateZ(180deg));
+        //     &::after{
+        //         @include transform(rotateZ(180deg));
+        //     }
+        // }
+    }
+}
+@media screen and (max-width: 700px){
+    .tocActive {
+        h1 {
+            &.entry-title {
+                display:none;
             }
         }
-    }
-}
-@media screen and (max-width: 1024px) and (orientation:portrait){
-    aside[id="stickyMenu"]{
-        .bobinette{
-            right: -6%;
+        &.wrapper {
+            padding-top:0;
         }
     }
-}
-@media screen and (max-width:767px){
+    h1.onTop {
+        margin-top: 20px;
+    }
+    
+
+    
     aside[id="stickyMenu"]{
-        .bobinette{
-            right: -6%;
-        }
+        width: 100%;
+        border-right: none;
+        margin-bottom:30px;
     }
 }
-@media screen and (max-width:767px) and (orientation:portrait){
-    aside[id="stickyMenu"]{
-        .bobinette{
-            right: -5%;
-        }
-    }
-}
-@media screen and (max-width:500px){
-    aside[id="stickyMenu"]{
-        .bobinette{
-            right: -12%;
-            top: 70%;
+
+@media screen and (min-width: 700px){
+    h1 {
+        &.onTop {
+        display:none;
         }
     }
 }

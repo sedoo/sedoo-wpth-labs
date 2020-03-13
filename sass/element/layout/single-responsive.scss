@@ -1,7 +1,7 @@
 @media screen and (max-width: 1024px){
     .single-post, .single-event{
         header[id="cover"]{
-            height: 45vh;
+            height: 30vh;
         }
         .wrapper-layout{
             @include flex-wrap;
@@ -63,21 +63,6 @@
     }
 }
 @media screen and (max-width:767px){
-    .single-post, .single-event{
-        main{
-            article{
-                section{
-                    p{
-                        &:first-child{
-                            &::first-letter{
-                                font-size: $h2-size-mobile;
-                            }
-                        }
-                    }
-                }           
-            }
-        }
-    }
     .read-more-article{
         .post-loop{
             .post-preview{

@@ -15,7 +15,7 @@ $titleItem=mb_strimwidth(get_the_title(), 0, 40, '...');
         <?php if(has_post_thumbnail()){ ?>
             <?php the_post_thumbnail('thumbnail-plugin'); ?>
         <?php } else { ?>
-            <img src="<?php echo get_template_directory_uri() . '/image/empty-mode-platform.svg'; ?>" alt="" />
+            <img src="<?php echo get_template_directory_uri() . '/images/empty-mode-platform.svg'; ?>" alt="" />
         <?php } ?>
     </div>
     <h3><?php echo $titleItem; ?></h3>
