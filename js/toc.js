@@ -42,6 +42,11 @@ jQuery(document).ready(function(){
     // Calcul de la hauteur du footer
     var footerHeight=jQuery('#page > footer').height() + 100;
 
+    // Fixe le sommaire au scroll (jquery.sticky.js)
+    // jQuery(window).load(function(){
+    //     jQuery('aside#stickyMenu').sticky({ topSpacing: 130 }); 
+    //     jQuery('aside#stickyMenu').sticky({ bottomSpacing: footerHeight });
+    //     });
 
 
     /**

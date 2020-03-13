@@ -40,14 +40,12 @@ $themeSlugRewrite = "sedoo-theme-labo";
                     <header>
                         <h1><?php the_title(); ?></h1>
                         <div>
-                            <div>
-                                <?php 
-                                if( function_exists('sedoo_labtools_show_categories') ){
-                                sedoo_labtools_show_categories($themes, $themeSlugRewrite);
-                                }
-                                ?>
-                            </div>
-                            <p class="post-meta"><?php echo __('Publié le', 'sedoo-wpth-labs'); ?> : <?php the_date(); ?></p>
+                            <?php 
+                            if( function_exists('sedoo_labtools_show_categories') ){
+                            sedoo_labtools_show_categories($themes, $themeSlugRewrite);
+                            }
+                            ?>
+                            <p class="post-meta"><?php the_date(); ?></p>
                         </div>
                     </header>
                     <section>
@@ -90,21 +88,21 @@ $themeSlugRewrite = "sedoo-theme-labo";
                 <?php                
                     while ( $the_query->have_posts() ) {
                         $the_query->the_post();
-
+                        $titleItem=mb_strimwidth(get_the_title(), 0, 80, '...');  
                         ?>
                         <a class="post-preview" href="<?php the_permalink(); ?>">   
                             <div>
-                                <h3><?php the_title(); ?></h3>
+                                <h3 title="<?php the_title(); ?>"><?php echo $titleItem; ?></h3>
                             </div>
                             <div class="post-img">
                                 <?php if (get_the_post_thumbnail()) {
                                     the_post_thumbnail(array(790, 240, true));
                                 } else {
                                     if (catch_that_image() ==  "no_image" ){
-                                        $custom_logo_id = get_theme_mod( 'custom_logo' );
-                                        $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); ?>
-                                        <img class="object-fit-contain" src="<?php echo $image[0]; ?>" alt="" />
-                                    <?php } else {
+                                         ?>
+                                        <img class="object-fit-contain" src="<?php echo get_template_directory_uri() .'/images/empty-mode-post.svg'; ?>" alt="" />
+                                    <?php 
+                                    } else {
                                         echo '<img src="';
                                         echo catch_that_image();
                                         echo '" alt="" />'; 

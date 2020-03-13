@@ -1,4 +1,20 @@
-.page{
+.single, .page{
+
+    article {
+
+        header {
+            @include display-flex;
+            @include flex-column;
+            margin-bottom:30px;
+
+            > div {
+                padding:20px;
+                border-bottom:1px solid #CCC;
+                
+            }
+        }
+    }
+
     .post-thumbnail{
         display: none;
     }

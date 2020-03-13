@@ -1,36 +1,37 @@
+
+.wrapper.tocActive {
+    @include display-flex;
+    @include flex-wrap;
+}
+
+.tocActive {
+    main {
+        flex:1 1 320px;
+    }
+    .wrapper-content {
+        padding:0 30px 70px;
+    }
+    
+}
+
 aside[id="stickyMenu"]{
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 500;
-    width: 18%;
-    min-width: 300px;
-    box-shadow: $basic-box-shadow; 
+    // position: fixed;
+    // left: 0;
+    // top: 0;
+    // z-index: 500;
+    width: 250px;
+    // min-width: 300px;
+    // box-shadow: $basic-box-shadow; 
     height: 100%;
-    background: $light-full;
+    // background: $light-full;
     @include display-flex;
     @include flex-column;
     @include justify-content-center;
-    padding: 5% 1%;
-    @include transform(translateX(-95%));
-    border-right: 3px solid $dark;
+    // padding: 5% 1%;
+    // @include transform(translateX(-95%));
+    border-right: 1px dotted $dark;
     @include basic-transition;
-    
-    &.open{
-        @include transform(none);
-        
-        .bobinette{
-            @include basic-transition;
-            
-            svg{
-                @include transform(rotateZ(180deg));
-            }
-        }
-    }
 
-    &:hover:not(.open){
-        @include transform(translateX(-90%));
-    }
     > div{
         position: relative;
         height: 100%;
@@ -46,47 +47,47 @@ aside[id="stickyMenu"]{
         p{
             font-family: $main-title-family;
             text-transform: uppercase;
-            font-size: $h3-size;
+            font-size: $font-size;
 
-            &::after{
-                content: "";
-                width: 30px;
-                height: 3px;
-                display: block;
-                margin: 10px 0 20px;
-            }
+            // &::after{
+            //     content: "";
+            //     width: 30px;
+            //     height: 3px;
+            //     display: block;
+            //     margin: 10px 0 20px;
+            // }
         }
-        nav{
+        /*nav{
             overflow-y: scroll;
             overflow-x: hidden;
-        }
+        }*/
         [id="tocList"]{
-            padding-right: 20px;
+            padding-right: 30px;
             li{
                 a{
-                    font-family: $second-title-family;
-                    font-size: $h3-size;
-                    border-bottom: dotted 1px $dark;
+                    font-family: $main-title-family;
+                    font-size: $font-size;
                     padding: 10px 0;
                     display: block;
                     margin-bottom: 10px;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;  
+                    // display: -webkit-box;
+                    // -webkit-line-clamp: 2;
+                    // -webkit-box-orient: vertical;  
                     overflow: hidden;
                     
                     &:hover{
-                        @include transform(translateX(20px));
+                        // @include transform(translateX(20px));
                     }
                 }
 
+
                 li{ 
-                    padding-left: 20px;
+                    padding: 3px 10px;
                     a{
                         font-family: $main-font-family;
-                        font-size: $font-size;
+                        font-size: $tiny-size;
                         border: 0;
-                        padding: 5px 0;
+                        padding: 0;
                         margin-bottom: 0;
                         
                         &:first-child{
@@ -94,6 +95,11 @@ aside[id="stickyMenu"]{
                         }
                     }
                 }
+
+                
+            }
+            > li:not(:last-child) > a {
+                border-bottom: dotted 1px $dark;
             }
         }
     }

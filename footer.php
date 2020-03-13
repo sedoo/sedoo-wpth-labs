@@ -207,14 +207,14 @@ $options_list_footer = get_field('list_choice', 'option');
                     <?php if(get_field('lien_intranet', 'option')){ ?>
                     <li>
                         <a href="<?php the_field('lien_intranet', 'option'); ?>" target="_blank">
-                            <img src="<?php echo get_template_directory_uri() . '/image/key.svg'; ?>" alt="" /><?php echo __("Intranet", 'sedoo-wpth-labs'); ?>
+                            <img src="<?php echo get_template_directory_uri() . '/images/key.svg'; ?>" alt="" /><?php echo __("Intranet", 'sedoo-wpth-labs'); ?>
                         </a>
                     </li>
                     <?php } ?>
                     <?php if(get_field('lien_webmail', 'option')){ ?>
                     <li>
                         <a href="<?php the_field('lien_webmail', 'option'); ?>" target="_blank">
-                            <img src="<?php echo get_template_directory_uri() . '/image/mail.svg'; ?>" alt="" /><?php echo __("Webmail", 'sedoo-wpth-labs'); ?>
+                            <img src="<?php echo get_template_directory_uri() . '/images/mail.svg'; ?>" alt="" /><?php echo __("Webmail", 'sedoo-wpth-labs'); ?>
                         </a>
                     </li>
                     <?php } ?>                        

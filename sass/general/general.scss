@@ -50,7 +50,7 @@ table {
 }
 /* FIN RESET */
 html{
-    font-size: 62.5%
+    font-size: 62.5%;
 }
 
 ::selection, -moz-::selection{
@@ -62,7 +62,7 @@ html{
 body{
     font-family: $main-font-family;
     line-height: 1.4;
-    color: $dark;
+    color: $dark-typo;
     font-size: $font-size;
     letter-spacing: $letter-spacing;
     hyphens: none;
@@ -138,7 +138,7 @@ figure{
     max-width: 100%!important;
 }
 div[id="page"]{
-    padding: 110px 20px 20px;
+    padding: 90px 20px 20px;
     overflow-y: hidden;
     max-width: 100%;
 }
@@ -146,7 +146,7 @@ div[id="page"]{
 .wrapper{
     max-width: $max-container-width;
     @include center-block;
-    padding: 70px 20px;
+    padding: 20px 20px;
 }
 .wrapper-layout{
     max-width: $max-archive-width;
@@ -199,7 +199,7 @@ h1, .h1{
     }
 }
 h2, .h2{
-    font-family:$second-title-family;
+    font-family:$main-title-family;
     font-size: $h2-size;
     color: $dark;
     margin: 20px 0 5px;
@@ -210,6 +210,7 @@ h3, .h3{
     margin-bottom: 10px;
 }
 h4{
+    font-family: $main-title-family;
     font-size: $h4-size;
     font-weight: $bold;
 }
@@ -218,13 +219,13 @@ p{
     text-align: left;
 }
 b{
-    font-family: $main-title-family;
+    font-family: $main-font-family;
 }
 strong{
-    font-family: $main-title-family;    
+    font-family: $main-font-family;    
 }
 button{
-    font-family: $main-title-family;
+    font-family: $main-font-family;
     color: $dark;
     outline: 0;
     box-shadow: 0;
@@ -276,12 +277,12 @@ small{
     .tag {
         margin: 10px 0 20px;
 
-        a{
+        a, span{
             text-decoration: none;
             color: $dark;
             text-transform: $uppercase;
             font-weight: $bold;
-            font-family: $main-title-family;
+            font-family: $main-font-family;
             font-size: $tiny-size;
             margin-right: 15px;
             display: inline-block;
@@ -294,11 +295,11 @@ small{
         }
     }
 }
-[data-role="list-platformTag"]{
+[data-role="list-platformTag"], .tribe-events-single{
     .tag{
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
         
-        a{
+        a, span {
             border: $basic-border;
             padding: 10px 20px;
             font-size: $font-size;
@@ -345,6 +346,7 @@ body a.btn{
 
     &:hover{
         background: $light-full!important;
+        color:#000;
     }
 }  
 
@@ -376,44 +378,32 @@ body a.btn{
 
 /* QUOTE */
 .wp-block-quote{
-    max-width: calc(100% - 150px);
-    margin: 90px auto;
+    max-width: 80%;
+    margin: 50px auto;
     position: relative;
     
     &::before{
         content: "“";
         font-size: calc(#{$h1-size} * 1.5);
-        font-family: $second-title-family;
+        font-family: $main-title-family;
         position: absolute;
-        top: -70px;
-        left: -70px;
+        top: -40px;
+        left: -40px;
     }
     
     &::after{
         content: "”";
         font-size: calc(#{$h1-size} * 1.5);
-        font-family: $second-title-family;
+        font-family: $main-title-family;
         position: absolute;
-        bottom: -70px;
-        right: -70px;
+        bottom: -40px;
+        right: -40px;
     }
     
     p{
-        font-size: calc(#{$h2-size} / 1.4);
-        font-family: $second-title-family;
+        font-size: $h4-size;
+        font-family: $main-title-family;
         font-style: $italic;
-        
-        &::first-letter{
-            padding: 10px!important;
-            background: $dark;
-            color: $light-full;
-            float: left;
-            font-size: $h1-size;
-            position: relative;
-            margin-top: -10px;
-            display: block;
-            font-style: normal;
-        }
     }
     cite{
         font-family: $main-title-family;
