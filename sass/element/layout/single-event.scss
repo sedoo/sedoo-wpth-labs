@@ -20,7 +20,7 @@
                 content: "";
                 width: 20px;
                 height: 20px;
-                background: url("image/add-event.svg") center center no-repeat;
+                background: url("images/add-event.svg") center center no-repeat;
                 background-size: cover;
                 vertical-align: middle;
                 margin-right: 10px;
@@ -55,19 +55,19 @@
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
-                background: url("image/location.svg");
+                background: url("images/location.svg");
                 position: relative;
                 top: 1px;
             }
             
             &.event-date{
                 &::before{
-                    background: url("image/date.svg");
+                    background: url("images/date.svg");
                 }
             }
             &.event-time{
                 &::before{
-                    background: url("image/time.svg");
+                    background: url("images/time.svg");
                 }
             }            
         }
