@@ -132,23 +132,23 @@ footer[id="colophon"]{
             }
 
             &[href*="facebook"]::after {
-                background-image: url("image/logo_facebook.svg");
+                background-image: url("images/logo_facebook.svg");
             }
 
             &[href*="twitter"]::after {
-                background-image: url("image/logo_twitter.svg");
+                background-image: url("images/logo_twitter.svg");
             }
 
             &[href*="instagram"]::after {
-                background-image: url("image/logo_instagram.svg");
+                background-image: url("images/logo_instagram.svg");
             }
 
             &[href*="youtube"]::after {
-                background-image: url("image/logo_youtube.svg");
+                background-image: url("images/logo_youtube.svg");
             }
 
             &[href*="linkedin"]::after {
-                background-image: url("image/logo_linkedin.svg");
+                background-image: url("images/logo_linkedin.svg");
             }
             
             &:hover{
