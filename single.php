@@ -40,13 +40,11 @@ $themeSlugRewrite = "sedoo-theme-labo";
                     <header>
                         <h1><?php the_title(); ?></h1>
                         <div>
-                            <div>
-                                <?php 
-                                if( function_exists('sedoo_labtools_show_categories') ){
-                                sedoo_labtools_show_categories($themes, $themeSlugRewrite);
-                                }
-                                ?>
-                            </div>
+                            <?php 
+                            if( function_exists('sedoo_labtools_show_categories') ){
+                            sedoo_labtools_show_categories($themes, $themeSlugRewrite);
+                            }
+                            ?>
                             <p class="post-meta"><?php the_date(); ?></p>
                         </div>
                     </header>

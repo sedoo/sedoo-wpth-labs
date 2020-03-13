@@ -23,7 +23,7 @@ aside[id="stickyMenu"]{
     // min-width: 300px;
     // box-shadow: $basic-box-shadow; 
     height: 100%;
-    background: $light-full;
+    // background: $light-full;
     @include display-flex;
     @include flex-column;
     @include justify-content-center;
@@ -32,21 +32,6 @@ aside[id="stickyMenu"]{
     border-right: 1px dotted $dark;
     @include basic-transition;
 
-    // &.open{
-    //     @include transform(none);
-        
-    //     .bobinette{
-    //         @include basic-transition;
-            
-    //         svg{
-    //             @include transform(rotateZ(180deg));
-    //         }
-    //     }
-    // }
-
-    // &:hover:not(.open){
-    //     @include transform(translateX(-90%));
-    // }
     > div{
         position: relative;
         height: 100%;

@@ -40,7 +40,7 @@ $title = get_the_title($page_id);
         <?php 
             if (get_field( 'table_content' )):
         ?>
-        <aside id="stickyMenu" class="open">
+        <aside id="stickyMenu">
             <div>
                 <p>Sommaire</p>
                 <nav role="sommaire">

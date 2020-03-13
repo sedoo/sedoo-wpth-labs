@@ -23,7 +23,15 @@
                 display:none;
             }
         }
+        &.wrapper {
+            padding-top:0;
+        }
     }
+    h1.onTop {
+        margin-top: 20px;
+    }
+    
+
     
     aside[id="stickyMenu"]{
         width: 100%;

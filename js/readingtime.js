@@ -79,14 +79,14 @@ Licensed under the MIT license
 					// if minutes are greater than 0
 					if(readingTimeMinutes > 0) {
 
-                        console.log('TOTO : ' + readingTimeMinutes);
+                        // console.log('TOTO : ' + readingTimeMinutes);
                         // MASSACRE 
                         if(readingTimeMinutes > 10) {
                             readingTimeMinutesWidth = 100;
                         } else {
                             readingTimeMinutesWidth= readingTimeMinutes*10;
                         }
-                        console.log('Nouvelle width : ' + readingTimeMinutesWidth);
+                        // console.log('Nouvelle width : ' + readingTimeMinutesWidth);
                         $(".progress-bar > div").width(readingTimeMinutesWidth + '%');
 						// set reading time by the minute
 						$(s.readingTimeTarget).html(s.prependTimeString + readingTimeMinutes + ((!s.readingTimeAsNumber) ? ' <span>' + minShortForm + "</span>" : '</span>'));
