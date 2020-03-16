@@ -22,8 +22,9 @@
                         $size='medium';
                         $thumb= $image['sizes'][$size];
                         ?>
+                    <figure>
                         <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo $image['alt']; ?>" />
-
+                    </figure>
                     <?php endif; ?>                
                 </div>
                 <?php } ?>
@@ -61,8 +62,9 @@
                     $size='medium';
                     $thumb= $image['sizes'][$size];
                     ?>
+                <figure>
                     <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo $image['alt']; ?>" />
-
+                </figure>
                 <?php endif; ?>
             </div>
         </div>
