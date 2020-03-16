@@ -16,8 +16,10 @@
 <div class="event-categories custom tag">
 <?php
 $terms = get_the_terms( get_the_id(), 'tribe_events_cat');
-foreach ($terms as $term) {
-    echo "<span class=\"tag-cloud-link ".$term->slug."\">".$term->name."</span>";
+if (!empty($terms)) {
+    foreach ($terms as $term) {
+        echo "<span class=\"tag-cloud-link ".$term->slug."\">".$term->name."</span>";
+    }
 }
 ?>
 </div>

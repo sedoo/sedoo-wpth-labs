@@ -52,7 +52,7 @@ while ( have_posts() ) : the_post();
         </main><!-- #main -->
 
         
-        <?php get_template_part( 'template-parts/contextual-sidebar-single-event', '' );?>
+        <?php get_template_part( 'template-parts/single-author-event', '' );?>
 
     </div>
     <?php get_template_part( 'template-parts/nav-box', '' );?>

@@ -10,3 +10,20 @@
 .tribe-block__events-link .tribe-block__btn--link a {
     font-size: $font-size;
 }
+
+[id="flex-single-tribe-event"] {
+    display: flex;
+    flex-wrap: wrap;
+
+    #tribe-events-content {
+        flex:1 1 800px;
+        margin-bottom:20px;
+        margin-right:30px;
+    }
+    .post-author {
+        flex:1 0 300px;
+    }
+
+}
+
+
