@@ -6,23 +6,25 @@
     $ajout_auteur = get_field('ajouteur_auteur');
     $select_lauteur_array = get_field( 'select_lauteur' ); 
 ?>
-
 <?php if ( get_field('select_lauteur') && ($ajout_auteur === 'interne')) { ?>
 <div class="post-author">
     <h2><?php echo __('Intervenant', 'sedoo-wpth-labs'); ?></h2>
     <div>
         <div>
-<!--            <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>">-->
+           <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>">
                 <?php if ( get_field( 'photo_auteur', 'user_'.$select_lauteur_array['ID']) ) { ?>
                 <div class="img-author">
                     <?php 
 
                     $image = get_field('photo_auteur', 'user_'.$select_lauteur_array['ID']);
 
-                    if( !empty($image) ): ?>
-
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
+                    if( !empty($image) ): 
+                        $size='medium';
+                        $thumb= $image['sizes'][$size];
+                        ?>
+                    <figure>
+                        <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo $image['alt']; ?>" />
+                    </figure>
                     <?php endif; ?>                
                 </div>
                 <?php } ?>
@@ -56,10 +58,13 @@
 
                 $image = get_field('photo_auteur_exterieur');
 
-                if( !empty($image) ): ?>
-
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
+                if( !empty($image) ):
+                    $size='medium';
+                    $thumb= $image['sizes'][$size];
+                    ?>
+                <figure>
+                    <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo $image['alt']; ?>" />
+                </figure>
                 <?php endif; ?>
             </div>
         </div>
