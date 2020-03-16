@@ -10,3 +10,28 @@
 .tribe-block__events-link .tribe-block__btn--link a {
     font-size: $font-size;
 }
+
+[id="flex-single-tribe-event"] {
+    display: flex;
+    flex-wrap: wrap;
+
+    #tribe-events-content {
+        flex:1 1 348px;
+        margin-bottom:20px;
+        margin-right:40px;
+    }
+    .post-author {
+        flex:0 0 300px;
+    }
+
+}
+
+@media (max-width:768px) {
+    [id="flex-single-tribe-event"] {
+        .post-author {
+            flex-grow:1;
+        }
+    }
+}
+
+
