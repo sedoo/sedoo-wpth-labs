@@ -35,5 +35,6 @@ if ( ! empty( $event_id ) && function_exists( 'tribe_is_recurring_event' ) ) {
 		<?php $this->template( 'single-event/comments' ); ?>
 		<?php $this->template( 'single-event/footer' ); ?>
 	</div>
-	<?php get_template_part( 'template-parts/single-author-event', '' );?>
+	<?php //get_template_part( 'template-parts/single-author', '' );?>
+	<?php get_template_part('template-parts/contextual-sidebar-single'); ?>
 </div>
