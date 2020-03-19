@@ -140,7 +140,7 @@
 
             .eta{
                 font-family: $main-title-family;
-                font-size: calc(#{$h1-size} * 1.5);
+                font-size: $h1-size;
                 text-align: left;
                 color: $dark;
                 position: relative;
@@ -150,7 +150,7 @@
                 white-space: nowrap;
 
                 span{
-                    font-size: calc(#{$font-size} * 1.5);
+                    font-size: $tiny-size;
                     display: inline-block;
                     vertical-align: middle;
                     text-transform: uppercase;
@@ -162,13 +162,13 @@
             }
             .progress-bar{
                 background: $light-grey;
-                height: 55px;
+                height: 35px;
                 width: 100%;
                 position: relative; 
                 margin-left: 20px;
                 
                 > div{
-                    height: 55px;
+                    height: 35px;
                     width: 0%;
                     position: absolute;
                     left: 0;
