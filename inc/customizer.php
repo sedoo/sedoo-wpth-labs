@@ -276,7 +276,6 @@ function labs_by_sedoo_color_style() {
              ::selection,
              -moz-::selection,
              .copyright .wrapper.site-info a:hover,
-             .contextual-sidebar .reading-time .eta-container .progress-bar > div,
              body a.btn,
              .search-form .search-submit,
              div[id="em-wrapper"] h2,

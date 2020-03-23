@@ -13,6 +13,9 @@
  *
  */
 ?>
+
+<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' );
+?>
 <div class="event-categories custom tag">
 <?php
 $terms = get_the_terms( get_the_id(), 'tribe_events_cat');
@@ -23,5 +26,4 @@ if (!empty($terms)) {
 }
 ?>
 </div>
-<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' );
-?>
+

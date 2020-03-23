@@ -58,7 +58,13 @@ while ( have_posts() ) : the_post();
                     <?php } ?>
                 </article>
             </main><!-- #main -->
-            <?php get_template_part('template-parts/contextual-sidebar-single'); ?>
+            <?php 
+            $ajout_auteur = get_field('ajouteur_auteur');
+            $select_lauteur_array = get_field( 'select_lauteur' ); 
+            if ( (get_field('ajouteur_auteur')) || (get_field('labstools_show_sidebar')) )  {
+            get_template_part('template-parts/contextual-sidebar-single'); 
+            }
+            ?>
         </div>
         <footer class="read-more-article">
             <div>
