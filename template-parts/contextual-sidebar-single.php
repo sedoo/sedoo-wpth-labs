@@ -3,64 +3,49 @@
  * Template part for the contextual sidebar in single
  *
  */
-$ajout_auteur = get_field('ajouteur_auteur');
-$select_lauteur_array = get_field( 'select_lauteur' ); 
-// $toc = do_shortcode("[toc]");
-//$author = get_field('select_lauteur') && ($ajout_auteur == true);
-//$reading_time = get_field('temps_lecture') == 1;
-?>
-<?php if( (get_field('temps_lecture') == 1) || (get_field('select_lauteur')) || (get_field('ajouteur_auteur')) ) { ?>
-<aside class="contextual-sidebar">
-    <?php 
-    if( function_exists('sedoo_labtools_show_categories') ){
-    $themes = get_the_terms( $post->ID, 'sedoo-theme-labo');  
-    // var_dump($themes);
-    $themeSlugRewrite = "sedoo-theme-labo";
-        if (is_array($themes)) {
-        echo "<h2>".__('Thematique(s)', 'sedoo-wpth-labs')."</h2>";
-        sedoo_labtools_show_categories($themes, $themeSlugRewrite);
-        }
 
-    $platform = get_the_terms( $post->ID, 'sedoo-platform-tag');  
-    $platformSlugRewrite = "sedoo-platform-tag";
-        if (is_array($platform)) {
-        echo "<h2>".__('Plateforme(s)', 'sedoo-wpth-labs')."</h2>";
-        sedoo_labtools_show_categories($platform, $platformSlugRewrite);
-        }
+?>
+<aside class="contextual-sidebar">
     
-    $axe = get_the_terms( $post->ID, 'sedoo-axe-tag');  
-    $axeSlugRewrite = "sedoo-axe-tag";
-        if (is_array($axe)) {
-        echo "<h2>".__('Axe(s)', 'sedoo-wpth-labs')."</h2>";
-        sedoo_labtools_show_categories($axe, $axeSlugRewrite);
-        }
-    }
-    ?>
-    <?php if(wp_is_mobile()){
-    
-    } else { ?>
-        <?php // table_content ( value )
-        if (get_field( 'temps_lecture' ) == 1) {
-        ?>
-        <div class="reading-time">
-            <h2><?php echo __('Temps de lecture', 'sedoo-wpth-labs'); ?></h2>
-            <div class="eta-container">
-                <div class="eta"></div>
-                <div class="progress-bar">
-                    <div></div>
-                </div>
-            </div>
-        </div>
-        <?php } ?>
     <?php 
-    }        
     if ( get_field('ajouteur_auteur')) {
         get_template_part( 'template-parts/single-author', '' );
-    }
-    ?>    
+    }  
     
-    
+    /*** LABTOOLS FOR SHOWING CURRENT TERMS OF CUSTOM TAXONOMIES */
+
+    // check if the repeater field has rows of data
+    if( have_rows('labstools_display_taxonomies') ):
+        // loop through the rows of data
+        while ( have_rows('labstools_display_taxonomies') ) : the_row();
+            // display a sub field value
+            $taxonomy = get_sub_field('labstools_choose_taxonomy');
+
+            if( function_exists('sedoo_labtools_show_categories') ){
+                $themes = get_the_terms( $post->ID, $taxonomy);
+                $taxonomy_labels = get_taxonomy_labels( get_taxonomy($taxonomy) );
+                // var_dump($taxonomy_labels);
+
+                if (is_array($themes)) {
+                    ?>
+                    <h2>
+                    <?php 
+                    if (get_sub_field('labstools_taxonomysection_title')) {
+                        the_sub_field('labstools_taxonomysection_title');
+                    } else {
+                        echo __($taxonomy_labels->name, 'sedoo-wpth-labs');
+                    }                    
+                    ?>
+                    </h2>                    
+                    <?php
+                    sedoo_labtools_show_categories($themes, $taxonomy);
+                }
+            }            
+        endwhile;
+
+    else :
+        // no rows found
+    endif;
+
+    ?>  
 </aside>
-<?php 
-} else { } 
-?>

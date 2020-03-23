@@ -218,6 +218,10 @@ p{
     margin: 10px 0;
     text-align: justify;
 }
+em {
+    font-style: italic;
+}
+
 b{
     font-family: $main-font-family;
 }
@@ -232,7 +236,7 @@ button{
     border: none;
     background: none;
 }
-p, a, td, th, address, li{
+p, a, td, th, address, li, figcaption{
     letter-spacing: 1px;
 }
 .quote{
@@ -295,7 +299,8 @@ small{
         }
     }
 }
-[data-role="list-platformTag"], .tribe-events-single{
+[data-role="list-platformTag"], 
+.tribe-events-single{
     .tag{
         // margin-bottom: 40px;
         
@@ -305,6 +310,14 @@ small{
             font-size: $font-size;
             margin-bottom: 20px;  
             
+        }
+        span {
+            border:none;
+            padding:0;
+
+            &::before{
+                content: "";
+            }
         }
     }
 }
@@ -434,7 +447,7 @@ body a.btn{
         
     figcaption{
         margin-top: -20px;
-        text-align: left;
+        text-align: justify;
         font-style: italic;
         
         br{

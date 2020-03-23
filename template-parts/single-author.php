@@ -42,10 +42,16 @@
                 <p><b><?php echo $select_lauteur_array['user_firstname']; ?> <?php echo $select_lauteur_array['user_lastname']; ?></b></p>
            </a>
             <p><?php the_field('poste', 'user_'.$select_lauteur_array['ID']) ?></p>
+            <?php 
+            if ($select_lauteur_array['user_description']) {
+            ?>
             <h3><?php echo __("À propos de l'intervenant", 'sedoo-wpth-labs'); ?></h3>
             <p class="author-description">
                 <?php echo $select_lauteur_array['user_description'];?>
             </p> 
+            <?php
+            }
+            ?>
            <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>" class="btn"><?php echo __("En savoir plus sur l'intervenant", 'sedoo-wpth-labs'); ?></a>
         </div>
    </div>
