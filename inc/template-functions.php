@@ -40,7 +40,7 @@ add_action( 'wp_head', 'labs_by_sedoo_pingback_header' );
  * Ajouter l'image à la une dans le flux RSS
  */
 
-function labs_by_sedoo_post_thumbnail($content) {
+function labs_by_sedoo_rss_post_thumbnail($content) {
 	global $post;
 	$content ='';
 
@@ -49,8 +49,8 @@ function labs_by_sedoo_post_thumbnail($content) {
 	}
 	return $content;
 }
-add_filter('the_excerpt_rss', 'labs_by_sedoo_post_thumbnail');
-add_filter('the_content_feed', 'labs_by_sedoo_post_thumbnail');
+add_filter('the_excerpt_rss', 'labs_by_sedoo_rss_post_thumbnail');
+add_filter('the_content_feed', 'labs_by_sedoo_rss_post_thumbnail');
 
 /**
  * automatically retrieve the first image from posts
