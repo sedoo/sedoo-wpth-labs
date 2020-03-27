@@ -20,7 +20,8 @@ if (is_array($categories) || is_object($categories))
 }
 
 while ( have_posts() ) : the_post();
-
+$themes = get_the_terms( $post->ID, 'category');  
+$themeSlugRewrite = "category";
 ?>
 	<div id="primary" class="content-area <?php echo esc_html( $categories[0]->slug );?>">
         <?php
@@ -38,12 +39,17 @@ while ( have_posts() ) : the_post();
                     <header>
                         <h1><?php the_title(); ?></h1>
                         <div>
-                            <p>
-                            <?php $categories = get_the_category();
-                                if ( ! empty( $categories ) ) {
-                                echo esc_html( $categories[0]->name );   
-                            }; ?>
-                            </p>
+                            <?php 
+                            // $categories = get_the_category();
+                            //     if ( ! empty( $categories ) ) {
+                            //     echo esc_html( $categories[0]->name );   
+                            // }; 
+                            ?>
+                            <?php 
+                            if( function_exists('sedoo_show_categories') ){
+                                sedoo_show_categories($themes, $themeSlugRewrite);
+                            }
+                            ?>
                             <p class="post-meta"><?php the_date(); ?></p>
                         </div>
                     </header>
@@ -66,13 +72,13 @@ while ( have_posts() ) : the_post();
             }
             ?>
         </div>
-        <footer class="read-more-article">
+        <footer class="wrapper single-footer">
             <div>
             <?php
             $args = array(
                 'post_type'             => 'post',
                 'post_status'           => array( 'publish' ),
-                'posts_per_page'        => '2',           
+                'posts_per_page'        => '3',           
                 'post__not_in'          => array(get_the_ID()), 
                 'orderby'               => 'date',
                 'order'                 => 'DESC',
@@ -84,42 +90,26 @@ while ( have_posts() ) : the_post();
                     ),
                 ),
             );
-            $the_query = new WP_Query( $args );
-
-            if ( $the_query->have_posts() ) {  
+            $postsList = get_posts ($args);
+    
+            if ($postsList){       
             ?>
-                <h2><?php echo __("D'autres actualités sur le même thème", 'sedoo-wpth-labs'); ?> :</h2>
-                <div class="post-loop">
-                <?php                
-                    while ( $the_query->have_posts() ) {
-                        $the_query->the_post();
-                        $titleItem=mb_strimwidth(get_the_title(), 0, 80, '...');  
-                        ?>
-                        <a class="post-preview" href="<?php the_permalink(); ?>">   
-                            <div>
-                                <h3 title="<?php the_title(); ?>"><?php echo $titleItem; ?></h3>
-                            </div>
-                            <div class="post-img">
-                                <?php if (get_the_post_thumbnail()) {
-                                    the_post_thumbnail(array(790, 240, true));
-                                } else {
-                                    if (labs_by_sedoo_catch_that_image() ==  "no_image" ){
-                                         ?>
-                                        <img class="object-fit-contain" src="<?php echo get_template_directory_uri() .'/images/empty-mode-post.svg'; ?>" alt="" />
-                                    <?php 
-                                    } else {
-                                        echo '<img src="';
-                                        echo labs_by_sedoo_catch_that_image();
-                                        echo '" alt="" />'; 
-                                    }
-                                }
-                                ?>
-                            </div>
-                        </a>
+            <h2><?php echo __('Plus d\'actualités', 'sedoo-wpth-labs') ?></h2>
+            <section role="listNews" class="post-wrapper">
+                
+                <?php
+
+                foreach ($postsList as $post) :
+                setup_postdata( $post );
+                    ?>
                     <?php
-                    }
-                ?>            
-               </div>
+                    get_template_part( 'template-parts/content', 'grid' );
+                    ?>
+                    <?php
+                endforeach;
+                ?>	
+            </section>
+
             <?php
             } else {
                 // no posts found

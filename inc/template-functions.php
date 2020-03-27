@@ -77,3 +77,33 @@ update_option( 'image_default_align', 'center' );
 update_option( 'image_default_link_type', 'none' );
 update_option( 'image_default_size', 'medium' );
 }
+
+/******************************************************************
+ * Afficher les archives des custom taxonomies
+ * $categories = get_the_terms( $post->ID, 'category');  
+ */
+
+function sedoo_show_categories($categories, $slugRewrite) {
+ 
+    if( $categories ) {
+    ?>
+    <div class="tag">
+    <?php
+        foreach( $categories as $categorie ) { 
+            if ($categorie->slug !== "non-classe") {
+                if ( (function_exists('pll_current_language')) && ("en" == pll_current_language())) {
+                    echo '<a href="'.site_url().'/'.pll_current_language().'/'.$slugRewrite.'/'.$categorie->slug.'" class="'.$categorie->slug.'">';
+                } else {
+                    echo '<a href="'.site_url().'/'.$slugRewrite.'/'.$categorie->slug.'" class="'.$categorie->slug.'">';
+                }
+                echo $categorie->name; 
+                ?>                    
+            </a>
+    <?php 
+            }
+        }
+    ?>
+    </div>
+  <?php
+      } 
+  }
