@@ -103,13 +103,13 @@ while ( have_posts() ) : the_post();
                                 <?php if (get_the_post_thumbnail()) {
                                     the_post_thumbnail(array(790, 240, true));
                                 } else {
-                                    if (catch_that_image() ==  "no_image" ){
+                                    if (labs_by_sedoo_catch_that_image() ==  "no_image" ){
                                          ?>
                                         <img class="object-fit-contain" src="<?php echo get_template_directory_uri() .'/images/empty-mode-post.svg'; ?>" alt="" />
                                     <?php 
                                     } else {
                                         echo '<img src="';
-                                        echo catch_that_image();
+                                        echo labs_by_sedoo_catch_that_image();
                                         echo '" alt="" />'; 
                                     }
                                 }

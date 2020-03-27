@@ -18,13 +18,13 @@ $postType=get_post_type();
             if (has_post_thumbnail()) {
                 the_post_thumbnail('thumbnail-loop');
             } else {
-                if (catch_that_image() ==  "no_image" ){
+                if (labs_by_sedoo_catch_that_image() ==  "no_image" ){
                    ?>
                    <img src="<?php echo get_template_directory_uri() .'/images/empty-mode-'.$postType.'.svg'; ?>" alt="" />
                    <?php
                 } else {
                     echo '<img src="';
-                    echo catch_that_image();
+                    echo labs_by_sedoo_catch_that_image();
                     echo '" alt="" />'; 
                 } 
             }?>
