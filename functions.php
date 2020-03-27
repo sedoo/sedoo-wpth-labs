@@ -176,29 +176,3 @@ require get_template_directory() . '/inc/custom-image-size.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-
-// automatically retrieve the first image from posts
-function catch_that_image() {
-  global $post, $posts;
-  $first_img = '';
-  ob_start();
-  ob_end_clean();
-  $output = preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $post->post_content, $matches);
-  $first_img = $matches[1][0];
-
-  if(empty($first_img)) {
-    $first_img = "no_image";
-  }
-  return $first_img;
-}
-
-
-
-add_action( 'after_setup_theme', 'prefix_default_image_settings' );
-
-function prefix_default_image_settings() {
-update_option( 'image_default_align', 'center' );
-update_option( 'image_default_link_type', 'none' );
-update_option( 'image_default_size', 'medium' );
-}

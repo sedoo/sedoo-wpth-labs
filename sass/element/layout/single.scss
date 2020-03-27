@@ -51,7 +51,7 @@
                     font-size: calc(#{$h1-size} * 0.8);
                 }
                 > div {
-                    padding:20px;
+                    padding:20px 0px 10px;
                     border-bottom:1px solid #CCC;
                     margin-bottom:30px;
                 }
@@ -255,6 +255,15 @@
         font-size: $h4-size;
     }
 
+}
+
+/* List more posts after single post */
+.single {
+    .post .group-content {
+        .entry-footer {
+            
+        }
+    }
 }
 
 .read-more-article{
