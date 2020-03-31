@@ -118,7 +118,7 @@ function sedoo_wpth_labs_get_queried_content_arguments($post_type, $taxonomy, $t
 		'post_type' => $post_type,
 		// 'post_type' 			=> 'sfdsd',
 		'post_status'           => array( 'publish' ),
-		'posts_per_page'        => 10,            // -1 pour liste sans limite
+		'posts_per_page'        => 9,            // -1 pour liste sans limite
 		'paged'					=> $paged,
 		// 'post__not_in'          => array($postID),    //exclu le post courant
 		'tax_query' => array(
@@ -141,17 +141,27 @@ function sedoo_wpth_labs_get_queried_content($tax_layout, $args) {
 	// var_dump($the_query);
 	// The Loop
 	if ( $the_query->have_posts() ) { 
-	// if ( have_posts() ) : 	
+        switch ($tax_layout) {
+            case "grid":
+                $listingClass = "post-wrapper";
+                break;
 
-		if ( $tax_layout == "grid" || $tax_layout == "grid-noimage") {
-			$listingClass = "post-wrapper";
-		} else {
-			$listingClass = "content-list";
-		}
+            case "grid-noimage":
+                $listingClass = "post-wrapper noimage";
+                break;
+            
+            case "list":
+                $listingClass = "content-list";
+                break;
+            
+            case "list-full":
+                $listingClass = "content-list";
+                break;
+                 
+            default:
+                $listingClass = "post-wrapper";
+        }
 
-		if ( $tax_layout == "") {
-			$tax_layout = "list";
-		}
 		?>
 		<section role="listNews" class="<?php echo $listingClass;?>">
 		<?php
