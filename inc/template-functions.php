@@ -182,5 +182,4 @@ function sedoo_wpth_labs_get_queried_content($tax_layout, $args) {
 	?>
 	</section>
 	<?php
->>>>>>> feature/acf_taxo_fields
 }
