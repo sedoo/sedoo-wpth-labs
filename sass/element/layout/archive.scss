@@ -5,6 +5,10 @@
     &.wrapper{
         max-width: $max-archive-width;
     }
+
+    header[id="cover"]{
+        margin-bottom: 20px;
+    }
     
     section + h2{
         margin-top: 70px;
@@ -24,6 +28,7 @@
 
 .posts-navigation{
     margin: 50px auto;
+    width: 100%;
     
     .nav-links{
         @include display-flex;

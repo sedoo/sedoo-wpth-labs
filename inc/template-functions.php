@@ -107,3 +107,89 @@ function sedoo_show_categories($categories, $slugRewrite) {
   <?php
       } 
   }
+
+  /**
+ * Prepare WP_Query for related content 
+ * 
+ */
+function sedoo_wpth_labs_get_queried_content_arguments($post_type, $taxonomy, $term_slug, $tax_layout, $paged) {
+     
+    $args = array(
+		'post_type' => $post_type,
+		// 'post_type' 			=> 'sfdsd',
+		'post_status'           => array( 'publish' ),
+		'posts_per_page'        => 9,            // -1 pour liste sans limite
+		'paged'					=> $paged,
+		// 'post__not_in'          => array($postID),    //exclu le post courant
+		'tax_query' => array(
+			array(
+				'taxonomy' => $taxonomy,
+				'field'    => 'slug',
+				'terms'    => $term_slug,
+			),
+		),
+	);
+    sedoo_wpth_labs_get_queried_content($tax_layout, $args);
+}
+
+/**
+ * Show related content
+ * 
+ */
+function sedoo_wpth_labs_get_queried_content($tax_layout, $args) {
+	$the_query = new WP_Query( $args );
+	// var_dump($the_query);
+	// The Loop
+	if ( $the_query->have_posts() ) { 
+        switch ($tax_layout) {
+            case "grid":
+                $listingClass = "post-wrapper";
+                break;
+
+            case "grid-noimage":
+                $listingClass = "post-wrapper noimage";
+                break;
+            
+            case "list":
+                $listingClass = "content-list";
+                break;
+            
+            case "list-full":
+                $listingClass = "content-list";
+                break;
+                 
+            default:
+                $listingClass = "post-wrapper";
+        }
+
+		?>
+		<section role="listNews" class="<?php echo $listingClass;?>">
+		<?php
+		/* Start the Loop */
+		while ( have_posts() ) :
+			the_post();
+			
+			/*
+			* Include the Post-Type-specific template for the content.
+			* If you want to override this in a child theme, then include a file
+			* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+			*/
+			get_template_part( 'template-parts/content', $tax_layout );
+
+
+		endwhile;
+
+		the_posts_navigation();
+
+	} else {
+
+		// get_template_part( 'template-parts/content', 'none' );
+		?>
+		<p><?php echo $no_result_text; ?></p>
+		<?php
+
+	}
+	?>
+	</section>
+	<?php
+}

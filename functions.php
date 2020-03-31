@@ -169,7 +169,11 @@ require get_template_directory() . '/inc/custom-acf-fields.php';
 /**
  * Include Custom Image Size 
  */
-require get_template_directory() . '/inc/custom-image-size.php';
+require get_template_directory() . '/inc/custom-image-size.php';/**
+* Include ACF Fields for taxonomy
+*/
+require get_template_directory() . '/inc/custom-acf-taxo-fields.php';
+
 /**
  * Load Jetpack compatibility file.
  */

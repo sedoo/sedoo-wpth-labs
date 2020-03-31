@@ -8,45 +8,47 @@
  */
 
 get_header();
+
+// get the current taxonomy term
+$term = get_queried_object();
+$code_color=labs_by_sedoo_main_color();
+$tax_layout = get_field('tax_layout', $term);
+$cover = get_field( 'tax_image', $term);
+$no_result_text = get_field('no_results_text_tax');			
+
 ?>
 
 	<div id="content-area" class="wrapper archives">
 		<main id="main" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-            
-            <section role="listNews" class="post-wrapper">
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
+		<?php
+		if ( !empty($cover)) {
+				$coverStyle = "background-image:url(".$cover['url'].")";
+			} else {
+				$coverStyle = "border-top:5px solid ".$code_color.";height:auto;";
+			}
+			?>
 			
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
+			<header id="cover" class="page-header" style="<?php echo $coverStyle;?>">
+							
+			</header><!-- .page-header -->
+			<h1 class="page-title">
+				<?php
+				single_cat_title('', true);
+				?>
+			</h1>
+			<?php
+			if (get_the_archive_description()) {
+				the_archive_description( '<div class="archive-description">', '</div>' );
+			}
 		?>
-            </section>
-            <?php the_posts_navigation(); ?>
+		<?php
+            /**
+             * WP_Query pour lister tous les types de posts
+             */
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            /* sedoo_wpth_labs_get_queried_content_arguments(post_types, taxonomy, slug, display, paged) */
+			sedoo_wpth_labs_get_queried_content_arguments(array('post', 'page'), 'category', $term->slug, $tax_layout, $paged);
+		?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

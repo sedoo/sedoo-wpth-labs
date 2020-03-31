@@ -26,6 +26,18 @@
             }
         }
     }
+    ol {
+        list-style: decimal;
+        padding-left: 40px;
+        
+        li{
+            margin-bottom: 10px;
+            
+            &:last-child{
+                margin-bottom: 30px;
+            }
+        }
+    }
     img{
         margin: 40px auto;
     }
