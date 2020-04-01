@@ -33,7 +33,7 @@
     }
 }
 @media screen and (max-width: 767px){
-    .post, .post:nth-child(4n), .post:nth-child(8n){
+    .post {
         .entry-header{
             height: 170px;
         }
