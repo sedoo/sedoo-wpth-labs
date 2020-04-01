@@ -266,8 +266,6 @@ function labs_by_sedoo_color_style() {
             ul[id="shortcuts"] li,
             .post .entry-header p,
             .post-horizontal .entry-header p,
-            .post:nth-child(4n)::before,
-            .post:nth-child(8n)::before,
             .social-list li a:hover::before,
             .read-more-article h2,
             .nav-box .nav-box-chevron,
