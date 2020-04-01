@@ -30,7 +30,7 @@ get_header();
             <?php
                 global $post;
                 $argsListPost = array(
-                    'posts_per_page'   => 4,
+                    'posts_per_page'   => 6,
                     'offset'           => 0,
                     'category'         => '',
                     'category_name'    => '',
