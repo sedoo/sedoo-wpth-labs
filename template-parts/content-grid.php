@@ -7,7 +7,7 @@
  * @package Data-Terra
  */
 
-
+$postType=get_post_type();
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
