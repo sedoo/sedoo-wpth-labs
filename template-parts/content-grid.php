@@ -30,17 +30,16 @@ $postType=get_post_type();
             }?>
             
         </figure>
-        <p>
+        
         <?php $categories = get_the_category();
-            if ( ! empty( $categories ) ) {
-            echo esc_html( $categories[0]->name );   
+        if (( ! empty( $categories ) )&&(!is_archive())) {
+            echo "<p>".esc_html( $categories[0]->name )."</p>";   
         }; ?>
-        </p>
 	</header><!-- .entry-header -->
     <div class="group-content">
         <div class="entry-content">
             <h2><?php the_title(); ?></h2>
-            <?php //the_excerpt(); ?>
+            <?php the_excerpt(); ?>
         </div><!-- .entry-content -->
         <footer class="entry-footer">
             <?php

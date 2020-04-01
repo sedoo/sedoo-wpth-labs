@@ -16,14 +16,11 @@
     //if (!is_front_page()) {
     ?>
 	<header class="entry-header">
-        <p>
-        <?php     
-            $categories = get_the_category();
-            if ( ! empty( $categories ) ) {
-            echo esc_html( $categories[0]->name );   
+    <?php $categories = get_the_category();
+        if (( ! empty( $categories ) )&&(!is_archive())) {
+            echo "<p>".esc_html( $categories[0]->name )."</p>";   
         }; 
-        ?>
-        </p>
+    ?>
     </header><!-- .entry-header -->
     <?php    
     //}
