@@ -1071,6 +1071,27 @@ acf_add_local_field_group(array(
 				'value' => 'sedoo-platform',
 			),
 		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'sedoo-sno',
+			),
+		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'sedoo-axe',
+			),
+		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'sedoo-project',
+			),
+		),
 	),
 	'menu_order' => 0,
 	'position' => 'side',
