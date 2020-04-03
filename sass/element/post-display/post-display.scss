@@ -28,56 +28,6 @@
         }
     }
     
-    // &:nth-child(4n){
-    //     grid-column: 1/4;
-    //     @include display-flex;
-    //     @include justify-content-between;
-    //     height: 340px;
-        
-        
-    //     &::before{
-    //         content: "";
-    //         position: absolute;
-    //         top: 10px;
-    //         left: 10px;
-    //         width: 100%;
-    //         height: 100%;
-    //         background: $dark;
-    //         z-index: -1;
-    //         box-shadow: $down-box-shadow;
-    //     }
-        
-    //     .entry-header{
-    //         height: 100%;
-    //         margin-right: 20px;
-    //         width: calc(33.3% - 10px);
-    //     }
-    //     .group-content{
-    //         width: calc(66.6% - 10px);
-    //         position: relative;
-    //     }
-    // }
-    
-    // &:nth-child(8n){
-    //     @include flex-row-reverse;
-        
-    //     .entry-header{
-    //         margin-left: 20px;
-    //         margin-right: 0;
-            
-    //         p{
-    //             left: auto;
-    //             right: -10px;
-    //         }
-    //     }
-    //     .entry-content{
-    //         text-align: right;
-            
-    //         p{
-    //             text-align: right;
-    //         }
-    //     }
-    // }
 }
 
 .post, .post-horizontal{
@@ -87,10 +37,6 @@
         height: 235px;
         width: 100%;
         margin-bottom: 10px;
-        // @include display-flex;
-        // @include flex-column;
-        // @include justify-content-center;
-        // @include align-items-center;
         
         figure{
             overflow: hidden;
@@ -195,9 +141,6 @@
         margin:0 10px 20px;
         -webkit-box-shadow: 0 0px 3px rgba(0, 0, 0, 0.5);
         box-shadow: 0 0px 3px rgba(0, 0, 0, 0.5); 
-        // box-shadow: none;
-        // -webkit-box-sizing: border-box;
-        // box-sizing: border-box;
         position: relative;
         background:#fff;
     }
@@ -234,16 +177,32 @@
     }
 }
 
-.content-list .post {
-    .entry-header{
-        height: auto;
-        // margin-bottom:40px;
-        padding:0;
+.content-list {
+    .post {
+        border-bottom:1px solid #CCC;
+        box-shadow:none;
 
-        p {
-            top:-20px;
+        .entry-header{
+            height: auto;
+            padding:0;
+
+            h2 {
+                margin-top:10px;
+            }
+            p {
+                top:-20px;
+            }
         }
+        .entry-content {
+            margin-bottom:0;
+            .date {
+                font-weight: bold;
+            }
+        }
+        
     }
+    
+    
 }
 
 .archive .post-wrapper {

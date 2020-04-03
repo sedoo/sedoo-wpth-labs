@@ -85,8 +85,8 @@ if( function_exists('acf_add_local_field_group') ):
                     'id' => '',
                 ),
                 'choices' => array(
-                    'grid' => 'Grid',
-                    'list' => 'list (default)',
+                    'grid' => 'Grid (default)',
+                    'list' => 'list',
                     'list-full' => 'list full content post',
                     'grid-noimage' => 'Grid without image',
                 ),
