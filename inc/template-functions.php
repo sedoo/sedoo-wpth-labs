@@ -182,7 +182,7 @@ function sedoo_wpth_labs_get_queried_content($tax_layout, $args) {
 		the_posts_navigation();
 
 	} else {
-
+		$no_result_text = get_field('no_results_text_tax', get_the_id());	
 		// get_template_part( 'template-parts/content', 'none' );
 		?>
 		<p><?php echo $no_result_text; ?></p>

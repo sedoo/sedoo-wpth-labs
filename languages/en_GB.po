@@ -1,0 +1,144 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Labs by Sedoo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-01 14:49+0000\n"
+"PO-Revision-Date: 2020-04-01 14:55+0000\n"
+"Last-Translator: poleweb <pvert@mel2.obs-mip.fr>\n"
+"Language-Team: English (UK)\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.4"
+
+#: template-parts/shortcut.php:39
+msgid "Annuaire"
+msgstr "Phone directory"
+
+#: template-parts/single-author.php:15 template-parts/single-author.php:70
+msgid "Auteur"
+msgstr "Author"
+
+#. Description of the theme
+msgid "Custom theme: Labs, developed by Sedoo"
+msgstr ""
+
+#: single-event.php:75
+msgid "D'autres événements sur le même thème"
+msgstr "Others events"
+
+#: template-parts/single-author.php:55 template-parts/single-author.php:104
+msgid "En savoir plus sur l'intervenant"
+msgstr "More about speaker"
+
+#. Name of the template
+msgid "Evenements"
+msgstr "Events"
+
+#: footer.php:40
+msgid "Fax"
+msgstr ""
+
+#: template-parts/search-form.php:13 template-parts/annuaire.php:12
+#: template-parts/calendar.php:17 template-parts/location.php:47
+msgid "Fermer"
+msgstr "Close"
+
+#. Name of the template
+msgid "Homepage"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://github.com/sedoo"
+msgstr ""
+
+#: template-parts/single-author.php:13 template-parts/single-author.php:68
+msgid "Intervenant"
+msgstr "Speaker"
+
+#: footer.php:210
+msgid "Intranet"
+msgstr ""
+
+#. Name of the theme
+msgid "Labs by Sedoo"
+msgstr ""
+
+#: homepage.php:58
+msgid "Les dernières actualités"
+msgstr "Last news"
+
+#: template-parts/content.php:51
+msgid "Lire la suite"
+msgstr "Read more"
+
+#: template-parts/content-grid-noimage.php:39
+msgid "Lire plus"
+msgstr "Read more"
+
+#: template-parts/shortcut.php:21
+msgid "Localisation"
+msgstr "Location"
+
+#: header.php:56 header.php:74
+msgid "Menu"
+msgstr ""
+
+#. Name of the template
+msgid "Page entière"
+msgstr "Full page"
+
+#: single.php:97
+msgid "Plus d'actualités"
+msgstr "More news"
+
+#: template-parts/shortcut.php:81
+msgid "Recherche"
+msgstr "Search"
+
+#: template-parts/search-form.php:10
+msgid "Rechercher"
+msgstr "Search"
+
+#. Author of the theme
+msgid "Sedoo - Raphael Vallauri - Pierre Vert"
+msgstr ""
+
+#: single-sedoo-rXXesearch-team.php:50
+msgid "Sommaire"
+msgstr "Table of content"
+
+#: single.php:61
+msgid "Sources"
+msgstr ""
+
+#: footer.php:140
+msgid "Suivez-nous sur les réseaux sociaux"
+msgstr "Follow us"
+
+#: footer.php:38
+msgid "Tel"
+msgstr "Phone"
+
+#: footer.php:165
+msgid "Tutelles"
+msgstr "Partners"
+
+#: homepage.php:73
+msgid "Voir toutes les actualités"
+msgstr "See all news"
+
+#: footer.php:217
+msgid "Webmail"
+msgstr ""
+
+#: template-parts/single-author.php:48 template-parts/single-author.php:98
+msgid "À propos de l'intervenant"
+msgstr "About speaker"
+
+#: template-parts/shortcut.php:65
+msgid "Événements"
+msgstr "Events"
