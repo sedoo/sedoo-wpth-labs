@@ -81,6 +81,12 @@ if ( ! function_exists( 'labs_by_sedoo_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		/**
+		 * Add support for core custom logo.
+		 *
+		 */
+		add_theme_support( 'align-wide' );
 	}
 endif;
 add_action( 'after_setup_theme', 'labs_by_sedoo_setup' );

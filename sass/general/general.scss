@@ -161,6 +161,14 @@ div[id="page"]{
     max-width: 1800px;
     @include center-block;
     padding: 70px 0;
+    a {
+        text-decoration: underline;
+    
+        &:hover{
+            color: $light-full;
+            text-decoration: none;
+        }
+    }
 }
 /* IMAGE */
 img{
@@ -309,6 +317,9 @@ small{
     }
 }
 
+/****************************
+****** BLOCK GUTENBERG ******
+****************************/
 
 .alignleft {
 float: left;
@@ -327,9 +338,22 @@ margin-left: auto;
 margin-right: auto;
 }
 
-/****************************
-****** BLOCK GUTENBERG ******
-****************************/
+.alignwide {
+    margin-left: calc(25% - 25vw);
+    margin-right: calc(25% - 25vw);
+}
+
+.alignfull {
+    margin-left: calc(50% - 45vw);
+    margin-right: calc(50% - 45vw);
+}
+
+.alignfull.wp-block-cover {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
 body a.btn{
     display: block;
     margin: 50px auto;
