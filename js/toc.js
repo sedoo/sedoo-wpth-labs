@@ -17,7 +17,12 @@ jQuery(document).ready(function(){
         // création des ancres, insertion avant les headers
         jQuery( '<a id="toc' + i + '"></a>' ).insertBefore( jQuery(this) );
         // Ajout des liens vers les ancres dans le sommaire
-        var item = '<li><a href="#toc' + i + '">' + jQuery(this).text() + '</a></li>';
+        if (jQuery(this).children('a').length > 0) {
+            var titleurl = jQuery(this).siblings().find("a").attr("href");
+            var item = '<li><a target="_blank" href="' + titleurl + '">' + jQuery(this).text() + '</a></li>';
+        } else {
+            var item = '<li><a href="#toc' + i + '">' + jQuery(this).text() + '</a></li>';
+        }
         // jQuery(item).appendTo('[role="sommaire"]');
 
         if( jQuery(this).is("h2") ){                                     
