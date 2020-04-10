@@ -18,7 +18,10 @@ jQuery(document).ready(function(){
         jQuery( '<a id="toc' + i + '"></a>' ).insertBefore( jQuery(this) );
         // Ajout des liens vers les ancres dans le sommaire
         if (jQuery(this).children('a').length > 0) {
+            console.log(jQuery(this).siblings().find("a"));
+            console.log(jQuery(this).siblings().find("a").attr("href"));
             var titleurl = jQuery(this).siblings().find("a").attr("href");
+            console.log(titleurl);
             var item = '<li><a target="_blank" href="' + titleurl + '">' + jQuery(this).text() + '</a></li>';
         } else {
             var item = '<li><a href="#toc' + i + '">' + jQuery(this).text() + '</a></li>';
