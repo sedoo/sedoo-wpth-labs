@@ -1,0 +1,31 @@
+
+/* PAGE BREAK */
+.page-links {
+    clear: both;
+    margin: 20px 0 1.5em;
+    border-top: 1px solid #EEE;
+	padding: 20px 0;
+
+
+    .post-page-numbers {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin-left:5px;
+        padding: 2px 9px;
+        border-radius: 50%;
+        border: 1px dotted #CCC;
+        text-align: center;
+        text-decoration: none;
+    }
+    span {
+        &.current {
+            color:white;
+        }
+    }
+    a {
+        &:hover {
+            background:#DDD ;
+        }
+    }
+}
