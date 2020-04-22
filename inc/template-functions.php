@@ -193,3 +193,33 @@ function sedoo_wpth_labs_get_queried_content($tax_layout, $args) {
 	</section>
 	<?php
 }
+/**
+ * Show Table Of Content
+ * 
+ */
+function sedoo_wpth_labs_display_sommaire($titre) {
+    ?>
+    <aside id="stickyMenu">
+        <p><?php echo $titre; ?></p>
+		<nav role="sommaire">
+			<ul id="tocList">
+				
+			</ul>
+		</nav>
+    </aside>
+    <?php 
+}
+
+function sedoo_wpth_labs_test_if_post_thumbnail_and_display() {
+    if (get_the_post_thumbnail()) {
+    ?>
+    <header id="cover">
+        <?php the_post_thumbnail(); ?>
+    </header>
+    <?php 
+    }
+}
+
+function sedoo_wpth_labs_display_title_on_top_on_mobile() {
+    echo '<h1 class="onTop">'.get_the_title().'</h1>';
+}
