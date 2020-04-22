@@ -30,7 +30,7 @@ $title = get_the_title($page_id);
     ?>
     <?php 
     // Show title first on mobile
-        if (get_field( 'table_content' )) {
+    if (get_field( 'table_content' )) {
     ?>
         <h1 class="onTop"><?php echo $title;?></h1>
     <?php
@@ -38,7 +38,7 @@ $title = get_the_title($page_id);
     ?>
 	<div id="primary" class="content-area wrapper <?php if (get_field( 'table_content' )) {echo " tocActive";}?>">
         <?php 
-            if (get_field( 'table_content' )):
+        if (get_field( 'table_content' )):
         ?>
         <aside id="stickyMenu">
             <div>

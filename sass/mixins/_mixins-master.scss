@@ -87,3 +87,31 @@
 @mixin transform($property){
     transform: $property;
 }
+
+// Alignement gutenberg 
+@mixin alignleft {
+    float: left;
+    margin-right: 1em;
+}
+
+@mixin alignright {
+float: right;
+margin-left: 1em;
+}
+
+@mixin aligncenter {
+clear: both;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+@mixin alignwide {
+    margin-left: calc(25% - 25vw);
+    margin-right: calc(25% - 25vw);
+}
+
+@mixin alignfull {
+    margin-left: calc(50% - 45vw);
+    margin-right: calc(50% - 45vw);
+}

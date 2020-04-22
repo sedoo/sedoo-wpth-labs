@@ -1,0 +1,23 @@
+/*** SEDOO BLOCKS PLUGINS ***/ 
+[class*="sedoo_blocks"] {
+    &.alignwide {
+        @include alignwide;
+    }
+    
+    &.alignfull {
+        @include alignfull;
+    }
+}
+
+iframe.sedoo_blocks_iframe {
+    &.alignwide {
+        width: 60vw;
+        margin-left: calc(25% - 20vw);
+        margin-right: calc(25% - 20vw);
+    }
+    &.alignfull {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+    }
+}
