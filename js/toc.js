@@ -44,17 +44,20 @@ jQuery(document).ready(function(){
         
     }
 
-
     jQuery('#tocList > li:first-child').addClass('active');
 
     // Calcul de la hauteur du footer
     var footerHeight=jQuery('#page > footer').height() + 100;
 
     // Fixe le sommaire au scroll (jquery.sticky.js)
-    // jQuery(window).load(function(){
-    //     jQuery('aside#stickyMenu').sticky({ topSpacing: 130 }); 
-    //     jQuery('aside#stickyMenu').sticky({ bottomSpacing: footerHeight });
-    //     });
+    jQuery(window).load(function(){
+        var viewportWidth = jQuery(window).width();
+        console.log('viewport' +viewportWidth);
+        if (viewportWidth > 900) {
+            jQuery('aside#stickyMenu').sticky({ topSpacing: 130 }); 
+            jQuery('aside#stickyMenu').sticky({ bottomSpacing: footerHeight });
+        }
+    });
 
 
     /**

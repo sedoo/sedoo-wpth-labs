@@ -16,69 +16,53 @@
 
 aside[id="stickyMenu"]{
     position: relative;
-    z-index: 2;
+    z-index: 500;
     width: 250px;
-    height: 100%;
     background: rgba(255,255,255,.95);
-    @include display-flex;
-    @include flex-column;
-    @include justify-content-center;
+    // @include display-flex;
+    // @include flex-column;
+    // @include justify-content-center;
     border-right: 1px dotted $dark;
     @include basic-transition;
+  
+    p{
+        font-family: $main-title-family;
+        text-transform: uppercase;
+        font-size: $font-size;
+        padding-left: 5px;            
+    }
 
-    > div{
-        position: relative;
-        height: 100%;
-        
-        > div{
-            height: 100%;
-            overflow: hidden;
-            @include display-flex;
-            @include flex-column;
-            @include justify-content-center;
-        }
-    
-        p{
-            font-family: $main-title-family;
-            text-transform: uppercase;
-            font-size: $font-size;
-            padding-left: 5px;            
-        }
+    [id="tocList"]{
+        padding: 0 20px;
+        li{
+            a{
+                font-family: $main-title-family;
+                font-size: $font-size;
+                padding: 10px 0;
+                display: block;
+                margin-bottom: 10px;
+                overflow: hidden;
+            }
 
-        [id="tocList"]{
-            padding: 0 20px;
-            li{
+
+            li{ 
+                padding: 3px 10px;
                 a{
-                    font-family: $main-title-family;
-                    font-size: $font-size;
-                    padding: 10px 0;
-                    display: block;
-                    margin-bottom: 10px;
-                    overflow: hidden;
-                }
-
-
-                li{ 
-                    padding: 3px 10px;
-                    a{
-                        font-family: $main-font-family;
-                        font-size: $tiny-size;
-                        border: 0;
-                        padding: 0;
-                        margin-bottom: 0;
-                        
-                        &:first-child{
-                            margin-top: 5px;
-                        }
+                    font-family: $main-font-family;
+                    font-size: $tiny-size;
+                    border: 0;
+                    padding: 0;
+                    margin-bottom: 0;
+                    
+                    &:first-child{
+                        margin-top: 5px;
                     }
                 }
-
-                
-            }
-            > li:not(:last-child) > a {
-                border-bottom: dotted 1px $dark;
-            }
+            }            
         }
+        > li:not(:last-child) > a {
+            border-bottom: dotted 1px $dark;
+        }        
     }
     
     ::-webkit-scrollbar{

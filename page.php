@@ -31,33 +31,14 @@ $title = get_the_title($page_id);
     <?php 
     // Show title first on mobile
     if (get_field( 'table_content' )) {
-    ?>
-        <h1 class="onTop"><?php echo $title;?></h1>
-    <?php
+        sedoo_wpth_labs_display_title_on_top_on_mobile();
     }
     ?>
 	<div id="primary" class="content-area wrapper <?php if (get_field( 'table_content' )) {echo " tocActive";}?>">
-        <?php 
-        if (get_field( 'table_content' )):
-        ?>
-        <aside id="stickyMenu">
-            <div>
-                <p>Sommaire</p>
-                <nav role="sommaire">
-                    <ol id="tocList">
-                        
-                    </ol>
-                </nav>
-                <!-- <button class="bobinette">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
-                            <rect fill="none" width="30" height="30"/>
-                            <polyline points="
-                            10.71,2.41 23.29,15 10.71,27.59 	"/>
-                    </svg> 
-                </button> -->
-            </div>
-        </aside>
-        <?php endif; ?>
+        <?php // table_content ( value ) 
+        if (get_field( 'table_content' )) {
+            sedoo_wpth_labs_display_sommaire('Sommaire');
+        } ?>
         <main id="main" class="site-main">
             
             <div class="wrapper-content">
