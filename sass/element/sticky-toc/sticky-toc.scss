@@ -15,93 +15,54 @@
 }
 
 aside[id="stickyMenu"]{
-    // position: fixed;
-    // left: 0;
-    // top: 0;
-    // z-index: 500;
+    position: relative;
+    z-index: 500;
     width: 250px;
-    // min-width: 300px;
-    // box-shadow: $basic-box-shadow; 
-    height: 100%;
-    // background: $light-full;
-    @include display-flex;
-    @include flex-column;
-    @include justify-content-center;
-    // padding: 5% 1%;
-    // @include transform(translateX(-95%));
+    background: rgba(255,255,255,.95);
+    // @include display-flex;
+    // @include flex-column;
+    // @include justify-content-center;
     border-right: 1px dotted $dark;
     @include basic-transition;
+  
+    p{
+        font-family: $main-title-family;
+        text-transform: uppercase;
+        font-size: $font-size;
+        padding-left: 5px;            
+    }
 
-    > div{
-        position: relative;
-        height: 100%;
-        
-        > div{
-            height: 100%;
-            overflow: hidden;
-            @include display-flex;
-            @include flex-column;
-            @include justify-content-center;
-        }
-    
-        p{
-            font-family: $main-title-family;
-            text-transform: uppercase;
-            font-size: $font-size;
+    [id="tocList"]{
+        padding: 0 20px;
+        li{
+            a{
+                font-family: $main-title-family;
+                font-size: $font-size;
+                padding: 10px 0;
+                display: block;
+                margin-bottom: 10px;
+                overflow: hidden;
+            }
 
-            // &::after{
-            //     content: "";
-            //     width: 30px;
-            //     height: 3px;
-            //     display: block;
-            //     margin: 10px 0 20px;
-            // }
-        }
-        /*nav{
-            overflow-y: scroll;
-            overflow-x: hidden;
-        }*/
-        [id="tocList"]{
-            padding-right: 30px;
-            li{
+
+            li{ 
+                padding: 3px 10px;
                 a{
-                    font-family: $main-title-family;
-                    font-size: $font-size;
-                    padding: 10px 0;
-                    display: block;
-                    margin-bottom: 10px;
-                    // display: -webkit-box;
-                    // -webkit-line-clamp: 2;
-                    // -webkit-box-orient: vertical;  
-                    overflow: hidden;
+                    font-family: $main-font-family;
+                    font-size: $tiny-size;
+                    border: 0;
+                    padding: 0;
+                    margin-bottom: 0;
                     
-                    &:hover{
-                        // @include transform(translateX(20px));
+                    &:first-child{
+                        margin-top: 5px;
                     }
                 }
-
-
-                li{ 
-                    padding: 3px 10px;
-                    a{
-                        font-family: $main-font-family;
-                        font-size: $tiny-size;
-                        border: 0;
-                        padding: 0;
-                        margin-bottom: 0;
-                        
-                        &:first-child{
-                            margin-top: 5px;
-                        }
-                    }
-                }
-
-                
-            }
-            > li:not(:last-child) > a {
-                border-bottom: dotted 1px $dark;
-            }
+            }            
         }
+        > li:not(:last-child) > a {
+            border-bottom: dotted 1px $dark;
+        }        
     }
     
     ::-webkit-scrollbar{

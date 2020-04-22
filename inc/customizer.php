@@ -303,7 +303,8 @@ function labs_by_sedoo_color_style() {
              
 			a:hover,
 			a:focus,
-			a:active {
+            a:active,
+            aside[id="stickyMenu"] [id="tocList"] li.active a {
 				color: <?php echo $code_color;?>;
 			}
 

@@ -322,30 +322,23 @@ small{
 ****************************/
 
 .alignleft {
-float: left;
-margin-right: 1em;
+    @include alignleft;
 }
 
 .alignright {
-float: right;
-margin-left: 1em;
+    @include alignright;
 }
 
 .aligncenter {
-clear: both;
-display: block;
-margin-left: auto;
-margin-right: auto;
+    @include aligncenter;
 }
 
 .alignwide {
-    margin-left: calc(25% - 25vw);
-    margin-right: calc(25% - 25vw);
+    @include alignwide;
 }
 
 .alignfull {
-    margin-left: calc(50% - 45vw);
-    margin-right: calc(50% - 45vw);
+    @include alignfull;
 }
 
 .alignfull.wp-block-cover {

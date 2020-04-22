@@ -12,7 +12,7 @@ jQuery(document).ready(function(){
     //jQuery('.navLeft .current-menu-item').after(navSommaire);
 
 	// Sur chaque :header
-	jQuery('.wrapper-layout h2, .wrapper-layout h3, .wrapper-content h2, .wrapper-content h3').each(function(){
+	jQuery('.wrapper-layout article > .entry-content > h2, .wrapper-layout article > .entry-content > h3, .wrapper-content article > .entry-content > h2, .wrapper-content article > .entry-content > h3').each(function(){
 
         // création des ancres, insertion avant les headers
         jQuery( '<a id="toc' + i + '"></a>' ).insertBefore( jQuery(this) );
@@ -39,9 +39,10 @@ jQuery(document).ready(function(){
 	});
     
     if (i < 2) {
-        jQuery('[role="sommaire"]').css("display", "none");
+        // jQuery('[role="sommaire"]').css("display", "none");
+        jQuery('[id="stickyMenu"]').css("display", "none");
+        
     }
-
 
     jQuery('#tocList > li:first-child').addClass('active');
 
@@ -49,10 +50,14 @@ jQuery(document).ready(function(){
     var footerHeight=jQuery('#page > footer').height() + 100;
 
     // Fixe le sommaire au scroll (jquery.sticky.js)
-    // jQuery(window).load(function(){
-    //     jQuery('aside#stickyMenu').sticky({ topSpacing: 130 }); 
-    //     jQuery('aside#stickyMenu').sticky({ bottomSpacing: footerHeight });
-    //     });
+    jQuery(window).load(function(){
+        var viewportWidth = jQuery(window).width();
+        console.log('viewport' +viewportWidth);
+        if (viewportWidth > 900) {
+            jQuery('aside#stickyMenu').sticky({ topSpacing: 130 }); 
+            jQuery('aside#stickyMenu').sticky({ bottomSpacing: footerHeight });
+        }
+    });
 
 
     /**
