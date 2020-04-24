@@ -6,8 +6,11 @@
  *
  * @package labs_by_Sedoo
  */
+
+if (taxonomy_exists('sedoo-theme-labo')) {
 $themes = get_the_terms( $post->ID, 'sedoo-theme-labo');  
 $themeSlugRewrite = "sedoo-theme-labo";
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -19,8 +22,7 @@ $themeSlugRewrite = "sedoo-theme-labo";
 		?>
 		<div>
 			<?php
-				sedoo_labtools_show_categories($themes, $themeSlugRewrite);
-				
+				sedoo_labtools_show_categories($themes, $themeSlugRewrite);				
 			?>
 		</div>
 		<?php
