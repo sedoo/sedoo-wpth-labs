@@ -92,7 +92,7 @@ if( function_exists('acf_add_local_field_group') ):
                 ),
                 'allow_null' => 0,
                 'other_choice' => 0,
-                'default_value' => 'list',
+                'default_value' => 'grid',
                 'layout' => 'vertical',
                 'return_format' => 'value',
                 'save_other_choice' => 0,
