@@ -73,6 +73,13 @@
         z-index: 500;
     }
 
+    &:not(.open) {
+        .custom-logo-link,
+        .close {
+            display:none;
+        }
+    }
+
     .wrapper {
         max-width: 1000px;
         width: 100%;
