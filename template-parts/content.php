@@ -18,24 +18,16 @@ $postType=get_post_type();
             if (has_post_thumbnail()) {
                 the_post_thumbnail('thumbnail-loop');
             } else {
-                if (labs_by_sedoo_catch_that_image() ==  "no_image" ){
-                   ?>
-                   <img src="<?php echo get_template_directory_uri() .'/images/empty-mode-'.$postType.'.svg'; ?>" alt="" />
-                   <?php
-                } else {
-                    echo '<img src="';
-                    echo labs_by_sedoo_catch_that_image();
-                    echo '" alt="" />'; 
-                } 
-            }?>
-            
+                labs_by_sedoo_catch_that_image();                
+            }?>            
         </figure>
-        <p>
-        <?php     $categories = get_the_category();
+        
+        <?php     
+        $categories = get_the_category();
             if ( ! empty( $categories ) ) {
-            echo esc_html( $categories[0]->name );   
+            echo "<p>".esc_html( $categories[0]->name )."</p>";   
         }; ?>
-        </p>
+        
 	</header><!-- .entry-header -->
     <div class="group-content">
         <div class="entry-content">

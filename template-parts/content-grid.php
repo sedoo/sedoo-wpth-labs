@@ -14,24 +14,16 @@ $postType=get_post_type();
     <a href="<?php the_permalink(); ?>"></a>
 	<header class="entry-header">
         <figure>
-        <?php 
+            <?php 
             if (has_post_thumbnail()) {
                 the_post_thumbnail('thumbnail-loop');
             } else {
-                if (labs_by_sedoo_catch_that_image() ==  "no_image" ){
-                   ?>
-                   <img src="<?php echo get_template_directory_uri() .'/images/empty-mode-'.$postType.'.svg'; ?>" alt="" />
-                   <?php
-                } else {
-                    echo '<img src="';
-                    echo labs_by_sedoo_catch_that_image();
-                    echo '" alt="" />'; 
-                } 
-            }?>
-            
+                labs_by_sedoo_catch_that_image();                
+            }?>            
         </figure>
         
-        <?php $categories = get_the_category();
+        <?php 
+        $categories = get_the_category();
         if (( ! empty( $categories ) )&&(!is_archive())) {
             echo "<p>".esc_html( $categories[0]->name )."</p>";   
         }; ?>

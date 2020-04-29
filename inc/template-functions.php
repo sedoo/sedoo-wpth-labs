@@ -56,18 +56,52 @@ add_filter('the_content_feed', 'labs_by_sedoo_rss_post_thumbnail');
  * automatically retrieve the first image from posts
  */
 
+ // GET REMOTE FILESIZE
+ // source : https://www.php.net/manual/fr/function.filesize.php#114952 
+function labs_by_sedoo_remote_filesize($url) {
+    static $regex = '/^Content-Length: *+\K\d++$/im';
+    if (!$fp = @fopen($url, 'rb')) {
+        return false;
+    }
+    if (
+        isset($http_response_header) &&
+        preg_match($regex, implode("\n", $http_response_header), $matches)
+    ) {
+        return (int)$matches[0];
+    }
+    return strlen(stream_get_contents($fp));
+}
+
 function labs_by_sedoo_catch_that_image() {
   global $post, $posts;
-  $first_img = '';
+  $postType=get_post_type();
+  $getIMG = '';
   ob_start();
   ob_end_clean();
   $output = preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $post->post_content, $matches);
-  $first_img = $matches[1][0];
+  $getIMG = $matches[1][0];
+  $current_siteurl = parse_url(get_site_url());
+  $srcURL=parse_url($getIMG);
 
-  if(empty($first_img)) {
-    $first_img = "no_image";
+  // check file size if not local
+  // 
+  if (($srcURL['host']!==$current_siteurl['host'])) {
+    $extIMG=$srcURL['scheme']."://".$srcURL['host'].$srcURL['path'];
+    $extIMGsize=labs_by_sedoo_remote_filesize($extIMG);
+    // if < 300000 > Ok let's display it
+    if ($extIMGsize<300000) {
+        $getIMG=$extIMG;
+    } else {
+        $extFileToBig="TRUE";
+    }
   }
-  return $first_img;
+
+  // if no image or external image too big, load default SVG
+  if((empty($getIMG))||($extFileToBig=="TRUE")) {
+    $getIMG = get_template_directory_uri() .'/images/empty-mode-'.$postType.'.svg';
+  }
+  $imgToShow="<img src=\"".$getIMG."\" alt=\"\" />";
+  echo $imgToShow;
 }
 add_action( 'after_setup_theme', 'prefix_default_image_settings' );
 
