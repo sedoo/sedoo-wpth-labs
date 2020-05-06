@@ -19,7 +19,8 @@ ul[id="shortcuts"]{
             @include transform(translateX(-150px));
             background: $light-full;
             
-            button{
+            button, 
+            a{
                 color: $dark;
             }
         }
