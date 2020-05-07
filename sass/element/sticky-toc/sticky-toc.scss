@@ -16,7 +16,7 @@
 
 aside[id="stickyMenu"]{
     position: relative;
-    z-index: 500;
+    z-index: 500 !important;
     width: 250px;
     background: rgba(255,255,255,.95);
     // @include display-flex;
