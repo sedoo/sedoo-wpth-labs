@@ -136,8 +136,8 @@ msgid "Webmail"
 msgstr ""
 
 #: template-parts/single-author.php:48 template-parts/single-author.php:98
-msgid "À propos de l'intervenant"
-msgstr "About speaker"
+msgid "À propos"
+msgstr "About"
 
 #: template-parts/shortcut.php:65
 msgid "Événements"
