@@ -284,7 +284,8 @@ function labs_by_sedoo_color_style() {
             .wp-block-button .wp-block-button__link,
             .posts-navigation a,
             .ui-widget-header,
-            .page-links span.current             
+            .page-links span.current,
+            .wrapper-layout .social-list a:hover::before          
             {
                 background: <?php echo $code_color;?>;
 			}
@@ -320,6 +321,8 @@ function labs_by_sedoo_color_style() {
              .bobinette svg polyline{
                  stroke: <?php echo $code_color; ?>;
              }
+            
+
          </style>
     <?php
 

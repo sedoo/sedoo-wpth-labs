@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Data-Terra
+ * @package sedoo-wpth-labs
  */
 
 $postType=get_post_type();
