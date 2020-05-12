@@ -1,20 +1,94 @@
 footer[id="colophon"]{
     background: $light-grey;
     padding: 50px 0 0;
+    background-repeat: no-repeat;
+    background-position: center 100px;
     
-    .wrapper{
-        padding: 0 20px;
-        @include display-grid;
-        @include grid-template-column(repeat(4, 1fr));
-        @include grid-gap(40px);
-        margin-bottom: 30px;
-        
-        h2{
-            @extend .h3;
-            margin-bottom: 20px;
-            
-            
-            &::after{
+    > div,
+    > div > :first-child {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    > div {
+        &.wrapper-layout {
+            > :first-child {
+                flex: 0 1 900px;
+            }
+            > :last-child {
+                flex: 0 1 200px;
+                display: flex;
+                flex-flow: column;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .social-list {
+        ul.inline-list {
+        padding:0;
+        }
+    }    
+
+
+}
+
+.footer-menu{
+    flex:0 0 250px;
+
+    * {
+        color:#FFF;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    ul{ 
+        list-style: none;
+        padding:0;
+
+        &.menu {
+            > li {
+                font-weight: bold;
+                font-size: 2rem;
+                margin-bottom: 30px;
+                
+                li {
+                    margin:10px 0;
+                    font-size: 1.5rem;
+                    font-weight: normal;
+                }
+
+                .submenu li .submenu {
+                    margin-left:20px;
+                }
+            }
+        }
+    }
+
+    ul[id="primary-menu"]{
+        .menu-item{
+            padding: 20px 0;
+            border-bottom: dotted 1px $dark-grey;
+            display: block;
+
+            a{
+                font-family: $main-title-family;
+                font-size: $h3-size;
+                text-transform: $uppercase;
+                text-decoration: none;
+                
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
+
+            &:first-child{
+                padding-top: 0;
+            }
+
+            .sub-menu{
                 display: none;
             }
         }
@@ -45,48 +119,7 @@ footer[id="colophon"]{
         }
     }
 }
-.footer-menu{
-    ul[id="primary-menu"]{
-        .menu-item{
-            padding: 20px 0;
-            border-bottom: dotted 1px $dark-grey;
-            display: block;
 
-            a{
-                font-family: $main-title-family;
-                font-size: $h3-size;
-                text-transform: $uppercase;
-                text-decoration: none;
-                
-                &:hover{
-                    opacity: 0.6;
-                }
-            }
-
-            &:first-child{
-                padding-top: 0;
-            }
-
-            .sub-menu{
-                display: none;
-            }
-        }
-    }
-}
-.footer-categories{
-    list-style: none;
-    
-    li{
-        margin-bottom: 20px;
-        
-        a{
-            font-family: $main-title-family;
-            color: $dark-grey;
-            text-decoration: none;
-            font-size: calc(#{$h3-size} * 1.4);
-        }
-    }
-}
 .social-partenaires{
     h2{
         margin-top: 0;
@@ -164,30 +197,47 @@ footer[id="colophon"]{
     }
 }
 .partners-list{
+    background:#FFF;
+
     ul{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
         li{
-            display: inline-block;
-            vertical-align: middle;
-            max-height: 50px;
-            margin-right: 20px;
-            margin-bottom: 20px;
-            
             img{
                 max-height: 50px;
             }
         }
     }
+    .wrapper-layout {
+        padding:0 20px;
+        a:hover {
+        background: none;
+        }
+    }
 }
+
 .copyright{
+    background:#FFF;
+
     .wrapper.site-info{
-        padding: 50px 0;
-        display: block;
-        margin-bottom: 0;
-        
+        nav {
+            margin:auto;
+        }
+        ul[id="mentions-menu"]{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li {
+                margin:10px;
+            }
+        }
         p{
-            text-align: right;
-            width: 50%;
-            margin-left: auto;
+            width: 100%;
+            text-align: center;
         }
         a{
             text-decoration: underline;
@@ -197,41 +247,6 @@ footer[id="colophon"]{
                 color: $light-full;
             }
         }
-        
-        nav[id="mentions-menu"], ul{
-            ul, &.intranet{
-                text-align: right;
-                li{
-                    display: inline-block;
-                    
-                    &::after{
-                        content: "";
-                        width: 5px;
-                        height: 5px;
-                        background: $dark;
-                        margin: 0 10px;
-                        display: inline-block;
-                        vertical-align: middle;
-                        border-radius: 100%;
-                    }
-                    &:last-child{
-                        margin-right: 0;
-                        
-                        &::after{
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-        .intranet{
-            text-align: right;
-            margin-top: 50px;
-            
-            img{
-                vertical-align: middle;
-                margin-right: 5px;
-            }
-        }
+    
     }
 }

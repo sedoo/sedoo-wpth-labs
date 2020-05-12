@@ -151,7 +151,7 @@ div[id="page"]{
 .wrapper-layout{
     max-width: $max-archive-width;
     @include center-block;
-    padding: 70px 20px;
+    padding: 20px 20px 70px;
 }
 .wrapper-content{
     @extend .wrapper;
@@ -468,12 +468,14 @@ body a.btn{
 .wp-block-button{
 
     .wp-block-button__link{
-        text-decoration: none;
-        color: $light-full;
-        border-radius: 0;
-        color: $light-full!important;
         padding: 10px 20px;
+        margin:10px;
+        border-radius: 0;
+        border:none;
         box-shadow: $basic-box-shadow;
+        text-decoration: none;
+        // color: $light-full;
+        color: $light-full!important;
     }
 }
 
