@@ -94,3 +94,15 @@ header[id="cover"]{
         width: 100%;
     }
 }   
+
+.home{
+    article {
+        h1{
+            text-align: center;
+            
+            &::after{
+                display: none;
+            }
+        }
+    }
+}

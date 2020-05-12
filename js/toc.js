@@ -17,7 +17,7 @@ jQuery(document).ready(function(){
         // création des ancres, insertion avant les headers
         jQuery( '<a id="toc' + i + '"></a>' ).insertBefore( jQuery(this) );
         // Ajout des liens vers les ancres dans le sommaire
-        console.log('aa');
+        // console.log('aa');
         if (jQuery(this).children('a').length > 0) {
             var titleurl = jQuery(this).find('a:first').attr('href');
             var item = '<li><a target="_blank" href="' + titleurl + '">' + jQuery(this).text() + '</a></li>';
@@ -54,11 +54,32 @@ jQuery(document).ready(function(){
         var viewportWidth = jQuery(window).width();
         console.log('viewport' +viewportWidth);
         if (viewportWidth > 900) {
-            jQuery('aside#stickyMenu').sticky({ topSpacing: 130 }); 
+            jQuery('aside#stickyMenu').sticky({ topSpacing: 130 });
             jQuery('aside#stickyMenu').sticky({ bottomSpacing: footerHeight });
+
+            jQuery(window).on("scroll", function() {
+                var scrollHeight = jQuery(document).height();
+                var scrollPosition = jQuery(window).height() + jQuery(window).scrollTop();
+                var asideHeight = jQuery('aside#stickyMenu').height();
+                console.log(asideHeight);
+                if ((scrollHeight - scrollPosition) < footerHeight) {
+                // if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+                    console.log("(" +scrollHeight+ "-" +scrollPosition+ ")=" + (scrollHeight - scrollPosition ));
+                    jQuery('aside#stickyMenu').css("bottom", footerHeight - (scrollHeight - scrollPosition));
+                    jQuery('aside#stickyMenu').css("top", "initial");
+                }
+            });
         }
     });
 
+    // corriger l'espace manquant à gauche du main, après l'action du sticky qui "fixe" le sommaire.
+    jQuery(window).scroll(function(){
+        if (jQuery('.sticky-wrapper').hasClass("is-sticky")) {
+            jQuery('.tocActive main').css("margin-left", "250px");
+        } else {
+            jQuery('.tocActive main').css("margin-left", "0");   
+        }
+    });
 
     /**
      * SCROLL SPY 
@@ -107,7 +128,7 @@ jQuery(document).ready(function(){
             menuItems
                 .parent().removeClass("active")
                 .end().filter("[href='#"+id+"']").parent().addClass("active");
-            }                   
+            }                
     });
 
 

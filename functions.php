@@ -44,9 +44,10 @@ if ( ! function_exists( 'labs_by_sedoo_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary-menu' => esc_html__( 'primary-menu', 'data-terra' ),
-			'burger-menu' => esc_html__( 'burger-menu', 'data-terra' ),
-            'mentions-menu' => esc_html__( 'mentions-menu', 'data-terra' )
+			'primary-menu' => esc_html__( 'primary-menu', 'sedoo-wpth-labs' ),
+			// 'burger-menu' => esc_html__( 'burger-menu', 'sedoo-wpth-labs' ),
+			'footer-menu' => esc_html__( 'footer-menu', 'sedoo-wpth-labs' ),
+            'mentions-menu' => esc_html__( 'mentions-menu', 'sedoo-wpth-labs' )
 		) );
 
 		/*
