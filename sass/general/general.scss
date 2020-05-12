@@ -151,7 +151,7 @@ div[id="page"]{
 .wrapper-layout{
     max-width: $max-archive-width;
     @include center-block;
-    padding: 70px 20px;
+    padding: 20px 20px 70px;
 }
 .wrapper-content{
     @extend .wrapper;

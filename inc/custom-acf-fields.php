@@ -1,6 +1,64 @@
 <?php
 if( function_exists('acf_add_local_field_group') ):
 
+/**
+ * OPTIONS GLOBALES DU THEME
+ */
+
+// activation des options
+acf_add_local_field_group(array(
+	'key' => 'group_5d6e44395feac',
+	'title' => 'Theme informations',
+	'fields' => array(
+		array(
+			'key' => 'field_5d6e446cc090d',
+			'label' => 'ajout options',
+			'name' => 'ajout_options',
+			'type' => 'checkbox',
+			'instructions' => 'Cocher les options à afficher dans les réglages du thème.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'contact' => 'Contact et Localisation',
+				'reseaux' => 'Réseaux Sociaux',
+				'partenaires' => 'Partenaires',
+				'annuaire' => 'Annuaire',
+				'calendar' => 'Calendrier',
+				'options'	=> 'Options du thème'
+			),
+			'allow_custom' => 0,
+			'default_value' => array(
+			),
+			'layout' => 'vertical',
+			'toggle' => 0,
+			'return_format' => 'value',
+			'save_custom' => 0,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'theme-informations',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
 acf_add_local_field_group(array(
 	'key' => 'group_5d6e4d122e2c9',
 	'title' => 'Annuaire Settings',
@@ -81,170 +139,6 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-acf_add_local_field_group(array(
-	'key' => 'group_5daec22cb625a',
-	'title' => 'Categories / Thematics settings',
-	'fields' => array(
-		array(
-			'key' => 'field_5daec24761777',
-			'label' => 'Choix de listing',
-			'name' => 'list_choice',
-			'type' => 'radio',
-			'instructions' => 'Quel listing souhaitez-vous afficher dans la 3ième colonne du footer ?',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				'categories' => 'Liste des catégories d\'article uniquement',
-				'thematic' => 'Liste des thématiques uniquement',
-				'custom' => 'Liste personnalisée de catégories et de thématiques',
-			),
-			'allow_null' => 0,
-			'other_choice' => 0,
-			'default_value' => '',
-			'layout' => 'vertical',
-			'return_format' => 'value',
-			'save_other_choice' => 0,
-		),
-		array(
-			'key' => 'field_5daec488e5ca7',
-			'label' => 'Listing personnalisé categories',
-			'name' => 'custom_list_category',
-			'type' => 'taxonomy',
-			'instructions' => 'Cocher les taxonomies que vous souhaitez afficher dans la liste',
-			'required' => 0,
-			'conditional_logic' => array(
-				array(
-					array(
-						'field' => 'field_5daec24761777',
-						'operator' => '==',
-						'value' => 'custom',
-					),
-				),
-			),
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'taxonomy' => 'category',
-			'field_type' => 'checkbox',
-			'add_term' => 1,
-			'save_terms' => 0,
-			'load_terms' => 0,
-			'return_format' => 'object',
-			'multiple' => 0,
-			'allow_null' => 0,
-		),
-		array(
-			'key' => 'field_5daecc0200e3c',
-			'label' => 'Listing personnalisé thématiques',
-			'name' => 'custom_list_thematic',
-			'type' => 'taxonomy',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => array(
-				array(
-					array(
-						'field' => 'field_5daec24761777',
-						'operator' => '==',
-						'value' => 'custom',
-					),
-				),
-			),
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'taxonomy' => 'sedoo-theme-labo',
-			'field_type' => 'checkbox',
-			'add_term' => 1,
-			'save_terms' => 0,
-			'load_terms' => 0,
-			'return_format' => 'object',
-			'multiple' => 0,
-			'allow_null' => 0,
-		),
-		array(
-			'key' => 'field_5daffd6c5d378',
-			'label' => 'Page événements',
-			'name' => 'ajout_evenements',
-			'type' => 'true_false',
-			'instructions' => 'Ajouter lien vers la page événements ?',
-			'required' => 0,
-			'conditional_logic' => array(
-				array(
-					array(
-						'field' => 'field_5daec24761777',
-						'operator' => '==',
-						'value' => 'custom',
-					),
-				),
-			),
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'default_value' => 0,
-			'ui' => 0,
-			'ui_on_text' => '',
-			'ui_off_text' => '',
-		),
-		array(
-			'key' => 'field_5daecc3d00e3d',
-			'label' => 'Lien vers page événements',
-			'name' => 'link_events_page',
-			'type' => 'page_link',
-			'instructions' => 'Indiquer le lien vers la page d\'événements',
-			'required' => 0,
-			'conditional_logic' => array(
-				array(
-					array(
-						'field' => 'field_5daffd6c5d378',
-						'operator' => '==',
-						'value' => '1',
-					),
-				),
-			),
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'post_type' => array(
-				0 => 'event',
-			),
-			'taxonomy' => '',
-			'allow_null' => 0,
-			'allow_archives' => 1,
-			'multiple' => 0,
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options-listing-categories-thematiques',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
 
 acf_add_local_field_group(array(
 	'key' => 'group_5d6faffd00cb6',
@@ -307,62 +201,6 @@ acf_add_local_field_group(array(
 				'param' => 'user_form',
 				'operator' => '==',
 				'value' => 'register',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
-
-acf_add_local_field_group(array(
-	'key' => 'group_5db006731378c',
-	'title' => 'Liens Intranet / Webmail',
-	'fields' => array(
-		array(
-			'key' => 'field_5db00678342e8',
-			'label' => 'Lien Intranet',
-			'name' => 'lien_intranet',
-			'type' => 'url',
-			'instructions' => 'Saisir le lien vers l\'intranet du Labo',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-		),
-		array(
-			'key' => 'field_5db153392f87c',
-			'label' => 'Lien webmail',
-			'name' => 'lien_webmail',
-			'type' => 'url',
-			'instructions' => 'Saisir le lien vers le webmail',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options-lien-intranet-webmail',
 			),
 		),
 	),
@@ -690,6 +528,362 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
+	'key' => 'group_5d6e4c5dc9201',
+	'title' => 'Social Settings',
+	'fields' => array(
+		array(
+			'key' => 'field_5d6e4c78e8243',
+			'label' => 'Réseaux Sociaux',
+			'name' => 'reseaux_sociaux',
+			'type' => 'repeater',
+			'instructions' => 'Ajouter autant des réseaux sociaux dans le footer',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 0,
+			'layout' => 'table',
+			'button_label' => '',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5d6e4c93e8244',
+					'label' => 'Lien Réseau Social',
+					'name' => 'lien_reseau_social',
+					'type' => 'url',
+					'instructions' => 'Saisir le lien vers le réseau social',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+				),
+			),
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-reseaux-sociaux',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+/**
+ * FOOTER OPTIONS
+ */
+acf_add_local_field_group(array(
+	'key' => 'group_5ebaa92f9edaf',
+	'title' => 'Footer',
+	'fields' => array(
+		array(
+			'key' => 'field_5ebab36e2427e',
+			'label' => 'Images & colors',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5ebaa93e884bd',
+			'label' => 'Footer background SVG',
+			'name' => 'footer_background_svg',
+			'type' => 'image',
+			'instructions' => 'Only format SVG format allowed',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'medium',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => 'svg',
+		),
+		array(
+			'key' => 'field_5ebab3882427f',
+			'label' => 'Footer color',
+			'name' => 'footer_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '#F2F2F2',
+		),
+		array(
+			'key' => 'field_5ebac5bd14139',
+			'label' => 'Footer text color',
+			'name' => 'footer_text_color',
+			'type' => 'color_picker',
+			'instructions' => 'If you choose a colored background, please choose a light color for you typography.
+Please refer to those <a href="https://material.io/design/color/text-legibility.html#text-types">Guide lines</a>.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '#FFFFFF',
+		),
+		array(
+			'key' => 'field_5ebabdc5e8c8d',
+			'label' => 'Informations',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5ebabdd6e8c8e',
+			'label' => 'Show copyright',
+			'name' => 'footer_show_copyright',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
+			'key' => 'field_5ebabe69e8c8f',
+			'label' => 'Copyright text',
+			'name' => 'footer_copyright_text',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5ebabdd6e8c8e',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '© Copyright',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-theme-options',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+/**
+ * SOURCE OF ARTICLE 
+ * only for post (single.php)
+ */
+
+acf_add_local_field_group(array(
+	'key' => 'group_5d6fb5f77ca9f',
+	'title' => 'Sources page articles',
+	'fields' => array(
+		array(
+			'key' => 'field_5d6fb628b251a',
+			'label' => 'Sources',
+			'name' => 'sources',
+			'type' => 'textarea',
+			'instructions' => 'Saisir les sources de l\'article',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => 'br',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'post',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+/**
+ * TABLE OF CONTENT
+ */
+
+acf_add_local_field_group(array(
+	'key' => 'group_5d763c9864edf',
+	'title' => 'Table des matières',
+	'fields' => array(
+		array(
+			'key' => 'field_5d763caf8246e',
+			'label' => 'Table des Matières',
+			'name' => 'table_content',
+			'type' => 'checkbox',
+			'instructions' => 'Afficher la table des matières ?',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'toc' => 'afficher',
+			),
+			'allow_custom' => 0,
+			'default_value' => array(
+			),
+			'layout' => 'vertical',
+			'toggle' => 0,
+			'return_format' => 'value',
+			'save_custom' => 0,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'default',
+			),
+		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'sedoo-research-team',
+			),
+		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'sedoo-platform',
+			),
+		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'sedoo-sno',
+			),
+		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'sedoo-axe',
+			),
+		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'sedoo-project',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'side',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
 	'key' => 'group_5d6faf894c203',
 	'title' => 'Sélection auteur',
 	'fields' => array(
@@ -916,289 +1110,6 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-acf_add_local_field_group(array(
-	'key' => 'group_5d6e4c5dc9201',
-	'title' => 'Social Settings',
-	'fields' => array(
-		array(
-			'key' => 'field_5d6e4c78e8243',
-			'label' => 'Réseaux Sociaux',
-			'name' => 'reseaux_sociaux',
-			'type' => 'repeater',
-			'instructions' => 'Ajouter autant des réseaux sociaux dans le footer',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'collapsed' => '',
-			'min' => 0,
-			'max' => 0,
-			'layout' => 'table',
-			'button_label' => '',
-			'sub_fields' => array(
-				array(
-					'key' => 'field_5d6e4c93e8244',
-					'label' => 'Lien Réseau Social',
-					'name' => 'lien_reseau_social',
-					'type' => 'url',
-					'instructions' => 'Saisir le lien vers le réseau social',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-				),
-			),
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options-reseaux-sociaux',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
-
-acf_add_local_field_group(array(
-	'key' => 'group_5d6fb5f77ca9f',
-	'title' => 'Sources page articles',
-	'fields' => array(
-		array(
-			'key' => 'field_5d6fb628b251a',
-			'label' => 'Sources',
-			'name' => 'sources',
-			'type' => 'textarea',
-			'instructions' => 'Saisir les sources de l\'article',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'maxlength' => '',
-			'rows' => '',
-			'new_lines' => 'br',
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'post',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
-
-acf_add_local_field_group(array(
-	'key' => 'group_5d763c9864edf',
-	'title' => 'Table des matières',
-	'fields' => array(
-		array(
-			'key' => 'field_5d763caf8246e',
-			'label' => 'Table des Matières',
-			'name' => 'table_content',
-			'type' => 'checkbox',
-			'instructions' => 'Afficher la table des matières ?',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				'toc' => 'afficher',
-			),
-			'allow_custom' => 0,
-			'default_value' => array(
-			),
-			'layout' => 'vertical',
-			'toggle' => 0,
-			'return_format' => 'value',
-			'save_custom' => 0,
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'page_template',
-				'operator' => '==',
-				'value' => 'default',
-			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'sedoo-research-team',
-			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'sedoo-platform',
-			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'sedoo-sno',
-			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'sedoo-axe',
-			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'sedoo-project',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'side',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
-
-// acf_add_local_field_group(array(
-// 	'key' => 'group_5dad7b0c8b7ea',
-// 	'title' => 'Temps de lecture',
-// 	'fields' => array(
-// 		array(
-// 			'key' => 'field_5dad7b236e8e8',
-// 			'label' => 'Temps de Lecture',
-// 			'name' => 'temps_lecture',
-// 			'type' => 'true_false',
-// 			'instructions' => '',
-// 			'required' => 0,
-// 			'conditional_logic' => 0,
-// 			'wrapper' => array(
-// 				'width' => '',
-// 				'class' => '',
-// 				'id' => '',
-// 			),
-// 			'message' => '',
-// 			'default_value' => 0,
-// 			'ui' => 1,
-// 			'ui_on_text' => '',
-// 			'ui_off_text' => '',
-// 		),
-// 	),
-// 	'location' => array(
-// 		array(
-// 			array(
-// 				'param' => 'post_type',
-// 				'operator' => '==',
-// 				'value' => 'post',
-// 			),
-// 		),
-// 	),
-// 	'menu_order' => 0,
-// 	'position' => 'side',
-// 	'style' => 'default',
-// 	'label_placement' => 'top',
-// 	'instruction_placement' => 'label',
-// 	'hide_on_screen' => '',
-// 	'active' => true,
-// 	'description' => '',
-// ));
-
-acf_add_local_field_group(array(
-	'key' => 'group_5d6e44395feac',
-	'title' => 'Theme informations',
-	'fields' => array(
-		array(
-			'key' => 'field_5d6e446cc090d',
-			'label' => 'ajout options',
-			'name' => 'ajout_options',
-			'type' => 'checkbox',
-			'instructions' => 'Cocher les options à afficher dans les réglages du thème.',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				'contact' => 'Contact et Localisation',
-				'reseaux' => 'Réseaux Sociaux',
-				'partenaires' => 'Partenaires',
-				'annuaire' => 'Annuaire',
-				'calendar' => 'Calendrier',
-				'category-list' => 'Listing categories / thématiques',
-				'intranet' => 'Intranet',
-			),
-			'allow_custom' => 0,
-			'default_value' => array(
-			),
-			'layout' => 'vertical',
-			'toggle' => 0,
-			'return_format' => 'value',
-			'save_custom' => 0,
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'theme-informations',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
 
 endif;
 ?>
