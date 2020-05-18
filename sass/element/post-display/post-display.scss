@@ -170,10 +170,22 @@
 
     &.sedoo-labtools-listCPT {
         justify-content: flex-start;
-        a.item-link {
-            flex:0 1 430px;
+        &.content-list {
+            article {
+                width: 100%;;
+            }
+        }
+        article {
+            > a {
+                text-decoration: none;
+                &:hover {
+                    color:#999;
+                }
+            }
+            flex:0 1 420px;
             margin:0 20px 20px 0;
         }
+        
     }
 }
 
