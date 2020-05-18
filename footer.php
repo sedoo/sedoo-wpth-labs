@@ -35,6 +35,7 @@ $footerStyle .= "\"";
         }
         ?>
         ;
+    }
         </style>    
         <div class="wrapper-layout">
             <div><!--footer menus-->
@@ -76,7 +77,7 @@ $footerStyle .= "\"";
             </div>
 
             <div class="social-partenaires">
-                 <?php if( have_rows('reseaux_sociaux', 'option') ): ?>
+                <?php if( have_rows('reseaux_sociaux', 'option') ): ?>
                 <div class="social-list">
                     <ul class="inline-list">
                     <?php while( have_rows('reseaux_sociaux', 'option') ): the_row(); 
@@ -93,6 +94,7 @@ $footerStyle .= "\"";
                     <?php endwhile; ?>
                     </ul>
                 </div>
+                <?php endif; ?>
 
                 <div class="infos-pratiques">
                     <?php if( have_rows('location_repeater', 'option') ): ?>
@@ -130,7 +132,6 @@ $footerStyle .= "\"";
                     <?php endwhile; ?>
                     <?php endif; ?>
                 </div>
-                <?php endif; ?>
                 <?php 
                 $custom_logo_id = get_theme_mod( 'custom_logo' );
                 $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); ?>

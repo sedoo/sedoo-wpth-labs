@@ -187,6 +187,10 @@ require get_template_directory() . '/inc/custom-acf-taxo-fields.php';
 * Include Blocks configs
 */
 require get_template_directory() . '/inc/custom-blocks-config.php';
+/**
+* Include Extra functions
+*/
+require get_template_directory() . '/inc/extras.php';
 
 
 /**
