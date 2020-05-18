@@ -83,7 +83,8 @@ $footerStyle .= "\"";
                         ?>
                         <li class="list">
                             <?php if( $link ): ?>
-                                <a href="<?php echo $link; ?>">
+                                <a href="<?php echo $link; ?>" title="Follow us">
+                                    <span class="screen-reader-text">Follow us</span>
                                 </a>
                             <?php endif; ?>
                         </li>
@@ -113,7 +114,15 @@ $footerStyle .= "\"";
                             <?php if($fax_contact) { ?>
                                 <p><?php echo __('Fax', 'sedoo-wpth-labs'); ?> : <?php echo $fax_contact; ?></p>
                             <?php } ?>
-                            <p><a href="mailto:<?php echo $mail_contact; ?>"><?php echo $mail_contact; ?></a></p>
+                            <?php 
+                            if ($mail_contact) {
+                                $mailProtected=explode("@", $mail_contact);
+                            
+                            ?>
+                            <p><?php echo $mailProtected[0]."<i class=\"hide\">NO SPAM -- FILTER</i>@<i class=\"hide\">NO SPAM -- FILTER</i>".$mailProtected[1];?></p>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
                     <?php endwhile; ?>

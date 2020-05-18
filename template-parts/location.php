@@ -30,7 +30,15 @@ if ( get_field('display_shortcut', 'option') == 'oui'){
                     <?php if($fax_contact) { ?>
                         <p>Fax : <?php echo $fax_contact; ?></p>
                     <?php } ?>
-                    <p><a href="mailto:<?php echo $mail_contact; ?>"><?php echo $mail_contact; ?></a></p>
+                    <?php 
+                    if ($mail_contact) {
+                        $mailProtected=explode("@", $mail_contact);
+                    
+                    ?>
+                    <p><?php echo $mailProtected[0]."<i class=\"hide\">NO SPAM -- FILTER</i>@<i class=\"hide\">NO SPAM -- FILTER</i>".$mailProtected[1];?></p>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
             <?php if($display_map == 'oui') { ?>
