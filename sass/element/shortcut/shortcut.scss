@@ -7,7 +7,7 @@ ul[id="shortcuts"]{
     @include transform(translateX(150px));
     z-index: 100;
     
-    li{
+    > li{
         padding: 10px;
         width: 100%;
         @include basic-transition;
@@ -52,6 +52,17 @@ ul[id="shortcuts"]{
                 margin-right: 20px;
             }
             
-        }
+        }        
+    }
+    .lang-item {
+        display: inline-block;
+        background: transparent;
+        font-size: $font-size;
+        img {
+            width:20px;
+        } 
     }
 }
+
+
+
