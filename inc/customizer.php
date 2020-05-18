@@ -305,7 +305,8 @@ function labs_by_sedoo_color_style() {
 			a:hover,
 			a:focus,
             a:active,
-            aside[id="stickyMenu"] [id="tocList"] li.active a {
+            aside[id="stickyMenu"] [id="tocList"] li.active a,
+            .post-wrapper.sedoo-labtools-listCPT article > a:hover {
 				color: <?php echo $code_color;?>;
 			}
 

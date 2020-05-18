@@ -134,9 +134,7 @@ body{
 [id="content"]{
     overflow: hidden;
 }
-figure{
-    // max-width: 100%!important;
-}
+
 div[id="page"]{
     padding: 90px 20px 20px;
     overflow-y: hidden;
@@ -317,277 +315,105 @@ small{
     }
 }
 
-/****************************
-****** BLOCK GUTENBERG ******
-****************************/
-
-.alignleft {
-    @include alignleft;
-}
-
-.alignright {
-    @include alignright;
-}
-
-.aligncenter {
-    @include aligncenter;
-}
-
-.alignwide {
-    @include alignwide;
-}
-
-.alignfull {
-    @include alignfull;
-}
-
-.alignfull.wp-block-cover {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-}
-
-body a.btn{
-    display: block;
-    margin: 50px auto;
-    border-radius: 0;
-    background: $dark;
-    color: $light-full;
-    text-align: center;
-    padding: 10px 40px;
-    box-shadow: $down-box-shadow;
-    position: relative;
-    z-index: 1;
-    max-width: 300px;
-    text-decoration: none!important;
-
-    &:hover{
-        background: $light-full!important;
-        color:#000;
-    }
-}  
-
-.blur{
-    filter: blur(5px);
-}
-
-
-/* COLONES */
-.wp-block-columns{
-    @include justify-content-between;
-    
-    &.has-2-columns{
-        .wp-block-column{
-            flex-basis: calc(50% - 5%);
-        }
-    }
-}
-
-/* TABLE */
-.wp-block-table{
-    // margin: 30px 0;
-    // width: 100%;
-    
-    td{
-        padding: 10px;
-    }
-}
-
-/* QUOTE */
-.wp-block-quote{
-    max-width: 80%;
-    margin: 50px auto;
-    position: relative;
-    
-    &::before{
-        content: "“";
-        font-size: calc(#{$h1-size} * 1.5);
-        font-family: $main-title-family;
-        position: absolute;
-        top: -40px;
-        left: -40px;
-    }
-    
-    &::after{
-        content: "”";
-        font-size: calc(#{$h1-size} * 1.5);
-        font-family: $main-title-family;
-        position: absolute;
-        bottom: -40px;
-        right: -40px;
-    }
-    
-    p{
-        font-size: $h4-size;
-        font-family: $main-title-family;
-        font-style: $italic;
-    }
-    cite{
-        font-family: $main-title-family;
-        font-size: $tiny-size;
-        display: block;
+// /* CALENDAR */
+// .wpfc-calendar-wrapper{
+//     h2{
+//         font-size: $h2-size!important;
+//     }
+//     .fc-view-container{
+//         *{
+//             box-sizing: border-box;
+//         }
+//     }
+//     .fc-toolbar{
+//         @include display-flex;
+//         @include justify-content-between;
+//         @include align-items-center;
         
-        &::before, &::after{
-            content: "-";
-            display: inline-block;
-            vertical-align: middle;
-        }
-        &::before{
-            margin-right: 10px;
-        }
-        &::after{
-            margin-left: 10px;
-        }
-    }
-}
-
-/* BLOCK IMAGE */
-.wp-block-image{
-    a{
-        &:hover{
-            background: none!important;
-        }
-    }
+//         .fc-left{
+//             order: 1;
+//         }
+//         .fc-center{
+//             order: 2;
+//         }
+//         .fc-right{
+//             order: 3;
+//         }
+//         .fc-clear{
+//             display: none;
+//         }
+//     }
+//     .fc-head{
+//         font-family: $main-title-family;
+//         text-transform: $uppercase;
+//         font-size: $font-size!important;
+//     }
+//     .fc-body{
+//         font-family: $main-font-family;
         
-    figcaption{
-        text-align: justify;
-        font-style: italic;
-        background: #EEE;
-        padding: 5px 10px;
-        color: #444;
-        font-size: 1.2rem;
+//         thead{    
+//             td{
+//                 font-size: $font-size!important;
+//             }
+//         }
+//         .fc-day{
+//             border: 1px solid $dark-grey;
+//         }
         
-        br{
-            margin:5px 0;
-            display: block;
-        }
-    }
-}
-
-/* WP CTA */
-.wp-block-button{
-
-    .wp-block-button__link{
-        padding: 10px 20px;
-        margin:10px;
-        border-radius: 0;
-        border:none;
-        box-shadow: $basic-box-shadow;
-        text-decoration: none;
-        // color: $light-full;
-        color: $light-full!important;
-    }
-}
-
-/* TABLE */
-.wp-block-table, table{
-    th{
-        background: $dark;
-        color: $light-full;
-        padding: 20px 10px;
-    }
-    tr{
-        &:nth-of-type(odd){
-            background: $light-grey;
-        }
-    }
-}
-
-/* CALENDAR */
-.wpfc-calendar-wrapper{
-    h2{
-        font-size: $h2-size!important;
-    }
-    .fc-view-container{
-        *{
-            box-sizing: border-box;
-        }
-    }
-    .fc-toolbar{
-        @include display-flex;
-        @include justify-content-between;
-        @include align-items-center;
-        
-        .fc-left{
-            order: 1;
-        }
-        .fc-center{
-            order: 2;
-        }
-        .fc-right{
-            order: 3;
-        }
-        .fc-clear{
-            display: none;
-        }
-    }
-    .fc-head{
-        font-family: $main-title-family;
-        text-transform: $uppercase;
-        font-size: $font-size!important;
-    }
-    .fc-body{
-        font-family: $main-font-family;
-        
-        thead{    
-            td{
-                font-size: $font-size!important;
-            }
-        }
-        .fc-day{
-            border: 1px solid $dark-grey;
-        }
-        
-        .fc-content-skeleton{
-            thead{
-                tr{
-                    background: transparent;
-                }
-            }
-        }
-    }
-    .fc{
-        button{
-            border: $basic-border;
-            text-transform: uppercase;
-            color: $dark;
-            background: none;
-            height: auto;
-            padding: 5px 10px;
-            border-radius: 0;
-            font-family: $main-title-family;
+//         .fc-content-skeleton{
+//             thead{
+//                 tr{
+//                     background: transparent;
+//                 }
+//             }
+//         }
+//     }
+//     .fc{
+//         button{
+//             border: $basic-border;
+//             text-transform: uppercase;
+//             color: $dark;
+//             background: none;
+//             height: auto;
+//             padding: 5px 10px;
+//             border-radius: 0;
+//             font-family: $main-title-family;
             
-            .ui-icon{
-                background-image: url("images/chevron.svg");
-                filter: invert(100%);
-                background-position: center;
-                background-size: cover;
-            }
-            &.fc-prev-button{
-                 .ui-icon{
-                    @include transform(scale(-1, 1));
-                }               
-            }
-        }
+//             .ui-icon{
+//                 background-image: url("images/chevron.svg");
+//                 filter: invert(100%);
+//                 background-position: center;
+//                 background-size: cover;
+//             }
+//             &.fc-prev-button{
+//                  .ui-icon{
+//                     @include transform(scale(-1, 1));
+//                 }               
+//             }
+//         }
         
-        .fc-button-group{
-            button:not(:last-child){
-                margin-right: 10px;
-            }
-        }
-    }
-    .ui-widget-content{
-        border-color: $dark-grey;
-        background: $light-grey;
+//         .fc-button-group{
+//             button:not(:last-child){
+//                 margin-right: 10px;
+//             }
+//         }
+//     }
+//     .ui-widget-content{
+//         border-color: $dark-grey;
+//         background: $light-grey;
         
-        &.ui-state-highlight{
-            border-width: 5px;
-            border-style: solid;
+//         &.ui-state-highlight{
+//             border-width: 5px;
+//             border-style: solid;
             
-        }
-    }
-}
+//         }
+//     }
+// }
 
+/*** HELPERS  ***/
+.hide {
+    display: none;
+}
 
 /* INTERACTIVE MAP */
 
