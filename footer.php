@@ -23,17 +23,19 @@ $footerStyle .= "\"";
 
 	</div><!-- #content -->  
     <footer id="colophon" class="site-footer" <?php echo $footerStyle;?> >
-    <?php
-    if (get_field('footer_text_color', 'option')) {
+    <style>
+   
+   footer[id="colophon"] * {
+        color:
+        <?php
+        if (get_field('footer_text_color', 'option')) {
+            the_field('footer_text_color', 'option');            
+        } else {
+            echo "#222";
+        }
         ?>
-        <style>
-            .footer-menu * {
-                color:<?php the_field('footer_text_color', 'option');?>;
-            }
-        </style>
-    <?php
-    }
-    ?>
+        ;
+        </style>    
         <div class="wrapper-layout">
             <div><!--footer menus-->
                 <?php if (has_nav_menu('footer-menu-1')) { 

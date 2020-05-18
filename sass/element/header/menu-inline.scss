@@ -101,9 +101,3 @@ ul[id="primary-menu"]{
         }
     }
 }
-
-@for $i from 1 through 5 {
-    .menu-item:nth-of-type(#{$i}) a {
-      @include transition-delay(($i - 1));
-    }
-}

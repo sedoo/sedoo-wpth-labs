@@ -64,11 +64,32 @@ acf_add_local_field_group(array(
 	'title' => 'Annuaire Settings',
 	'fields' => array(
 		array(
+			'key' => 'field_5ec2846a3a2d6',
+			'label' => 'URL page annuaire',
+			'name' => 'url_page_annuaire',
+			'type' => 'page_link',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => array(
+				0 => 'page',
+			),
+			'taxonomy' => '',
+			'allow_null' => 0,
+			'allow_archives' => 0,
+			'multiple' => 0,
+		),
+		array(
 			'key' => 'field_5d6e4d1d7d654',
 			'label' => 'Lien Annuaire',
 			'name' => 'lien_annuaire',
 			'type' => 'url',
-			'instructions' => 'Insérer le lien vers l\'annuaire du laboratoire',
+			'instructions' => 'Insérer le lien vers l\'application d\'annuaire du laboratoire',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -139,89 +160,35 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-
-acf_add_local_field_group(array(
-	'key' => 'group_5d6faffd00cb6',
-	'title' => 'Champs additionnels auteurs',
-	'fields' => array(
-		array(
-			'key' => 'field_5d6fb014d56e1',
-			'label' => 'Poste au sein du laboratoire',
-			'name' => 'poste',
-			'type' => 'text',
-			'instructions' => 'Saisir le poste au sein du laboratoire',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5d6fb025d56e2',
-			'label' => 'Photo auteur',
-			'name' => 'photo_auteur',
-			'type' => 'image',
-			'instructions' => 'Téléverser la photo de l\'auteur',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'array',
-			'preview_size' => 'thumbnail',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'user_form',
-				'operator' => '==',
-				'value' => 'edit',
-			),
-		),
-		array(
-			array(
-				'param' => 'user_form',
-				'operator' => '==',
-				'value' => 'register',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
-
 acf_add_local_field_group(array(
 	'key' => 'group_5d6e45131ccd4',
 	'title' => 'Location Settings',
 	'fields' => array(
 		array(
+			'key' => 'field_5ec283ff3a2d5',
+			'label' => 'Lier avec la page d\'accès',
+			'name' => 'url_page_access',
+			'type' => 'page_link',
+			'instructions' => 'Les informations ci-dessous s\'afficheront sur la page en relation',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => array(
+				0 => 'page',
+			),
+			'taxonomy' => '',
+			'allow_null' => 0,
+			'allow_archives' => 0,
+			'multiple' => 0,
+		),
+		array(
 			'key' => 'field_5db6f28ec9561',
 			'label' => 'Affichage à droite',
-			'name' => 'display_shortcut',
+			'name' => 'display_map_shortcut',
 			'type' => 'true_false',
 			'instructions' => 'Souhaitez-vous affichez les informations de contact et la carte sur le bord droite de l\'écran ?',
 			'required' => 0,
@@ -749,6 +716,53 @@ Please refer to those <a href="https://material.io/design/color/text-legibility.
 ));
 
 /**
+ * LANGAGE OPTIONS
+ */
+if (function_exists('pll_the_languages')) {
+	acf_add_local_field_group(array(
+		'key' => 'group_5ec291beb375f',
+		'title' => 'Langage options',
+		'fields' => array(
+			array(
+				'key' => 'field_5ec291ce8ba92',
+				'label' => 'Affichage des drapeaux à droite dans les raccourcis',
+				'name' => 'display_lang_shortcut',
+				'type' => 'true_false',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 0,
+				'ui' => 1,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options-theme-options',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+}
+/**
  * SOURCE OF ARTICLE 
  * only for post (single.php)
  */
@@ -783,6 +797,83 @@ acf_add_local_field_group(array(
 				'param' => 'post_type',
 				'operator' => '==',
 				'value' => 'post',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+/***
+ * CHAMPS AUTEUR
+ */
+acf_add_local_field_group(array(
+	'key' => 'group_5d6faffd00cb6',
+	'title' => 'Champs additionnels auteurs',
+	'fields' => array(
+		array(
+			'key' => 'field_5d6fb014d56e1',
+			'label' => 'Poste au sein du laboratoire',
+			'name' => 'poste',
+			'type' => 'text',
+			'instructions' => 'Saisir le poste au sein du laboratoire',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5d6fb025d56e2',
+			'label' => 'Photo auteur',
+			'name' => 'photo_auteur',
+			'type' => 'image',
+			'instructions' => 'Téléverser la photo de l\'auteur',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+			'preview_size' => 'thumbnail',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'user_form',
+				'operator' => '==',
+				'value' => 'edit',
+			),
+		),
+		array(
+			array(
+				'param' => 'user_form',
+				'operator' => '==',
+				'value' => 'register',
 			),
 		),
 	),
