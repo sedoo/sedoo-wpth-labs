@@ -22,7 +22,6 @@ jQuery(document).ready(function ($) {
         
     });
     
-    
     // Pop over à l'ouverture du searchform
     $(".search-form-btn").click(function () {
         $(".overlay.search-form").addClass("open");
@@ -32,29 +31,7 @@ jQuery(document).ready(function ($) {
         $(".overlay.search-form").removeClass("open");
         $("body").removeClass("overlay-expanded");
 
-    });
-    
-    // Pop over à l'ouverture de location
-    $(".location-btn").click(function () {
-        $(".overlay.location").addClass("open");
-        $("body").addClass("overlay-expanded");
-    });
-    $(".overlay .close").click(function () {
-        $(".overlay.location").removeClass("open");
-        $("body").removeClass("overlay-expanded");
-
-    });
-    // Pop over à l'ouverture de l'annuaire
-    $(".annuaire-btn").click(function () {
-        $(".overlay.annuaire").addClass("open");
-        $("body").addClass("overlay-expanded");
-    });
-    $(".overlay .close").click(function () {
-        $(".overlay.annuaire").removeClass("open");
-        $("body").removeClass("overlay-expanded");
-
-    });   
-    
+    });  
     
     // Initialisation du carousel pour le menu
     if (window.matchMedia("(min-width: 767px)").matches) {

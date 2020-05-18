@@ -5,11 +5,10 @@
  */
 $options_theme = get_field('ajout_options', 'option');
 ?>
-
 <ul id="shortcuts">
     <?php if( get_field('display_shortcut', 'option') == 'oui' ) { ?>
     <li class="location-btn">
-        <button>
+        <a href="<?php the_field('url_page_access', 'option'); ?>">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
                 <g>
                     <path fill="#FFFFFF" d="M15,0C8.72,0,3.63,5.1,3.63,11.37C3.63,17.66,15,29.88,15,29.88s11.37-12.22,11.37-18.51
@@ -19,12 +18,12 @@ $options_theme = get_field('ajout_options', 'option');
                 </g>
             </svg>
             <?php echo __('Localisation', 'sedoo-wpth-labs'); ?>
-        </button>
+        </a>
     </li>
     <?php } ?>
     <?php if( $options_theme && in_array('annuaire', $options_theme) ) { ?>
     <li class="annuaire-btn">
-        <button>
+        <a href="<?php the_field('url_page_annuaire', 'option'); ?>">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
                 <g>
                     <rect fill="none" width="30" height="30" class="size"/>
@@ -37,7 +36,7 @@ $options_theme = get_field('ajout_options', 'option');
                 </g>
             </svg>
             <?php echo __('Annuaire', 'sedoo-wpth-labs'); ?>
-        </button>
+        </a>
     </li>
     <?php } ?>
     <?php if( $options_theme && in_array('calendar', $options_theme) ) { ?>
@@ -66,9 +65,20 @@ $options_theme = get_field('ajout_options', 'option');
         </a>
     </li>
     <?php } ?>
-    <li class="search-form-btn">
+    
+    <?php if( get_field('display_lang_shortcut', 'option') == 'oui' ) { ?>
+    <li class="lang-btn">
         <button>
-            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45" x="0px" y="0px"  width="30px" height="30px" >
+                <path fill="#FFF" d="M37.45,6.35a1,1,0,0,0-1.05.09c-4,3-9.18,1.59-14.21.24-4.45-1.2-8.65-2.33-11.74-.27a1,1,0,0,0-.45.83V41a1.2,1.2,0,0,0,2.4,0V25.66c2.35-.91,5.72,0,9.27.95a35.59,35.59,0,0,0,9,1.6,11.25,11.25,0,0,0,7-2.17,1,1,0,0,0,.4-.8v-18A1,1,0,0,0,37.45,6.35Z"/>
+            </svg>
+            <ul><?php pll_the_languages(array('show_flags'=>0,'show_names'=>0,'hide_current'=>1, 'display_names_as'=>'slug')); ?></ul>
+        </button>
+    </li>
+    <?php } ?>
+
+    <li class="search-form-btn">
+        <button>            
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
                 <g>
                     <path fill="#FFFFFF" d="M18.67,2.08c-5.18,0-9.4,4.21-9.4,9.4c0,1.87,0.55,3.61,1.5,5.07l-7.74,7.74c-0.78,0.78-0.78,2.05,0,2.83
@@ -84,12 +94,5 @@ $options_theme = get_field('ajout_options', 'option');
 </ul>
 
 <?php
-
-
-    get_template_part( 'template-parts/search-form', 'page' );
-    get_template_part( 'template-parts/location', 'page' );
-    get_template_part( 'template-parts/annuaire', 'page' );
-    get_template_part( 'template-parts/calendar', 'page' );
-
-
+get_template_part( 'template-parts/search-form', 'page' );
 ?>
