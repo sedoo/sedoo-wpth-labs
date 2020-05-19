@@ -34,6 +34,7 @@ ul[id="shortcuts"]{
         }
         button, a{
             font-family: $main-title-family;
+            font-size: $tiny-size;
             text-transform: $uppercase;
             color: $light-full;
             text-decoration: none;
