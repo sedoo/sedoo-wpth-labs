@@ -55,13 +55,32 @@ ul[id="shortcuts"]{
             
         }        
     }
+
+    > li.lang-btn {
+        
+        > button {
+            > ul {
+            position: absolute;
+            width: calc(100% - 30px);
+            height: 100%;
+            display: flex;
+            left: 50px;
+            align-items: center;
+            }
+        }
+    }
     .lang-item {
-        display: inline-block;
         background: transparent;
         font-size: $font-size;
         img {
             width:20px;
         } 
+        &:not(:only-child){
+            margin-right: 10px;
+        }
+    }
+    .lang-item a {
+        display: block;
     }
 }
 
