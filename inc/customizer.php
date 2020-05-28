@@ -242,7 +242,7 @@ function labs_by_sedoo_color_style() {
             .read-more-article .post-loop .post-preview:hover h3,
             .wrapper-content a, 
             .wrapper-layout a,
-            .fullwidth a, 
+            .fullwidth a,
             .copyright .wrapper.site-info a,
             .search-form .search-submit:hover,
             .search-form .search-field:focus,
@@ -298,11 +298,11 @@ function labs_by_sedoo_color_style() {
             .search-annuaire input[type="search"]:focus,
             .ui-widget-header,
             .page-links span.current
-             {
+            {
                  border-color: <?php echo $code_color;?>;
-             }
-             
-			a:hover,
+            }
+
+            a:hover,
 			a:focus,
             a:active,
             aside[id="stickyMenu"] [id="tocList"] li.active a,
