@@ -124,7 +124,10 @@ body a.btn{
 }
 
 /* BLOCK IMAGE */
-.wp-block-image{
+.wp-block-image {
+    margin-top: 0;
+    margin-bottom: 20px;
+
     a{
         &:hover{
             background: none!important;
@@ -135,6 +138,8 @@ body a.btn{
         text-align: justify;
         font-style: italic;
         background: #EEE;
+        margin-top:10px;
+        margin-bottom:10px;
         padding: 5px 10px;
         color: #444;
         font-size: 1.2rem;

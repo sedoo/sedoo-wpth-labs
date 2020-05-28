@@ -80,12 +80,12 @@ function labs_by_sedoo_catch_that_image() {
   ob_end_clean();
   $output = preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $post->post_content, $matches);
   $getIMG = $matches[1][0];
+
   $current_siteurl = parse_url(get_site_url());
   $srcURL=parse_url($getIMG);
-
   // check file size if not local
   // 
-  if (($srcURL['host']!==$current_siteurl['host'])) {
+  if (($srcURL['host']!==$current_siteurl['host']) && (!empty($getIMG)) ) {
     $extIMG=$srcURL['scheme']."://".$srcURL['host'].$srcURL['path'];
     $extIMGsize=labs_by_sedoo_remote_filesize($extIMG);
     // if < 300000 > Ok let's display it
@@ -100,12 +100,11 @@ function labs_by_sedoo_catch_that_image() {
   if((empty($getIMG))||($extFileToBig=="TRUE")) {
     $getIMG = get_template_directory_uri() .'/images/empty-mode-'.$postType.'.svg';
   }
-  $imgToShow="<img src=\"".$getIMG."\" alt=\"\" />";
+  $imgToShow='<img src="'.$getIMG.'" alt="" />';
   echo $imgToShow;
 }
+
 add_action( 'after_setup_theme', 'prefix_default_image_settings' );
-
-
 function prefix_default_image_settings() {
 update_option( 'image_default_align', 'center' );
 update_option( 'image_default_link_type', 'none' );
