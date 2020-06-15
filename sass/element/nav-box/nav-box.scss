@@ -18,8 +18,8 @@
     &.previous{
         left: 0;
         .label{
-            @include transform(scale(-1, 1) translateX(-140px));
-            left: -140px;
+            @include transform(scale(-1, 1) translateX(-250px));
+            left: -250px;
         }
         .nav-box-chevron{
             @include transform(scale(-1, 1));
@@ -48,8 +48,8 @@
         right: 0;
         
         .label{
-            @include transform(translateX(110px));
-            left: -110px;
+            @include transform(translateX(250px));
+            left: -250px;
         }
         .nav-box-chevron{
             right: 0;
@@ -93,12 +93,15 @@
         background: $dark;
     }
     .label{
-        font-size: $tiny-size;
-        white-space: nowrap;
-        color: $light-full;
+        padding:2px 5px;
         position: absolute;
-        @include basic-transition;
+        top:-21px;
+        background:rgba(0,0,0,0.6);
+        white-space: nowrap;
+        font-size: $tiny-size;
+        color: $light-full;
         opacity: 0;
+        @include basic-transition;
         @include basic-transition-delay;
     }
     .card-nav{
@@ -112,17 +115,15 @@
         p{
             margin: 0;
             padding: 10px 20px;
+            overflow: hidden;
+            max-height: 70px;
             font-family: $main-title-family;
             color: $dark-grey;
-            @include basic-transition-delay;
-            text-transform: $uppercase;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;  
-            max-height: 70px;
             text-align:left;
-            background:rgba(0,0,0,0.6);
+            text-transform: $uppercase;            
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            @include basic-transition-delay;
             @include basic-transition;
             @include transition-delay(0.1);
         }
