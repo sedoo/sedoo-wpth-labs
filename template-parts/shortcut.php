@@ -17,7 +17,7 @@ $options_theme = get_field('ajout_options', 'option');
                     <rect fill="none" width="30" height="30" class="size"/>
                 </g>
             </svg>
-            <?php echo __('Localisation', 'sedoo-wpth-labs'); ?>
+            <?php echo __('Location', 'sedoo-wpth-labs'); ?>
         </a>
     </li>
     <?php } ?>
