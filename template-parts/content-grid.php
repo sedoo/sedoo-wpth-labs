@@ -11,7 +11,7 @@ $postType=get_post_type();
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
-    <a href="<?php the_permalink(); ?>"></a>
+    <a href="<?php the_permalink(); ?>" title="<?php echo __('Read more', 'sedoo-wpth-labs'); ?>"></a>
 	<header class="entry-header">
         <figure>
             <?php 
@@ -38,9 +38,7 @@ $postType=get_post_type();
             if ( 'post' === get_post_type() ) :
                 ?>
                 <p><?php the_date('d.m.Y') ?></p>
-            <?php endif; ?>
-            <!--
-            <a href="<?php //the_permalink(); ?>"><?php //echo __('Lire plus', 'sedoo-wpth-labs'); ?> →</a>-->
+            <?php endif; ?>           
         </footer><!-- .entry-footer -->
         
     </div>

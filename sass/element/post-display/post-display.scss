@@ -191,8 +191,11 @@
 
 .content-list {
     .post {
-        border-bottom:1px solid #CCC;
         box-shadow:none;
+
+        a:hover {
+            color:$dark-typo;
+        }
 
         .entry-header{
             height: auto;

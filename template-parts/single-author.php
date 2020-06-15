@@ -10,9 +10,9 @@
 <div class="post-author">
     <h2><?php 
     if (get_post_type() == "tribe_events") {
-        $typeOfUser = __('Intervenant', 'sedoo-wpth-labs');
+        $typeOfUser = __('Speaker', 'sedoo-wpth-labs');
     } else {
-        $typeOfUser = __('Auteur', 'sedoo-wpth-labs');
+        $typeOfUser = __('Author', 'sedoo-wpth-labs');
     }
     echo $typeOfUser; ?>
     </h2>
@@ -45,14 +45,14 @@
             <?php 
             if ($select_lauteur_array['user_description']) {
             ?>
-            <h3><?php echo __("À propos", 'sedoo-wpth-labs'); ?></h3>
+            <h3><?php echo __("About", 'sedoo-wpth-labs'); ?></h3>
             <p class="author-description">
                 <?php echo $select_lauteur_array['user_description'];?>
             </p> 
             <?php
             }
             ?>
-           <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>" class="btn"><?php echo __("En savoir plus", 'sedoo-wpth-labs'); ?></a>
+           <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>" class="btn"><?php echo __("Learn more", 'sedoo-wpth-labs'); ?></a>
         </div>
    </div>
 </div>
@@ -65,9 +65,9 @@
     <h2>
     <?php
     if (get_post_type() == "tribe_events") {
-        $typeOfUser = __('Intervenant', 'sedoo-wpth-labs');
+        $typeOfUser = __('Speaker', 'sedoo-wpth-labs');
     } else {
-        $typeOfUser = __('Auteur', 'sedoo-wpth-labs');
+        $typeOfUser = __('Author', 'sedoo-wpth-labs');
     }
     echo $typeOfUser; 
     ?>    
@@ -95,13 +95,13 @@
             <p><b><?php the_field('nom_de_lauteur_exterieur'); ?></b></p>
             <p><?php the_field('poste_de_lauteur'); ?></p>
             <?php if( get_field('a_propos_auteur') ){ ?>
-            <h3><?php echo __("À propos", 'sedoo-wpth-labs'); ?></h3>
+            <h3><?php echo __("About", 'sedoo-wpth-labs'); ?></h3>
             <p class="author-description">
                 <?php the_field('a_propos_auteur'); ?>
             </p> 
             <?php } ?>
             <?php if( get_field('site_internet_auteur') ){ ?>
-                <a href="<?php the_field('site_internet_auteur'); ?>" class="btn" target="_blank"><?php echo __("En savoir plus", 'sedoo-wpth-labs'); ?></a>
+                <a href="<?php the_field('site_internet_auteur'); ?>" class="btn" target="_blank"><?php echo __("Learn more", 'sedoo-wpth-labs'); ?></a>
             <?php } ?>
         </div>
    </div>
