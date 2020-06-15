@@ -35,7 +35,7 @@ $options_theme = get_field('ajout_options', 'option');
         c1.13-0.94,1.84-2.35,1.84-3.94c0-2.83-2.3-5.13-5.13-5.13c-1.63,0-3.06,0.77-4,1.96C19.59,8.22,21.2,10.44,21.2,13.04z" />
                 </g>
             </svg>
-            <?php echo __('Annuaire', 'sedoo-wpth-labs'); ?>
+            <?php echo __('Phone book', 'sedoo-wpth-labs'); ?>
         </a>
     </li>
     <?php } ?>
@@ -61,7 +61,7 @@ $options_theme = get_field('ajout_options', 'option');
 
                     <line fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="15.04" y1="2.02" x2="15.04" y2="5.52"/>
             </svg>
-            <?php echo __('Événements', 'sedoo-wpth-labs'); ?>
+            <?php echo __('Events', 'sedoo-wpth-labs'); ?>
         </a>
     </li>
     <?php } ?>
@@ -88,7 +88,7 @@ $options_theme = get_field('ajout_options', 'option');
                     <rect fill="none" width="30" height="30" class="size"/>
                 </g>
             </svg>
-            <?php echo __('Recherche', 'sedoo-wpth-labs'); ?>
+            <?php echo __('Search', 'sedoo-wpth-labs'); ?>
         </button>
     </li>
 </ul>

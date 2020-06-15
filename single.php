@@ -94,7 +94,7 @@ $themeSlugRewrite = "category";
     
             if ($postsList){       
             ?>
-            <h2><?php echo __('Plus d\'actualités', 'sedoo-wpth-labs') ?></h2>
+            <h2><?php echo __('More news', 'sedoo-wpth-labs') ?></h2>
             <section role="listNews" class="post-wrapper">
                 
                 <?php
