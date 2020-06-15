@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Labs by Sedoo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-15 14:06+0000\n"
+"POT-Creation-Date: 2020-06-15 15:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -61,6 +61,14 @@ msgstr ""
 
 #. Name of the template
 msgid "Homepage"
+msgstr ""
+
+#: template-parts/nav-box.php:15
+msgid "Previous post"
+msgstr ""
+
+#: template-parts/nav-box.php:40
+msgid "Next post"
 msgstr ""
 
 #: template-parts/search-form.php:10 template-parts/shortcut.php:91

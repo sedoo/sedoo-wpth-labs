@@ -107,7 +107,7 @@
         @include basic-transition;
         z-index: 350;
         max-width: 300px;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
         
         p{
             margin: 0;
@@ -120,7 +120,9 @@
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;  
-            max-height: 80px;   
+            max-height: 70px;
+            text-align:left;
+            background:rgba(0,0,0,0.6);
             @include basic-transition;
             @include transition-delay(0.1);
         }

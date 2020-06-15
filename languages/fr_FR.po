@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Labs by Sedoo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-15 14:06+0000\n"
-"PO-Revision-Date: 2020-06-15 14:09+0000\n"
+"POT-Creation-Date: 2020-06-15 15:15+0000\n"
+"PO-Revision-Date: 2020-06-15 15:16+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -61,6 +61,14 @@ msgstr "Plus d'actualités"
 #. Name of the template
 msgid "Homepage"
 msgstr ""
+
+#: template-parts/nav-box.php:15
+msgid "Previous post"
+msgstr "Article précédent"
+
+#: template-parts/nav-box.php:40
+msgid "Next post"
+msgstr "Article suivant"
 
 #: template-parts/search-form.php:10 template-parts/shortcut.php:91
 msgid "Search"
