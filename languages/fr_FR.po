@@ -1,14 +1,13 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Labs by Sedoo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-15 15:15+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: \n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"PO-Revision-Date: 2020-06-15 15:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: Français\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -57,7 +56,7 @@ msgstr ""
 
 #: single.php:97
 msgid "More news"
-msgstr ""
+msgstr "Plus d'actualités"
 
 #. Name of the template
 msgid "Homepage"
@@ -65,52 +64,52 @@ msgstr ""
 
 #: template-parts/nav-box.php:15
 msgid "Previous post"
-msgstr ""
+msgstr "Article précédent"
 
 #: template-parts/nav-box.php:40
 msgid "Next post"
-msgstr ""
+msgstr "Article suivant"
 
 #: template-parts/search-form.php:10 template-parts/shortcut.php:91
 msgid "Search"
-msgstr ""
+msgstr "Rechercher"
 
 #: template-parts/search-form.php:13
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 #: template-parts/shortcut.php:20
 msgid "Location"
-msgstr ""
+msgstr "Localisation"
 
 #: template-parts/shortcut.php:38
 msgid "Phone book"
-msgstr ""
+msgstr "Annuaire"
 
 #: template-parts/shortcut.php:64
 msgid "Events"
-msgstr ""
+msgstr "Événements"
 
 #: template-parts/content.php:43 template-parts/content-grid-noimage.php:39
 #: template-parts/content-grid.php:14
 msgid "Read more"
-msgstr ""
+msgstr "Lire la suite"
 
 #: template-parts/single-author.php:13 template-parts/single-author.php:68
 msgid "Speaker"
-msgstr ""
+msgstr "Intervenant"
 
 #: template-parts/single-author.php:15 template-parts/single-author.php:70
 msgid "Author"
-msgstr ""
+msgstr "Auteur"
 
 #: template-parts/single-author.php:48 template-parts/single-author.php:98
 msgid "About"
-msgstr ""
+msgstr "A propos"
 
 #: template-parts/single-author.php:55 template-parts/single-author.php:104
 msgid "Learn more"
-msgstr ""
+msgstr "En savoir plus"
 
 #. Name of the theme
 msgid "Labs by Sedoo"
