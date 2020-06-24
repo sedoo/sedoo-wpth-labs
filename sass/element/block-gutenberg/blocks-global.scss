@@ -180,6 +180,10 @@ body a.btn{
     }
 }
 
+.wp-block-table.is-style-regular tr{
+    background-color: white !important;
+}
+
 /* EMBED YOUTUBE */
 .wp-block-embed-youtube.is-type-video.wp-embed-aspect-16-9 {
     position: relative;
