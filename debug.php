@@ -27,7 +27,7 @@ echo 'a';
         update_post_meta( get_the_ID(), '_EventStartDate', $date1ok);
     }
     if($date2bug == '') {
-        update_post_meta( get_the_ID(), '_EventStartDate', $date2ok);
+        update_post_meta( get_the_ID(), '_EventEndDate', $date2ok);
     }
 
     echo '</li>';
