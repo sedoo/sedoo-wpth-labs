@@ -200,11 +200,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
-/* include users with no post in api json */
-add_filter( 'rest_user_query', 'prefix_remove_has_published_posts_from_wp_api_user_query', 10, 2 );
-function prefix_remove_has_published_posts_from_wp_api_user_query( $prepared_args, $request ) {
-	unset( $prepared_args['has_published_posts'] );
-
-	return $prepared_args;
+/** shortcode for hide email in content */
+function shortcode_mail_sedoo($atts, $content){
+	
+    return '<p>'.$content.'<i class="hide">NO SPAM -- FILTER</i>@<i class="hide">NO SPAM -- FILTER</i>'.$atts['domain'].'</p>';
 }
+add_shortcode('hmail','shortcode_mail_sedoo');
