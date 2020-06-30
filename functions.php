@@ -203,6 +203,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /** shortcode for hide email in content */
 function shortcode_mail_sedoo($atts, $content){
 	
-    return '<p>'.$content.'<i class="hide">NO SPAM -- FILTER</i>@<i class="hide">NO SPAM -- FILTER</i>'.$atts['domain'].'</p>';
+    return $content.'<i class="hide">NO SPAM -- FILTER</i>@<i class="hide">NO SPAM -- FILTER</i>'.$atts['domain'];
 }
 add_shortcode('hmail','shortcode_mail_sedoo');
