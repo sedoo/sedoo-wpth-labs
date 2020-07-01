@@ -128,7 +128,6 @@ function labs_by_sedoo_customize_color( $wp_customize )
     )));
 
 
-
     //  =======================================
     //  = Text Input text color code     =
     //  =======================================
@@ -136,7 +135,11 @@ function labs_by_sedoo_customize_color( $wp_customize )
         'default'        => '#FFF',
         'capability'     => 'edit_theme_options',
         'type'           => 'theme_mod',
- 
+    ));
+    $wp_customize->add_setting('labs_by_sedoo_text_color_code_secondary', array(
+        'default'        => '#FFF',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'theme_mod',
     ));
 
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'labs_by_sedoo_text_color_code', array(
@@ -144,6 +147,13 @@ function labs_by_sedoo_customize_color( $wp_customize )
         'section'    => 'labs_by_sedoo_color_scheme',
         'settings'   => 'labs_by_sedoo_text_color_code',
     )) );
+
+	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'labs_by_sedoo_color_code', array(
+        'label'      => __('Couleur secondaire du thème', 'labs_by_sedoo'),
+        'section'    => 'labs_by_sedoo_color_scheme',
+        'settings'   => 'labs_by_sedoo_text_color_code_secondary',
+    )));
+
 
     //  =======================================
     //  = Text Input Link hover color code     =
