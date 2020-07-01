@@ -206,3 +206,6 @@ function shortcode_mail_sedoo($atts, $content){
     return $content.'<i class="hide">NO SPAM -- FILTER</i>@<i class="hide">NO SPAM -- FILTER</i>'.$atts['domain'];
 }
 add_shortcode('hmail','shortcode_mail_sedoo');
+
+// Color wheel 
+//require get_template_directory() . '/inc/color.php';
