@@ -143,6 +143,7 @@ function labs_by_sedoo_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'labs_by_sedoo_scripts' );
 
+
 /**
  * Implement the Custom Header feature.
  */
@@ -207,5 +208,49 @@ function shortcode_mail_sedoo($atts, $content){
 }
 add_shortcode('hmail','shortcode_mail_sedoo');
 
-// Color wheel 
-//require get_template_directory() . '/inc/color.php';
+
+// Add color to the gutenberg palet
+require get_template_directory() . '/inc/color.php';
+
+
+// save color from js for them option
+add_action( 'wp_ajax_save_theme_colors', 'save_theme_colors' );
+add_action( 'wp_ajax_nopriv_save_theme_colors', 'save_theme_colors' );
+
+function save_theme_colors() {
+  
+	$color1 = '#'.$_POST['color1'];
+	$color2 = '#'.$_POST['color2'];
+	$color3 = '#'.$_POST['color3'];
+	$color4 = '#'.$_POST['color4'];
+	$color5 = '#'.$_POST['color5'];
+	$siteid = $_POST['siteid'];
+	
+
+	switch_to_blog($siteid);
+
+	// if no color palet option then create them
+	if(!get_option('options_theme_palet_color')){
+
+	//	add_option('options_theme_palet_color', 5, '', 'no');
+	//	add_option('_options_theme_palet_color', 'field_5efd9539079ff', '', 'no');
+	//	add_option('options_theme_palet_color_0_added_theme_color', $color1);
+	//	add_option('_options_theme_palet_color_0_added_theme_color', 'field_5efd959407a00', '', 'no');
+	//	add_option('options_theme_palet_color_1_added_theme_color', $color2);
+	//	add_option('_options_theme_palet_color_1_added_theme_color', 'field_5efd959407a00', '', 'no');
+	//	add_option('options_theme_palet_color_2_added_theme_color', $color3);
+	//	add_option('_options_theme_palet_color_2_added_theme_color', 'field_5efd959407a00', '', 'no');
+	//	add_option('options_theme_palet_color_3_added_theme_color', $color4);
+	//	add_option('_options_theme_palet_color_3_added_theme_color', 'field_5efd959407a00', '', 'no');
+	//	add_option('options_theme_palet_color_4_added_theme_color', $color5);
+	//	add_option('_options_theme_palet_color_4_added_theme_color', 'field_5efd959407a00', '', 'no');
+	}
+	wp_die();
+}
+
+
+// get color for css in inc/color.php  (numcoor is the numero of the color (from 0 to 4))
+function get_site_color($num_color) {
+	$color = get_option('options_theme_palet_color_'.$num_color.'_added_theme_color');
+	return $color;
+}

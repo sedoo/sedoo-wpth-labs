@@ -555,6 +555,67 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
+
+acf_add_local_field_group(array(
+	'key' => 'group_5efd951c0a8bf',
+	'title' => 'Complementary Color',
+	'fields' => array(
+		array(
+			'key' => 'field_5efd9539079ff',
+			'label' => 'Add color to theme palette',
+			'name' => 'theme_palet_color',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 0,
+			'layout' => 'table',
+			'button_label' => '',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5efd959407a00',
+					'label' => 'Couleur',
+					'name' => 'added_theme_color',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+				),
+			),
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-theme-options',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
 /**
  * FOOTER OPTIONS
  */
