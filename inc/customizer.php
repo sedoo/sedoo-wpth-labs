@@ -82,6 +82,7 @@ function hex2rgb($hex) {
 
 
 
+
 /**************************************************************************************************************
 *  Ajout du controleur de couleur personnalisée dans le customizer
 *
@@ -91,11 +92,6 @@ function hex2rgb($hex) {
 function labs_by_sedoo_customize_color( $wp_customize )
 {
    //All our sections, settings, and controls will be added here
-
-
-   // remove the 'colors' section
-   $wp_customize->remove_section('colors');
-
 
    //1. Define a new section (if desired) to the Theme Customizer
  	$wp_customize->add_section('labs_by_sedoo_color_scheme', array(
@@ -124,25 +120,12 @@ function labs_by_sedoo_customize_color( $wp_customize )
         'type'           => 'theme_mod',
  
     ));
-    $wp_customize->add_setting('labs_by_sedoo_color_code_secondary', array(
-        'default'        => '#CCC',
-        'capability'     => 'edit_theme_options',
-        'type'           => 'theme_mod',
- 
-    ));
 
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'labs_by_sedoo_color_code', array(
         'label'      => __('Couleur principale', 'labs_by_sedoo'),
         'section'    => 'labs_by_sedoo_color_scheme',
         'settings'   => 'labs_by_sedoo_color_code',
     )));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'labs_by_sedoo_color_code_secondary', array(
-        'label'      => __('Couleur secondaire', 'labs_by_sedoo'),
-        'section'    => 'labs_by_sedoo_color_scheme',
-        'settings'   => 'labs_by_sedoo_color_code_secondary',
-    )));
-
 
 
     //  =======================================
@@ -152,7 +135,11 @@ function labs_by_sedoo_customize_color( $wp_customize )
         'default'        => '#FFF',
         'capability'     => 'edit_theme_options',
         'type'           => 'theme_mod',
- 
+    ));
+    $wp_customize->add_setting('labs_by_sedoo_text_color_code_secondary', array(
+        'default'        => '#FFF',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'theme_mod',
     ));
 
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'labs_by_sedoo_text_color_code', array(
@@ -160,6 +147,13 @@ function labs_by_sedoo_customize_color( $wp_customize )
         'section'    => 'labs_by_sedoo_color_scheme',
         'settings'   => 'labs_by_sedoo_text_color_code',
     )) );
+
+	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'labs_by_sedoo_color_code', array(
+        'label'      => __('Couleur secondaire du thème', 'labs_by_sedoo'),
+        'section'    => 'labs_by_sedoo_color_scheme',
+        'settings'   => 'labs_by_sedoo_text_color_code_secondary',
+    )));
+
 
     //  =======================================
     //  = Text Input Link hover color code     =
@@ -177,6 +171,40 @@ function labs_by_sedoo_customize_color( $wp_customize )
 //        'settings'   => 'labs_by_sedoo_link_hover_color_code',
 //    )) );
 
+
+    //  =============================
+    //  = Checkbox breadcrumb       =
+    //  =============================
+    $wp_customize->add_setting('labs_by_sedoo_breadcrumb', array(
+        'default'        => 'false',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'theme_mod',
+ 
+    ));
+
+	$wp_customize->add_control('labs_by_sedoo_breadcrumb', array(
+        'label'      => __('Afficher le fil d\'ariane sur les pages', 'labs_by_sedoo'),
+        'section'    => 'labs_by_sedoo_color_scheme',
+        'settings'   => 'labs_by_sedoo_breadcrumb',
+        'type'       => 'checkbox',
+    ));
+
+	//  =============================
+    //  = Text Input copyright     =
+    //  =============================
+    $wp_customize->add_setting('labs_by_sedoo_copyright', array(
+        'default'        => 'Pôle Aeris '.date('Y').' - Service de données OMP (SEDOO)',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'theme_mod',
+ 
+    ));
+
+	$wp_customize->add_control('labs_by_sedoo_copyright', array(
+        'label'      => __('© Copyright', 'labs_by_sedoo'),
+        'section'    => 'labs_by_sedoo_color_scheme',
+        'settings'   => 'labs_by_sedoo_copyright',
+    ));
+
 }
 add_action( 'customize_register', 'labs_by_sedoo_customize_color' );
 
@@ -192,13 +220,6 @@ function labs_by_sedoo_main_color(){
 
     return $code_color;
 }
-
-function labs_by_sedoo_main_color_secondary(){
-    $code_color = get_theme_mod( 'labs_by_sedoo_color_code_secondary' );
-
-    return $code_color;
-}
-
 
 /*****
 * 
