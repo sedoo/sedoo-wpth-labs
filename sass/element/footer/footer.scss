@@ -52,12 +52,12 @@ footer[id="colophon"]{
         &.menu {
             > li {
                 font-weight: bold;
-                font-size: 2rem;
+                font-size: $h3-size;
                 margin-bottom: 30px;
                 
                 li {
                     margin:10px 0;
-                    font-size: 1.5rem;
+                    font-size: $h2-size-mobile;
                     font-weight: normal;
                 }
 
