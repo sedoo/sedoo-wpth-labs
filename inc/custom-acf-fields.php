@@ -819,10 +819,10 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_5d6fb014d56e1',
-			'label' => 'Poste au sein du laboratoire',
+			'label' => 'Current position',
 			'name' => 'poste',
 			'type' => 'text',
-			'instructions' => 'Saisir le poste au sein du laboratoire',
+			'instructions' => 'Provide your current position / poste dans l\'institution',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -838,10 +838,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5d6fb025d56e2',
-			'label' => 'Photo auteur',
+			'label' => 'Photo',
 			'name' => 'photo_auteur',
 			'type' => 'image',
-			'instructions' => 'Téléverser la photo de l\'auteur',
+			'instructions' => 'Upload your photo',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
