@@ -52,7 +52,7 @@ jQuery(document).ready(function(){
     // Fixe le sommaire au scroll (jquery.sticky.js)
     jQuery(window).load(function(){
         var viewportWidth = jQuery(window).width();
-        console.log('viewport' +viewportWidth);
+     //   console.log('viewport' +viewportWidth);
         if (viewportWidth > 900) {
             jQuery('aside#stickyMenu').sticky({ topSpacing: 130 });
             jQuery('aside#stickyMenu').sticky({ bottomSpacing: footerHeight });
@@ -61,10 +61,10 @@ jQuery(document).ready(function(){
                 var scrollHeight = jQuery(document).height();
                 var scrollPosition = jQuery(window).height() + jQuery(window).scrollTop();
                 var asideHeight = jQuery('aside#stickyMenu').height();
-                console.log(asideHeight);
+              //  console.log(asideHeight);
                 if ((scrollHeight - scrollPosition) < footerHeight) {
                 // if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-                    console.log("(" +scrollHeight+ "-" +scrollPosition+ ")=" + (scrollHeight - scrollPosition ));
+                 //   console.log("(" +scrollHeight+ "-" +scrollPosition+ ")=" + (scrollHeight - scrollPosition ));
                     jQuery('aside#stickyMenu').css("bottom", footerHeight - (scrollHeight - scrollPosition));
                     jQuery('aside#stickyMenu').css("top", "initial");
                 }

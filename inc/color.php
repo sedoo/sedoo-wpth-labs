@@ -26,7 +26,7 @@ if(function_exists('get_field')) {
 		);
 		
 		////////////
-		// Then add the choosen colors to the colors array
+		// Then add the choosen colors to the colors array (custom color bloc)
 		/////
 		$couleurs_options_choose  = get_field('ajout_de_couleurs', 'option');
 		$numero_couleur = 1;
@@ -100,8 +100,6 @@ function sedoo_colorgeneration_theme_colors() {
 	wp_die();
 }
 
-
-
 ////////////////
 // get main color in js (used by users for regenerate their palette)
 /////////
@@ -114,7 +112,7 @@ function labs_by_sedoo_ajax_get_main_color(){
 
 
 ////////////////
-// hook before the form in theme informations to embed colorwheel.js
+// hook before the form in theme informations to embed colorwheel.js (calculate colors)
 /////////
 function acf_load_color_field_choices( $field ) {
 	wp_enqueue_script( 'labs-by-sedoo-load-colorwheel', get_template_directory_uri() . '/js/colorwheel.js' );
@@ -125,12 +123,20 @@ add_filter('acf/load_field/name=theme_palet_color', 'acf_load_color_field_choice
 
 
 ////////////////
-// get color for css in inc/color.php  (numcoor is the numero of the color (from 0 to 4))
+// get color for css in inc/color.php  (numcolor is the numero of the color (from 0 to 4))
 /////////
 function get_site_color($num_color) {
 	$color = get_option('options_theme_palet_color_'.$num_color.'_added_theme_color');
 	return $color;
 }
+////////
+// Get color added from user 
+/////
+function get_site_color_custom($num_color) {
+	$color = get_option('options_ajout_de_couleurs_'.$num_color.'_color');
+	return $color;
+}
+
 
 ////////////////
 // load color in css
@@ -138,6 +144,7 @@ function get_site_color($num_color) {
 function labs_sedoo_add_color_to_theme() {
 	?>
 		<style type="text/css">
+			/* MAIN COLORS ? SECONDARY ONE AND MESSAGES ONE */
 			.has-main-color-background-color {
 				background-color : <?php echo labs_by_sedoo_main_color(); ?>;
 			}
@@ -156,24 +163,6 @@ function labs_sedoo_add_color_to_theme() {
 			.has-red-background-color {
 				background-color : <?php echo get_field('red_color', 'option'); ?>;;
 			}
-	
-			.has-couleur-ajoutee-1-background-color {
-				background-color : <?php echo get_site_color(0); ?>;
-			}
-			.has-couleur-ajoutee-2-background-color {
-				background-color : <?php echo get_site_color(1); ?>;
-			}
-			.has-couleur-ajoutee-3-background-color {
-				background-color : <?php echo get_site_color(2); ?>;
-			}
-			.has-couleur-ajoutee-4-background-color {
-				background-color : <?php echo get_site_color(3); ?>;
-			}
-			.has-couleur-ajoutee-5-background-color {
-				background-color : <?php echo get_site_color(4); ?>;
-			}
-	
-
 			.has-main-color-color {
 				color : <?php echo labs_by_sedoo_main_color(); ?>;
 			}
@@ -193,6 +182,7 @@ function labs_sedoo_add_color_to_theme() {
 				color : <?php echo get_field('red_color', 'option'); ?>;
 			}
 
+			/* GENERATED COLORS BY THE PALETTE GENERATOR */
 			.has-couleur-ajoutee-1-color {
 				color : <?php echo get_site_color(0); ?>;
 			}
@@ -207,6 +197,54 @@ function labs_sedoo_add_color_to_theme() {
 			}
 			.has-couleur-ajoutee-5-color {
 				color : <?php echo get_site_color(4); ?>;
+			}
+			.has-couleur-ajoutee-1-background-color {
+				background-color : <?php echo get_site_color(0); ?>;
+			}
+			.has-couleur-ajoutee-2-background-color {
+				background-color : <?php echo get_site_color(1); ?>;
+			}
+			.has-couleur-ajoutee-3-background-color {
+				background-color : <?php echo get_site_color(2); ?>;
+			}
+			.has-couleur-ajoutee-4-background-color {
+				background-color : <?php echo get_site_color(3); ?>;
+			}
+			.has-couleur-ajoutee-5-background-color {
+				background-color : <?php echo get_site_color(4); ?>;
+			}
+
+			/* CUSTOM COLORS CHOOSED BY USER */
+			.has-couleur-selectionnee-1-color {
+				color : <?php echo get_site_color_custom(0); ?>;
+			}
+			.has-couleur-selectionnee-2-color {
+				color : <?php echo get_site_color_custom(1); ?>;
+			}
+			.has-couleur-selectionnee-3-color {
+				color : <?php echo get_site_color_custom(2); ?>;
+			}
+			.has-couleur-selectionnee-4-color {
+				color : <?php echo get_site_color_custom(3); ?>;
+			}
+			.has-couleur-selectionnee-5-color {
+				color : <?php echo get_site_color_custom(4); ?>;
+			}
+						
+			.has-couleur-selectionnee-1-background-color {
+				color : <?php echo get_site_color_custom(0); ?>;
+			}
+			.has-couleur-selectionnee-2-background-color {
+				color : <?php echo get_site_color_custom(1); ?>;
+			}
+			.has-couleur-selectionnee-3-background-color {
+				color : <?php echo get_site_color_custom(2); ?>;
+			}
+			.has-couleur-selectionnee-4-background-color {
+				color : <?php echo get_site_color_custom(3); ?>;
+			}
+			.has-couleur-selectionnee-5-background-color {
+				color : <?php echo get_site_color_custom(4); ?>;
 			}
 	
 		</style>
