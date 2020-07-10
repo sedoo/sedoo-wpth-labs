@@ -143,6 +143,12 @@ function labs_by_sedoo_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'labs_by_sedoo_scripts' );
 
+
+function labs_by_sedoo_palettecolor_script() {
+	wp_enqueue_script( 'labs-by-sedoo-palette', get_template_directory_uri() . '/js/palette.js', array(), '20151215', true );
+}
+add_action( 'admin_enqueue_scripts', 'labs_by_sedoo_palettecolor_script' );
+
 /**
  * Implement the Custom Header feature.
  */
@@ -192,7 +198,6 @@ require get_template_directory() . '/inc/custom-acf-taxo-fields.php';
 */
 require get_template_directory() . '/inc/extras.php';
 
-
 /**
  * Load Jetpack compatibility file.
  */
@@ -200,12 +205,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-/** shortcode for hide email in content */
-function shortcode_mail_sedoo($atts, $content){
-	
-    return $content.'<i class="hide">NO SPAM -- FILTER</i>@<i class="hide">NO SPAM -- FILTER</i>'.$atts['domain'];
-}
-add_shortcode('hmail','shortcode_mail_sedoo');
+// Add color to the gutenberg palet
+require get_template_directory() . '/inc/color.php';
 
-// Color wheel 
-//require get_template_directory() . '/inc/color.php';
