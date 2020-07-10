@@ -2,4 +2,6 @@ README.html
 .DS_Store
 .config
 .sass-cache
+.map
 style.css.map
+*.map
