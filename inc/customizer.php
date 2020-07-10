@@ -223,6 +223,12 @@ function labs_by_sedoo_main_color(){
     return $code_color;
 }
 
+function labs_by_sedoo_main_color_secondary(){
+    $code_color = get_theme_mod( 'labs_by_sedoo_color_code_secondary' );
+
+    return $code_color;
+}
+
 /*****
 * 
 * chargement du code couleur selectionné ou saisi

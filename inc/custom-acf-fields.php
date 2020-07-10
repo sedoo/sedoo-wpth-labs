@@ -555,6 +555,268 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
+
+/**
+ * COLOR PALETTE 
+ * */
+acf_add_local_field_group(array(
+	'key' => 'group_5efd951c0a8bf',
+	'title' => 'Complementary Colors',
+	'fields' => array(
+		array(
+			'key' => 'field_5efd9539079ff',
+			'label' => 'Add color to theme palette',
+			'name' => 'theme_palet_color',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'sedoo_color_repeater',
+			),
+			'collapsed' => '',
+			'min' => 5,
+			'max' => 5,
+			'layout' => 'table',
+			'button_label' => '',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5efd959407a00',
+					'label' => 'Couleur',
+					'name' => 'added_theme_color',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+				),
+			),
+		),
+		array(
+			'key' => 'field_5efeefd81e5d6',
+			'label' => 'Gestion de la palette',
+			'name' => 'mode_de_calcul',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'select_calcul_method',
+			),
+			'choices' => array(
+				'triade' => 'Triade',
+				'tetrade' => 'Tetrade',
+				'analogic' => 'Analogic',
+				'contrast' => 'Contraste',
+			),
+			'default_value' => array(
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5efedf57077bc',
+			'label' => '',
+			'name' => 'Regénérer',
+			'type' => 'button_group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => 'btn_regenerate_palette',
+			),
+			'choices' => array(
+				'regenerer' => 'Regenerer',
+			),
+			'allow_null' => 0,
+			'default_value' => '',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-theme-options',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+/**
+ * COLOR FOR MESSAGES 
+ * */
+acf_add_local_field_group(array(
+	'key' => 'group_5eff161ad0d6b',
+	'title' => 'Colors messages',
+	'fields' => array(
+		array(
+			'key' => 'field_5eff162073dc0',
+			'label' => 'Green color',
+			'name' => 'green_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '#4caf50',
+		),
+		array(
+			'key' => 'field_5eff164f73dc2',
+			'label' => 'Orange color',
+			'name' => 'orange_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '#ff9800',
+		),
+		array(
+			'key' => 'field_5eff163f73dc1',
+			'label' => 'Red color',
+			'name' => 'red_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '#f44336',
+		),
+		array(
+			'key' => 'field_5eff167973dc3',
+			'label' => 'Blue color',
+			'name' => 'blue_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '#2196f3',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-theme-options',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+/**
+ * COLOR CUSTOM 
+ * */
+acf_add_local_field_group(array(
+	'key' => 'group_5eff10015098f',
+	'title' => 'Custom colors',
+	'fields' => array(
+		array(
+			'key' => 'field_5eff103e6e8cc',
+			'label' => 'Custom color palette',
+			'name' => 'ajout_de_couleurs',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 5,
+			'layout' => 'table',
+			'button_label' => '',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5eff104c6e8cd',
+					'label' => 'Color',
+					'name' => 'sedoo_select_custom_color',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+				),
+			),
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-theme-options',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
 /**
  * FOOTER OPTIONS
  */
