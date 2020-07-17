@@ -56,7 +56,7 @@ if(function_exists('get_field')) {
 		////////////
 		// Loading my color array to the gutenberg palette
 		/////
-	//	add_theme_support( 'editor-color-palette', $couleurs );
+		add_theme_support( 'editor-color-palette', $couleurs );
 	}
 
 	add_action( 'after_setup_theme', 'sedoo_colorselect_and_palette_creation' );
