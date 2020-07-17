@@ -680,7 +680,7 @@ acf_add_local_field_group(array(
 			'label' => 'Green color',
 			'name' => 'green_color',
 			'type' => 'color_picker',
-			'instructions' => '',
+			'instructions' => 'Used for success messages.',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -695,7 +695,7 @@ acf_add_local_field_group(array(
 			'label' => 'Orange color',
 			'name' => 'orange_color',
 			'type' => 'color_picker',
-			'instructions' => '',
+			'instructions' => 'Used for prevention messages.',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -710,7 +710,7 @@ acf_add_local_field_group(array(
 			'label' => 'Red color',
 			'name' => 'red_color',
 			'type' => 'color_picker',
-			'instructions' => '',
+			'instructions' => 'Used for warning messages.',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -764,10 +764,10 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_5eff103e6e8cc',
-			'label' => 'Custom color palette',
+			'label' => 'Customs colors',
 			'name' => 'ajout_de_couleurs',
 			'type' => 'repeater',
-			'instructions' => '',
+			'instructions' => 'Add here customs colors to use when editing content.',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -817,6 +817,88 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
+
+/** 
+ * HEADER OPTIONS
+ */
+
+
+acf_add_local_field_group(array(
+	'key' => 'group_5f11a0f3a031c',
+	'title' => 'Header',
+	'fields' => array(
+		array(
+			'key' => 'field_5f11a0f9c01a3',
+			'label' => 'Mettre une image en avant par défaut ?',
+			'name' => 'sedoo_img_defaut_yesno',
+			'type' => 'true_false',
+			'instructions' => 'Si une image par défaut est activée, toutes les pages seront dotées d\'une image par défaut servant de bandeau en haut.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
+			'key' => 'field_5f11a17dc01a4',
+			'label' => 'Choix de l\'image',
+			'name' => 'sedoo_labs_default_cover_url',
+			'type' => 'image',
+			'instructions' => 'Format 1600*462 optimal.',
+			'required' => 1,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5f11a0f9c01a3',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'cover',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-theme-options',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+
 /**
  * FOOTER OPTIONS
  */
@@ -839,6 +921,81 @@ acf_add_local_field_group(array(
 			),
 			'placement' => 'top',
 			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5f1197056d8fc',
+			'label' => 'Replace footer logo by another image ?',
+			'name' => 'sedoo_labs_footer_replace_logo',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
+			'key' => 'field_5f11972f6d8fd',
+			'label' => 'Image',
+			'name' => 'sedoo_labs_image_in_footer',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5f1197056d8fc',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'medium',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+		array(
+			'key' => 'field_5f1197496d8fe',
+			'label' => 'Url du lien',
+			'name' => 'sedoo_labs_footer_url_image',
+			'type' => 'url',
+			'instructions' => 'l\'image n\'est pas clicable si aucune url est renseignée',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5f1197056d8fc',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
 		),
 		array(
 			'key' => 'field_5ebaa93e884bd',
