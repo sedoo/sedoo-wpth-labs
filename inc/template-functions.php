@@ -236,7 +236,7 @@ function sedoo_wpth_labs_get_queried_content($tax_layout, $args) {
 function sedoo_wpth_labs_display_sommaire($titre) {
     ?>
     <aside id="stickyMenu">
-        <p><?php echo $titre; ?></p>
+        <p><?php echo __('Summary', 'sedoo-wpth-labs'); ?></p>
 		<nav role="sommaire">
 			<ul id="tocList">
 				
