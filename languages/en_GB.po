@@ -91,6 +91,10 @@ msgstr ""
 msgid "Speaker"
 msgstr ""
 
+#: inc/template-function.php:239
+msgid "Summary"
+msgstr ""
+
 #: template-parts/single-author.php:15 template-parts/single-author.php:70
 msgid "Author"
 msgstr ""
