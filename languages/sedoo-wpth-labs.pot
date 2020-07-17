@@ -91,6 +91,10 @@ msgstr ""
 msgid "Events"
 msgstr ""
 
+#: inc/template-function.php:239
+msgid "Summary"
+msgstr "Sommaire"
+
 #: template-parts/content.php:43 template-parts/content-grid-noimage.php:39
 #: template-parts/content-grid.php:14
 msgid "Read more"
