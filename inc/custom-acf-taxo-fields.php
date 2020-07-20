@@ -67,6 +67,7 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
+
     acf_add_local_field_group(array(
         'key' => 'group_5e7b35476ee26',
         'title' => 'Choose layout for display your content',
@@ -117,6 +118,51 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => '',
     ));
     
+        
+    if(is_plugin_active( 'sedoo-wppl-portfolio/sedoo-wppl-portfolio.php' )) {
+        acf_add_local_field_group(array(
+            'key' => 'group_5f1585e059f9a',
+            'title' => 'Affichage en portfolio',
+            'fields' => array(
+                array(
+                    'key' => 'field_5f1585e77d2cf',
+                    'label' => 'Affichage en portfolio',
+                    'name' => 'sedoo_affichage_en_portfolio',
+                    'type' => 'true_false',
+                    'instructions' => 'Si sélectionné, supplantera les autre choix d\'affichage.',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'message' => '',
+                    'default_value' => 0,
+                    'ui' => 1,
+                    'ui_on_text' => '',
+                    'ui_off_text' => '',
+                ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'taxonomy',
+                        'operator' => '==',
+                        'value' => 'all',
+                    ),
+                ),
+            ),
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+            'active' => true,
+            'description' => '',
+        ));
+    }
     
     endif;
 ?>

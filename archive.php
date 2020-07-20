@@ -14,8 +14,8 @@ $term = get_queried_object();
 $code_color=labs_by_sedoo_main_color();
 $tax_layout = get_field('tax_layout', $term);
 $cover = get_field( 'tax_image', $term);
-$no_result_text = get_field('no_results_text_tax');			
-
+$no_result_text = get_field('no_results_text_tax');	
+$affichage_portfolio = get_field('sedoo_affichage_en_portfolio', $term);
 ?>
 
 	<div id="content-area" class="wrapper archives">
@@ -42,12 +42,31 @@ $no_result_text = get_field('no_results_text_tax');
 			}
 		?>
 		<?php
-            /**
-             * WP_Query pour lister tous les types de posts
-             */
-			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-            /* sedoo_wpth_labs_get_queried_content_arguments(post_types, taxonomy, slug, display, paged) */
-			sedoo_wpth_labs_get_queried_content_arguments(array('post', 'page'), 'category', $term->slug, $tax_layout, $paged);
+			if($affichage_portfolio != true) { // if portfolio then display it, if not just do the normal script
+				/**
+				 * WP_Query pour lister tous les types de posts
+				 */
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				/* sedoo_wpth_labs_get_queried_content_arguments(post_types, taxonomy, slug, display, paged) */
+				sedoo_wpth_labs_get_queried_content_arguments(array('post', 'page'), 'category', $term->slug, $tax_layout, $paged);
+			} else {
+				?>
+				<script>
+					ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+				</script>
+				<style>
+					.sedoo_port_action_btn li:hover {
+						background-color: <?php echo $code_color; ?> !important;
+					}
+
+					.sedoo_port_action_btn li.active {
+						background-color: <?php echo $code_color; ?> !important;
+					}
+				</style>
+				<?php 
+				archive_do_portfolio_display($term);
+			}
+        
 		?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
