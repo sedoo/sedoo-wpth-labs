@@ -224,7 +224,6 @@ function labs_by_sedoo_main_color(){
 }
 
 function labs_by_sedoo_main_color_secondary(){
-    var_dump(get_theme_mod( 'labs_by_sedoo_color_code_secondary' ));
     $code_color = get_theme_mod( 'labs_by_sedoo_color_code_secondary' );
 
     return $code_color;
@@ -381,7 +380,6 @@ function labs_by_sedoo_color_style() {
             }
          </style>
     <?php
-    var_dump($code_color_sec);
 }
 add_action( 'wp_head', 'labs_by_sedoo_color_style');
 
