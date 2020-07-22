@@ -245,7 +245,7 @@ function labs_by_sedoo_color_style() {
 	// }
 
     $code_color=labs_by_sedoo_main_color();
-
+    $code_color_sec=labs_by_sedoo_main_color_secondary();
 	$rgb_color = hex2rgb($code_color); // array 0 => r , 1 => g, 2 => b
     
 	?>
@@ -342,6 +342,37 @@ function labs_by_sedoo_color_style() {
              }
             
 
+            /* AGENDA */
+            .tribe-common .tribe-common-c-btn, .tribe-common a.tribe-common-c-btn, .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-view-selector--tabs .tribe-events-c-view-selector__list-item--active .tribe-events-c-view-selector__list-item-link::after, .tribe-events .datepicker .day.active, .tribe-events .datepicker .day.active.focused, .tribe-events .datepicker .day.active:focus,
+            .tribe-events .datepicker .day.active:hover,
+            .tribe-events .datepicker .month.active,
+            .tribe-events .datepicker .month.active.focused,
+            .tribe-events .datepicker .month.active:focus,
+            .tribe-events .datepicker .month.active:hover,
+            .tribe-events .datepicker .year.active,
+            .tribe-events .datepicker .year.active.focused,
+            .tribe-events .datepicker .year.active:focus,
+            .tribe-events .datepicker .year.active:hover,
+            .tribe-events .tribe-events-c-ical__link:active,
+            .tribe-events .tribe-events-c-ical__link:focus,
+            .tribe-events .tribe-events-c-ical__link:hover,
+            .tribe-events .tribe-events-c-view-selector__button::before {
+                background : <?php echo $code_color;?>;
+            }
+            
+            .tribe-common .tribe-common-c-btn:active, .tribe-common a.tribe-common-c-btn:active,
+            .tribe-common .tribe-common-c-btn:focus, .tribe-common .tribe-common-c-btn:hover, .tribe-common a.tribe-common-c-btn:focus, .tribe-common a.tribe-common-c-btn:hover {
+                background:<?php echo $code_color_sec; ?>;
+            }
+
+            .tribe-events .tribe-events-c-ical__link {
+                color:<?php echo $code_color;?>;
+            }
+            @keyframes a {
+                50% {
+                    background-color:<?php echo $code_color;?>
+                }
+            }
          </style>
     <?php
 
