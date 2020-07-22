@@ -129,7 +129,6 @@ function labs_by_sedoo_customize_color( $wp_customize )
         'settings'   => 'labs_by_sedoo_color_code',
     )));
 
-
     //  =======================================
     //  = Text Input text color code     =
     //  =======================================
@@ -138,11 +137,17 @@ function labs_by_sedoo_customize_color( $wp_customize )
         'capability'     => 'edit_theme_options',
         'type'           => 'theme_mod',
     ));
-    $wp_customize->add_setting('labs_by_sedoo_text_color_code_secondary', array(
+    $wp_customize->add_setting('labs_by_sedoo_color_code_secondary', array(
         'default'        => '#FFF',
         'capability'     => 'edit_theme_options',
         'type'           => 'theme_mod',
     ));
+
+	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'labs_by_sedoo_color_code_secondary', array(
+        'label'      => __('Couleur secondaire du thème', 'labs_by_sedoo'),
+        'section'    => 'labs_by_sedoo_color_scheme',
+        'settings'   => 'labs_by_sedoo_color_code_secondary',
+    )));
 
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'labs_by_sedoo_text_color_code', array(
         'label'      => __('Couleur des textes sur les blocks utilisant la couleur dominante', 'labs_by_sedoo'),
@@ -150,11 +155,6 @@ function labs_by_sedoo_customize_color( $wp_customize )
         'settings'   => 'labs_by_sedoo_text_color_code',
     )) );
 
-	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'labs_by_sedoo_text_color_code_secondary', array(
-        'label'      => __('Couleur secondaire du thème', 'labs_by_sedoo'),
-        'section'    => 'labs_by_sedoo_color_scheme',
-        'settings'   => 'labs_by_sedoo_text_color_code_secondary',
-    )));
 
 
     //  =======================================
@@ -224,6 +224,7 @@ function labs_by_sedoo_main_color(){
 }
 
 function labs_by_sedoo_main_color_secondary(){
+    var_dump(get_theme_mod( 'labs_by_sedoo_color_code_secondary' ));
     $code_color = get_theme_mod( 'labs_by_sedoo_color_code_secondary' );
 
     return $code_color;
@@ -365,8 +366,13 @@ function labs_by_sedoo_color_style() {
                 background:<?php echo $code_color_sec; ?>;
             }
 
+            .tribe-events .tribe-events-c-ical__link::before {
+                background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M6 1v10m5-5H1' fill='none' fill-rule='evenodd' stroke='rgb(<?php echo $rgb_color[0].",".$rgb_color[1].",".$rgb_color[2].")" ?>' stroke-linecap='square' stroke-width='1.5'/%3E%3C/svg%3E");
+            }
+
             .tribe-events .tribe-events-c-ical__link {
                 color:<?php echo $code_color;?>;
+                border-color: <?php echo $code_color;?>;
             }
             @keyframes a {
                 50% {
@@ -375,7 +381,7 @@ function labs_by_sedoo_color_style() {
             }
          </style>
     <?php
-
+    var_dump($code_color_sec);
 }
 add_action( 'wp_head', 'labs_by_sedoo_color_style');
 
