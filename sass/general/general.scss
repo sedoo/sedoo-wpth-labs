@@ -427,3 +427,24 @@ small{
         color: $light-full;
     }
 }
+
+
+.page-template-homepage_second #cover{
+    top: 0;
+    left: 0;
+    padding-top: 10%;
+    margin-top: -90px;
+}
+
+.page-template-homepage_second #primary-menu>li a {
+    color: white !important;
+}
+.page-template-homepage_second #page {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.page-template-homepage_second .site-header {
+    background:rgba(0, 0, 0, 0.2);
+}
