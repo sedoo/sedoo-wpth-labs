@@ -169,7 +169,8 @@ body a.btn{
 /* TABLE */
 .wp-block-table, table{
     th{
-        background: $dark;
+        font-weight: bold;
+        border-bottom: 2px solid black;
         color: $light-full;
         padding: 20px 10px;
     }
