@@ -15,16 +15,15 @@ if (get_field('footer_background_svg', 'option')) {
     $footerStyle .= "background-image:url(".get_field('footer_background_svg', 'option').");";
 } 
 if (get_field('footer_color', 'option')) { 
-    $footerStyle .="background-color:".get_field('footer_color', 'option').";";
+    $footerStyle .="background:".get_field('footer_color', 'option').";";
 }
 $footerStyle .= "\"";
-
 ?>
-
 	</div><!-- #content -->  
     <footer id="colophon" class="site-footer" <?php echo $footerStyle;?> >
     <style>
-   
+
+
    footer[id="colophon"] * {
         color:
         <?php
