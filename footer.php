@@ -96,15 +96,19 @@ $footerStyle .= "\"";
                 <?php endif; ?>
 
                 <div class="infos-pratiques">
+
                     <?php if( have_rows('location_repeater', 'option') ): ?>
-                    <?php while( have_rows('location_repeater', 'option')): the_row();
-                        $nom_labo = get_sub_field('nom_laboratoire', 'option');
-                        $adresse_labo = get_sub_field('adresse', 'option');
-                        $contact_labo = get_sub_field('contact_laboratoire', 'option');
-                        $tel_contact = get_sub_field('telephone_contact', 'option');
-                        $fax_contact = get_sub_field('fax_contact', 'option');
-                        $mail_contact = get_sub_field('mail_contact', 'option');
-                        $map = get_sub_field('map', 'option');
+                    <?php 
+                    
+                    
+                    $adresses = get_field('location_repeater', 'option');
+                        $nom_labo = $adresses[0]['nom_laboratoire'];
+                        $adresse_labo = $adresses[0]['adresse'];
+                        $contact_labo = $adresses[0]['contact_laboratoire'];
+                        $tel_contact = $adresses[0]['telephone_contact'];
+                        $fax_contact = $adresses[0]['fax_contact'];
+                        $mail_contact = $adresses[0]['mail_contact'];
+                        $map = $adresses[0]['map'];
                     ?>
                     <div class="row-infos">
                         <div>
@@ -127,8 +131,15 @@ $footerStyle .= "\"";
                             }
                             ?>
                         </div>
-                    </div>
-                    <?php endwhile; ?>
+                    </div>                
+                    <?php 
+                    // if repeater have multiple row or not
+                    
+                    if(count(get_field('location_repeater', 'option') ) > 1) {
+                        echo '<a class="btn_footer_local" href="'.get_field('url_page_access', 'option').'"> Toutes les adresses </a>';
+                    }
+
+                    ?>
                     <?php endif; ?>
                 </div>
                 <?php 
