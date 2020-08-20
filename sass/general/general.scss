@@ -415,6 +415,12 @@ small{
 //     }
 // }
 
+
+ul li ol {
+    margin-top: 15px;
+    list-style: square;
+}
+
 /*** HELPERS  ***/
 .hide {
     display: none;
@@ -428,7 +434,11 @@ small{
     }
 }
 
+.fullwidthnav {
+    margin-top: 20px;;
+}
 
+/* template with big image */
 .page-template-homepage_second #cover{
     top: 0;
     left: 0;
@@ -447,4 +457,13 @@ small{
 
 .page-template-homepage_second .site-header {
     background:rgba(0, 0, 0, 0.2);
+}
+
+/* end template with big image */
+
+
+.btn_footer_local {
+    padding: 5px 15px;
+    border-radius: 2px;
+    text-decoration: none !important;
 }
