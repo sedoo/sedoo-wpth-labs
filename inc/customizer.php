@@ -306,7 +306,7 @@ function labs_by_sedoo_color_style() {
             .wrapper-layout .social-list a:hover::before, 
             .cn-button  , .btn_footer_local       
             {
-                background: <?php echo $code_color;?> !important;
+                background: <?php echo $code_color;?>;
 			}
             
             .social-list li a:hover::before,
