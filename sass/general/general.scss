@@ -461,9 +461,28 @@ ul li ol {
 
 /* end template with big image */
 
-
+// button in footer if more than 1 adress 
 .btn_footer_local {
     padding: 5px 15px;
     border-radius: 2px;
     text-decoration: none !important;
 }
+// end button in footer if more than 1 adress 
+
+// nav header (top , over the main menu */
+[id="ul-top-menu"] {
+    display: flex;
+}
+[id="ul-top-menu"] li {
+    margin-right:20px;
+}
+[id="ul-top-menu"] li a {
+    cursor: pointer;
+}
+
+@media (max-width:1024px) {
+    #top-header {
+        display: none;
+    }
+}
+// end nav header (top , over the main menu */

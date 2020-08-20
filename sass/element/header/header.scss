@@ -22,7 +22,8 @@ header[id="masthead"]{
         .nav-container{
             @include display-flex;
             @include justify-content-end;
-            @include align-items-center;
+            @include align-items-end;
+            flex-direction: column;
         }
     }
 }

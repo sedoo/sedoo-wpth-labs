@@ -44,6 +44,7 @@ if ( ! function_exists( 'labs_by_sedoo_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
+            'top-menu' => esc_html__( 'top-menu', 'sedoo-wpth-labs' ),
 			'primary-menu' => esc_html__( 'primary-menu', 'sedoo-wpth-labs' ),
 			// 'burger-menu' => esc_html__( 'burger-menu', 'sedoo-wpth-labs' ),
 			'footer-menu-1' => esc_html__( 'footer-menu-1', 'sedoo-wpth-labs' ),

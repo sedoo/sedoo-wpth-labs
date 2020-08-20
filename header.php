@@ -25,13 +25,25 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'labs-by-sedoo' ); ?></a>
-
+    
 	<header id="masthead" class="site-header">
         <div class="wrapper">
             <div class="site-branding">
                 <?php the_custom_logo(); ?>
             </div><!-- .site-branding -->
             <div class="nav-container">
+            <?php if (has_nav_menu('top-menu')) { 
+                ?>
+                    <nav id="top-header">
+                    <?php
+                        wp_nav_menu( array(
+                            'theme_location' => 'top-menu',
+                            'menu_id'        => 'ul-top-menu',
+                        ) );
+                    ?>
+                    </nav>
+                <?php
+                } ?>
                 <?php if(wp_is_mobile()): ?>
                 <nav id="primary-navigation" class="main-navigation">
                     <?php 
