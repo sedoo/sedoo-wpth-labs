@@ -486,3 +486,15 @@ ul li ol {
     }
 }
 // end nav header (top , over the main menu */
+
+/* fix for CES summary */
+.single-ces {
+    #tocList {
+        li, ul {
+            list-style-type: none;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+}
