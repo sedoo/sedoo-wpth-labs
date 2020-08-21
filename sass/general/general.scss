@@ -498,3 +498,9 @@ ul li ol {
         }
     }
 }
+
+/* fix for components (css conflics */
+.sedoo-component table tr ,
+.sedoo-component table thead {
+    background: white;
+}
