@@ -91,6 +91,21 @@ if ( ! function_exists( 'labs_by_sedoo_setup' ) ) :
 		 *
 		 */
 		add_theme_support( 'align-wide' );
+
+		/** ****************************************************************
+		* CUSTOM UNITS   rem / vh ...
+		* https://make.wordpress.org/core/2020/07/27/new-block-tools-on-wordpress-5-5/
+		*/
+
+		// This will disable all custom units
+		add_theme_support( 'custom-units' );
+
+		/** ****************************************************************
+		* CUSTOM Line height...
+		* https://make.wordpress.org/core/2020/07/27/new-block-tools-on-wordpress-5-5/
+		*/
+		// add_theme_support( 'custom-line-height' );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'labs_by_sedoo_setup' );

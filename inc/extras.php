@@ -17,4 +17,4 @@ function sedoo_labs_shortcode_mail_sedoo($atts, $content){
 add_shortcode('hmail','sedoo_labs_shortcode_mail_sedoo');
 
 
-  ?>
+?>
