@@ -198,22 +198,32 @@ function labs_sedoo_add_color_to_theme() {
 			.has-couleur-ajoutee-5-color {
 				color : <?php echo get_site_color(4); ?>;
 			}
-			.has-couleur-ajoutee-1-background-color {
+			.has-couleur-ajoutee-1-background-color,
+			.wp-block-cover-image.has-background-dim.has-couleur-ajoutee-1-background-color::before, 
+			.wp-block-cover.has-background-dim.has-couleur-ajoutee-1-background-color::before {
 				background-color : <?php echo get_site_color(0); ?>;
 			}
-			.has-couleur-ajoutee-2-background-color {
+			.has-couleur-ajoutee-2-background-color,
+			.wp-block-cover-image.has-background-dim.has-couleur-ajoutee-2-background-color::before, 
+			.wp-block-cover.has-background-dim.has-couleur-ajoutee-2-background-color::before {
 				background-color : <?php echo get_site_color(1); ?>;
 			}
-			.has-couleur-ajoutee-3-background-color {
+			.has-couleur-ajoutee-3-background-color,
+			.wp-block-cover-image.has-background-dim.has-couleur-ajoutee-3-background-color::before, 
+			.wp-block-cover.has-background-dim.has-couleur-ajoutee-3-background-color::before {
 				background-color : <?php echo get_site_color(2); ?>;
 			}
-			.has-couleur-ajoutee-4-background-color {
+			.has-couleur-ajoutee-4-background-color,
+			.wp-block-cover-image.has-background-dim.has-couleur-ajoutee-4-background-color::before, 
+			.wp-block-cover.has-background-dim.has-couleur-ajoutee-4-background-color::before {
 				background-color : <?php echo get_site_color(3); ?>;
 			}
-			.has-couleur-ajoutee-5-background-color {
+			.has-couleur-ajoutee-5-background-color,
+			.wp-block-cover-image.has-background-dim.has-couleur-ajoutee-5-background-color::before, 
+			.wp-block-cover.has-background-dim.has-couleur-ajoutee-5-background-color::before {
 				background-color : <?php echo get_site_color(4); ?>;
 			}
-
+	
 			/* CUSTOM COLORS CHOOSED BY USER */
 			.has-couleur-selectionnee-1-color {
 				color : <?php echo get_site_color_custom(0); ?>;
@@ -232,19 +242,19 @@ function labs_sedoo_add_color_to_theme() {
 			}
 						
 			.has-couleur-selectionnee-1-background-color {
-				color : <?php echo get_site_color_custom(0); ?>;
+				background-color : <?php echo get_site_color_custom(0); ?>;
 			}
 			.has-couleur-selectionnee-2-background-color {
-				color : <?php echo get_site_color_custom(1); ?>;
+				background-color : <?php echo get_site_color_custom(1); ?>;
 			}
 			.has-couleur-selectionnee-3-background-color {
-				color : <?php echo get_site_color_custom(2); ?>;
+				background-color : <?php echo get_site_color_custom(2); ?>;
 			}
 			.has-couleur-selectionnee-4-background-color {
-				color : <?php echo get_site_color_custom(3); ?>;
+				background-color : <?php echo get_site_color_custom(3); ?>;
 			}
 			.has-couleur-selectionnee-5-background-color {
-				color : <?php echo get_site_color_custom(4); ?>;
+				background-color : <?php echo get_site_color_custom(4); ?>;
 			}
 	
 		</style>
