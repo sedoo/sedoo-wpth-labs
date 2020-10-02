@@ -30,14 +30,7 @@ $event_id = get_the_ID();
 
 	<!-- Notices -->
 	<?php tribe_the_notices() ?>
-	<div class="event-categories custom">
-		<?php
-		$terms = get_the_terms( get_the_id(), 'tribe_events_cat');
-		foreach ($terms as $term) {
-			echo "<a href='".get_term_link($term->term_id)."' class=\"tag-cloud-link ".$term->slug."\">".$term->name."</a>";
-		}
-		?>
-	</div>
+	
 	<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' ); ?>
 
 	<div class="tribe-events-schedule tribe-clearfix">
