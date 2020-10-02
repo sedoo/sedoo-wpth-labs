@@ -7,22 +7,27 @@
  *
  * See more documentation about our Blocks Editor templating system.
  *
- * @link {INSERT_ARTCILE_LINK_HERE}
+ * @link http://m.tri.be/1aiy
  *
  * @version 4.7.2
  *
  */
 ?>
-
-<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' );
+<?php
+if ( has_post_thumbnail() ) {
 ?>
-<div class="event-categories custom tag">
+	<header id="cover">
+		<?php the_post_thumbnail('cover'); ?>
+	</header>
+<?php 
+}
+?>
+<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' );?>
+<div class="tag">
 <?php
 $terms = get_the_terms( get_the_id(), 'tribe_events_cat');
-if (!empty($terms)) {
-    foreach ($terms as $term) {
-        echo "<span class=\"tag-cloud-link ".$term->slug."\">".$term->name."</span>";
-    }
+foreach ($terms as $term) {
+    echo "<a href='".get_term_link($term->term_id)."' class=\"".$term->slug."\">".$term->name."</a>";
 }
 ?>
 </div>

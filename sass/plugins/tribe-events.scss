@@ -35,8 +35,19 @@
     margin-top: 20px;
 }
 
-.datepicker-days th {
-    background-color: #eee;
+.tribe-events-calendar-list__event-datetime-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tribe-events-single {
+    header[id="cover"] {
+        margin-bottom:20px;
+    }
+    .tag {
+        border-bottom: 1px solid #CCC;
+        padding-bottom: 10px;
+    }
 }
 
 @media (max-width:768px) {
