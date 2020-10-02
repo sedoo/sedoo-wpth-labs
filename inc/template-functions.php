@@ -259,3 +259,14 @@ function sedoo_wpth_labs_test_if_post_thumbnail_and_display() {
 function sedoo_wpth_labs_display_title_on_top_on_mobile() {
     echo '<h1 class="onTop">'.get_the_title().'</h1>';
 }
+
+// function for remove seconds in date display (the events calendar, templates in tribe/events/v2/...)
+function removeFromEnd($string, $stringToRemove) {
+    $stringToRemoveLen = strlen($stringToRemove);
+    $stringLen = strlen($string);
+   
+    $pos = $stringLen - $stringToRemoveLen;
+    $out = substr($string, 0, $pos);
+
+    return $out;
+}

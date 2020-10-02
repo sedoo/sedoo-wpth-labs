@@ -246,11 +246,22 @@ function labs_by_sedoo_color_style() {
 
     $code_color=labs_by_sedoo_main_color();
     $code_color_sec=labs_by_sedoo_main_color_secondary();
-	$rgb_color = hex2rgb($code_color); // array 0 => r , 1 => g, 2 => b
+    $rgb_color = hex2rgb($code_color); // array 0 => r , 1 => g, 2 => b
+    
+    if (!get_theme_mod('labs_by_sedoo_text_color_code')) {
+        $hover_text_color="#FFFFFF";
+    } else {
+        $hover_text_color=get_theme_mod('labs_by_sedoo_text_color_code');
+    }
     
 	?>
          <style type="text/css">
              
+             :root {
+                --theme-color:<?php echo $code_color;?>;
+                --hover-text-color:<?php echo $hover_text_color;?>;
+            }
+
             .post:hover .group-content .entry-content h2,
             ul[id="shortcuts"] li:hover button,
             ul[id="shortcuts"] li:hover a,

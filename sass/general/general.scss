@@ -269,7 +269,7 @@ small{
     font-family: $main-font-family;
     font-style: normal;
 }
-.page, .single{
+.page, .single, .tribe-events-calendar-list, .tribe-events-calendar-latest-past{
     .tag {
         margin: 0;
 
@@ -289,6 +289,11 @@ small{
                 display: inline-block;
             }
         }
+
+        a:hover {
+            background-color: var(--theme-color);
+            color:var(--hover-text-color);
+        }
     }
 }
 
@@ -296,8 +301,7 @@ small{
     background-color: transparent !important;
 }
 
-[data-role="list-platformTag"], 
-.tribe-events-single{
+[data-role="list-platformTag"]{
     .tag{
         // margin-bottom: 40px;
         
