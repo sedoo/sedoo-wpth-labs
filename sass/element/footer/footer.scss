@@ -186,6 +186,14 @@ footer[id="colophon"]{
             &[href*="linkedin"]::after {
                 background-image: url("images/logo_linkedin.svg");
             }
+
+            &[href*="vimeo"]::after {
+                background-image: url("images/logo_vimeo.svg");
+            }
+
+            &[href*="researchgate"]::after {
+                background-image: url("images/logo_researchgate.svg");
+            }
             
             &:hover{
                 background:none;

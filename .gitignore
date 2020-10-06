@@ -5,3 +5,5 @@ README.html
 .map
 style.css.map
 *.map
+*.po~
+*.pot~

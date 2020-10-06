@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Labs by Sedoo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-15 15:15+0000\n"
-"PO-Revision-Date: 2020-07-17 11:10+0200\n"
+"POT-Creation-Date: 2020-10-06 15:31+0000\n"
+"PO-Revision-Date: 2020-10-06 15:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -11,26 +11,30 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
-"X-Loco-Version: 2.3.3; wp-5.4.2\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.4.3; wp-5.5.1"
 
 #: functions.php:47
+msgid "top-menu"
+msgstr ""
+
+#: functions.php:48
 msgid "primary-menu"
 msgstr ""
 
-#: functions.php:49
+#: functions.php:50
 msgid "footer-menu-1"
 msgstr ""
 
-#: functions.php:50
+#: functions.php:51
 msgid "footer-menu-2"
 msgstr ""
 
-#: functions.php:51
+#: functions.php:52
 msgid "footer-menu-3"
 msgstr ""
 
-#: functions.php:52
+#: functions.php:53
 msgid "mentions-menu"
 msgstr ""
 
@@ -38,17 +42,25 @@ msgstr ""
 msgid "Page entière"
 msgstr ""
 
-#: header.php:56 header.php:74
+#. Name of the template
+msgid "Homepage image"
+msgstr ""
+
+#: header.php:68 header.php:86 header-image.php:68 header-image.php:86
 msgid "Menu"
 msgstr ""
 
-#: footer.php:117
+#: footer.php:120
 msgid "Tel"
 msgstr ""
 
-#: footer.php:119
+#: footer.php:122
 msgid "Fax"
-msgstr ""
+msgstr "Fax"
+
+#: footer.php:218
+msgid "Data service OMP"
+msgstr "Service de Données OMP"
 
 #: single.php:61
 msgid "Sources"
@@ -62,6 +74,10 @@ msgstr "Plus d'actualités"
 msgid "Homepage"
 msgstr "Page d’Accueil"
 
+#: inc/template-functions.php:239
+msgid "Summary"
+msgstr "Sommaire"
+
 #: template-parts/nav-box.php:15
 msgid "Previous post"
 msgstr "Article précédent"
@@ -69,6 +85,13 @@ msgstr "Article précédent"
 #: template-parts/nav-box.php:40
 msgid "Next post"
 msgstr "Article suivant"
+
+#: template-parts/content-portfolio-grid.php:6
+#: template-parts/content-portfolio-grid.php:43 template-parts/content.php:43
+#: template-parts/content-grid-noimage.php:39
+#: template-parts/content-grid.php:14
+msgid "Read more"
+msgstr "Lire la suite"
 
 #: template-parts/search-form.php:10 template-parts/shortcut.php:91
 msgid "Search"
@@ -89,15 +112,6 @@ msgstr "Annuaire"
 #: template-parts/shortcut.php:64
 msgid "Events"
 msgstr "Événements"
-
-#: inc/template-function.php:239
-msgid "Summary"
-msgstr "Sommaire"
-
-#: template-parts/content.php:43 template-parts/content-grid-noimage.php:39
-#: template-parts/content-grid.php:14
-msgid "Read more"
-msgstr "Lire la suite"
 
 #: template-parts/single-author.php:13 template-parts/single-author.php:68
 msgid "Speaker"

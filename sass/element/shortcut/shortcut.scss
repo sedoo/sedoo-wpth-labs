@@ -5,7 +5,7 @@ ul[id="shortcuts"]{
     max-width: 200px;
     width: 100%;
     @include transform(translateX(150px));
-    z-index: 100;
+    z-index: 1000;
     
     > li{
         padding: 10px;
