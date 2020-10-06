@@ -215,7 +215,7 @@ $footerStyle .= "\"";
                     if (get_field('footer_show_copyright', 'option')) {
                         ?>
                         <p>
-                        <?php echo get_field('footer_copyright_text', 'option');?> - <a href="https://www.sedoo.fr" title="Visit Sedoo website">SEDOO (<?php echo __('Service de données OMP', 'sedoo-wpth-labs');?>)</a>
+                        <?php echo get_field('footer_copyright_text', 'option');?> - <a href="https://www.sedoo.fr" title="Visit Sedoo website">SEDOO (<?php echo __('Data service OMP', 'sedoo-wpth-labs');?>)</a>
                         </p>
                     <?php
                     }
