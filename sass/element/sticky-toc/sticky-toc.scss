@@ -15,9 +15,12 @@
 }
 
 aside[id="stickyMenu"]{
-    position: relative;
+    position: sticky;
+    height: calc(100vh - 150px);
+    top:120px;
     z-index: 500 !important;
     width: 250px;
+    overflow-y: scroll;
     background: rgba(255,255,255,.95);
     // @include display-flex;
     // @include flex-column;
@@ -41,7 +44,7 @@ aside[id="stickyMenu"]{
                 padding: 10px 0;
                 display: block;
                 margin-bottom: 10px;
-                overflow: hidden;
+                // overflow: hidden;
             }
 
 
