@@ -8,6 +8,25 @@
  *
  * @package labs_by_Sedoo
  */
+// check Main menu layout
+// choice : classic (default), flyout
+if (get_field('sedoo_labs_main_menu_layout', 'option')) {
+    $mainMenuLayout = get_field('sedoo_labs_main_menu_layout', 'option'); //field_5f6da0eb5ac37
+} else {
+    $mainMenuLayout = "classicMenu";
+}
+
+// switch ($mainMenuLayout) {
+//     case "classic":
+//         $mainMenuClass = "menu".$mainMenuLayout;
+//         break;
+//     case "flyout":
+//         $mainMenuClass = "menu".$mainMenuLayout;
+//         break;
+    // case 2:
+    //     echo "i égal 2";
+    //     break;
+// }
 
 ?>
 <!doctype html>
@@ -16,8 +35,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant:500|Montserrat:700|Poppins:200&display=swap" rel="stylesheet">  -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,400i,600,700&display=swap" rel="stylesheet"> 
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
     
 	<?php wp_head(); ?>
 </head>
@@ -44,8 +63,8 @@
                     </nav>
                 <?php
                 } ?>
-                
-                <nav id="primary-navigation" class="main-navigation">
+                <a class="toggle-nav" href="#">&#9776;</a>
+                <nav id="primary-navigation" class="main-navigation <?php echo $mainMenuLayout;?>">
                     <?php                     
                     wp_nav_menu( array(
                         'theme_location' => 'primary-menu',

@@ -822,11 +822,37 @@ acf_add_local_field_group(array(
  * HEADER OPTIONS
  */
 
-
 acf_add_local_field_group(array(
 	'key' => 'group_5f11a0f3a031c',
 	'title' => 'Header',
 	'fields' => array(
+		array(
+			'key' => 'field_5f6da0eb5ac37',
+			'label' => 'Main menu layout',
+			'name' => 'sedoo_labs_main_menu_layout',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'classicMenu' => 'Grid menu',
+				'flyoutMenu' => 'Flyout menu',
+			),
+			'default_value' => array(
+				0 => 'classic:Grid menu',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
 		array(
 			'key' => 'field_5f11a0f9c01a3',
 			'label' => 'Mettre une image en avant par défaut ?',
@@ -888,7 +914,7 @@ acf_add_local_field_group(array(
 			),
 		),
 	),
-	'menu_order' => 0,
+	'menu_order' => 3,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',
@@ -1124,7 +1150,7 @@ Please refer to those <a href="https://material.io/design/color/text-legibility.
 			),
 		),
 	),
-	'menu_order' => 0,
+	'menu_order' => 4,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',
