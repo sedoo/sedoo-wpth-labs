@@ -44,74 +44,23 @@
                     </nav>
                 <?php
                 } ?>
-                <?php if(wp_is_mobile()): ?>
+                
                 <nav id="primary-navigation" class="main-navigation">
-                    <?php 
-                    if (has_nav_menu('burger-menu')){
-                        wp_nav_menu( array(
-                            'theme_location' => 'burger-menu',
-                            'menu_id'        => 'burger-menu',
-                        ) );
-                    } else{
-                        wp_nav_menu( array(
-                            'theme_location' => 'primary-menu',
-                            'menu_id'        => 'primary-menu',
-                        ) );                      
-                    }  
+                    <?php                     
+                    wp_nav_menu( array(
+                        'theme_location' => 'primary-menu',
+                        'menu_id'        => 'primary-menu',
+                    ) ); 
                     ?>
-                    <button class="burger">
+                    <!-- <button class="burger">
                         <div class="burger-icon">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                        <label for="burger"><?php echo __('Menu', 'sedoo-wpth-labs'); ?></label>
-                    </button>
+                        <label for="burger"><?php //echo __('Menu', 'sedoo-wpth-labs'); ?></label>
+                    </button> -->
                 </nav>
-                <?php else : ?>
-                <?php if (has_nav_menu('primary-menu')) { ?>
-                <nav id="primary-navigation" class="main-navigation">
-                    <?php
-                        wp_nav_menu( array(
-                            'theme_location' => 'primary-menu',
-                            'menu_id'        => 'primary-menu',
-                        ) );
-                    ?>
-                    <button class="burger">
-                        <div class="burger-icon">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <label for="burger"><?php echo __('Menu', 'sedoo-wpth-labs'); ?></label>
-                    </button>
-                </nav>
-                <?php } ?>
-                <?php if (has_nav_menu('burger-menu')) {?>
-<!--
-                    <nav id="burger-navigation" class="second-navigation">
-                        <button class="burger">
-                            <div class="burger-icon">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <label for="burger">Menu</label>
-                        </button>
-                        <div class="overlay">
-                            <?php
-                            wp_nav_menu( array(
-                                'theme_location' => 'burger-menu',
-                                'menu_id'        => 'burger-menu',
-                            ) );
-                            ?>
-                        </div>
-                    </nav>
--->
-                <?php 
-                    }
-                   endif;
-                ?>
             </div>
         </div>
 	</header><!-- #masthead -->

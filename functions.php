@@ -46,7 +46,6 @@ if ( ! function_exists( 'labs_by_sedoo_setup' ) ) :
 		register_nav_menus( array(
             'top-menu' => esc_html__( 'top-menu', 'sedoo-wpth-labs' ),
 			'primary-menu' => esc_html__( 'primary-menu', 'sedoo-wpth-labs' ),
-			// 'burger-menu' => esc_html__( 'burger-menu', 'sedoo-wpth-labs' ),
 			'footer-menu-1' => esc_html__( 'footer-menu-1', 'sedoo-wpth-labs' ),
 			'footer-menu-2' => esc_html__( 'footer-menu-2', 'sedoo-wpth-labs' ),
 			'footer-menu-3' => esc_html__( 'footer-menu-3', 'sedoo-wpth-labs' ),
