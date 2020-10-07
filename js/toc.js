@@ -53,23 +53,23 @@ jQuery(document).ready(function(){
     jQuery(window).load(function(){
         var viewportWidth = jQuery(window).width();
      //   console.log('viewport' +viewportWidth);
-        if (viewportWidth > 900) {
-            jQuery('aside#stickyMenu').sticky({ topSpacing: 130 });
-            jQuery('aside#stickyMenu').sticky({ bottomSpacing: footerHeight });
+        // if (viewportWidth > 900) {
+        //     jQuery('aside#stickyMenu').sticky({ topSpacing: 130 });
+        //     jQuery('aside#stickyMenu').sticky({ bottomSpacing: footerHeight });
 
-            jQuery(window).on("scroll", function() {
-                var scrollHeight = jQuery(document).height();
-                var scrollPosition = jQuery(window).height() + jQuery(window).scrollTop();
-                var asideHeight = jQuery('aside#stickyMenu').height();
-              //  console.log(asideHeight);
-                if ((scrollHeight - scrollPosition) < footerHeight) {
-                // if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-                 //   console.log("(" +scrollHeight+ "-" +scrollPosition+ ")=" + (scrollHeight - scrollPosition ));
-                    jQuery('aside#stickyMenu').css("bottom", footerHeight - (scrollHeight - scrollPosition));
-                    jQuery('aside#stickyMenu').css("top", "initial");
-                }
-            });
-        }
+        //     jQuery(window).on("scroll", function() {
+        //         var scrollHeight = jQuery(document).height();
+        //         var scrollPosition = jQuery(window).height() + jQuery(window).scrollTop();
+        //         var asideHeight = jQuery('aside#stickyMenu').height();
+        //       //  console.log(asideHeight);
+        //         if ((scrollHeight - scrollPosition) < footerHeight) {
+        //         // if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+        //          //   console.log("(" +scrollHeight+ "-" +scrollPosition+ ")=" + (scrollHeight - scrollPosition ));
+        //             jQuery('aside#stickyMenu').css("bottom", footerHeight - (scrollHeight - scrollPosition));
+        //             jQuery('aside#stickyMenu').css("top", "initial");
+        //         }
+        //     });
+        // }
     });
 
     // corriger l'espace manquant à gauche du main, après l'action du sticky qui "fixe" le sommaire.
