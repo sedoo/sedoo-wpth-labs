@@ -13,7 +13,7 @@
 if (get_field('sedoo_labs_main_menu_layout', 'option')) {
     $mainMenuLayout = get_field('sedoo_labs_main_menu_layout', 'option'); //field_5f6da0eb5ac37
 } else {
-    $mainMenuLayout = "classicMenu";
+    $mainMenuLayout = "gridMenu";
 }
 
 // switch ($mainMenuLayout) {
@@ -64,7 +64,7 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
                 <?php
                 } ?>
                 <a class="toggle-nav" href="#">&#9776;</a>
-                <nav id="primary-navigation" class="main-navigation <?php echo $mainMenuLayout;?>">
+                <nav id="primary-navigation" class="main-navigation <?php echo $mainMenuLayout;?>" role="navigation" aria-label="Menu principal / Main menu">
                     <?php                     
                     wp_nav_menu( array(
                         'theme_location' => 'primary-menu',

@@ -1,6 +1,6 @@
 @import "header/header";
 @import "header/burger-expanded";
-@import "header/menu-inline";
+// @import "header/menu-inline";
 @import "cover/archive-cover";
 @import "cover/cover";
 @import "footer/footer";
@@ -13,6 +13,8 @@
 @import "shortcut/shortcut";
 @import "shortcut/overlay";
 @import "nav-box/nav-box";
+@import "navigation/grid-menu";
+@import "navigation/flyout-menu";
 @import "sticky-toc/sticky-toc";
 @import "layout/author";
 @import "block-gutenberg/blocks-global";

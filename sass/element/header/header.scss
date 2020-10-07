@@ -53,8 +53,9 @@ nav[id="primary-navigation"]{
             
             &:hover{
                 a{
-                    color: $light-full;
-                    background: $dark;
+                    // color: $light-full;
+                    // background: $dark;
+                    // background: var(--theme-color);
                 }
             }
         }

@@ -119,11 +119,7 @@ body{
     }
     &.overlay-expanded{
         overflow: hidden;
-        
-        div[id="page"]{
-            // overflow: hidden;
-        }
-        
+               
         .site-content, .site-footer{
             @extend .blur;
             @include basic-transition-delay;

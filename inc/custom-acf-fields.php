@@ -840,11 +840,11 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'classicMenu' => 'Grid menu',
+				'gridMenu' => 'Grid menu',
 				'flyoutMenu' => 'Flyout menu',
 			),
 			'default_value' => array(
-				0 => 'classic:Grid menu',
+				0 => 'gridMenu:Grid menu',
 			),
 			'allow_null' => 0,
 			'multiple' => 0,

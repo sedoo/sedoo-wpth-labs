@@ -259,7 +259,7 @@ function labs_by_sedoo_color_style() {
              
              :root {
                 --theme-color:<?php echo $code_color;?>;
-                --hover-text-color:<?php echo $hover_text_color;?>;
+                --hover-textcolor:<?php echo $hover_text_color;?>;
             }
 
             .post:hover .group-content .entry-content h2,
@@ -291,8 +291,6 @@ function labs_by_sedoo_color_style() {
 				color: <?php echo $code_color;?>;
 			}
 
-			nav[id="primary-navigation"] ul li:hover a,
-            ul[id="primary-menu"] .menu-item .sub-menu,
             ul[id="shortcuts"] li,
             .post .entry-header p,
             .post-horizontal .entry-header p,
