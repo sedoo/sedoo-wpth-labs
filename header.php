@@ -15,7 +15,7 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
 } else {
     $mainMenuLayout = "gridMenu";
 }
-
+// var_dump($mainMenuLayout);
 // switch ($mainMenuLayout) {
 //     case "classic":
 //         $mainMenuClass = "menu".$mainMenuLayout;
@@ -44,7 +44,6 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'labs-by-sedoo' ); ?></a>
-    
 	<header id="masthead" class="site-header">
         <div class="wrapper">
             <div class="site-branding">

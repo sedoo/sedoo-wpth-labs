@@ -842,6 +842,7 @@ acf_add_local_field_group(array(
 			'choices' => array(
 				'gridMenu' => 'Grid menu',
 				'flyoutMenu' => 'Flyout menu',
+				'flyoutMenuH' => 'Flyout menu horizontal level 2',
 			),
 			'default_value' => array(
 				0 => 'gridMenu:Grid menu',
