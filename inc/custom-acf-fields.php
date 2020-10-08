@@ -828,10 +828,10 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_5f6da0eb5ac37',
-			'label' => 'Main menu layout',
+			'label' => 'Main menu default layout',
 			'name' => 'sedoo_labs_main_menu_layout',
 			'type' => 'select',
-			'instructions' => '',
+			'instructions' => 'Choose default layout for menu...',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -840,12 +840,12 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'gridMenu' => 'Grid menu',
-				'flyoutMenu' => 'Flyout menu',
-				'flyoutMenuH' => 'Flyout menu horizontal level 2',
+				'grid' => 'Grid menu (default)',
+				'flyout' => 'Flyout menu',
+				'flyoutH' => 'Flyout menu horizontal level 2',
 			),
 			'default_value' => array(
-				0 => 'gridMenu:Grid menu',
+				0 => 'grid:Grid menu',
 			),
 			'allow_null' => 0,
 			'multiple' => 0,
@@ -925,6 +925,59 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
+/**
+ * MENU LAYOUT 
+ * add class on 1st level item
+ */
+acf_add_local_field_group(array(
+	'key' => 'group_5e6f8bc4af8a4',
+	'title' => 'Menu layout options',
+	'fields' => array(
+		array(
+			'key' => 'field_5f7ea9d2e8913',
+			'label' => 'Layout menu',
+			'name' => 'sedoo_labs_layout_menu',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'flyout' => 'Flyout vertical',
+				'flyoutH' => 'Flyout horizontal',
+				'grid' => 'Grid',
+			),
+			'default_value' => false,
+			'allow_null' => 1,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'nav_menu_item',
+				'operator' => '==',
+				'value' => 'location/primary-menu',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
 
 /**
  * FOOTER OPTIONS
