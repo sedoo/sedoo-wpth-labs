@@ -1130,7 +1130,7 @@ Please refer to those <a href="https://material.io/design/color/text-legibility.
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '#FFFFFF',
+			'default_value' => '#222222',
 		),
 		array(
 			'key' => 'field_5ebabdc5e8c8d',

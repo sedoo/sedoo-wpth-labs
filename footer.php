@@ -30,7 +30,7 @@ $footerStyle .= "\"";
         if (get_field('footer_text_color', 'option')) {
             the_field('footer_text_color', 'option');            
         } else {
-            echo "#222";
+            echo "#222222";
         }
         ?>
         ;
