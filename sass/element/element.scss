@@ -14,6 +14,7 @@
 @import "shortcut/overlay";
 @import "nav-box/nav-box";
 @import "navigation/multi-menu";
+@import "navigation/responsive-menu";
 // @import "navigation/grid-menu";
 // @import "navigation/flyout-menu";
 // @import "navigation/flyout-menu-horizontal-level2";
@@ -41,8 +42,8 @@
 @import "cover/cover-responsive";
 @import "shortcut/shortcut-responsive";
 @import "nav-box/nav-box-responsive";
-@import "header/menu-inline-responsive";
-@import "header/burger-expanded-responsive";
+// @import "header/menu-inline-responsive";
+// @import "header/burger-expanded-responsive";
 @import "layout/search-responsive";
 @import "layout/author-responsive";
 @import "block-gutenberg/search-annuaire-responsive";

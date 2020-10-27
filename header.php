@@ -40,9 +40,36 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'labs-by-sedoo' ); ?></a>
 	<header id="masthead" class="site-header">
         <div class="wrapper">
+        <?php
+        if ( wp_is_mobile() ) {
+        ?>
+            <label for="menu-trigger" id="trigger" class="menu-trigger">Open/Close Menu</label>
+        <?php
+        } 
+        ?>      
             <div class="site-branding">
                 <?php the_custom_logo(); ?>
             </div><!-- .site-branding -->
+
+        <?php
+        if ( wp_is_mobile() ) {
+            // responsive menu
+        ?>  
+            <input type="checkbox" id="menu-trigger">  
+            <nav id="responsive-menu" class="mp-menu">
+                <?php                     
+                wp_nav_menu( array(
+                    'theme_location' => 'primary-menu',
+                    'menu_id'        => 'mobile-menu',
+                    'depth'        => '3',
+                    'container_class'   => 'mp-level',
+                    'container_aria_label' => 'Menu principal / Main menu',
+                ) ); 
+                ?>
+            </nav>
+        <?php
+        } else {
+        ?>            
             <div class="nav-container">
             <?php if (has_nav_menu('top-menu')) { 
                 ?>
@@ -51,17 +78,21 @@
                         wp_nav_menu( array(
                             'theme_location' => 'top-menu',
                             'menu_id'        => 'ul-top-menu',
+                            'depth'        => '1',
                         ) );
                     ?>
                     </nav>
                 <?php
                 } ?>
-                <a class="toggle-nav" href="#">&#9776;</a>
+                
+
                 <nav id="primary-navigation" class="main-navigation" role="navigation" aria-label="Menu principal / Main menu">
                     <?php                     
                     wp_nav_menu( array(
                         'theme_location' => 'primary-menu',
                         'menu_id'        => 'primary-menu',
+                        'depth'        => '3',
+                        'container_aria_label' => 'Menu principal / Main menu',
                     ) ); 
                     ?>
                     <!-- <button class="burger">
@@ -74,6 +105,10 @@
                     </button> -->
                 </nav>
             </div>
+        <?php
+        }
+        ?> 
+            
         </div>
 	</header><!-- #masthead -->
 
