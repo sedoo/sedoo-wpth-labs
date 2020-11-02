@@ -182,7 +182,7 @@ ul[id="primary-menu"] {
                 top: 100%;
                 padding: 20px;
                 @include display-grid;
-                @include grid-template-column(repeat(3, 1fr));
+                @include grid-template-column(repeat(5, 1fr));
                 @include grid-gap(20px);
                 z-index: -1;
                 @include transform(scale(1, 0));
@@ -201,9 +201,9 @@ ul[id="primary-menu"] {
                     a{
                         // color: $light-full;
                         padding: 0;
-                        font-family: $main-font-family;
+                        // font-family: $main-font-family;
                         text-transform: $text-transform-none;
-                        font-size: $h4-size;
+                        font-size: $rem-size;
                         
                         &::after{
                             content: "";

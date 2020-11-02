@@ -1,12 +1,8 @@
-.flyoutMenu {
+.flyout {
 
-    ul[id="primary-menu"] {
-        display: none;
-        margin: 0;
-        padding-left: 0;
-        list-style: none;    
+    ul[id="primary-menu"] { 
         
-        .menu-item {
+        & > .menu-item {
             position: relative;
 
             &:hover > .sub-menu,
@@ -24,10 +20,19 @@
             &.current-menu-ancestor > a {
                 color: var(--theme-color);
             }
+
+            &:nth-last-child(-n+2) {
+                & > .sub-menu {
+                    right:0;
+                    left:auto;
+                    .sub-menu {
+                        left:-100%;
+                    }
+                }
+            }
         }
 
         .sub-menu {
-            
             position: absolute;
             top: 80px;
             opacity: 0;
@@ -37,12 +42,11 @@
             @include transform(scale(1, 0));
             transform-origin: top center;
             box-shadow: $down-box-shadow;
-            // box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+            @include basic-transition;
 
             .menu-item {
                 width: 100%;
-                @include basic-transition;
-                @include basic-transition-delay;
+                position: relative;
 
                 &:first-child {
                     border-top: 2px solid var(--theme-color);
@@ -55,21 +59,21 @@
                 &.focus > .sub-menu {
                     width: 300px;
                     opacity: 1;
-                    left:100%;
+                    top: 0;
                     z-index: 300;
                     @include transform(scale(1, 1));
                 }
             }
 
             .sub-menu {
-                // left: -999em;
                 opacity: 0;
-                top: 0;
-                max-width: 300px;
+                left:100%;
+                @include basic-transition;
+                // max-width: 300px;
             }
             a {
                 padding: 15px 10px;
-                font-size: $font-size;
+                font-size: $tiny-size;
                 font-weight: $light;
                 text-transform: none;
             }
@@ -86,19 +90,19 @@
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-	margin:auto;
-}
+// .menu-toggle,
+// .main-navigation.toggled ul {
+// 	display: block;
+// 	margin:auto;
+// }
 
-@media screen and (min-width: 37.5em) {
-    .flyoutMenu {
-        ul[id="primary-menu"] {
-            display: block;
-            .menu-toggle {
-                display: none;
-            }
-        }
-    }	
-}
+// @media screen and (min-width: 37.5em) {
+//     .flyoutMenu {
+//         ul[id="primary-menu"] {
+//             display: block;
+//             .menu-toggle {
+//                 display: none;
+//             }
+//         }
+//     }	
+// }

@@ -2,26 +2,6 @@ jQuery(document).ready(function ($) {
     
     'use strict';
     
-    // Toggle sur l'ouverture du menu burger
-    $(".burger").click(function () {
-        $("body").toggleClass("menu-expanded");
-//        $(".menu-helper").toggleClass("visible");
-		$(".burger label").text(function(i, v){
-		   return v === 'Menu' ? 'Fermer' : 'Menu'
-		});
-
-        // Chaque élément du menu s'affiche avec une transition différée
-        var delay = 0;
-        $('.menu-burger-menu-container').each(function () {
-            var $li = $(this);
-
-            setTimeout(function () {
-                $li.toggleClass('transition-open');
-            }, delay += 100); // delay 100 ms
-        });
-        
-    });
-    
     // Pop over à l'ouverture du searchform
     $(".search-form-btn").click(function () {
         $(".overlay.search-form").addClass("open");
@@ -31,56 +11,7 @@ jQuery(document).ready(function ($) {
         $(".overlay.search-form").removeClass("open");
         $("body").removeClass("overlay-expanded");
 
-    });  
-    
-    // Initialisation du carousel pour le menu
-    if (window.matchMedia("(min-width: 767px)").matches) {
-//        $('#burger-menu').slick({
-//          infinite: true,
-//          centerMode: true,
-//          centerPadding: '40px',
-//          slidesToShow: 1.7,
-//          dots: true,
-//          prevArrow: false,
-//          nextArrow: false,
-//          mobileFirst: true,
-//          responsive: [
-//            {
-//              breakpoint: 1200,
-//              settings: {
-//                slidesToShow: 1.7,
-//                centerPadding: '40px',
-//              }
-//            },
-//            {
-//              breakpoint: 1100,
-//              settings: {
-//                slidesToShow: 1,
-//                centerPadding: '20px',
-//              }
-//            },
-//            {
-//              breakpoint: 100,
-//              settings: {
-//                arrows: false,
-//                centerMode: true,
-//                centerPadding: '10px',
-//                slidesToShow: 1
-//              }
-//            }
-//          ]
-//        });
-    }else{
-        $('.overlay.location .wrapper').slick({
-            infinite: true,
-            centerMode: true,
-            centerPadding: '20px',
-            slidesToShow: 1,
-            dots: true,
-            prevArrow: false,
-            nextArrow: false     
-        });  
-    }
+    });   
     
     //Convert address tags to google map links - Copyright Michael Jasper 2011
     $('address').each(function () {

@@ -8,6 +8,11 @@
  *
  * @package labs_by_Sedoo
  */
+if (get_field('sedoo_labs_main_menu_layout', 'option')) {
+    $mainMenuLayout = get_field('sedoo_labs_main_menu_layout', 'option'); //field_5f6da0eb5ac37
+} else {
+    $mainMenuLayout = "grid";
+}
 
 // var_dump($mainMenuLayout);
 // switch ($mainMenuLayout) {
@@ -56,13 +61,12 @@
             // responsive menu
         ?>  
             <input type="checkbox" id="menu-trigger">  
-            <nav id="responsive-menu" class="mp-menu">
+            <nav id="responsive-menu">
                 <?php                     
                 wp_nav_menu( array(
                     'theme_location' => 'primary-menu',
                     'menu_id'        => 'mobile-menu',
-                    'depth'        => '3',
-                    'container_class'   => 'mp-level',
+                    'depth'        => '2',
                     'container_aria_label' => 'Menu principal / Main menu',
                 ) ); 
                 ?>
@@ -86,7 +90,7 @@
                 } ?>
                 
 
-                <nav id="primary-navigation" class="main-navigation" role="navigation" aria-label="Menu principal / Main menu">
+                <nav id="primary-navigation" class="main-navigation <?php echo $mainMenuLayout;?>" role="navigation" aria-label="Menu principal / Main menu">
                     <?php                     
                     wp_nav_menu( array(
                         'theme_location' => 'primary-menu',
@@ -95,14 +99,6 @@
                         'container_aria_label' => 'Menu principal / Main menu',
                     ) ); 
                     ?>
-                    <!-- <button class="burger">
-                        <div class="burger-icon">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <label for="burger"><?php //echo __('Menu', 'sedoo-wpth-labs'); ?></label>
-                    </button> -->
                 </nav>
             </div>
         <?php

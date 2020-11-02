@@ -926,58 +926,58 @@ acf_add_local_field_group(array(
 ));
 
 /**
- * MENU LAYOUT 
+ * MENU LAYOUT      				>>> FAUSSE BONNE IDEE !!
  * add class on 1st level item
  */
-acf_add_local_field_group(array(
-	'key' => 'group_5e6f8bc4af8a4',
-	'title' => 'Menu layout options',
-	'fields' => array(
-		array(
-			'key' => 'field_5f7ea9d2e8913',
-			'label' => 'Layout menu',
-			'name' => 'sedoo_labs_layout_menu',
-			'type' => 'select',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				'flyout' => 'Flyout vertical',
-				'flyoutH' => 'Flyout horizontal',
-				'grid' => 'Grid',
-			),
-			'default_value' => false,
-			'allow_null' => 1,
-			'multiple' => 0,
-			'ui' => 0,
-			'return_format' => 'value',
-			'ajax' => 0,
-			'placeholder' => '',
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'nav_menu_item',
-				'operator' => '==',
-				'value' => 'location/primary-menu',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
+// acf_add_local_field_group(array(
+// 	'key' => 'group_5e6f8bc4af8a4',
+// 	'title' => 'Menu layout options',
+// 	'fields' => array(
+// 		array(
+// 			'key' => 'field_5f7ea9d2e8913',
+// 			'label' => 'Layout menu',
+// 			'name' => 'sedoo_labs_layout_menu',
+// 			'type' => 'select',
+// 			'instructions' => '',
+// 			'required' => 0,
+// 			'conditional_logic' => 0,
+// 			'wrapper' => array(
+// 				'width' => '',
+// 				'class' => '',
+// 				'id' => '',
+// 			),
+// 			'choices' => array(
+// 				'flyout' => 'Flyout vertical',
+// 				'flyoutH' => 'Flyout horizontal',
+// 				'grid' => 'Grid',
+// 			),
+// 			'default_value' => false,
+// 			'allow_null' => 1,
+// 			'multiple' => 0,
+// 			'ui' => 0,
+// 			'return_format' => 'value',
+// 			'ajax' => 0,
+// 			'placeholder' => '',
+// 		),
+// 	),
+// 	'location' => array(
+// 		array(
+// 			array(
+// 				'param' => 'nav_menu_item',
+// 				'operator' => '==',
+// 				'value' => 'location/primary-menu',
+// 			),
+// 		),
+// 	),
+// 	'menu_order' => 0,
+// 	'position' => 'normal',
+// 	'style' => 'default',
+// 	'label_placement' => 'top',
+// 	'instruction_placement' => 'label',
+// 	'hide_on_screen' => '',
+// 	'active' => true,
+// 	'description' => '',
+// ));
 
 /**
  * FOOTER OPTIONS

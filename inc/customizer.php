@@ -265,7 +265,6 @@ function labs_by_sedoo_color_style() {
             .post:hover .group-content .entry-content h2,
             ul[id="shortcuts"] li:hover button,
             ul[id="shortcuts"] li:hover a,
-            nav[id="burger-navigation"] .overlay .slick-slide .menu-item a:hover,
             .footer-menu ul[id="primary-menu"] .menu-item a,
             .footer-categories li a:hover,
             .read-more-article .post-loop .post-preview:hover h3,

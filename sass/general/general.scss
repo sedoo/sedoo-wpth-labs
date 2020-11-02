@@ -90,32 +90,7 @@ body{
         }
         ul[id="shortcuts"]{
             z-index: 5;
-        }
-        
-        #burger-navigation {
-            .burger{
-                .burger-icon{
-                    span{
-                        &:first-child{
-                            @include transform(rotateZ(45deg) translate(6px, 5px));
-                        }
-                        &:nth-child(2){
-                            width: 0%;
-                        }
-                        &:last-child{
-                            @include transform(rotateZ(-45deg) translate(6px, -5px));
-                        }
-                    }
-                }
-            }
-
-
-            .overlay{
-                opacity: 1;
-                @include transform(none);
-                z-index: 200;
-            }
-        }
+        }        
     }
     &.overlay-expanded{
         overflow: hidden;
