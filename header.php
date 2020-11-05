@@ -49,13 +49,22 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
         ?>  
             <input type="checkbox" id="menu-trigger">  
             <nav id="responsive-menu">
-                <?php                     
+                <?php         
+                if (has_nav_menu('mobile-menu')) {
+                    wp_nav_menu( array(
+                        'theme_location' => 'mobile-menu',
+                        'menu_id'        => 'mobile-menu',
+                        'depth'        => '2',
+                        'container_aria_label' => 'Menu principal / Main menu',
+                    ) );
+                } else {
                 wp_nav_menu( array(
                     'theme_location' => 'primary-menu',
                     'menu_id'        => 'mobile-menu',
                     'depth'        => '2',
                     'container_aria_label' => 'Menu principal / Main menu',
                 ) ); 
+                }
                 ?>
             </nav>
         <?php
