@@ -14,19 +14,6 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
     $mainMenuLayout = "grid";
 }
 
-// var_dump($mainMenuLayout);
-// switch ($mainMenuLayout) {
-//     case "classic":
-//         $mainMenuClass = "menu".$mainMenuLayout;
-//         break;
-//     case "flyout":
-//         $mainMenuClass = "menu".$mainMenuLayout;
-//         break;
-    // case 2:
-    //     echo "i égal 2";
-    //     break;
-// }
-
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

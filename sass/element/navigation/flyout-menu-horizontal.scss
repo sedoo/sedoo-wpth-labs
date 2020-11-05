@@ -1,0 +1,146 @@
+.flyoutH {
+
+    ul[id="primary-menu"] {
+        // display: none;
+        // margin: 0;
+        // padding-left: 0;
+        // list-style: none;    
+        
+        & > .menu-item {
+            // position: relative;
+
+            &:hover > .sub-menu,
+            &.focus > .sub-menu {
+                // left: 0;
+                width: 100%;
+                opacity: 1;
+                z-index: 300;
+                @include transform(scale(1, 1));
+            }
+
+            &:hover > a,
+            &.current_page_item > a,
+            &.current-menu-item > a,
+            &.current_page_ancestor > a,
+            &.current-menu-ancestor > a {
+                color: var(--theme-color);
+            }
+
+        }
+
+        .sub-menu {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            opacity: 0;
+            left:0;
+            background: rgba(255,255,255,.95);
+            border-top:2px solid var(--theme-color);
+            border-bottom:2px solid var(--theme-color);
+            @include transform(scale(1, 0));
+            transform-origin: top center;
+            box-shadow: $down-box-shadow;
+            @include basic-transition;
+
+            & > .menu-item {
+                flex:1 1 auto;
+                display: flex;
+                align-items: center;
+                position: relative;
+                @include basic-transition;
+                @include basic-transition-delay;
+
+                &.menu-item-has-children::after {
+                    content: "\276F";
+                    width: 10px;
+                    height: 10px;
+                    position: absolute;                    
+                    bottom: 7px;
+                    left:25px;
+                    transform: rotate(90deg);
+                    transform-origin: center center;
+                    color:#555;
+                    font-size: $mini-size;
+
+                    @include basic-transition;
+                }
+                &.menu-item-has-children:hover::after {
+                    transform: rotate(90deg) translateX(4px);
+                }
+
+                &:hover > .sub-menu,
+                &.focus > .sub-menu {
+                    width: 300px;
+                    opacity: 1;
+                    // top:100%;
+                    z-index: 300;
+                    @include transform(scale(1, 1));
+                }
+                &:nth-last-child(-n+2):nth-child(n+3) {
+                    & > .sub-menu {
+                        right:0;
+                        left:auto;
+                        .sub-menu {
+                            left:-100%;
+                        }
+                    }
+                }
+            }
+
+            .sub-menu {
+                opacity: 0;
+                flex-direction: column;
+                max-width: 300px;
+                @include basic-transition;
+
+                & > .menu-item {
+                    display: block;
+
+                    &:hover > a,
+                    &.focus > a {
+                        background: var(--theme-color) none repeat scroll 0 0;/* !important;*/
+                        color: var(--hover-textcolor);
+                    }
+
+                    a {
+                        padding:10px 10px;
+                    }
+                }
+            }
+            a {
+                padding: 20px 20px;
+                font-weight: $light;
+                text-transform: none;
+            }
+
+            // :hover > a,
+            // .focus > a {
+            //     background: var(--theme-color) none repeat scroll 0 0;/* !important;*/
+            //     color: var(--hover-textcolor);
+            //     height: 100%;
+            // }
+
+
+        }
+    }
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+	margin:auto;
+}
+
+@media screen and (min-width: 37.5em) {
+    .flyoutMenuH {
+        ul[id="primary-menu"] {
+            display: block;
+            .menu-toggle {
+                display: none;
+            }
+        }
+    }	
+}
