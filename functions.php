@@ -105,6 +105,9 @@ if ( ! function_exists( 'labs_by_sedoo_setup' ) ) :
 		*/
 		// add_theme_support( 'custom-line-height' );
 
+		// Add theme support for embed videos.
+		add_theme_support( 'responsive-embeds' );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'labs_by_sedoo_setup' );
