@@ -35,7 +35,11 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
         <?php
         if ( wp_is_mobile() ) {
         ?>
-            <label for="menu-trigger" id="trigger" class="menu-trigger">Open/Close Menu</label>
+            <label for="menu-trigger" id="trigger" class="menu-trigger">
+                <span class="bar top"></span>
+                <span class="bar middle"></span>
+                <span class="bar bottom"></span>
+            </label>
         <?php
         } 
         ?>      
@@ -47,7 +51,8 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
         if ( wp_is_mobile() ) {
             // responsive menu
         ?>  
-            <input type="checkbox" id="menu-trigger">  
+            <input type="checkbox" id="menu-trigger"> 
+            
             <nav id="responsive-menu">
                 <?php         
                 if (has_nav_menu('mobile-menu')) {
@@ -83,8 +88,7 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
                     ?>
                     </nav>
                 <?php
-                } ?>
-                
+                } ?>                
 
                 <nav id="primary-navigation" class="main-navigation <?php echo $mainMenuLayout;?>" role="navigation" aria-label="Menu principal / Main menu">
                     <?php                     
