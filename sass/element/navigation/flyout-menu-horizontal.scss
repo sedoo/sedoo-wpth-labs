@@ -100,7 +100,7 @@
 
                     &:hover > a,
                     &.focus > a {
-                        background: var(--theme-color) none repeat scroll 0 0;/* !important;*/
+                        background: var(--theme-color) none repeat scroll 0 0;
                         color: var(--hover-textcolor);
                     }
 
@@ -117,7 +117,7 @@
 
             // :hover > a,
             // .focus > a {
-            //     background: var(--theme-color) none repeat scroll 0 0;/* !important;*/
+            //     background: var(--theme-color) none repeat scroll 0 0;
             //     color: var(--hover-textcolor);
             //     height: 100%;
             // }

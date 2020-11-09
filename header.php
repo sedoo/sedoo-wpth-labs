@@ -20,27 +20,38 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="profile" href="https://gmpg.org/xfn/11">    
+    <?php wp_head(); ?>
     <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">  -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-	<?php wp_head(); ?>
+    <script src="<?php echo get_template_directory_uri() . '/assets/MultiLevelPushMenu/js/modernizr.custom.js';?>"></script>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<div id="page" class="site <?php if ( wp_is_mobile() ) {echo "mobile";}?>">
+<?php
+if ( wp_is_mobile() ) {
+    // responsive menu
+?>  <div class="mp-pusher" id="mp-pusher">
+<?php }
+?>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'labs-by-sedoo' ); ?></a>
 	<header id="masthead" class="site-header">
         <div class="wrapper">
         <?php
         if ( wp_is_mobile() ) {
         ?>
-            <label for="menu-trigger" id="trigger" class="menu-trigger">
-                <span class="bar top"></span>
-                <span class="bar middle"></span>
-                <span class="bar bottom"></span>
-            </label>
+            <p>
+                <a href="#" id="trigger" class="menu-trigger">                    
+                    <span class="bar top"></span>
+                    <span class="bar middle"></span>
+                    <span class="bar bottom"></span>
+                </a>
+            </p> 
         <?php
+            // $menu_items = wp_get_nav_menu_items('primary-menu');
+        
+            // var_dump($menu_items);
         } 
         ?>      
             <div class="site-branding">
@@ -51,9 +62,7 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
         if ( wp_is_mobile() ) {
             // responsive menu
         ?>  
-            <input type="checkbox" id="menu-trigger"> 
-            
-            <nav id="responsive-menu">
+            <nav id="mp-menu" class="mp-menu">
                 <?php         
                 if (has_nav_menu('mobile-menu')) {
                     wp_nav_menu( array(
@@ -63,12 +72,7 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
                         'container_aria_label' => 'Menu principal / Main menu',
                     ) );
                 } else {
-                wp_nav_menu( array(
-                    'theme_location' => 'primary-menu',
-                    'menu_id'        => 'mobile-menu',
-                    'depth'        => '2',
-                    'container_aria_label' => 'Menu principal / Main menu',
-                ) ); 
+                    labs_by_sedoo_mlpushmenu('primary-menu');
                 }
                 ?>
             </nav>

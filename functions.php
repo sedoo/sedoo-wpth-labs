@@ -227,3 +227,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // Add color to the gutenberg palet
 require get_template_directory() . '/inc/color.php';
 
+// Add color to the gutenberg palet
+require get_template_directory() . '/inc/mlpushmenu.php';
+

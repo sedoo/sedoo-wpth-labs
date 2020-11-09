@@ -28,6 +28,11 @@ header[id="masthead"]{
     }
 }
 
+.mobile {
+    header[id="masthead"]{
+        padding: 0;
+    }
+}
 nav[id="primary-navigation"]{
     @include display-flex;
     @include align-items-center;

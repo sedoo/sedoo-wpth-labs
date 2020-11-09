@@ -19,5 +19,9 @@ jQuery(document).ready(function ($) {
         $(this).html(link);
     });
     
+    $('#trigger').click(function(){
+        $('.menu-trigger').toggleClass("active");
+    });
+
 });
 

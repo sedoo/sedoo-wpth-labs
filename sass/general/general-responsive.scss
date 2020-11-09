@@ -63,10 +63,12 @@
     }
 }
 @media screen and (max-width:767px) and (orientation:portrait){
-    div[id="page"]{
-        padding-top: 70px;
-    }
     .wrapper-layout{
         padding: 70px 8px;
     }
+}
+
+#page.mobile {
+    padding:0 0 20px;
+    position: relative;
 }

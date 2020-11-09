@@ -32,7 +32,6 @@ footer[id="colophon"]{
         }
     }    
 
-
 }
 
 .footer-menu{
@@ -210,8 +209,9 @@ footer[id="colophon"]{
 }
 .partners-list{
     background:#FFF;
-    height: 100px;
+    min-height: 100px;
     align-items: center;
+    padding-top: 20px;
 
     ul{
         display: flex;
