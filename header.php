@@ -70,17 +70,18 @@ if ( wp_is_mobile() ) {
                         'menu_id'        => 'mobile-menu',
                         'depth'        => '2',
                         'container_aria_label' => 'Menu principal / Main menu',
-                        'walker' => new Push_Menu_Walker(),
+                        'walker' => new Sedoo_Push_Menu_Walker(),
                         )
                     );
                 } else {
                     // labs_by_sedoo_mlpushmenu('primary-menu');
                     wp_nav_menu( array(
                         'theme_location' => 'primary-menu',
-                        'menu_id'        => 'primary-menu',
+                        'menu_id'        => 'mobile-menu',
                         'depth'        => '3',
+                        'container_class'   => 'mp-level',
                         'container_aria_label' => 'Menu principal / Main menu',
-                        'walker' => new Push_Menu_Walker(),
+                        'walker' => new Sedoo_Push_Menu_Walker(),
                         ) 
                     ); 
                 }

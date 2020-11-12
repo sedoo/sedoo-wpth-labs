@@ -60,7 +60,7 @@ function labs_by_sedoo_mlpushmenu( $theme_location ) {
  * Required plugin
  * https://github.com/adgsm/multi-level-push-menu
  */
-class Push_Menu_Walker extends Walker_Nav_Menu {
+class Sedoo_Push_Menu_Walker extends Walker_Nav_Menu {
     /**
      * Start the element output.
      *
@@ -70,62 +70,32 @@ class Push_Menu_Walker extends Walker_Nav_Menu {
      * @param  array $args    Additional strings.
      * @return void
      */
-    function start_el( &$output, $item, $depth = 5, $args = array(), $id = 0 ) {
+    
+    function start_el(&$output, $item, $depth=3, $args=null, $id=0) { 
+               
+        // If has submenu
+        if ($args->walker->has_children) {
+            // $output .= "<li class='" .  implode(" ", $item->classes) . " icon-arrow-left'>";
+            $output .= "<li class='icon-arrow-left'>";
 
-        $output .= "<li>";
+            if ($item->url && $item->url != '#') {
+                $output .= '<a href="' . $item->url . '" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">'.$item->title.'';
+            } else {
+                $output .= '<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">'.$item->title.'';
+            }
+            $output .= '</a>';
+            $output .= '<div class="mp-level">';
+            $output .= '<h2><a href="' . $item->url . '">'.$item->title.'</a></h2>';
+            $output .= '<a class="mp-back" href="#">back</a>';
 
-        $attributes  = '';
-        $title = $item->title;
-        $desc = $item->description;
-        $classes = $item->classes;
-                /*["classes"] => array(8) {
-                    [0]=> string(0) "" <-- THIS IS THE CUSTOM CLASS
-                    [1]=> string(9) "menu-item" 
-                    [2]=> string(24) "menu-item-type-post_type" 
-                    [3]=> string(21) "menu-item-object-page" 
-                    [4]=> string(17) "current-menu-item" 
-                    [5]=> string(9) "page_item"
-                    [6]=> string(12) "page-item-50"
-                    [7]=> string(17) "current_page_item"
-                }*/
-        $font_awesome_class = ' class="fa fa-'. $classes[0] . '"';
+        } 
+        else {
+            $output .= "<li>";
+            $output .= '<a href="' . $item->url . '">'.$item->title.'';
+            $output .= '</a>';
+        }
 
-        ! empty( $item->url )
-            and $attributes .= ' href="'   . esc_attr( $item->url        ) .'"';
-
-        $title = apply_filters( 'the_title', $item->title, $item->ID );
-
-        if (!empty ( $classes[0] )) : // If we have a custom class, add the H2 + icon
-                $item_output = $args->before
-                    . "<a $attributes>"
-                    .       $args->link_before
-                    .       $title
-                    . '</a> '
-                    . '<h2>'
-                    .       '<i ' . $font_awesome_class . '></i>'
-                    .       $title
-                    . '</h2>'
-                    . $args->link_after
-                    // . $description <-- Not needed for now...
-                    . $args->after;
-        else :
-                $item_output = $args->before
-                    . "<a $attributes>"
-                    . $args->link_before
-                    . $title
-                    . '</a> '
-                    . $args->link_after
-                    . $args->after;
-        endif;
-
-        // Since $output is called by reference we don't need to return anything.
-        $output .= apply_filters(
-            'walker_nav_menu_start_el',
-            $item_output,
-            $item,
-            $depth,
-            $args
-        );
     }
+
 }
 ?>
