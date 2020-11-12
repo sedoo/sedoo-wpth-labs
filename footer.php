@@ -30,7 +30,7 @@ $footerStyle .= "\"";
         if (get_field('footer_text_color', 'option')) {
             the_field('footer_text_color', 'option');            
         } else {
-            echo "#222";
+            echo "#222222";
         }
         ?>
         ;
@@ -223,10 +223,24 @@ $footerStyle .= "\"";
                 </div><!-- .site-info -->
             </div>
         <?php } ?>    
-	</footer><!-- #colophon -->
+    </footer><!-- #colophon -->
+    <?php
+    if ( wp_is_mobile() ) {
+    // end div mp-pusher    
+    ?>
+    </div> 
+    <?php } ?>
 </div><!-- #page -->
 <?php get_template_part( 'template-parts/shortcut', 'page' ); ?>
-<?php wp_footer(); ?>   
+<?php wp_footer(); 
 
+if (wp_is_mobile() ) {
+?>
+<script>
+new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ), {type : 'cover'} );
+</script>
+<?php
+}
+?>   
 </body>
 </html>

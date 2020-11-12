@@ -90,40 +90,11 @@ body{
         }
         ul[id="shortcuts"]{
             z-index: 5;
-        }
-        
-        #burger-navigation {
-            .burger{
-                .burger-icon{
-                    span{
-                        &:first-child{
-                            @include transform(rotateZ(45deg) translate(6px, 5px));
-                        }
-                        &:nth-child(2){
-                            width: 0%;
-                        }
-                        &:last-child{
-                            @include transform(rotateZ(-45deg) translate(6px, -5px));
-                        }
-                    }
-                }
-            }
-
-
-            .overlay{
-                opacity: 1;
-                @include transform(none);
-                z-index: 200;
-            }
-        }
+        }        
     }
     &.overlay-expanded{
         overflow: hidden;
-        
-        div[id="page"]{
-            // overflow: hidden;
-        }
-        
+               
         .site-content, .site-footer{
             @extend .blur;
             @include basic-transition-delay;
@@ -135,10 +106,11 @@ body{
 // }
 
 div[id="page"]{
-    padding: 90px 20px 20px;
+    padding: 0 20px 20px;
     // overflow-y: hidden;
     max-width: 100%;
 }
+
 /* WRAPPER */
 .wrapper{
     max-width: $max-container-width;

@@ -259,13 +259,12 @@ function labs_by_sedoo_color_style() {
              
              :root {
                 --theme-color:<?php echo $code_color;?>;
-                --hover-text-color:<?php echo $hover_text_color;?>;
+                --hover-textcolor:<?php echo $hover_text_color;?>;
             }
 
             .post:hover .group-content .entry-content h2,
             ul[id="shortcuts"] li:hover button,
             ul[id="shortcuts"] li:hover a,
-            nav[id="burger-navigation"] .overlay .slick-slide .menu-item a:hover,
             .footer-menu ul[id="primary-menu"] .menu-item a,
             .footer-categories li a:hover,
             .read-more-article .post-loop .post-preview:hover h3,
@@ -291,8 +290,6 @@ function labs_by_sedoo_color_style() {
 				color: <?php echo $code_color;?>;
 			}
 
-			nav[id="primary-navigation"] ul li:hover a,
-            ul[id="primary-menu"] .menu-item .sub-menu,
             ul[id="shortcuts"] li,
             .post .entry-header p,
             .post-horizontal .entry-header p,

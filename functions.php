@@ -44,9 +44,9 @@ if ( ! function_exists( 'labs_by_sedoo_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-            'top-menu' => esc_html__( 'top-menu', 'sedoo-wpth-labs' ),
-			'primary-menu' => esc_html__( 'primary-menu', 'sedoo-wpth-labs' ),
-			// 'burger-menu' => esc_html__( 'burger-menu', 'sedoo-wpth-labs' ),
+            'top-menu' 		=> esc_html__( 'top-menu', 'sedoo-wpth-labs' ),
+			'primary-menu' 	=> esc_html__( 'primary-menu', 'sedoo-wpth-labs' ),
+			'mobile-menu' 	=> esc_html__( 'mobile-menu', 'sedoo-wpth-labs' ),
 			'footer-menu-1' => esc_html__( 'footer-menu-1', 'sedoo-wpth-labs' ),
 			'footer-menu-2' => esc_html__( 'footer-menu-2', 'sedoo-wpth-labs' ),
 			'footer-menu-3' => esc_html__( 'footer-menu-3', 'sedoo-wpth-labs' ),
@@ -105,6 +105,9 @@ if ( ! function_exists( 'labs_by_sedoo_setup' ) ) :
 		* https://make.wordpress.org/core/2020/07/27/new-block-tools-on-wordpress-5-5/
 		*/
 		// add_theme_support( 'custom-line-height' );
+
+		// Add theme support for embed videos.
+		add_theme_support( 'responsive-embeds' );
 
 	}
 endif;
@@ -223,4 +226,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 // Add color to the gutenberg palet
 require get_template_directory() . '/inc/color.php';
+
+// Add color to the gutenberg palet
+require get_template_directory() . '/inc/mlpushmenu.php';
 

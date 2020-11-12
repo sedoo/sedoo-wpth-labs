@@ -822,11 +822,38 @@ acf_add_local_field_group(array(
  * HEADER OPTIONS
  */
 
-
 acf_add_local_field_group(array(
 	'key' => 'group_5f11a0f3a031c',
 	'title' => 'Header',
 	'fields' => array(
+		array(
+			'key' => 'field_5f6da0eb5ac37',
+			'label' => 'Main menu default layout',
+			'name' => 'sedoo_labs_main_menu_layout',
+			'type' => 'select',
+			'instructions' => 'Choose default layout for menu...',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'grid' => 'Grid menu (default)',
+				'flyout' => 'Flyout menu',
+				'flyoutH' => 'Flyout menu horizontal level 2',
+			),
+			'default_value' => array(
+				0 => 'grid:Grid menu',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
 		array(
 			'key' => 'field_5f11a0f9c01a3',
 			'label' => 'Mettre une image en avant par défaut ?',
@@ -888,7 +915,7 @@ acf_add_local_field_group(array(
 			),
 		),
 	),
-	'menu_order' => 0,
+	'menu_order' => 3,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',
@@ -898,6 +925,59 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
+/**
+ * MENU LAYOUT      				>>> FAUSSE BONNE IDEE !!
+ * add class on 1st level item
+ */
+// acf_add_local_field_group(array(
+// 	'key' => 'group_5e6f8bc4af8a4',
+// 	'title' => 'Menu layout options',
+// 	'fields' => array(
+// 		array(
+// 			'key' => 'field_5f7ea9d2e8913',
+// 			'label' => 'Layout menu',
+// 			'name' => 'sedoo_labs_layout_menu',
+// 			'type' => 'select',
+// 			'instructions' => '',
+// 			'required' => 0,
+// 			'conditional_logic' => 0,
+// 			'wrapper' => array(
+// 				'width' => '',
+// 				'class' => '',
+// 				'id' => '',
+// 			),
+// 			'choices' => array(
+// 				'flyout' => 'Flyout vertical',
+// 				'flyoutH' => 'Flyout horizontal',
+// 				'grid' => 'Grid',
+// 			),
+// 			'default_value' => false,
+// 			'allow_null' => 1,
+// 			'multiple' => 0,
+// 			'ui' => 0,
+// 			'return_format' => 'value',
+// 			'ajax' => 0,
+// 			'placeholder' => '',
+// 		),
+// 	),
+// 	'location' => array(
+// 		array(
+// 			array(
+// 				'param' => 'nav_menu_item',
+// 				'operator' => '==',
+// 				'value' => 'location/primary-menu',
+// 			),
+// 		),
+// 	),
+// 	'menu_order' => 0,
+// 	'position' => 'normal',
+// 	'style' => 'default',
+// 	'label_placement' => 'top',
+// 	'instruction_placement' => 'label',
+// 	'hide_on_screen' => '',
+// 	'active' => true,
+// 	'description' => '',
+// ));
 
 /**
  * FOOTER OPTIONS
@@ -1050,7 +1130,7 @@ Please refer to those <a href="https://material.io/design/color/text-legibility.
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '#FFFFFF',
+			'default_value' => '#222222',
 		),
 		array(
 			'key' => 'field_5ebabdc5e8c8d',
@@ -1124,7 +1204,7 @@ Please refer to those <a href="https://material.io/design/color/text-legibility.
 			),
 		),
 	),
-	'menu_order' => 0,
+	'menu_order' => 4,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',
@@ -1351,37 +1431,44 @@ acf_add_local_field_group(array(
 			array(
 				'param' => 'post_type',
 				'operator' => '==',
-				'value' => 'sedoo-research-team',
+				'value' => 'any',
 			),
 		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'sedoo-platform',
-			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'ces',
-			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'sedoo-sno',
-			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'sedoo-axe',
-			),
-		),
+		// array(
+		// 	array(
+		// 		'param' => 'post_type',
+		// 		'operator' => '==',
+		// 		'value' => 'sedoo-research-team',
+		// 	),
+		// ),
+		// array(
+		// 	array(
+		// 		'param' => 'post_type',
+		// 		'operator' => '==',
+		// 		'value' => 'sedoo-platform',
+		// 	),
+		// ),
+		// array(
+		// 	array(
+		// 		'param' => 'post_type',
+		// 		'operator' => '==',
+		// 		'value' => 'ces',
+		// 	),
+		// ),
+		// array(
+		// 	array(
+		// 		'param' => 'post_type',
+		// 		'operator' => '==',
+		// 		'value' => 'sedoo-sno',
+		// 	),
+		// ),
+		// array(
+		// 	array(
+		// 		'param' => 'post_type',
+		// 		'operator' => '==',
+		// 		'value' => 'sedoo-axe',
+		// 	),
+		// ),
 		array(
 			array(
 				'param' => 'post_type',
