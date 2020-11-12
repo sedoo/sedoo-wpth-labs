@@ -1431,37 +1431,44 @@ acf_add_local_field_group(array(
 			array(
 				'param' => 'post_type',
 				'operator' => '==',
-				'value' => 'sedoo-research-team',
+				'value' => 'any',
 			),
 		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'sedoo-platform',
-			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'ces',
-			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'sedoo-sno',
-			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'sedoo-axe',
-			),
-		),
+		// array(
+		// 	array(
+		// 		'param' => 'post_type',
+		// 		'operator' => '==',
+		// 		'value' => 'sedoo-research-team',
+		// 	),
+		// ),
+		// array(
+		// 	array(
+		// 		'param' => 'post_type',
+		// 		'operator' => '==',
+		// 		'value' => 'sedoo-platform',
+		// 	),
+		// ),
+		// array(
+		// 	array(
+		// 		'param' => 'post_type',
+		// 		'operator' => '==',
+		// 		'value' => 'ces',
+		// 	),
+		// ),
+		// array(
+		// 	array(
+		// 		'param' => 'post_type',
+		// 		'operator' => '==',
+		// 		'value' => 'sedoo-sno',
+		// 	),
+		// ),
+		// array(
+		// 	array(
+		// 		'param' => 'post_type',
+		// 		'operator' => '==',
+		// 		'value' => 'sedoo-axe',
+		// 	),
+		// ),
 		array(
 			array(
 				'param' => 'post_type',
