@@ -14,6 +14,10 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
     $mainMenuLayout = "grid";
 }
 
+// if ($mainMenuLayout = "grid") {
+//     if (get_field('sedoo_labs_main_menu_layout', 'option')) {
+// }
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -49,9 +53,6 @@ if ( wp_is_mobile() ) {
                 </a>
             </p> 
         <?php
-            // $menu_items = wp_get_nav_menu_items('primary-menu');
-        
-            // var_dump($menu_items);
         } 
         ?>      
             <div class="site-branding">

@@ -164,6 +164,7 @@ acf_add_local_field_group(array(
 	'key' => 'group_5d6e45131ccd4',
 	'title' => 'Location Settings',
 	'fields' => array(
+		//TAB Location settings
 		array(
 			'key' => 'field_5ec283ff3a2d5',
 			'label' => 'Lier avec la page d\'accès',
@@ -409,90 +410,90 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-acf_add_local_field_group(array(
-	'key' => 'group_5d6e4caf573e6',
-	'title' => 'Partenaires Settings',
-	'fields' => array(
-		array(
-			'key' => 'field_5d6e4cc5424e1',
-			'label' => 'Partenaires',
-			'name' => 'partenaires',
-			'type' => 'repeater',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'collapsed' => '',
-			'min' => 0,
-			'max' => 0,
-			'layout' => 'table',
-			'button_label' => '',
-			'sub_fields' => array(
-				array(
-					'key' => 'field_5d6e4ce0424e2',
-					'label' => 'Lien Partenaire',
-					'name' => 'lien_partenaire',
-					'type' => 'url',
-					'instructions' => 'Saisir le lien vers le site du partenaire',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-				),
-				array(
-					'key' => 'field_5d6e4cf4424e3',
-					'label' => 'Logo Partenaire',
-					'name' => 'logo_partenaire',
-					'type' => 'image',
-					'instructions' => 'Téléverser le logo du partenaire',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'return_format' => 'array',
-					'preview_size' => 'full',
-					'library' => 'all',
-					'min_width' => '',
-					'min_height' => '',
-					'min_size' => '',
-					'max_width' => '',
-					'max_height' => '',
-					'max_size' => '',
-					'mime_types' => '',
-				),
-			),
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options-partenaires',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
+// acf_add_local_field_group(array(
+// 	'key' => 'group_5d6e4caf573e6',
+// 	'title' => 'Partenaires Settings',
+// 	'fields' => array(
+// 		array(
+// 			'key' => 'field_5d6e4cc5424e1',
+// 			'label' => 'Partenaires',
+// 			'name' => 'partenaires',
+// 			'type' => 'repeater',
+// 			'instructions' => '',
+// 			'required' => 0,
+// 			'conditional_logic' => 0,
+// 			'wrapper' => array(
+// 				'width' => '',
+// 				'class' => '',
+// 				'id' => '',
+// 			),
+// 			'collapsed' => '',
+// 			'min' => 0,
+// 			'max' => 0,
+// 			'layout' => 'table',
+// 			'button_label' => '',
+// 			'sub_fields' => array(
+// 				array(
+// 					'key' => 'field_5d6e4ce0424e2',
+// 					'label' => 'Lien Partenaire',
+// 					'name' => 'lien_partenaire',
+// 					'type' => 'url',
+// 					'instructions' => 'Saisir le lien vers le site du partenaire',
+// 					'required' => 0,
+// 					'conditional_logic' => 0,
+// 					'wrapper' => array(
+// 						'width' => '',
+// 						'class' => '',
+// 						'id' => '',
+// 					),
+// 					'default_value' => '',
+// 					'placeholder' => '',
+// 				),
+// 				array(
+// 					'key' => 'field_5d6e4cf4424e3',
+// 					'label' => 'Logo Partenaire',
+// 					'name' => 'logo_partenaire',
+// 					'type' => 'image',
+// 					'instructions' => 'Téléverser le logo du partenaire',
+// 					'required' => 0,
+// 					'conditional_logic' => 0,
+// 					'wrapper' => array(
+// 						'width' => '',
+// 						'class' => '',
+// 						'id' => '',
+// 					),
+// 					'return_format' => 'array',
+// 					'preview_size' => 'full',
+// 					'library' => 'all',
+// 					'min_width' => '',
+// 					'min_height' => '',
+// 					'min_size' => '',
+// 					'max_width' => '',
+// 					'max_height' => '',
+// 					'max_size' => '',
+// 					'mime_types' => '',
+// 				),
+// 			),
+// 		),
+// 	),
+// 	'location' => array(
+// 		array(
+// 			array(
+// 				'param' => 'options_page',
+// 				'operator' => '==',
+// 				'value' => 'acf-options-partenaires',
+// 			),
+// 		),
+// 	),
+// 	'menu_order' => 0,
+// 	'position' => 'normal',
+// 	'style' => 'default',
+// 	'label_placement' => 'top',
+// 	'instruction_placement' => 'label',
+// 	'hide_on_screen' => '',
+// 	'active' => true,
+// 	'description' => '',
+// ));
 
 acf_add_local_field_group(array(
 	'key' => 'group_5d6e4c5dc9201',
@@ -559,10 +560,139 @@ acf_add_local_field_group(array(
 /**
  * COLOR PALETTE 
  * */
+// acf_add_local_field_group(array(
+// 	'key' => 'group_5efd951c0a8bf',
+// 	'title' => 'Complementary Colors',
+// 	'fields' => array(
+		// array(
+		// 	'key' => 'field_5efd9539079ff',
+		// 	'label' => 'Add color to theme palette',
+		// 	'name' => 'theme_palet_color',
+		// 	'type' => 'repeater',
+		// 	'instructions' => '',
+		// 	'required' => 0,
+		// 	'conditional_logic' => 0,
+		// 	'wrapper' => array(
+		// 		'width' => '',
+		// 		'class' => '',
+		// 		'id' => 'sedoo_color_repeater',
+		// 	),
+		// 	'collapsed' => '',
+		// 	'min' => 5,
+		// 	'max' => 5,
+		// 	'layout' => 'table',
+		// 	'button_label' => '',
+		// 	'sub_fields' => array(
+		// 		array(
+		// 			'key' => 'field_5efd959407a00',
+		// 			'label' => 'Couleur',
+		// 			'name' => 'added_theme_color',
+		// 			'type' => 'color_picker',
+		// 			'instructions' => '',
+		// 			'required' => 0,
+		// 			'conditional_logic' => 0,
+		// 			'wrapper' => array(
+		// 				'width' => '',
+		// 				'class' => '',
+		// 				'id' => '',
+		// 			),
+		// 			'default_value' => '',
+		// 		),
+		// 	),
+		// ),
+		// array(
+		// 	'key' => 'field_5efeefd81e5d6',
+		// 	'label' => 'Gestion de la palette',
+		// 	'name' => 'mode_de_calcul',
+		// 	'type' => 'select',
+		// 	'instructions' => '',
+		// 	'required' => 0,
+		// 	'conditional_logic' => 0,
+		// 	'wrapper' => array(
+		// 		'width' => '',
+		// 		'class' => '',
+		// 		'id' => 'select_calcul_method',
+		// 	),
+		// 	'choices' => array(
+		// 		'triade' => 'Triade',
+		// 		'tetrade' => 'Tetrade',
+		// 		'analogic' => 'Analogic',
+		// 		'contrast' => 'Contraste',
+		// 	),
+		// 	'default_value' => array(
+		// 	),
+		// 	'allow_null' => 0,
+		// 	'multiple' => 0,
+		// 	'ui' => 0,
+		// 	'return_format' => 'value',
+		// 	'ajax' => 0,
+		// 	'placeholder' => '',
+		// ),
+		// array(
+		// 	'key' => 'field_5efedf57077bc',
+		// 	'label' => '',
+		// 	'name' => 'Regénérer',
+		// 	'type' => 'button_group',
+		// 	'instructions' => '',
+		// 	'required' => 0,
+		// 	'conditional_logic' => 0,
+		// 	'wrapper' => array(
+		// 		'width' => '',
+		// 		'class' => '',
+		// 		'id' => 'btn_regenerate_palette',
+		// 	),
+		// 	'choices' => array(
+		// 		'regenerer' => 'Regenerer',
+		// 	),
+		// 	'allow_null' => 0,
+		// 	'default_value' => '',
+		// 	'layout' => 'horizontal',
+		// 	'return_format' => 'value',
+		// ),
+// 	),
+// 	'location' => array(
+// 		array(
+// 			array(
+// 				'param' => 'options_page',
+// 				'operator' => '==',
+// 				'value' => 'acf-options-theme-options',
+// 			),
+// 		),
+// 	),
+// 	'menu_order' => 0,
+// 	'position' => 'normal',
+// 	'style' => 'default',
+// 	'label_placement' => 'top',
+// 	'instruction_placement' => 'label',
+// 	'hide_on_screen' => '',
+// 	'active' => true,
+// 	'description' => '',
+// ));
+
+/**
+ * COLORS
+ * */
 acf_add_local_field_group(array(
-	'key' => 'group_5efd951c0a8bf',
-	'title' => 'Complementary Colors',
+	'key' => 'group_5eff161ad0d6b',
+	'title' => 'Colors',
 	'fields' => array(
+		array(
+			'key' => 'field_5fae57bag7fe5',
+			'label' => 'Complementary Colors',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		//TAB
 		array(
 			'key' => 'field_5efd9539079ff',
 			'label' => 'Add color to theme palette',
@@ -648,33 +778,74 @@ acf_add_local_field_group(array(
 			'layout' => 'horizontal',
 			'return_format' => 'value',
 		),
-	),
-	'location' => array(
 		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options-theme-options',
+			'key' => 'field_5fae57bah7fe5',
+			'label' => 'Custom colors',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5eff103e6e8cc',
+			'label' => 'Add custom colors',
+			'name' => 'ajout_de_couleurs',
+			'type' => 'repeater',
+			'instructions' => 'Add here custom colors to use when editing content.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 5,
+			'layout' => 'table',
+			'button_label' => '',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5eff104c6e8cd',
+					'label' => 'Color',
+					'name' => 'sedoo_select_custom_color',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+				),
 			),
 		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
-
-/**
- * COLOR FOR MESSAGES 
- * */
-acf_add_local_field_group(array(
-	'key' => 'group_5eff161ad0d6b',
-	'title' => 'Colors messages',
-	'fields' => array(
+		array(
+			'key' => 'field_5fae57bai7fe5',
+			'label' => 'Messages colors',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
 		array(
 			'key' => 'field_5eff162073dc0',
 			'label' => 'Green color',
@@ -758,65 +929,65 @@ acf_add_local_field_group(array(
 /**
  * COLOR CUSTOM 
  * */
-acf_add_local_field_group(array(
-	'key' => 'group_5eff10015098f',
-	'title' => 'Custom colors',
-	'fields' => array(
-		array(
-			'key' => 'field_5eff103e6e8cc',
-			'label' => 'Customs colors',
-			'name' => 'ajout_de_couleurs',
-			'type' => 'repeater',
-			'instructions' => 'Add here customs colors to use when editing content.',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'collapsed' => '',
-			'min' => 0,
-			'max' => 5,
-			'layout' => 'table',
-			'button_label' => '',
-			'sub_fields' => array(
-				array(
-					'key' => 'field_5eff104c6e8cd',
-					'label' => 'Color',
-					'name' => 'sedoo_select_custom_color',
-					'type' => 'color_picker',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-				),
-			),
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options-theme-options',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
+// acf_add_local_field_group(array(
+// 	'key' => 'group_5eff10015098f',
+// 	'title' => 'Custom colors',
+// 	'fields' => array(
+		// array(
+		// 	'key' => 'field_5eff103e6e8cc',
+		// 	'label' => 'Customs colors',
+		// 	'name' => 'ajout_de_couleurs',
+		// 	'type' => 'repeater',
+		// 	'instructions' => 'Add here customs colors to use when editing content.',
+		// 	'required' => 0,
+		// 	'conditional_logic' => 0,
+		// 	'wrapper' => array(
+		// 		'width' => '',
+		// 		'class' => '',
+		// 		'id' => '',
+		// 	),
+		// 	'collapsed' => '',
+		// 	'min' => 0,
+		// 	'max' => 5,
+		// 	'layout' => 'table',
+		// 	'button_label' => '',
+		// 	'sub_fields' => array(
+		// 		array(
+		// 			'key' => 'field_5eff104c6e8cd',
+		// 			'label' => 'Color',
+		// 			'name' => 'sedoo_select_custom_color',
+		// 			'type' => 'color_picker',
+		// 			'instructions' => '',
+		// 			'required' => 0,
+		// 			'conditional_logic' => 0,
+		// 			'wrapper' => array(
+		// 				'width' => '',
+		// 				'class' => '',
+		// 				'id' => '',
+		// 			),
+		// 			'default_value' => '',
+		// 		),
+		// 	),
+		// ),
+// 	),
+// 	'location' => array(
+// 		array(
+// 			array(
+// 				'param' => 'options_page',
+// 				'operator' => '==',
+// 				'value' => 'acf-options-theme-options',
+// 			),
+// 		),
+// 	),
+// 	'menu_order' => 0,
+// 	'position' => 'normal',
+// 	'style' => 'default',
+// 	'label_placement' => 'top',
+// 	'instruction_placement' => 'label',
+// 	'hide_on_screen' => '',
+// 	'active' => true,
+// 	'description' => '',
+// ));
 
 /** 
  * HEADER OPTIONS
@@ -826,6 +997,22 @@ acf_add_local_field_group(array(
 	'key' => 'group_5f11a0f3a031c',
 	'title' => 'Header',
 	'fields' => array(
+		array(
+			'key' => 'field_5fae57bae7fe5',
+			'label' => 'Menu layout',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
 		array(
 			'key' => 'field_5f6da0eb5ac37',
 			'label' => 'Main menu default layout',
@@ -853,6 +1040,86 @@ acf_add_local_field_group(array(
 			'return_format' => 'value',
 			'ajax' => 0,
 			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5fae53436a4d1',
+			'label' => 'Grid menu background color',
+			'name' => 'grid_menu_color',
+			'type' => 'select',
+			'instructions' => 'Documentation & examples : https://labo.obs-mip.fr/doc/3-types-de-menus/',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5f6da0eb5ac37',
+						'operator' => '==',
+						'value' => 'grid',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'whiteGrid' => 'White (default)',
+				'coloredGrid' => 'Main theme color',
+			),
+			'default_value' => array(
+				0 => 'whiteGrid:White',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5fae54c36a4d3',
+			'label' => 'Grid menu columns',
+			'name' => 'grid_menu_columns',
+			'type' => 'range',
+			'instructions' => 'How many columns for the grid menu ?
+Documentation & examples : https://labo.obs-mip.fr/doc/3-types-de-menus/',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5f6da0eb5ac37',
+						'operator' => '==',
+						'value' => 'grid',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => 5,
+			'min' => 3,
+			'max' => 6,
+			'step' => '',
+			'prepend' => '',
+			'append' => '',
+		),
+		array(
+			'key' => 'field_5fae57cde7fe6',
+			'label' => 'Default feature image',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
 		),
 		array(
 			'key' => 'field_5f11a0f9c01a3',
@@ -924,60 +1191,6 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
-
-/**
- * MENU LAYOUT      				>>> FAUSSE BONNE IDEE !!
- * add class on 1st level item
- */
-// acf_add_local_field_group(array(
-// 	'key' => 'group_5e6f8bc4af8a4',
-// 	'title' => 'Menu layout options',
-// 	'fields' => array(
-// 		array(
-// 			'key' => 'field_5f7ea9d2e8913',
-// 			'label' => 'Layout menu',
-// 			'name' => 'sedoo_labs_layout_menu',
-// 			'type' => 'select',
-// 			'instructions' => '',
-// 			'required' => 0,
-// 			'conditional_logic' => 0,
-// 			'wrapper' => array(
-// 				'width' => '',
-// 				'class' => '',
-// 				'id' => '',
-// 			),
-// 			'choices' => array(
-// 				'flyout' => 'Flyout vertical',
-// 				'flyoutH' => 'Flyout horizontal',
-// 				'grid' => 'Grid',
-// 			),
-// 			'default_value' => false,
-// 			'allow_null' => 1,
-// 			'multiple' => 0,
-// 			'ui' => 0,
-// 			'return_format' => 'value',
-// 			'ajax' => 0,
-// 			'placeholder' => '',
-// 		),
-// 	),
-// 	'location' => array(
-// 		array(
-// 			array(
-// 				'param' => 'nav_menu_item',
-// 				'operator' => '==',
-// 				'value' => 'location/primary-menu',
-// 			),
-// 		),
-// 	),
-// 	'menu_order' => 0,
-// 	'position' => 'normal',
-// 	'style' => 'default',
-// 	'label_placement' => 'top',
-// 	'instruction_placement' => 'label',
-// 	'hide_on_screen' => '',
-// 	'active' => true,
-// 	'description' => '',
-// ));
 
 /**
  * FOOTER OPTIONS
@@ -1082,7 +1295,7 @@ acf_add_local_field_group(array(
 			'label' => 'Footer background SVG',
 			'name' => 'footer_background_svg',
 			'type' => 'image',
-			'instructions' => 'Only format SVG format allowed',
+			'instructions' => 'Only SVG format allowed',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -1194,6 +1407,83 @@ Please refer to those <a href="https://material.io/design/color/text-legibility.
 			'append' => '',
 			'maxlength' => '',
 		),
+		array(
+			'key' => 'field_5fbcbdc5e8c8d',
+			'label' => 'Partners',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5d6e4cc5424e1',
+			'label' => 'Partners',
+			'name' => 'partenaires',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 0,
+			'layout' => 'table',
+			'button_label' => '',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5d6e4ce0424e2',
+					'label' => 'Link',
+					'name' => 'lien_partenaire',
+					'type' => 'url',
+					'instructions' => 'Saisir le lien vers le site du partenaire',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5d6e4cf4424e3',
+					'label' => 'Logo',
+					'name' => 'logo_partenaire',
+					'type' => 'image',
+					'instructions' => 'Upload partner\'s logo',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'full',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
+			),
+		),
 	),
 	'location' => array(
 		array(
@@ -1217,50 +1507,51 @@ Please refer to those <a href="https://material.io/design/color/text-legibility.
 /**
  * LANGAGE OPTIONS
  */
-if (function_exists('pll_the_languages')) {
-	acf_add_local_field_group(array(
-		'key' => 'group_5ec291beb375f',
-		'title' => 'Langage options',
-		'fields' => array(
-			array(
-				'key' => 'field_5ec291ce8ba92',
-				'label' => 'Affichage des drapeaux à droite dans les raccourcis',
-				'name' => 'display_lang_shortcut',
-				'type' => 'true_false',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'message' => '',
-				'default_value' => 0,
-				'ui' => 1,
-				'ui_on_text' => '',
-				'ui_off_text' => '',
-			),
-		),
-		'location' => array(
-			array(
-				array(
-					'param' => 'options_page',
-					'operator' => '==',
-					'value' => 'acf-options-theme-options',
-				),
-			),
-		),
-		'menu_order' => 0,
-		'position' => 'normal',
-		'style' => 'default',
-		'label_placement' => 'top',
-		'instruction_placement' => 'label',
-		'hide_on_screen' => '',
-		'active' => true,
-		'description' => '',
-	));
-}
+// if (function_exists('pll_the_languages')) {
+// 	acf_add_local_field_group(array(
+// 		'key' => 'group_5ec291beb375f',
+// 		'title' => 'Langage options',
+// 		'fields' => array(
+// 			array(
+// 				'key' => 'field_5ec291ce8ba92',
+// 				'label' => 'Affichage des drapeaux à droite dans les raccourcis',
+// 				'name' => 'display_lang_shortcut',
+// 				'type' => 'true_false',
+// 				'instructions' => '',
+// 				'required' => 0,
+// 				'conditional_logic' => 0,
+// 				'wrapper' => array(
+// 					'width' => '',
+// 					'class' => '',
+// 					'id' => '',
+// 				),
+// 				'message' => '',
+// 				'default_value' => 0,
+// 				'ui' => 1,
+// 				'ui_on_text' => '',
+// 				'ui_off_text' => '',
+// 			),
+// 		),
+// 		'location' => array(
+// 			array(
+// 				array(
+// 					'param' => 'options_page',
+// 					'operator' => '==',
+// 					'value' => 'acf-options-theme-options',
+// 				),
+// 			),
+// 		),
+// 		'menu_order' => 0,
+// 		'position' => 'normal',
+// 		'style' => 'default',
+// 		'label_placement' => 'top',
+// 		'instruction_placement' => 'label',
+// 		'hide_on_screen' => '',
+// 		'active' => true,
+// 		'description' => '',
+// 	));
+// }
+
 /**
  * SOURCE OF ARTICLE 
  * only for post (single.php)
