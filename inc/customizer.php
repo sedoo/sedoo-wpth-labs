@@ -387,6 +387,34 @@ function labs_by_sedoo_color_style() {
                     background-color:<?php echo $code_color;?>
                 }
             }
+
+            <?php
+            if ($mainMenuLayout = "grid") {
+                if ( get_field('sedoo_labs_grid_menu_color', 'option') == "coloredGrid" ) {                    
+                ?>
+                    nav[id="primary-navigation"].grid.coloredGrid ul li a:hover,
+                    .grid.coloredGrid ul[id="primary-menu"] .menu-item:hover .sub-menu
+                    {
+                        background: var(--theme-color);
+                    }
+                    nav[id="primary-navigation"].grid.coloredGrid ul li a:hover,
+                    .grid.coloredGrid ul[id="primary-menu"] .menu-item:hover .sub-menu a
+                    {
+                        color: #FFF;
+                    }
+                <?php
+                }
+            
+                if (get_field('sedoo_labs_grid_menu_columns', 'option') !== 5) {
+                ?>
+                .grid ul[id="primary-menu"] .menu-item .sub-menu {
+                    grid-template-columns: repeat(<?php echo get_field('sedoo_labs_grid_menu_columns', 'option');?>, 1fr);       
+                }                               
+                <?php
+                } 
+            }
+            ?>
+
          </style>
     <?php
 }

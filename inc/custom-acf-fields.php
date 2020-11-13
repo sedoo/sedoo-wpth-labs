@@ -410,91 +410,6 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-// acf_add_local_field_group(array(
-// 	'key' => 'group_5d6e4caf573e6',
-// 	'title' => 'Partenaires Settings',
-// 	'fields' => array(
-// 		array(
-// 			'key' => 'field_5d6e4cc5424e1',
-// 			'label' => 'Partenaires',
-// 			'name' => 'partenaires',
-// 			'type' => 'repeater',
-// 			'instructions' => '',
-// 			'required' => 0,
-// 			'conditional_logic' => 0,
-// 			'wrapper' => array(
-// 				'width' => '',
-// 				'class' => '',
-// 				'id' => '',
-// 			),
-// 			'collapsed' => '',
-// 			'min' => 0,
-// 			'max' => 0,
-// 			'layout' => 'table',
-// 			'button_label' => '',
-// 			'sub_fields' => array(
-// 				array(
-// 					'key' => 'field_5d6e4ce0424e2',
-// 					'label' => 'Lien Partenaire',
-// 					'name' => 'lien_partenaire',
-// 					'type' => 'url',
-// 					'instructions' => 'Saisir le lien vers le site du partenaire',
-// 					'required' => 0,
-// 					'conditional_logic' => 0,
-// 					'wrapper' => array(
-// 						'width' => '',
-// 						'class' => '',
-// 						'id' => '',
-// 					),
-// 					'default_value' => '',
-// 					'placeholder' => '',
-// 				),
-// 				array(
-// 					'key' => 'field_5d6e4cf4424e3',
-// 					'label' => 'Logo Partenaire',
-// 					'name' => 'logo_partenaire',
-// 					'type' => 'image',
-// 					'instructions' => 'Téléverser le logo du partenaire',
-// 					'required' => 0,
-// 					'conditional_logic' => 0,
-// 					'wrapper' => array(
-// 						'width' => '',
-// 						'class' => '',
-// 						'id' => '',
-// 					),
-// 					'return_format' => 'array',
-// 					'preview_size' => 'full',
-// 					'library' => 'all',
-// 					'min_width' => '',
-// 					'min_height' => '',
-// 					'min_size' => '',
-// 					'max_width' => '',
-// 					'max_height' => '',
-// 					'max_size' => '',
-// 					'mime_types' => '',
-// 				),
-// 			),
-// 		),
-// 	),
-// 	'location' => array(
-// 		array(
-// 			array(
-// 				'param' => 'options_page',
-// 				'operator' => '==',
-// 				'value' => 'acf-options-partenaires',
-// 			),
-// 		),
-// 	),
-// 	'menu_order' => 0,
-// 	'position' => 'normal',
-// 	'style' => 'default',
-// 	'label_placement' => 'top',
-// 	'instruction_placement' => 'label',
-// 	'hide_on_screen' => '',
-// 	'active' => true,
-// 	'description' => '',
-// ));
-
 acf_add_local_field_group(array(
 	'key' => 'group_5d6e4c5dc9201',
 	'title' => 'Social Settings',
@@ -555,119 +470,6 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
-
-
-/**
- * COLOR PALETTE 
- * */
-// acf_add_local_field_group(array(
-// 	'key' => 'group_5efd951c0a8bf',
-// 	'title' => 'Complementary Colors',
-// 	'fields' => array(
-		// array(
-		// 	'key' => 'field_5efd9539079ff',
-		// 	'label' => 'Add color to theme palette',
-		// 	'name' => 'theme_palet_color',
-		// 	'type' => 'repeater',
-		// 	'instructions' => '',
-		// 	'required' => 0,
-		// 	'conditional_logic' => 0,
-		// 	'wrapper' => array(
-		// 		'width' => '',
-		// 		'class' => '',
-		// 		'id' => 'sedoo_color_repeater',
-		// 	),
-		// 	'collapsed' => '',
-		// 	'min' => 5,
-		// 	'max' => 5,
-		// 	'layout' => 'table',
-		// 	'button_label' => '',
-		// 	'sub_fields' => array(
-		// 		array(
-		// 			'key' => 'field_5efd959407a00',
-		// 			'label' => 'Couleur',
-		// 			'name' => 'added_theme_color',
-		// 			'type' => 'color_picker',
-		// 			'instructions' => '',
-		// 			'required' => 0,
-		// 			'conditional_logic' => 0,
-		// 			'wrapper' => array(
-		// 				'width' => '',
-		// 				'class' => '',
-		// 				'id' => '',
-		// 			),
-		// 			'default_value' => '',
-		// 		),
-		// 	),
-		// ),
-		// array(
-		// 	'key' => 'field_5efeefd81e5d6',
-		// 	'label' => 'Gestion de la palette',
-		// 	'name' => 'mode_de_calcul',
-		// 	'type' => 'select',
-		// 	'instructions' => '',
-		// 	'required' => 0,
-		// 	'conditional_logic' => 0,
-		// 	'wrapper' => array(
-		// 		'width' => '',
-		// 		'class' => '',
-		// 		'id' => 'select_calcul_method',
-		// 	),
-		// 	'choices' => array(
-		// 		'triade' => 'Triade',
-		// 		'tetrade' => 'Tetrade',
-		// 		'analogic' => 'Analogic',
-		// 		'contrast' => 'Contraste',
-		// 	),
-		// 	'default_value' => array(
-		// 	),
-		// 	'allow_null' => 0,
-		// 	'multiple' => 0,
-		// 	'ui' => 0,
-		// 	'return_format' => 'value',
-		// 	'ajax' => 0,
-		// 	'placeholder' => '',
-		// ),
-		// array(
-		// 	'key' => 'field_5efedf57077bc',
-		// 	'label' => '',
-		// 	'name' => 'Regénérer',
-		// 	'type' => 'button_group',
-		// 	'instructions' => '',
-		// 	'required' => 0,
-		// 	'conditional_logic' => 0,
-		// 	'wrapper' => array(
-		// 		'width' => '',
-		// 		'class' => '',
-		// 		'id' => 'btn_regenerate_palette',
-		// 	),
-		// 	'choices' => array(
-		// 		'regenerer' => 'Regenerer',
-		// 	),
-		// 	'allow_null' => 0,
-		// 	'default_value' => '',
-		// 	'layout' => 'horizontal',
-		// 	'return_format' => 'value',
-		// ),
-// 	),
-// 	'location' => array(
-// 		array(
-// 			array(
-// 				'param' => 'options_page',
-// 				'operator' => '==',
-// 				'value' => 'acf-options-theme-options',
-// 			),
-// 		),
-// 	),
-// 	'menu_order' => 0,
-// 	'position' => 'normal',
-// 	'style' => 'default',
-// 	'label_placement' => 'top',
-// 	'instruction_placement' => 'label',
-// 	'hide_on_screen' => '',
-// 	'active' => true,
-// 	'description' => '',
-// ));
 
 /**
  * COLORS
@@ -926,69 +728,6 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-/**
- * COLOR CUSTOM 
- * */
-// acf_add_local_field_group(array(
-// 	'key' => 'group_5eff10015098f',
-// 	'title' => 'Custom colors',
-// 	'fields' => array(
-		// array(
-		// 	'key' => 'field_5eff103e6e8cc',
-		// 	'label' => 'Customs colors',
-		// 	'name' => 'ajout_de_couleurs',
-		// 	'type' => 'repeater',
-		// 	'instructions' => 'Add here customs colors to use when editing content.',
-		// 	'required' => 0,
-		// 	'conditional_logic' => 0,
-		// 	'wrapper' => array(
-		// 		'width' => '',
-		// 		'class' => '',
-		// 		'id' => '',
-		// 	),
-		// 	'collapsed' => '',
-		// 	'min' => 0,
-		// 	'max' => 5,
-		// 	'layout' => 'table',
-		// 	'button_label' => '',
-		// 	'sub_fields' => array(
-		// 		array(
-		// 			'key' => 'field_5eff104c6e8cd',
-		// 			'label' => 'Color',
-		// 			'name' => 'sedoo_select_custom_color',
-		// 			'type' => 'color_picker',
-		// 			'instructions' => '',
-		// 			'required' => 0,
-		// 			'conditional_logic' => 0,
-		// 			'wrapper' => array(
-		// 				'width' => '',
-		// 				'class' => '',
-		// 				'id' => '',
-		// 			),
-		// 			'default_value' => '',
-		// 		),
-		// 	),
-		// ),
-// 	),
-// 	'location' => array(
-// 		array(
-// 			array(
-// 				'param' => 'options_page',
-// 				'operator' => '==',
-// 				'value' => 'acf-options-theme-options',
-// 			),
-// 		),
-// 	),
-// 	'menu_order' => 0,
-// 	'position' => 'normal',
-// 	'style' => 'default',
-// 	'label_placement' => 'top',
-// 	'instruction_placement' => 'label',
-// 	'hide_on_screen' => '',
-// 	'active' => true,
-// 	'description' => '',
-// ));
-
 /** 
  * HEADER OPTIONS
  */
@@ -1044,7 +783,7 @@ acf_add_local_field_group(array(
 		array(
 			'key' => 'field_5fae53436a4d1',
 			'label' => 'Grid menu background color',
-			'name' => 'grid_menu_color',
+			'name' => 'sedoo_labs_grid_menu_color',
 			'type' => 'select',
 			'instructions' => 'Documentation & examples : https://labo.obs-mip.fr/doc/3-types-de-menus/',
 			'required' => 0,
@@ -1079,7 +818,7 @@ acf_add_local_field_group(array(
 		array(
 			'key' => 'field_5fae54c36a4d3',
 			'label' => 'Grid menu columns',
-			'name' => 'grid_menu_columns',
+			'name' => 'sedoo_labs_grid_menu_columns',
 			'type' => 'range',
 			'instructions' => 'How many columns for the grid menu ?
 Documentation & examples : https://labo.obs-mip.fr/doc/3-types-de-menus/',
