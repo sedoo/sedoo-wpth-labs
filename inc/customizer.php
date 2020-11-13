@@ -312,7 +312,7 @@ function labs_by_sedoo_color_style() {
             .ui-widget-header,
             .page-links span.current,
             .wrapper-layout .social-list a:hover::before, 
-            .cn-button  , .btn_footer_local       
+            .cn-button  , .btn_footer_local:hover   
             {
                 background: <?php echo $code_color;?>;
 			}
