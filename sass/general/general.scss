@@ -342,9 +342,12 @@ ul li ol {
 
 // button in footer if more than 1 adress 
 .btn_footer_local {
-    padding: 5px 15px;
+    padding: 5px;
     border-radius: 2px;
     text-decoration: none !important;
+    svg {
+        transform: translateY(4px);
+    }
 }
 // end button in footer if more than 1 adress 
 

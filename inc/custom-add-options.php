@@ -29,13 +29,14 @@ if( function_exists('acf_add_options_page') ) {
         ));
     }
 
-    if( $options_theme && in_array('partenaires', $options_theme) ) {
-        acf_add_options_sub_page(array(
-            'page_title' 	=> 'Theme Partenaires Settings',
-            'menu_title'	=> 'Partenaires',
-            'parent_slug'	=> 'theme-informations',
-        ));
-    }
+    // Ajouté dans les options du footer active par défaut
+    // if( $options_theme && in_array('partenaires', $options_theme) ) {
+    //     acf_add_options_sub_page(array(
+    //         'page_title' 	=> 'Theme Partenaires Settings',
+    //         'menu_title'	=> 'Partenaires',
+    //         'parent_slug'	=> 'theme-informations',
+    //     ));
+    // }
     
     if( $options_theme && in_array('annuaire', $options_theme) ) {
     	acf_add_options_sub_page(array(
@@ -51,11 +52,12 @@ if( function_exists('acf_add_options_page') ) {
             'parent_slug'	=> 'theme-informations',
         ));
     }   
-    if( $options_theme && in_array('options', $options_theme) ) {
+    // Actif par défaut
+    // if( $options_theme && in_array('options', $options_theme) ) {
     	acf_add_options_sub_page(array(
             'page_title' 	=> 'Theme options',
             'menu_title'	=> 'Theme options',
             'parent_slug'	=> 'theme-informations',
         ));
-    }
+    // }
 }

@@ -15,7 +15,7 @@ acf_add_local_field_group(array(
 			'label' => 'ajout options',
 			'name' => 'ajout_options',
 			'type' => 'checkbox',
-			'instructions' => 'Cocher les options à afficher dans les réglages du thème.',
+			'instructions' => 'Check options to show in theme administration options menu.',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -24,12 +24,12 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'contact' => 'Contact et Localisation',
-				'reseaux' => 'Réseaux Sociaux',
-				'partenaires' => 'Partenaires',
-				'annuaire' => 'Annuaire',
-				'calendar' => 'Calendrier',
-				'options'	=> 'Options du thème'
+				'contact' => 'Contact & Location',
+				'reseaux' => 'Social networks',
+				'partenaires' => 'Partners',
+				'annuaire' => 'Directory',
+				'calendar' => 'Calendar',
+				'options'	=> 'Theme advanced option'
 			),
 			'allow_custom' => 0,
 			'default_value' => array(
@@ -61,11 +61,11 @@ acf_add_local_field_group(array(
 
 acf_add_local_field_group(array(
 	'key' => 'group_5d6e4d122e2c9',
-	'title' => 'Annuaire Settings',
+	'title' => 'Directory Settings',
 	'fields' => array(
 		array(
 			'key' => 'field_5ec2846a3a2d6',
-			'label' => 'URL page annuaire',
+			'label' => 'URL directory page',
 			'name' => 'url_page_annuaire',
 			'type' => 'page_link',
 			'instructions' => '',
@@ -86,10 +86,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5d6e4d1d7d654',
-			'label' => 'Lien Annuaire',
+			'label' => 'Link to directory',
 			'name' => 'lien_annuaire',
 			'type' => 'url',
-			'instructions' => 'Insérer le lien vers l\'application d\'annuaire du laboratoire',
+			'instructions' => '(Insérer le lien vers l\'application d\'annuaire du laboratoire)',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -126,10 +126,10 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_5dadb1927d6d8',
-			'label' => 'URL Calendrier',
+			'label' => 'URL Calendar',
 			'name' => 'url_calendar',
 			'type' => 'url',
-			'instructions' => 'Ajouter le lien vers la page événement',
+			'instructions' => 'add link to page events list (might be https://website_url/events )',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -164,12 +164,13 @@ acf_add_local_field_group(array(
 	'key' => 'group_5d6e45131ccd4',
 	'title' => 'Location Settings',
 	'fields' => array(
+		//TAB Location settings
 		array(
 			'key' => 'field_5ec283ff3a2d5',
-			'label' => 'Lier avec la page d\'accès',
+			'label' => 'Link to Access page',
 			'name' => 'url_page_access',
 			'type' => 'page_link',
-			'instructions' => 'Les informations ci-dessous s\'afficheront sur la page en relation',
+			'instructions' => 'Informations below will be shown in relation page',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -187,10 +188,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5db6f28ec9561',
-			'label' => 'Affichage à droite',
+			'label' => 'Show on right shortcuts',
 			'name' => 'display_map_shortcut',
 			'type' => 'true_false',
-			'instructions' => 'Souhaitez-vous affichez les informations de contact et la carte sur le bord droite de l\'écran ?',
+			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -206,10 +207,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5d95af7a91861',
-			'label' => 'Information géographiques du Laboratoire',
+			'label' => 'Informations',
 			'name' => 'location_repeater',
 			'type' => 'repeater',
-			'instructions' => 'Saisir les infos relatives à une adresse de laboratoire',
+			'instructions' => 'Enter address informations',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -225,10 +226,10 @@ acf_add_local_field_group(array(
 			'sub_fields' => array(
 				array(
 					'key' => 'field_5d6e4556b87f7',
-					'label' => 'Nom du Laboratoire',
+					'label' => 'Name of institute / laboratory',
 					'name' => 'nom_laboratoire',
 					'type' => 'text',
-					'instructions' => 'Saisir le nom du laboratoire',
+					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -244,10 +245,10 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5d6e457fb87f8',
-					'label' => 'Adresse du laboratoire',
+					'label' => 'Postal Address',
 					'name' => 'adresse',
 					'type' => 'textarea',
-					'instructions' => 'Saisir l\'adresse du laboratoire',
+					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -263,10 +264,10 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5d6e461b92f71',
-					'label' => 'Contact au sein du laboratoire',
+					'label' => 'Contact name',
 					'name' => 'contact_laboratoire',
 					'type' => 'text',
-					'instructions' => 'Saisir le nom du contact au sein du laboratoire',
+					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -282,10 +283,10 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5d6e463092f72',
-					'label' => 'Téléphone du contact',
+					'label' => 'Contact phone number',
 					'name' => 'telephone_contact',
 					'type' => 'text',
-					'instructions' => 'Saisir le téléphone du contact au sein du laboratoire',
+					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -301,10 +302,10 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5d88c18b0b677',
-					'label' => 'Fax',
+					'label' => 'Fax number',
 					'name' => 'fax_contact',
 					'type' => 'text',
-					'instructions' => 'Saisir le numéro de fax',
+					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -320,7 +321,7 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5d6e464492f73',
-					'label' => 'Adresse mail du contact',
+					'label' => 'Contact email',
 					'name' => 'mail_contact',
 					'type' => 'email',
 					'instructions' => 'Saisir l\'adresse email du contact',
@@ -338,7 +339,7 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5db6f2234981c',
-					'label' => 'Affichage carte',
+					'label' => 'Show map',
 					'name' => 'display_map',
 					'type' => 'true_false',
 					'instructions' => 'Souhaitez-vous afficher la carte ?',
@@ -363,7 +364,7 @@ acf_add_local_field_group(array(
 					'label' => 'Map',
 					'name' => 'map',
 					'type' => 'open_street_map',
-					'instructions' => 'Renseignez l\'adresse du laboratoire',
+					'instructions' => 'Enter address here',
 					'required' => 0,
 					'conditional_logic' => array(
 						array(
@@ -410,100 +411,15 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
-	'key' => 'group_5d6e4caf573e6',
-	'title' => 'Partenaires Settings',
-	'fields' => array(
-		array(
-			'key' => 'field_5d6e4cc5424e1',
-			'label' => 'Partenaires',
-			'name' => 'partenaires',
-			'type' => 'repeater',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'collapsed' => '',
-			'min' => 0,
-			'max' => 0,
-			'layout' => 'table',
-			'button_label' => '',
-			'sub_fields' => array(
-				array(
-					'key' => 'field_5d6e4ce0424e2',
-					'label' => 'Lien Partenaire',
-					'name' => 'lien_partenaire',
-					'type' => 'url',
-					'instructions' => 'Saisir le lien vers le site du partenaire',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-				),
-				array(
-					'key' => 'field_5d6e4cf4424e3',
-					'label' => 'Logo Partenaire',
-					'name' => 'logo_partenaire',
-					'type' => 'image',
-					'instructions' => 'Téléverser le logo du partenaire',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'return_format' => 'array',
-					'preview_size' => 'full',
-					'library' => 'all',
-					'min_width' => '',
-					'min_height' => '',
-					'min_size' => '',
-					'max_width' => '',
-					'max_height' => '',
-					'max_size' => '',
-					'mime_types' => '',
-				),
-			),
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options-partenaires',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
-
-acf_add_local_field_group(array(
 	'key' => 'group_5d6e4c5dc9201',
 	'title' => 'Social Settings',
 	'fields' => array(
 		array(
 			'key' => 'field_5d6e4c78e8243',
-			'label' => 'Réseaux Sociaux',
+			'label' => 'Social networks',
 			'name' => 'reseaux_sociaux',
 			'type' => 'repeater',
-			'instructions' => 'Ajouter autant des réseaux sociaux dans le footer',
+			'instructions' => 'Add social networks icons in footer area',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -519,10 +435,10 @@ acf_add_local_field_group(array(
 			'sub_fields' => array(
 				array(
 					'key' => 'field_5d6e4c93e8244',
-					'label' => 'Lien Réseau Social',
+					'label' => 'Social networks link',
 					'name' => 'lien_reseau_social',
 					'type' => 'url',
-					'instructions' => 'Saisir le lien vers le réseau social',
+					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -555,14 +471,30 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-
 /**
- * COLOR PALETTE 
+ * COLORS
  * */
 acf_add_local_field_group(array(
-	'key' => 'group_5efd951c0a8bf',
-	'title' => 'Complementary Colors',
+	'key' => 'group_5eff161ad0d6b',
+	'title' => 'Colors',
 	'fields' => array(
+		array(
+			'key' => 'field_5fae57bag7fe5',
+			'label' => 'Complementary Colors',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		//TAB
 		array(
 			'key' => 'field_5efd9539079ff',
 			'label' => 'Add color to theme palette',
@@ -584,7 +516,7 @@ acf_add_local_field_group(array(
 			'sub_fields' => array(
 				array(
 					'key' => 'field_5efd959407a00',
-					'label' => 'Couleur',
+					'label' => 'Color',
 					'name' => 'added_theme_color',
 					'type' => 'color_picker',
 					'instructions' => '',
@@ -601,7 +533,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5efeefd81e5d6',
-			'label' => 'Gestion de la palette',
+			'label' => 'color palette managment ',
 			'name' => 'mode_de_calcul',
 			'type' => 'select',
 			'instructions' => '',
@@ -630,7 +562,7 @@ acf_add_local_field_group(array(
 		array(
 			'key' => 'field_5efedf57077bc',
 			'label' => '',
-			'name' => 'Regénérer',
+			'name' => 'Regenerate',
 			'type' => 'button_group',
 			'instructions' => '',
 			'required' => 0,
@@ -641,40 +573,81 @@ acf_add_local_field_group(array(
 				'id' => 'btn_regenerate_palette',
 			),
 			'choices' => array(
-				'regenerer' => 'Regenerer',
+				'regenerer' => 'Regenerate',
 			),
 			'allow_null' => 0,
 			'default_value' => '',
 			'layout' => 'horizontal',
 			'return_format' => 'value',
 		),
-	),
-	'location' => array(
 		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options-theme-options',
+			'key' => 'field_5fae57bah7fe5',
+			'label' => 'Custom colors',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5eff103e6e8cc',
+			'label' => 'Add custom colors',
+			'name' => 'ajout_de_couleurs',
+			'type' => 'repeater',
+			'instructions' => 'Add here custom colors to use when editing content.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 5,
+			'layout' => 'table',
+			'button_label' => '',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5eff104c6e8cd',
+					'label' => 'Color',
+					'name' => 'sedoo_select_custom_color',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+				),
 			),
 		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
-
-/**
- * COLOR FOR MESSAGES 
- * */
-acf_add_local_field_group(array(
-	'key' => 'group_5eff161ad0d6b',
-	'title' => 'Colors messages',
-	'fields' => array(
+		array(
+			'key' => 'field_5fae57bai7fe5',
+			'label' => 'Messages colors',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
 		array(
 			'key' => 'field_5eff162073dc0',
 			'label' => 'Green color',
@@ -755,69 +728,6 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-/**
- * COLOR CUSTOM 
- * */
-acf_add_local_field_group(array(
-	'key' => 'group_5eff10015098f',
-	'title' => 'Custom colors',
-	'fields' => array(
-		array(
-			'key' => 'field_5eff103e6e8cc',
-			'label' => 'Customs colors',
-			'name' => 'ajout_de_couleurs',
-			'type' => 'repeater',
-			'instructions' => 'Add here customs colors to use when editing content.',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'collapsed' => '',
-			'min' => 0,
-			'max' => 5,
-			'layout' => 'table',
-			'button_label' => '',
-			'sub_fields' => array(
-				array(
-					'key' => 'field_5eff104c6e8cd',
-					'label' => 'Color',
-					'name' => 'sedoo_select_custom_color',
-					'type' => 'color_picker',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-				),
-			),
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options-theme-options',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
-
 /** 
  * HEADER OPTIONS
  */
@@ -826,6 +736,22 @@ acf_add_local_field_group(array(
 	'key' => 'group_5f11a0f3a031c',
 	'title' => 'Header',
 	'fields' => array(
+		array(
+			'key' => 'field_5fae57bae7fe5',
+			'label' => 'Menu layout',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
 		array(
 			'key' => 'field_5f6da0eb5ac37',
 			'label' => 'Main menu default layout',
@@ -855,11 +781,91 @@ acf_add_local_field_group(array(
 			'placeholder' => '',
 		),
 		array(
+			'key' => 'field_5fae53436a4d1',
+			'label' => 'Grid menu background color',
+			'name' => 'sedoo_labs_grid_menu_color',
+			'type' => 'select',
+			'instructions' => 'Documentation & examples : https://labo.obs-mip.fr/doc/3-types-de-menus/',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5f6da0eb5ac37',
+						'operator' => '==',
+						'value' => 'grid',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'whiteGrid' => 'White (default)',
+				'coloredGrid' => 'Main theme color',
+			),
+			'default_value' => array(
+				0 => 'whiteGrid:White',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5fae54c36a4d3',
+			'label' => 'Grid menu columns',
+			'name' => 'sedoo_labs_grid_menu_columns',
+			'type' => 'range',
+			'instructions' => 'How many columns for the grid menu ?
+Documentation & examples : https://labo.obs-mip.fr/doc/3-types-de-menus/',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5f6da0eb5ac37',
+						'operator' => '==',
+						'value' => 'grid',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => 5,
+			'min' => 3,
+			'max' => 6,
+			'step' => '',
+			'prepend' => '',
+			'append' => '',
+		),
+		array(
+			'key' => 'field_5fae57cde7fe6',
+			'label' => 'Default feature image',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		array(
 			'key' => 'field_5f11a0f9c01a3',
-			'label' => 'Mettre une image en avant par défaut ?',
+			'label' => 'Default feature image ?',
 			'name' => 'sedoo_img_defaut_yesno',
 			'type' => 'true_false',
-			'instructions' => 'Si une image par défaut est activée, toutes les pages seront dotées d\'une image par défaut servant de bandeau en haut.',
+			'instructions' => 'If activated, every pages will have this default feature image as banner, if no feature image is defined explicitly.',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -875,7 +881,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5f11a17dc01a4',
-			'label' => 'Choix de l\'image',
+			'label' => 'Choose image',
 			'name' => 'sedoo_labs_default_cover_url',
 			'type' => 'image',
 			'instructions' => 'Format 1600*462 optimal.',
@@ -924,60 +930,6 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
-
-/**
- * MENU LAYOUT      				>>> FAUSSE BONNE IDEE !!
- * add class on 1st level item
- */
-// acf_add_local_field_group(array(
-// 	'key' => 'group_5e6f8bc4af8a4',
-// 	'title' => 'Menu layout options',
-// 	'fields' => array(
-// 		array(
-// 			'key' => 'field_5f7ea9d2e8913',
-// 			'label' => 'Layout menu',
-// 			'name' => 'sedoo_labs_layout_menu',
-// 			'type' => 'select',
-// 			'instructions' => '',
-// 			'required' => 0,
-// 			'conditional_logic' => 0,
-// 			'wrapper' => array(
-// 				'width' => '',
-// 				'class' => '',
-// 				'id' => '',
-// 			),
-// 			'choices' => array(
-// 				'flyout' => 'Flyout vertical',
-// 				'flyoutH' => 'Flyout horizontal',
-// 				'grid' => 'Grid',
-// 			),
-// 			'default_value' => false,
-// 			'allow_null' => 1,
-// 			'multiple' => 0,
-// 			'ui' => 0,
-// 			'return_format' => 'value',
-// 			'ajax' => 0,
-// 			'placeholder' => '',
-// 		),
-// 	),
-// 	'location' => array(
-// 		array(
-// 			array(
-// 				'param' => 'nav_menu_item',
-// 				'operator' => '==',
-// 				'value' => 'location/primary-menu',
-// 			),
-// 		),
-// 	),
-// 	'menu_order' => 0,
-// 	'position' => 'normal',
-// 	'style' => 'default',
-// 	'label_placement' => 'top',
-// 	'instruction_placement' => 'label',
-// 	'hide_on_screen' => '',
-// 	'active' => true,
-// 	'description' => '',
-// ));
 
 /**
  * FOOTER OPTIONS
@@ -1055,10 +1007,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5f1197496d8fe',
-			'label' => 'Url du lien',
+			'label' => 'Link URL',
 			'name' => 'sedoo_labs_footer_url_image',
 			'type' => 'url',
-			'instructions' => 'l\'image n\'est pas clicable si aucune url est renseignée',
+			'instructions' => 'image not clickable is no link URL is defined',
 			'required' => 0,
 			'conditional_logic' => array(
 				array(
@@ -1082,7 +1034,7 @@ acf_add_local_field_group(array(
 			'label' => 'Footer background SVG',
 			'name' => 'footer_background_svg',
 			'type' => 'image',
-			'instructions' => 'Only format SVG format allowed',
+			'instructions' => 'Only SVG format allowed',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -1194,6 +1146,83 @@ Please refer to those <a href="https://material.io/design/color/text-legibility.
 			'append' => '',
 			'maxlength' => '',
 		),
+		array(
+			'key' => 'field_5fbcbdc5e8c8d',
+			'label' => 'Partners',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5d6e4cc5424e1',
+			'label' => 'Partners',
+			'name' => 'partenaires',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 0,
+			'layout' => 'table',
+			'button_label' => '',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5d6e4ce0424e2',
+					'label' => 'Link',
+					'name' => 'lien_partenaire',
+					'type' => 'url',
+					'instructions' => 'Link to partner\'s website ',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+				),
+				array(
+					'key' => 'field_5d6e4cf4424e3',
+					'label' => 'Logo',
+					'name' => 'logo_partenaire',
+					'type' => 'image',
+					'instructions' => 'Upload partner\'s logo',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'full',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
+			),
+		),
 	),
 	'location' => array(
 		array(
@@ -1214,53 +1243,7 @@ Please refer to those <a href="https://material.io/design/color/text-legibility.
 	'description' => '',
 ));
 
-/**
- * LANGAGE OPTIONS
- */
-if (function_exists('pll_the_languages')) {
-	acf_add_local_field_group(array(
-		'key' => 'group_5ec291beb375f',
-		'title' => 'Langage options',
-		'fields' => array(
-			array(
-				'key' => 'field_5ec291ce8ba92',
-				'label' => 'Affichage des drapeaux à droite dans les raccourcis',
-				'name' => 'display_lang_shortcut',
-				'type' => 'true_false',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'message' => '',
-				'default_value' => 0,
-				'ui' => 1,
-				'ui_on_text' => '',
-				'ui_off_text' => '',
-			),
-		),
-		'location' => array(
-			array(
-				array(
-					'param' => 'options_page',
-					'operator' => '==',
-					'value' => 'acf-options-theme-options',
-				),
-			),
-		),
-		'menu_order' => 0,
-		'position' => 'normal',
-		'style' => 'default',
-		'label_placement' => 'top',
-		'instruction_placement' => 'label',
-		'hide_on_screen' => '',
-		'active' => true,
-		'description' => '',
-	));
-}
+
 /**
  * SOURCE OF ARTICLE 
  * only for post (single.php)
@@ -1268,14 +1251,14 @@ if (function_exists('pll_the_languages')) {
 
 acf_add_local_field_group(array(
 	'key' => 'group_5d6fb5f77ca9f',
-	'title' => 'Sources page articles',
+	'title' => 'Post sources',
 	'fields' => array(
 		array(
 			'key' => 'field_5d6fb628b251a',
 			'label' => 'Sources',
 			'name' => 'sources',
 			'type' => 'textarea',
-			'instructions' => 'Saisir les sources de l\'article',
+			'instructions' => 'Insert here post sources',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -1314,7 +1297,7 @@ acf_add_local_field_group(array(
  */
 acf_add_local_field_group(array(
 	'key' => 'group_5d6faffd00cb6',
-	'title' => 'Champs additionnels auteurs',
+	'title' => 'Author additionnal fields',
 	'fields' => array(
 		array(
 			'key' => 'field_5d6fb014d56e1',
@@ -1392,14 +1375,14 @@ acf_add_local_field_group(array(
 
 acf_add_local_field_group(array(
 	'key' => 'group_5d763c9864edf',
-	'title' => 'Table des matières',
+	'title' => 'Table of content',
 	'fields' => array(
 		array(
 			'key' => 'field_5d763caf8246e',
-			'label' => 'Table des Matières',
+			'label' => 'Table of content',
 			'name' => 'table_content',
 			'type' => 'checkbox',
-			'instructions' => 'Afficher la table des matières ?',
+			'instructions' => 'Show Table of content ?',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -1408,7 +1391,7 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'toc' => 'afficher',
+				'toc' => 'Show',
 			),
 			'allow_custom' => 0,
 			'default_value' => array(
@@ -1489,11 +1472,11 @@ acf_add_local_field_group(array(
 
 acf_add_local_field_group(array(
 	'key' => 'group_5d6faf894c203',
-	'title' => 'Sélection auteur',
+	'title' => 'Select author',
 	'fields' => array(
 		array(
 			'key' => 'field_5d6fafaccec98',
-			'label' => 'Ajouter auteur',
+			'label' => 'Add author',
 			'name' => 'ajouteur_auteur',
 			'type' => 'select',
 			'instructions' => '',
@@ -1505,8 +1488,8 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'interne' => 'Afficher un auteur du laboratoire',
-				'externe' => 'Mentionner un auteur / intervenant extérieur',
+				'interne' => 'Show local author (website\'s user)',
+				'externe' => 'Insert external author',
 			),
 			'default_value' => array(
 			),
@@ -1519,7 +1502,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5d6fafcccec99',
-			'label' => 'Selectionner l\'auteur',
+			'label' => 'Select author',
 			'name' => 'select_lauteur',
 			'type' => 'user',
 			'instructions' => '',
@@ -1545,10 +1528,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5d96f05c8037d',
-			'label' => 'Photo auteur extérieur',
+			'label' => 'Photo external author',
 			'name' => 'photo_auteur_exterieur',
 			'type' => 'image',
-			'instructions' => 'Téléverser la photo de l\'auteur',
+			'instructions' => 'Upload photo',
 			'required' => 0,
 			'conditional_logic' => array(
 				array(
@@ -1577,10 +1560,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5d96f0a18037e',
-			'label' => 'Nom de l\'auteur extérieur',
+			'label' => 'External author name',
 			'name' => 'nom_de_lauteur_exterieur',
 			'type' => 'text',
-			'instructions' => 'Saisir le nom de l\'auteur',
+			'instructions' => '',
 			'required' => 1,
 			'conditional_logic' => array(
 				array(
@@ -1604,10 +1587,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5d96f0be8037f',
-			'label' => 'Poste de l\'auteur',
+			'label' => 'External author position',
 			'name' => 'poste_de_lauteur',
 			'type' => 'text',
-			'instructions' => 'Saisir le poste occupé par l\'auteur',
+			'instructions' => '',
 			'required' => 1,
 			'conditional_logic' => array(
 				array(
@@ -1631,10 +1614,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5d96f0fc80380',
-			'label' => 'A propos de l\'auteur',
+			'label' => 'About author ',
 			'name' => 'a_propos_auteur',
 			'type' => 'textarea',
-			'instructions' => 'Saisir l\'à propos de l\'auteur',
+			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => array(
 				array(
@@ -1658,10 +1641,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5d96f13280381',
-			'label' => 'Site internet auteur',
+			'label' => 'Author\'s website ',
 			'name' => 'site_internet_auteur',
 			'type' => 'url',
-			'instructions' => 'Saisir le lien vers le site de l\'auteur',
+			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => array(
 				array(

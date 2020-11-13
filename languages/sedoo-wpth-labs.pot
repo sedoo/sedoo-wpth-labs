@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Labs by Sedoo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-06 15:31+0000\n"
+"POT-Creation-Date: 2020-11-13 13:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -21,6 +21,10 @@ msgstr ""
 
 #: functions.php:48
 msgid "primary-menu"
+msgstr ""
+
+#: functions.php:49
+msgid "mobile-menu"
 msgstr ""
 
 #: functions.php:50
@@ -47,10 +51,6 @@ msgstr ""
 msgid "Homepage image"
 msgstr ""
 
-#: header.php:68 header.php:86 header-image.php:68 header-image.php:86
-msgid "Menu"
-msgstr ""
-
 #: footer.php:120
 msgid "Tel"
 msgstr ""
@@ -59,8 +59,16 @@ msgstr ""
 msgid "Fax"
 msgstr ""
 
+#: footer.php:139
+msgid "All addresses"
+msgstr ""
+
 #: footer.php:218
 msgid "Data service OMP"
+msgstr ""
+
+#: header-image.php:68 header-image.php:86
+msgid "Menu"
 msgstr ""
 
 #: single.php:61

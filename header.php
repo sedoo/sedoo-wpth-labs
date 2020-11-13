@@ -13,6 +13,25 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
 } else {
     $mainMenuLayout = "grid";
 }
+$classesMainMenu = $mainMenuLayout;
+
+if ($mainMenuLayout = "grid") {
+    if (get_field('sedoo_labs_grid_menu_color', 'option')) {
+        $sedoo_labs_grid_menu_color = get_field('sedoo_labs_grid_menu_color', 'option');
+    } else {
+        $sedoo_labs_grid_menu_color = "whiteGrid";
+    }
+
+    // if (get_field('sedoo_labs_grid_menu_columns', 'option')) {
+    //     $sedoo_labs_grid_menu_columns = get_field('sedoo_labs_grid_menu_columns', 'option');
+    // } else {
+    //     $sedoo_labs_grid_menu_columns = "5";
+    // }
+    $classesMainMenu .= " ".$sedoo_labs_grid_menu_color;
+}
+
+
+
 
 ?>
 <!doctype html>
@@ -49,9 +68,6 @@ if ( wp_is_mobile() ) {
                 </a>
             </p> 
         <?php
-            // $menu_items = wp_get_nav_menu_items('primary-menu');
-        
-            // var_dump($menu_items);
         } 
         ?>      
             <div class="site-branding">
@@ -105,7 +121,7 @@ if ( wp_is_mobile() ) {
                 <?php
                 } ?>                
 
-                <nav id="primary-navigation" class="main-navigation <?php echo $mainMenuLayout;?>" role="navigation" aria-label="Menu principal / Main menu">
+                <nav id="primary-navigation" class="main-navigation <?php echo $classesMainMenu;?>" role="navigation" aria-label="Menu principal / Main menu">
                     <?php                     
                     wp_nav_menu( array(
                         'theme_location' => 'primary-menu',
