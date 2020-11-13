@@ -8,6 +8,30 @@
  *
  * @package labs_by_Sedoo
  */
+if (get_field('sedoo_labs_main_menu_layout', 'option')) {
+    $mainMenuLayout = get_field('sedoo_labs_main_menu_layout', 'option'); //field_5f6da0eb5ac37
+} else {
+    $mainMenuLayout = "grid";
+}
+$classesMainMenu = $mainMenuLayout;
+
+if ($mainMenuLayout = "grid") {
+    if (get_field('sedoo_labs_grid_menu_color', 'option')) {
+        $sedoo_labs_grid_menu_color = get_field('sedoo_labs_grid_menu_color', 'option');
+    } else {
+        $sedoo_labs_grid_menu_color = "whiteGrid";
+    }
+
+    // if (get_field('sedoo_labs_grid_menu_columns', 'option')) {
+    //     $sedoo_labs_grid_menu_columns = get_field('sedoo_labs_grid_menu_columns', 'option');
+    // } else {
+    //     $sedoo_labs_grid_menu_columns = "5";
+    // }
+    $classesMainMenu .= " ".$sedoo_labs_grid_menu_color;
+}
+
+
+
 
 ?>
 <!doctype html>
@@ -15,22 +39,73 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant:500|Montserrat:700|Poppins:200&display=swap" rel="stylesheet">  -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,400i,600,700&display=swap" rel="stylesheet"> 
-    
-	<?php wp_head(); ?>
+	<link rel="profile" href="https://gmpg.org/xfn/11">    
+    <?php wp_head(); ?>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="<?php echo get_template_directory_uri() . '/assets/MultiLevelPushMenu/js/modernizr.custom.js';?>"></script>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<div id="page" class="site <?php if ( wp_is_mobile() ) {echo "mobile";}?>">
+<?php
+if ( wp_is_mobile() ) {
+    // responsive menu
+?>  <div class="mp-pusher" id="mp-pusher">
+<?php }
+?>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'labs-by-sedoo' ); ?></a>
-    
 	<header id="masthead" class="site-header">
         <div class="wrapper">
+        <?php
+        if ( wp_is_mobile() ) {
+        ?>
+            <p>
+                <a href="#" id="trigger" class="menu-trigger">                    
+                    <span class="bar top"></span>
+                    <span class="bar middle"></span>
+                    <span class="bar bottom"></span>
+                </a>
+            </p> 
+        <?php
+        } 
+        ?>      
             <div class="site-branding">
                 <?php the_custom_logo(); ?>
             </div><!-- .site-branding -->
+
+        <?php
+        if ( wp_is_mobile() ) {
+        // responsive menu
+        ?>  
+            <nav id="mp-menu" class="mp-menu">
+                <?php         
+                if (has_nav_menu('mobile-menu')) {
+                    wp_nav_menu( array(
+                        'theme_location' => 'mobile-menu',
+                        'menu_id'        => 'mobile-menu',
+                        'depth'        => '3',
+                        'container_class'   => 'mp-level',
+                        'container_aria_label' => 'Menu principal / Main menu',
+                        'walker' => new Sedoo_Push_Menu_Walker(),
+                        )
+                    );
+                } else {
+                    wp_nav_menu( array(
+                        'theme_location' => 'primary-menu',
+                        'menu_id'        => 'mobile-menu',
+                        'depth'        => '3',
+                        'container_class'   => 'mp-level',
+                        'container_aria_label' => 'Menu principal / Main menu',
+                        'walker' => new Sedoo_Push_Menu_Walker(),
+                        ) 
+                    ); 
+                }
+                ?>
+            </nav>
+        <?php
+        } else {
+        ?>            
             <div class="nav-container">
             <?php if (has_nav_menu('top-menu')) { 
                 ?>
@@ -39,80 +114,28 @@
                         wp_nav_menu( array(
                             'theme_location' => 'top-menu',
                             'menu_id'        => 'ul-top-menu',
+                            'depth'        => '1',
                         ) );
                     ?>
                     </nav>
                 <?php
-                } ?>
-                <?php if(wp_is_mobile()): ?>
-                <nav id="primary-navigation" class="main-navigation">
-                    <?php 
-                    if (has_nav_menu('burger-menu')){
-                        wp_nav_menu( array(
-                            'theme_location' => 'burger-menu',
-                            'menu_id'        => 'burger-menu',
-                        ) );
-                    } else{
-                        wp_nav_menu( array(
-                            'theme_location' => 'primary-menu',
-                            'menu_id'        => 'primary-menu',
-                        ) );                      
-                    }  
+                } ?>                
+
+                <nav id="primary-navigation" class="main-navigation <?php echo $classesMainMenu;?>" role="navigation" aria-label="Menu principal / Main menu">
+                    <?php                     
+                    wp_nav_menu( array(
+                        'theme_location' => 'primary-menu',
+                        'menu_id'        => 'primary-menu',
+                        'depth'        => '3',
+                        'container_aria_label' => 'Menu principal / Main menu',
+                    ) ); 
                     ?>
-                    <button class="burger">
-                        <div class="burger-icon">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <label for="burger"><?php echo __('Menu', 'sedoo-wpth-labs'); ?></label>
-                    </button>
                 </nav>
-                <?php else : ?>
-                <?php if (has_nav_menu('primary-menu')) { ?>
-                <nav id="primary-navigation" class="main-navigation">
-                    <?php
-                        wp_nav_menu( array(
-                            'theme_location' => 'primary-menu',
-                            'menu_id'        => 'primary-menu',
-                        ) );
-                    ?>
-                    <button class="burger">
-                        <div class="burger-icon">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <label for="burger"><?php echo __('Menu', 'sedoo-wpth-labs'); ?></label>
-                    </button>
-                </nav>
-                <?php } ?>
-                <?php if (has_nav_menu('burger-menu')) {?>
-<!--
-                    <nav id="burger-navigation" class="second-navigation">
-                        <button class="burger">
-                            <div class="burger-icon">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <label for="burger">Menu</label>
-                        </button>
-                        <div class="overlay">
-                            <?php
-                            wp_nav_menu( array(
-                                'theme_location' => 'burger-menu',
-                                'menu_id'        => 'burger-menu',
-                            ) );
-                            ?>
-                        </div>
-                    </nav>
--->
-                <?php 
-                    }
-                   endif;
-                ?>
             </div>
+        <?php
+        }
+        ?> 
+            
         </div>
 	</header><!-- #masthead -->
 

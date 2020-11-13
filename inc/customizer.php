@@ -259,13 +259,12 @@ function labs_by_sedoo_color_style() {
              
              :root {
                 --theme-color:<?php echo $code_color;?>;
-                --hover-text-color:<?php echo $hover_text_color;?>;
+                --hover-textcolor:<?php echo $hover_text_color;?>;
             }
 
             .post:hover .group-content .entry-content h2,
             ul[id="shortcuts"] li:hover button,
             ul[id="shortcuts"] li:hover a,
-            nav[id="burger-navigation"] .overlay .slick-slide .menu-item a:hover,
             .footer-menu ul[id="primary-menu"] .menu-item a,
             .footer-categories li a:hover,
             .read-more-article .post-loop .post-preview:hover h3,
@@ -291,8 +290,6 @@ function labs_by_sedoo_color_style() {
 				color: <?php echo $code_color;?>;
 			}
 
-			nav[id="primary-navigation"] ul li:hover a,
-            ul[id="primary-menu"] .menu-item .sub-menu,
             ul[id="shortcuts"] li,
             .post .entry-header p,
             .post-horizontal .entry-header p,
@@ -315,7 +312,7 @@ function labs_by_sedoo_color_style() {
             .ui-widget-header,
             .page-links span.current,
             .wrapper-layout .social-list a:hover::before, 
-            .cn-button  , .btn_footer_local       
+            .cn-button  , .btn_footer_local:hover   
             {
                 background: <?php echo $code_color;?>;
 			}
@@ -390,6 +387,34 @@ function labs_by_sedoo_color_style() {
                     background-color:<?php echo $code_color;?>
                 }
             }
+
+            <?php
+            if ($mainMenuLayout = "grid") {
+                if ( get_field('sedoo_labs_grid_menu_color', 'option') == "coloredGrid" ) {                    
+                ?>
+                    nav[id="primary-navigation"].grid.coloredGrid ul li a:hover,
+                    .grid.coloredGrid ul[id="primary-menu"] .menu-item:hover .sub-menu
+                    {
+                        background: var(--theme-color);
+                    }
+                    nav[id="primary-navigation"].grid.coloredGrid ul li a:hover,
+                    .grid.coloredGrid ul[id="primary-menu"] .menu-item:hover .sub-menu a
+                    {
+                        color: #FFF;
+                    }
+                <?php
+                }
+            
+                if (get_field('sedoo_labs_grid_menu_columns', 'option') !== 5) {
+                ?>
+                .grid ul[id="primary-menu"] .menu-item .sub-menu {
+                    grid-template-columns: repeat(<?php echo get_field('sedoo_labs_grid_menu_columns', 'option');?>, 1fr);       
+                }                               
+                <?php
+                } 
+            }
+            ?>
+
          </style>
     <?php
 }

@@ -7,6 +7,13 @@ function labs_load_javascript_files() {
     
     wp_enqueue_script('labs_slick', get_template_directory_uri() . '/js/slick.js', array('jquery'), '', true );
     wp_enqueue_script('labs_toc', get_template_directory_uri() . '/js/toc.js', array('jquery'), '', true );
+
+    if ( wp_is_mobile() ) {
+        wp_enqueue_script( 'labs-by-sedoo-mlpushmenu-classie', get_template_directory_uri() . '/assets/MultiLevelPushMenu/js/classie.js', array(), '20201106', true );
+        wp_enqueue_script( 'labs-by-sedoo-mlpushmenu-mlpushmenu', get_template_directory_uri() . '/assets/MultiLevelPushMenu/js/mlpushmenu.js', array(), '1.0.0', true );
+        // wp_enqueue_script( 'labs-by-sedoo-mlpushmenu-mlpushmenu', get_template_directory_uri() . '/assets/MultiLevelPushMenu/js/modernizr.custom.js', array(), '2.6.2', true );
+        // wp_enqueue_style( 'labs-by-sedoo-mlpushmenu-css', get_theme_file_uri( '/assets/MultiLevelPushMenu/css/component.css' ), array(), '' );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'labs_load_javascript_files' );
 ?>

@@ -30,14 +30,14 @@ $footerStyle .= "\"";
         if (get_field('footer_text_color', 'option')) {
             the_field('footer_text_color', 'option');            
         } else {
-            echo "#222";
+            echo "#222222";
         }
         ?>
         ;
     }
         </style>    
         <div class="wrapper-layout">
-            <div><!--footer menus-->
+            <div id="footer-menu"><!--footer menus-->
                 <?php if (has_nav_menu('footer-menu-1')) { 
                 ?>
                 <nav class="footer-menu" id="footer-menu-1">
@@ -135,11 +135,23 @@ $footerStyle .= "\"";
                     <?php 
                     // if repeater have multiple row or not
                     
-                    if(count(get_field('location_repeater', 'option') ) > 1) {
-                        echo '<a class="btn_footer_local" href="'.get_field('url_page_access', 'option').'"> Toutes les adresses </a>';
-                    }
-
-                    ?>
+                        if(count(get_field('location_repeater', 'option') ) > 1) {
+                            // echo '<a class="btn_footer_local" href="'.get_field('url_page_access', 'option').'"> '. __('All addresses', 'sedoo-wpth-labs').' </a>';
+                        ?>
+                        <a class="btn_footer_local" href="<?php the_field('url_page_access', 'option'); ?>">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+                            <g>
+                                <path fill="#FFFFFF" d="M15,0C8.72,0,3.63,5.1,3.63,11.37C3.63,17.66,15,29.88,15,29.88s11.37-12.22,11.37-18.51
+                    C26.37,5.1,21.28,0,15,0z M15,15.91c-2.51,0-4.54-2.03-4.54-4.54c0-2.5,2.03-4.53,4.54-4.53c2.5,0,4.53,2.03,4.53,4.53
+                    C19.53,13.88,17.5,15.91,15,15.91z" />
+                                <rect fill="none" width="30" height="30" class="size"/>
+                            </g>
+                        </svg>
+                        <?php echo __('All addresses', 'sedoo-wpth-labs'); ?>
+                        </a>
+                        <?php
+                        }
+                        ?>
                     <?php endif; ?>
                 </div>
                 <?php 
@@ -223,10 +235,24 @@ $footerStyle .= "\"";
                 </div><!-- .site-info -->
             </div>
         <?php } ?>    
-	</footer><!-- #colophon -->
+    </footer><!-- #colophon -->
+    <?php
+    if ( wp_is_mobile() ) {
+    // end div mp-pusher    
+    ?>
+    </div> 
+    <?php } ?>
 </div><!-- #page -->
 <?php get_template_part( 'template-parts/shortcut', 'page' ); ?>
-<?php wp_footer(); ?>   
+<?php wp_footer(); 
 
+if (wp_is_mobile() ) {
+?>
+<script>
+new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ), {type : 'cover'} );
+</script>
+<?php
+}
+?>   
 </body>
 </html>

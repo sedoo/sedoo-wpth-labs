@@ -1,7 +1,6 @@
 header[id="masthead"]{
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
     width: 100%;
     background: $light-full;
     z-index: 100; 
@@ -13,6 +12,7 @@ header[id="masthead"]{
         @include justify-content-between;
         @include align-items-center;
         padding: 0;
+        position: relative;
         
         
         .site-branding{
@@ -28,6 +28,11 @@ header[id="masthead"]{
     }
 }
 
+.mobile {
+    header[id="masthead"]{
+        padding: 0;
+    }
+}
 nav[id="primary-navigation"]{
     @include display-flex;
     @include align-items-center;
@@ -54,94 +59,33 @@ nav[id="primary-navigation"]{
             
             &:hover{
                 a{
-                    color: $light-full;
-                    background: $dark;
+                    // // font-size: $tiny-size;
+                    // color: $light-full;
+                    // background: $dark;
+                    // background: var(--theme-color);
+                    &+ul a {
+                        font-size: $tiny-size;
+                    }
                 }
-            }
-        }
-    }
-    .burger{
-        display: none;
-    }
-}
-
-nav[id="burger-navigation"]{
-    margin-left: 50px;
-}
-
-.burger{
-    padding: 10px;
-    @include display-flex;
-    @include align-items-center;
-    border: none;
-    border-left: $burger-border;
-    border-right: $burger-border;
-    background: transparent;
-    position: relative;
-    z-index: 250;
-    color:$light-dark;
-
-    &::before, &::after{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background: $light-dark;
-        @include basic-transition;
-    }
-
-    &::after{
-        bottom: 0;
-        right: 0;
-        top: auto;
-        left: auto;
-    }
-
-    &:hover{
-        &::before, &::after{
-            width: 50%;
-        }   
-
-        .burger-icon{
-            span{
-                &:nth-child(2){
-                    @include transform(translateX(100%));
-                }
+                
             }
         }
     }
 
+}
+ul[id="primary-menu"] {
+    display: none;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    position: relative; 
+}
 
-    label{
-        text-transform: $uppercase;
-        font-size: $font-size;
-        font-weight: $bold;
-        z-index: -1;
-    }
-
-    .burger-icon{
-        width: 30px;
-        margin-right: 10px;
-
-        span{
-            background: $light-dark;
-            width: 100%;
-            height: 5px;
-            margin-bottom: 3px;
-            display: block;
-            border-radius: 10px;
-            @include basic-transition;
-            @include basic-transition-delay;
-
-            &:nth-child(2){
-                width: 50%;
-            }
-
-            &:last-child{
-                margin-bottom: 0;
-            }
+@media screen and (min-width: 37.5em) {
+    ul[id="primary-menu"] {
+        display: flex;
+        .menu-toggle {
+            display: none;
         }
     }
 }

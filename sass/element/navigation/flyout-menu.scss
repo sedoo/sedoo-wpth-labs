@@ -1,0 +1,110 @@
+.flyout {
+
+    ul[id="primary-menu"] { 
+        
+        & > .menu-item {
+            position: relative;
+
+            &:hover > .sub-menu,
+            &.focus > .sub-menu {
+                // left: 0;
+                width: 300px;
+                opacity: 1;
+                z-index: 300;
+                @include transform(scale(1, 1));
+            }
+
+            &.current_page_item > a,
+            &.current-menu-item > a,
+            &.current_page_ancestor > a,
+            &.current-menu-ancestor > a {
+                color: var(--theme-color);
+            }
+
+            &:nth-last-child(-n+2) {
+                & > .sub-menu {
+                    right:0;
+                    left:auto;
+                    .sub-menu {
+                        left:-100%;
+                    }
+                }
+            }
+        }
+
+        .sub-menu {
+            position: absolute;
+            top: 80px;
+            opacity: 0;
+            left:0;
+            z-index: 300;
+            background: rgba(255,255,255,.95);
+            width: 300px;
+            @include transform(scale(1, 0));
+            transform-origin: top center;
+            box-shadow: $down-box-shadow;
+            @include basic-transition;
+
+            .menu-item {
+                width: 100%;
+                position: relative;
+
+                &:first-child {
+                    border-top: 2px solid var(--theme-color);
+                }
+                &:last-child {
+                    border-bottom: 2px solid var(--theme-color);
+                }
+
+                &:hover > .sub-menu,
+                &.focus > .sub-menu {
+                    width: 300px;
+                    opacity: 1;
+                    top: 0;
+                    z-index: 300;
+                    @include transform(scale(1, 1));
+                }
+            }
+
+            .sub-menu {
+                opacity: 0;
+                left:100%;
+                top:0;
+                @include basic-transition;
+                // max-width: 300px;
+            }
+            a {
+                padding: 15px 10px;
+                font-size: $tiny-size;
+                font-weight: $light;
+                text-transform: none;
+            }
+
+            :hover > a,
+            .focus > a {
+                background: var(--theme-color) none repeat scroll 0 0;
+                color: var(--hover-textcolor);
+            }
+
+
+        }
+    }
+}
+
+/* Small menu. */
+// .menu-toggle,
+// .main-navigation.toggled ul {
+// 	display: block;
+// 	margin:auto;
+// }
+
+// @media screen and (min-width: 37.5em) {
+//     .flyoutMenu {
+//         ul[id="primary-menu"] {
+//             display: block;
+//             .menu-toggle {
+//                 display: none;
+//             }
+//         }
+//     }	
+// }

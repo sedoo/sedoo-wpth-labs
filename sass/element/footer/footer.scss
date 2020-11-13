@@ -7,11 +7,16 @@ footer[id="colophon"]{
     > div,
     > div > :first-child {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
     }
 
+    > div > :first-child {
+    justify-content: space-evenly
+    }
+    
     > div {
+        justify-content: space-between;
+
         &.wrapper-layout {
             padding-bottom:20px;
             > :first-child {
@@ -31,7 +36,6 @@ footer[id="colophon"]{
         padding:0;
         }
     }    
-
 
 }
 
@@ -210,8 +214,9 @@ footer[id="colophon"]{
 }
 .partners-list{
     background:#FFF;
-    height: 100px;
+    min-height: 100px;
     align-items: center;
+    padding-top: 20px;
 
     ul{
         display: flex;
