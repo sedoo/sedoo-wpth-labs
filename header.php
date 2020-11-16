@@ -19,19 +19,11 @@ if ($mainMenuLayout = "grid") {
     if (get_field('sedoo_labs_grid_menu_color', 'option')) {
         $sedoo_labs_grid_menu_color = get_field('sedoo_labs_grid_menu_color', 'option');
     } else {
-        $sedoo_labs_grid_menu_color = "whiteGrid";
+        $sedoo_labs_grid_menu_color = "coloredGrid";
     }
 
-    // if (get_field('sedoo_labs_grid_menu_columns', 'option')) {
-    //     $sedoo_labs_grid_menu_columns = get_field('sedoo_labs_grid_menu_columns', 'option');
-    // } else {
-    //     $sedoo_labs_grid_menu_columns = "5";
-    // }
     $classesMainMenu .= " ".$sedoo_labs_grid_menu_color;
 }
-
-
-
 
 ?>
 <!doctype html>

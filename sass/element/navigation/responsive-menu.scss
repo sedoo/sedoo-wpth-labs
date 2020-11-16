@@ -200,6 +200,10 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
 					@include basic-transition;
 				}
 			}
+			// &:hover a{
+			// 	background:var(--theme-color);
+			// 	color:#FFF;
+			// }
 		}
 		&.sub-menu {
 			background: #FFF;
@@ -221,7 +225,7 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
 	}
 
 	.mp-back {
-		background: #CCC;
+		background:var(--theme-color);
 		outline: none;
 		color: #fff;
 		text-transform: uppercase;
@@ -241,14 +245,11 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
 			right: 10px;
 			// transform: rotate(180deg);
 			transform-origin: center center;
-			color:#555;
+			color:#FFF;
 			font-size: $mini-size;
 
 			@include basic-transition;
 		}
-		// &.menu-item-has-children:hover::after {
-		// 	transform: rotate(180deg) translateX(4px);
-		// }
 	}	
 
 }
