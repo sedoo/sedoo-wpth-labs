@@ -94,22 +94,20 @@ $footerStyle .= "\"";
                     </ul>
                 </div>
                 <?php endif; ?>
-
+                
+                <?php if( have_rows('location_repeater', 'option') ){ ?>
                 <div class="infos-pratiques">
-
-                    <?php if( have_rows('location_repeater', 'option') ): ?>
-                    <?php 
-                    
-                    
-                    $adresses = get_field('location_repeater', 'option');
-                        $nom_labo = $adresses[0]['nom_laboratoire'];
-                        $adresse_labo = $adresses[0]['adresse'];
-                        $contact_labo = $adresses[0]['contact_laboratoire'];
-                        $tel_contact = $adresses[0]['telephone_contact'];
-                        $fax_contact = $adresses[0]['fax_contact'];
-                        $mail_contact = $adresses[0]['mail_contact'];
-                        $map = $adresses[0]['map'];
-                    ?>
+                
+                <?php                                        
+                $adresses = get_field('location_repeater', 'option');
+                $nom_labo = $adresses[0]['nom_laboratoire'];
+                $adresse_labo = $adresses[0]['adresse'];
+                $contact_labo = $adresses[0]['contact_laboratoire'];
+                $tel_contact = $adresses[0]['telephone_contact'];
+                $fax_contact = $adresses[0]['fax_contact'];
+                $mail_contact = $adresses[0]['mail_contact'];
+                $map = $adresses[0]['map'];
+                ?>
                     <div class="row-infos">
                         <div>
                             <p><b><?php echo $nom_labo; ?></b></p>
@@ -135,24 +133,23 @@ $footerStyle .= "\"";
                     <?php 
                     // if repeater have multiple row or not
                     
-                        if(count(get_field('location_repeater', 'option') ) > 1) {
-                            // echo '<a class="btn_footer_local" href="'.get_field('url_page_access', 'option').'"> '. __('All addresses', 'sedoo-wpth-labs').' </a>';
-                        ?>
-                        <a class="btn_footer_local" href="<?php the_field('url_page_access', 'option'); ?>">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
-                            <g>
-                                <path fill="#FFFFFF" d="M15,0C8.72,0,3.63,5.1,3.63,11.37C3.63,17.66,15,29.88,15,29.88s11.37-12.22,11.37-18.51
-                    C26.37,5.1,21.28,0,15,0z M15,15.91c-2.51,0-4.54-2.03-4.54-4.54c0-2.5,2.03-4.53,4.54-4.53c2.5,0,4.53,2.03,4.53,4.53
-                    C19.53,13.88,17.5,15.91,15,15.91z" />
-                                <rect fill="none" width="30" height="30" class="size"/>
-                            </g>
-                        </svg>
-                        <?php echo __('All addresses', 'sedoo-wpth-labs'); ?>
-                        </a>
-                        <?php
-                        }
-                        ?>
-                    <?php endif; ?>
+                    if(count(get_field('location_repeater', 'option') ) > 1) {
+                        // echo '<a class="btn_footer_local" href="'.get_field('url_page_access', 'option').'"> '. __('All addresses', 'sedoo-wpth-labs').' </a>';
+                    ?>
+                    <a class="btn_footer_local" href="<?php the_field('url_page_access', 'option'); ?>">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+                        <g>
+                            <path fill="#FFFFFF" d="M15,0C8.72,0,3.63,5.1,3.63,11.37C3.63,17.66,15,29.88,15,29.88s11.37-12.22,11.37-18.51
+                C26.37,5.1,21.28,0,15,0z M15,15.91c-2.51,0-4.54-2.03-4.54-4.54c0-2.5,2.03-4.53,4.54-4.53c2.5,0,4.53,2.03,4.53,4.53
+                C19.53,13.88,17.5,15.91,15,15.91z" />
+                            <rect fill="none" width="30" height="30" class="size"/>
+                        </g>
+                    </svg>
+                    <?php echo __('All addresses', 'sedoo-wpth-labs'); ?>
+                    </a>
+                    <?php
+                    }
+                    ?>                    
                 </div>
                 <?php 
                 if(get_field('sedoo_labs_footer_replace_logo', 'option') == true) {
@@ -178,7 +175,7 @@ $footerStyle .= "\"";
             </div>
         </div>
 
-        <?php if( have_rows('partenaires', 'option') ): ?>
+        <?php if( have_rows('partenaires', 'option') ){ ?>
         <div class="partners-list">
             <ul id="partners-sidebar" class="inline-list wrapper-layout" role="complementary">
             <?php while( have_rows('partenaires', 'option') ): the_row(); 
@@ -191,13 +188,13 @@ $footerStyle .= "\"";
 
                 <li class="list">
 
-                    <?php if( $link ): ?>
+                    <?php if( $link ){ ?>
                         <a href="<?php echo $link; ?>">
-                    <?php endif; ?>
+                    <?php } ?>
                         <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt'] ?>" />
-                    <?php if( $link ): ?>
+                    <?php if( $link ){ ?>
                         </a>
-                    <?php endif; ?>
+                    <?php } ?>
 
                 </li>
 
@@ -205,7 +202,9 @@ $footerStyle .= "\"";
 
             </ul>
         </div>
-        <?php endif; ?>
+        <?php 
+            }  
+        } ?>
         <?php if (has_nav_menu('mentions-menu') || get_field('footer_show_copyright', 'option') ) { ?>
             <div class="copyright">
                 <div class="site-info wrapper">
