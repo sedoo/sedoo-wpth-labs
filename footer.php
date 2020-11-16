@@ -97,7 +97,7 @@ $footerStyle .= "\"";
                 
                 <?php if( have_rows('location_repeater', 'option') ){ ?>
                 <div class="infos-pratiques">
-                
+
                 <?php                                        
                 $adresses = get_field('location_repeater', 'option');
                 $nom_labo = $adresses[0]['nom_laboratoire'];
@@ -226,7 +226,12 @@ $footerStyle .= "\"";
                     if (get_field('footer_show_copyright', 'option')) {
                         ?>
                         <p>
-                        <?php echo get_field('footer_copyright_text', 'option');?> - <a href="https://www.sedoo.fr" title="Visit Sedoo website">SEDOO (<?php echo __('Data service OMP', 'sedoo-wpth-labs');?>)</a>
+                        <?php 
+                        if (get_field('footer_copyright_text', 'option')) {
+                        echo get_field('footer_copyright_text', 'option')." - ";
+                        }
+                        ?>
+                        <a href="https://www.sedoo.fr" title="Visit Sedoo website">SEDOO (<?php echo __('Data service OMP', 'sedoo-wpth-labs');?>)</a>
                         </p>
                     <?php
                     }
