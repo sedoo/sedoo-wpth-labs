@@ -155,58 +155,6 @@ function labs_by_sedoo_customize_color( $wp_customize )
         'settings'   => 'labs_by_sedoo_text_color_code',
     )) );
 
-
-
-    //  =======================================
-    //  = Text Input Link hover color code     =
-    //  =======================================
-//    $wp_customize->add_setting('labs_by_sedoo_link_hover_color_code', array(
-//        'default'        => '#009FDE',
-//        'capability'     => 'edit_theme_options',
-//        'type'           => 'theme_mod',
-// 
-//    ));
-//
-//	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'labs_by_sedoo_link_hover_color_code', array(
-//        'label'      => __('Couleur de survol des liens', 'labs_by_sedoo'),
-//        'section'    => 'labs_by_sedoo_color_scheme',
-//        'settings'   => 'labs_by_sedoo_link_hover_color_code',
-//    )) );
-
-
-    //  =============================
-    //  = Checkbox breadcrumb       =
-    //  =============================
-    $wp_customize->add_setting('labs_by_sedoo_breadcrumb', array(
-        'default'        => 'false',
-        'capability'     => 'edit_theme_options',
-        'type'           => 'theme_mod',
- 
-    ));
-
-	$wp_customize->add_control('labs_by_sedoo_breadcrumb', array(
-        'label'      => __('Afficher le fil d\'ariane sur les pages', 'labs_by_sedoo'),
-        'section'    => 'labs_by_sedoo_color_scheme',
-        'settings'   => 'labs_by_sedoo_breadcrumb',
-        'type'       => 'checkbox',
-    ));
-
-	//  =============================
-    //  = Text Input copyright     =
-    //  =============================
-    $wp_customize->add_setting('labs_by_sedoo_copyright', array(
-        'default'        => 'Pôle Aeris '.date('Y').' - Service de données OMP (SEDOO)',
-        'capability'     => 'edit_theme_options',
-        'type'           => 'theme_mod',
- 
-    ));
-
-	$wp_customize->add_control('labs_by_sedoo_copyright', array(
-        'label'      => __('© Copyright', 'labs_by_sedoo'),
-        'section'    => 'labs_by_sedoo_color_scheme',
-        'settings'   => 'labs_by_sedoo_copyright',
-    ));
-
 }
 add_action( 'customize_register', 'labs_by_sedoo_customize_color' );
 
