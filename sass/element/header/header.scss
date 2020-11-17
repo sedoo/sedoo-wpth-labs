@@ -7,6 +7,29 @@ header[id="masthead"]{
     padding: 10px 20px;
     box-sizing: border-box;
     
+    &.darkHeader {
+        background: $dark-opacity;
+
+        nav[id="primary-navigation"] > div > ul > li > a,
+        nav[id="top-header"] > div > ul > li > a {
+            color:white;
+        }
+    }
+
+    &.small {
+        /* site header for scrolling, small version */
+        padding: 5px 20px;
+
+        .custom-logo {
+            height: 50px;
+            width: auto;
+        }
+
+        nav[id="primary-navigation"] > div > ul > li > a {
+            padding: 10px 10px;
+        }
+    }
+
     .wrapper{
         @include display-flex;
         @include justify-content-between;
