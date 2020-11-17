@@ -25,6 +25,12 @@ if ($mainMenuLayout = "grid") {
     $classesMainMenu .= " ".$sedoo_labs_grid_menu_color;
 }
 
+if (get_field('sedoo_labs_header_appearance', 'option')) {
+    $classesHeader = get_field('sedoo_labs_header_appearance', 'option');
+} else {
+    $classesHeader = "whiteHeader";
+}
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -47,7 +53,7 @@ if ( wp_is_mobile() ) {
 <?php }
 ?>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'labs-by-sedoo' ); ?></a>
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header <?php echo $classesHeader;?>">
         <div class="wrapper">
         <?php
         if ( wp_is_mobile() ) {
