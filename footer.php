@@ -148,8 +148,12 @@ $footerStyle .= "\"";
                     </a>
                     <?php
                     }
-                }?>       
+                ?>
                 </div>
+                <?php
+                }
+                ?>       
+                
                 <figure>
                 <?php 
                 if(get_field('sedoo_labs_footer_replace_logo', 'option') == true) {
@@ -157,7 +161,7 @@ $footerStyle .= "\"";
                         echo '<a class="footer_img" href="'.get_field('sedoo_labs_footer_url_image', 'option').'">';
                     }
                     ?>
-                        <img alt="" class=" object-fit-contain" src="<?php echo get_field('sedoo_labs_image_in_footer', 'option'); ?>" >
+                    <img alt="" class=" object-fit-contain" src="<?php echo get_field('sedoo_labs_image_in_footer', 'option'); ?>" >
                     <?php 
                     if(get_field('sedoo_labs_footer_url_image', 'option')) { 
                         echo '</a>';
@@ -165,12 +169,11 @@ $footerStyle .= "\"";
                 } else {
                     $custom_logo_id = get_theme_mod( 'custom_logo' );
                     $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); 
-                ?>
+                    ?>
                     <img class="object-fit-contain" src="<?php echo $image[0]; ?>" alt="" />
                 <?php
                 }
-                ?>
-                    
+                ?>                    
                 </figure>
             </div>
         </div>
