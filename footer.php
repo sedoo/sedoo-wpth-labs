@@ -76,7 +76,7 @@ $footerStyle .= "\"";
             </div>
 
             <div class="social-partenaires">
-                <?php if( have_rows('reseaux_sociaux', 'option') ): ?>
+                <?php if( have_rows('reseaux_sociaux', 'option') ) { ?>
                 <div class="social-list">
                     <ul class="inline-list">
                     <?php while( have_rows('reseaux_sociaux', 'option') ): the_row(); 
@@ -84,16 +84,16 @@ $footerStyle .= "\"";
                         $link = get_sub_field('lien_reseau_social', 'option');
                         ?>
                         <li class="list">
-                            <?php if( $link ): ?>
+                            <?php if( $link ){ ?>
                                 <a href="<?php echo $link; ?>" title="Follow us">
                                     <span class="screen-reader-text">Follow us</span>
                                 </a>
-                            <?php endif; ?>
+                            <?php } ?>
                         </li>
                     <?php endwhile; ?>
                     </ul>
                 </div>
-                <?php endif; ?>
+                <?php } ?>
                 
                 <?php if( have_rows('location_repeater', 'option') ){ ?>
                 <div class="infos-pratiques">
@@ -134,7 +134,6 @@ $footerStyle .= "\"";
                     // if repeater have multiple row or not
                     
                     if(count(get_field('location_repeater', 'option') ) > 1) {
-                        // echo '<a class="btn_footer_local" href="'.get_field('url_page_access', 'option').'"> '. __('All addresses', 'sedoo-wpth-labs').' </a>';
                     ?>
                     <a class="btn_footer_local" href="<?php the_field('url_page_access', 'option'); ?>">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
@@ -149,29 +148,30 @@ $footerStyle .= "\"";
                     </a>
                     <?php
                     }
-                    ?>                    
+                }?>       
                 </div>
+                <figure>
                 <?php 
                 if(get_field('sedoo_labs_footer_replace_logo', 'option') == true) {
                     if(get_field('sedoo_labs_footer_url_image', 'option')) { 
                         echo '<a class="footer_img" href="'.get_field('sedoo_labs_footer_url_image', 'option').'">';
                     }
-                        ?>
-                        <figure>
-                            <img alt="" class=" object-fit-contain" src="<?php echo get_field('sedoo_labs_image_in_footer', 'option'); ?>" >
-                        </figure>
-                        <?php 
+                    ?>
+                        <img alt="" class=" object-fit-contain" src="<?php echo get_field('sedoo_labs_image_in_footer', 'option'); ?>" >
+                    <?php 
                     if(get_field('sedoo_labs_footer_url_image', 'option')) { 
                         echo '</a>';
                     }
                 } else {
                     $custom_logo_id = get_theme_mod( 'custom_logo' );
                     $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); 
+                ?>
+                    <img class="object-fit-contain" src="<?php echo $image[0]; ?>" alt="" />
+                <?php
                 }
                 ?>
-
-                <img class="object-fit-contain" src="<?php echo $image[0]; ?>" alt="" />
-                
+                    
+                </figure>
             </div>
         </div>
 
@@ -203,8 +203,8 @@ $footerStyle .= "\"";
             </ul>
         </div>
         <?php 
-            }  
-        } ?>
+        }  
+        ?>
         <?php if (has_nav_menu('mentions-menu') || get_field('footer_show_copyright', 'option') ) { ?>
             <div class="copyright">
                 <div class="site-info wrapper">
