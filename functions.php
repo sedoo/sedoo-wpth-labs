@@ -150,7 +150,7 @@ add_action( 'widgets_init', 'labs_by_sedoo_widgets_init' );
  * Enqueue scripts and styles.
  */
 function labs_by_sedoo_scripts() {
-	wp_enqueue_style( 'labs-by-sedoo-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'labs-by-sedoo-style', get_stylesheet_uri(), array(), filemtime(get_template_directory() . '/style.css'), false );
 
 	wp_enqueue_script( 'labs-by-sedoo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
