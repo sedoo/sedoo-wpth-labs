@@ -145,115 +145,137 @@ function labs_sedoo_add_color_to_theme() {
 	?>
 		<style type="text/css">
 			/* MAIN COLORS ? SECONDARY ONE AND MESSAGES ONE */
-			.has-main-color-background-color {
-				background-color : <?php echo labs_by_sedoo_main_color(); ?>;
+			.has-main-color-background-color, 
+			[class^="wp-block"].has-background-dim.has-main-color-background-color {
+				background-color : var(--theme-color);
 			}
-			.has-secondary-color-background-color {
+			.has-secondary-color-background-color,
+			[class^="wp-block"].has-background-dim.has-secondary-color-background-color {
 				background-color : <?php echo labs_by_sedoo_main_color_secondary(); ?>;
 			}
-			.has-green-background-color {
+			.has-green-background-color,
+			[class^="wp-block"].has-background-dim.has-green-background-color {
 				background-color : <?php echo get_field('green_color', 'option'); ?>;;
 			}
-			.has-blue-background-color {
+			.has-blue-background-color,
+			[class^="wp-block"].has-background-dim.has-blue-background-color {
 				background-color : <?php echo get_field('blue_color', 'option'); ?>;;
 			}
-			.has-orange-background-color {
+			.has-orange-background-color,
+			[class^="wp-block"].has-background-dim.has-orange-background-color {
 				background-color : <?php echo get_field('orange_color', 'option'); ?>;;
 			}
-			.has-red-background-color {
+			.has-red-background-color,
+			[class^="wp-block"].has-background-dim.has-red-background-color {
 				background-color : <?php echo get_field('red_color', 'option'); ?>;;
 			}
-			.has-main-color-color {
-				color : <?php echo labs_by_sedoo_main_color(); ?>;
+			.has-main-color-color,
+			[class^="wp-block"].has-background-dim.has-main-color-color {
+				color : var(--theme-color);
 			}
-			.has-secondary-color-color {
+			.has-secondary-color-color,
+			[class^="wp-block"].has-background-dim.has-secondary-color-color {
 				color : <?php echo labs_by_sedoo_main_color_secondary(); ?>;
 			}
-			.has-blue-color {
+			.has-blue-color,
+			[class^="wp-block"].has-background-dim.has-blue-color {
 				color : <?php echo get_field('blue_color', 'option'); ?>;
 			}
-			.has-green-color {
+			.has-green-color,
+			[class^="wp-block"].has-background-dim.has-green-color {
 				color : <?php echo get_field('green_color', 'option'); ?>;
 			}
-			.has-orange-color {
+			.has-orange-color,
+			[class^="wp-block"].has-background-dim.has-orange-color {
 				color : <?php echo get_field('orange_color', 'option'); ?>;
 			}
-			.has-red-color {
+			.has-red-color,
+			[class^="wp-block"].has-background-dim.has-red-color {
 				color : <?php echo get_field('red_color', 'option'); ?>;
 			}
 
 			/* GENERATED COLORS BY THE PALETTE GENERATOR */
-			.has-couleur-ajoutee-1-color {
+			.has-couleur-ajoutee-1-color,
+			[class^="wp-block"].has-background-dim.has-couleur-ajoutee-1-color {
 				color : <?php echo get_site_color(0); ?>;
 			}
-			.has-couleur-ajoutee-2-color {
+			.has-couleur-ajoutee-2-color,
+			[class^="wp-block"].has-background-dim.has-couleur-ajoutee-2-color {
 				color : <?php echo get_site_color(1); ?>;
 			}
-			.has-couleur-ajoutee-3-color {
+			.has-couleur-ajoutee-3-color,
+			[class^="wp-block"].has-background-dim.has-couleur-ajoutee-3-color {
 				color : <?php echo get_site_color(2); ?>;
 			}
-			.has-couleur-ajoutee-4-color {
+			.has-couleur-ajoutee-4-color,
+			[class^="wp-block"].has-background-dim.has-couleur-ajoutee-4-color {
 				color : <?php echo get_site_color(3); ?>;
 			}
-			.has-couleur-ajoutee-5-color {
+			.has-couleur-ajoutee-5-color,
+			[class^="wp-block"].has-background-dim.has-couleur-ajoutee-5-color {
 				color : <?php echo get_site_color(4); ?>;
 			}
 			.has-couleur-ajoutee-1-background-color,
-			.wp-block-cover-image.has-background-dim.has-couleur-ajoutee-1-background-color::before, 
-			.wp-block-cover.has-background-dim.has-couleur-ajoutee-1-background-color::before {
+			[class^="wp-block"].has-background-dim.has-couleur-ajoutee-1-background-color::before {
 				background-color : <?php echo get_site_color(0); ?>;
 			}
 			.has-couleur-ajoutee-2-background-color,
-			.wp-block-cover-image.has-background-dim.has-couleur-ajoutee-2-background-color::before, 
-			.wp-block-cover.has-background-dim.has-couleur-ajoutee-2-background-color::before {
+			.[class^="wp-block"].has-background-dim.has-couleur-ajoutee-2-background-color::before  {
 				background-color : <?php echo get_site_color(1); ?>;
 			}
 			.has-couleur-ajoutee-3-background-color,
-			.wp-block-cover-image.has-background-dim.has-couleur-ajoutee-3-background-color::before, 
-			.wp-block-cover.has-background-dim.has-couleur-ajoutee-3-background-color::before {
+			[class^="wp-block"].has-background-dim.has-couleur-ajoutee-3-background-color::before  {
 				background-color : <?php echo get_site_color(2); ?>;
 			}
 			.has-couleur-ajoutee-4-background-color,
-			.wp-block-cover-image.has-background-dim.has-couleur-ajoutee-4-background-color::before, 
-			.wp-block-cover.has-background-dim.has-couleur-ajoutee-4-background-color::before {
+			[class^="wp-block"].has-background-dim.has-couleur-ajoutee-4-background-color::before  {
 				background-color : <?php echo get_site_color(3); ?>;
 			}
 			.has-couleur-ajoutee-5-background-color,
-			.wp-block-cover-image.has-background-dim.has-couleur-ajoutee-5-background-color::before, 
-			.wp-block-cover.has-background-dim.has-couleur-ajoutee-5-background-color::before {
+			[class^="wp-block"].has-background-dim.has-couleur-ajoutee-5-background-color::before {
 				background-color : <?php echo get_site_color(4); ?>;
 			}
 	
 			/* CUSTOM COLORS CHOOSED BY USER */
-			.has-couleur-selectionnee-1-color {
+			.has-couleur-selectionnee-1-color,
+			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-1-color {
 				color : <?php echo get_site_color_custom(0); ?>;
 			}
-			.has-couleur-selectionnee-2-color {
+			.has-couleur-selectionnee-2-color,
+			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-2-color {
 				color : <?php echo get_site_color_custom(1); ?>;
 			}
-			.has-couleur-selectionnee-3-color {
+			.has-couleur-selectionnee-3-color,
+			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-3-color {
 				color : <?php echo get_site_color_custom(2); ?>;
 			}
-			.has-couleur-selectionnee-4-color {
+			.has-couleur-selectionnee-4-color,
+			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-4-color {
 				color : <?php echo get_site_color_custom(3); ?>;
 			}
-			.has-couleur-selectionnee-5-color {
+			.has-couleur-selectionnee-5-color,
+			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-5-color {
 				color : <?php echo get_site_color_custom(4); ?>;
 			}
 						
-			.has-couleur-selectionnee-1-background-color {
+			.has-couleur-selectionnee-1-background-color,
+			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-1-background-color {
 				background-color : <?php echo get_site_color_custom(0); ?>;
 			}
-			.has-couleur-selectionnee-2-background-color {
+			.has-couleur-selectionnee-2-background-color,
+			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-2-background-color {
 				background-color : <?php echo get_site_color_custom(1); ?>;
 			}
-			.has-couleur-selectionnee-3-background-color {
+			.has-couleur-selectionnee-3-background-color,
+			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-3-background-color {
 				background-color : <?php echo get_site_color_custom(2); ?>;
 			}
-			.has-couleur-selectionnee-4-background-color {
+			.has-couleur-selectionnee-4-background-color,
+			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-4-background-color {
 				background-color : <?php echo get_site_color_custom(3); ?>;
 			}
-			.has-couleur-selectionnee-5-background-color {
+			.has-couleur-selectionnee-5-background-color,
+			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-5-background-color {
 				background-color : <?php echo get_site_color_custom(4); ?>;
 			}
 	

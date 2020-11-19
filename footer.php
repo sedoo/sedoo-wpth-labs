@@ -13,7 +13,7 @@ $options_list_footer = get_field('list_choice', 'option');
 $footerStyle = "style=\"";
 if (get_field('footer_background_svg', 'option')) { 
     $footerStyle .= "background-image:url(".get_field('footer_background_svg', 'option').");";
-} 
+}
 if (get_field('footer_color', 'option')) { 
     $footerStyle .="background:".get_field('footer_color', 'option').";";
 }
@@ -154,7 +154,7 @@ $footerStyle .= "\"";
                 }
                 ?>       
                 
-                <figure>
+                <figure class="footer-logo">
                 <?php 
                 if(get_field('sedoo_labs_footer_replace_logo', 'option') == true) {
                     if(get_field('sedoo_labs_footer_url_image', 'option')) { 
