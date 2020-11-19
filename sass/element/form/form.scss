@@ -1,0 +1,17 @@
+form {
+    input, 
+    textarea,
+    select {
+        border:1px solid var(--theme-color);
+        padding:10px;
+
+        &:focus,
+        &:active {
+            outline: 2px solid var(--theme-color);
+        }
+    }
+    [type="submit"] {
+        background: var(--theme-color);
+        color:var(--hover-textcolor);
+    }
+}
