@@ -91,20 +91,15 @@
     }
 }
 
-/* Small menu. */
-// .menu-toggle,
-// .main-navigation.toggled ul {
-// 	display: block;
-// 	margin:auto;
-// }
+header[id="masthead"].small {
+    .flyout {
 
-// @media screen and (min-width: 37.5em) {
-//     .flyoutMenu {
-//         ul[id="primary-menu"] {
-//             display: block;
-//             .menu-toggle {
-//                 display: none;
-//             }
-//         }
-//     }	
-// }
+        ul[id="primary-menu"] { 
+                
+            .sub-menu {
+                position: absolute;
+                top: 44px;
+            }
+        }
+    }
+}

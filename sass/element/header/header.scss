@@ -1,11 +1,12 @@
 header[id="masthead"]{
     position: sticky;
     top: 0;
-    width: 100%;
-    background: $light-full;
-    z-index: 100; 
+    // width: calc(100% + 40px);
+    // margin-left: -20px;
+
     padding: 10px 20px;
-    box-sizing: border-box;
+    background: $light-opacity;
+    z-index: 100; 
     
     &.darkHeader {
         background: $dark-opacity;
@@ -40,6 +41,10 @@ header[id="masthead"]{
         
         .site-branding{
             max-width: 200px;
+
+            .custom-logo {
+                @include basic-transition;
+            }
         }
         
         .nav-container{
