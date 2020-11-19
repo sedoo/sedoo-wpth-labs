@@ -72,32 +72,6 @@ footer[id="colophon"]{
         }
     }
 
-    ul[id="primary-menu"]{
-        .menu-item{
-            padding: 20px 0;
-            border-bottom: dotted 1px $dark-grey;
-            display: block;
-
-            a{
-                font-family: $main-title-family;
-                font-size: $h3-size;
-                text-transform: $uppercase;
-                text-decoration: none;
-                
-                &:hover{
-                    opacity: 0.6;
-                }
-            }
-
-            &:first-child{
-                padding-top: 0;
-            }
-
-            .sub-menu{
-                display: none;
-            }
-        }
-    }
 }
 .infos-pratiques{
     img{
@@ -211,6 +185,11 @@ footer[id="colophon"]{
             }
         }
     }
+}
+
+figure.footer-logo {
+    max-width: 150px;
+    margin:auto;
 }
 .partners-list{
     background:#FFF;
