@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Labs by Sedoo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-13 13:30+0000\n"
-"PO-Revision-Date: 2020-11-13 13:30+0000\n"
+"POT-Creation-Date: 2020-11-20 11:42+0000\n"
+"PO-Revision-Date: 2020-11-20 11:44+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -152,3 +152,12 @@ msgstr ""
 #. Author URI of the theme
 msgid "https://github.com/sedoo"
 msgstr ""
+
+msgid "Search Results for :"
+msgstr "Résultat(s) pour la recherche :"
+
+msgid "Search keyword :"
+msgstr "Recherche :"
+
+msgid "Submit"
+msgstr "Envoyer"

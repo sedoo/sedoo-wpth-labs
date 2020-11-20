@@ -40,12 +40,6 @@ $themeSlugRewrite = "category";
                         <h1><?php the_title(); ?></h1>
                         <div>
                             <?php 
-                            // $categories = get_the_category();
-                            //     if ( ! empty( $categories ) ) {
-                            //     echo esc_html( $categories[0]->name );   
-                            // }; 
-                            ?>
-                            <?php 
                             if( function_exists('sedoo_show_categories') ){
                                 sedoo_show_categories($themes, $themeSlugRewrite);
                             }
