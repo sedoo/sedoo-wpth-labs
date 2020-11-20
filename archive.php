@@ -48,7 +48,7 @@ $affichage_portfolio = get_field('sedoo_affichage_en_portfolio', $term);
 				 */
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				/* sedoo_wpth_labs_get_queried_content_arguments(post_types, taxonomy, slug, display, paged) */
-				sedoo_wpth_labs_get_queried_content_arguments(array('post', 'page'), 'category', $term->slug, $tax_layout, $paged);
+				sedoo_wpth_labs_get_queried_content_arguments(array('any'), $term->taxonomy, $term->slug, $tax_layout, $paged);
 			} else {
 				?>
 				<script>
