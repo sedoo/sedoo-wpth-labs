@@ -77,18 +77,18 @@
                 margin-bottom: 10px;
                 @include basic-transition;
                 @include basic-transition-delay;
-                display: -webkit-box;
+                // display: -webkit-box;
                 -webkit-line-clamp: 4;
-                -webkit-box-orient: vertical;  
+                // -webkit-box-orient: vertical;  
                 overflow: hidden;
                 text-transform: $uppercase;
                 margin-top: 0;
             }
             p{
                 font-size: calc(#{$font-size} / 1.2);
-                display: -webkit-box;
+                // display: -webkit-box;
                 -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;  
+                // -webkit-box-orient: vertical;  
                 overflow: hidden;
             }
         }

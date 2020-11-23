@@ -6,7 +6,8 @@
  *
  * @package labs_by_Sedoo
  */
-
+$term = get_queried_object();
+$cover = get_field( 'tax_image', $term);
 get_header();
 ?>
 
@@ -15,7 +16,29 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 			<?php
-			get_template_part( 'template-parts/header-category', '' );
+			if ( !empty($cover)) {
+					$coverStyle = "background-image:url(".$cover['url'].")";
+				
+				// else {
+				// 	$coverStyle = "border-top:5px solid ".$code_color.";height:auto;";
+				// }
+				?>
+				
+				<header id="cover" class="page-header" style="<?php echo $coverStyle;?>">
+					
+				</header><!-- .page-header -->
+				<?php
+				}
+				?>	
+				<h1 class="page-title">
+					<?php
+					single_cat_title('', true);
+					?>
+				</h1>
+				<?php
+				if (get_the_archive_description()) {
+					the_archive_description( '<div class="archive-description">', '</div>' );
+				}
 			?>
             
             <section role="listNews" class="content-list">
