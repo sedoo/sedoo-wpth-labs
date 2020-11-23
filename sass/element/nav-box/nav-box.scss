@@ -122,7 +122,7 @@
             text-align:left;
             text-transform: $uppercase;            
             -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
+            // -webkit-box-orient: vertical;
             @include basic-transition-delay;
             @include basic-transition;
             @include transition-delay(0.1);
