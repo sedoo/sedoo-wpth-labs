@@ -27,6 +27,11 @@
     }
 }
 @media screen and (max-width: 1024px){
+    header[id="masthead"] {
+        &.small {
+            padding: 0;
+        }
+    }
     nav[id="primary-navigation"]{
         
         > div{

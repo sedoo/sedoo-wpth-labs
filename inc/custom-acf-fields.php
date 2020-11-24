@@ -828,7 +828,7 @@ acf_add_local_field_group(array(
 			'label' => 'Grid menu background color',
 			'name' => 'sedoo_labs_grid_menu_color',
 			'type' => 'select',
-			'instructions' => '<a href="https://labo.obs-mip.fr/doc/3-types-de-menus/" target="_blank">Documentation & examples</a> ',
+			'instructions' => '<a href="https://labo.obs-mip.fr/doc/category/header/" target="_blank">Documentation & examples</a> ',
 			'required' => 0,
 			'conditional_logic' => array(
 				array(
@@ -864,7 +864,7 @@ acf_add_local_field_group(array(
 			'name' => 'sedoo_labs_grid_menu_columns',
 			'type' => 'range',
 			'instructions' => 'How many columns for the grid menu ?
-			<a href="https://labo.obs-mip.fr/doc/3-types-de-menus/" target="_blank">Documentation & examples</a>',
+			<a href="https://labo.obs-mip.fr/doc/category/header/" target="_blank">Documentation & examples</a>',
 			'required' => 0,
 			'conditional_logic' => array(
 				array(
