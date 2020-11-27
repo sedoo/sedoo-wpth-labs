@@ -1,22 +1,4 @@
-@media screen and (max-width: 1024px){
-    aside[id="stickyMenu"]{
-        // width: 90%;
-        // @include transform(translateX(-100%));
-
-        // &:hover:not(.open){
-        //     @include transform(translateX(-100%));
-        // }
-        
-        // .bobinette{
-        //     right: -5%;
-            
-        //     &::after{
-        //         @include transform(rotateZ(180deg));
-        //     }
-        // }
-    }
-}
-@media screen and (max-width: 700px){
+@media screen and (max-width: 918px){
     .tocActive {
         h1 {
             &.entry-title {
@@ -40,7 +22,7 @@
     }
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 919px){
     h1 {
         &.onTop {
         display:none;

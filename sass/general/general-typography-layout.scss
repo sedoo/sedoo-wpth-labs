@@ -58,14 +58,14 @@
     main article section h2:first-of-type{
         margin-top: 0;
     }
-    h2 + a + h3, h2 + h3{
-        margin-top: -20px; 
-        margin-bottom: 20px;
-    }
-    h3 + a + h4, h3 + h4{
-        margin-top: -20px;
-        margin-bottom: 20px;
-    }
+    // h2 + a + h3, h2 + h3{
+    //     margin-top: -20px; 
+    //     margin-bottom: 20px;
+    // }
+    // h3 + a + h4, h3 + h4{
+    //     margin-top: -20px;
+    //     margin-bottom: 20px;
+    // }
     p + h2, p + a + h2{
         margin-top: 50px;
     }

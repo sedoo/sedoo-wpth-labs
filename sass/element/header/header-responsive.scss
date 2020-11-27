@@ -3,35 +3,15 @@
         ul{
             li{
                 a{
-                    // font-size: calc(#{$font-size} / 1.2);
                     font-size:$font-size;
-                    padding: 20px 10px;
+                    padding: 10px;
                 }
             }
         }   
-    }
-    header[id="masthead"] {
-        &.small {
-            /* site header for scrolling, small version */
-            padding: 5px 20px;
-    
-            .custom-logo {
-                height: 50px;
-                width: auto;
-            }
-    
-            nav[id="primary-navigation"] > div > ul > li > a {
-                padding: 10px 10px;
-            }
-        }
-    }
+    }    
 }
 @media screen and (max-width: 1024px){
-    header[id="masthead"] {
-        &.small {
-            padding: 0;
-        }
-    }
+
     nav[id="primary-navigation"]{
         
         > div{
@@ -135,11 +115,6 @@
                     width: auto;
                 }
             }
-        }
-    }
-    nav[id="primary-navigation"]{
-        > div{  
-            padding: 100px 20px 50px;
         }
     }
 }
