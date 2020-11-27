@@ -24,7 +24,6 @@ jQuery(document).ready(function(){
         } else {
             var item = '<li><a href="#toc' + i + '">' + jQuery(this).text() + '</a></li>';
         }
-        // jQuery(item).appendTo('[role="sommaire"]');
 
         if( jQuery(this).is("h2") ){                                     
             prevH2List = jQuery("<ul></ul>");                
@@ -93,8 +92,8 @@ jQuery(document).ready(function(){
         menuItems = topMenu.find("a"),
         // Anchors corresponding to menu items
         scrollItems = menuItems.map(function(){
-        var item = jQuery(jQuery(this).attr("href"));
-        if (item.length) { return item; }
+            var item = jQuery(jQuery(this).attr("href"));
+            if (item.length) { return item; }
         });
 
     // Bind click handler to menu items

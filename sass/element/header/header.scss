@@ -1,13 +1,29 @@
+.home {
+    header[id="masthead"]{
+        padding: 10px 20px;
+
+        
+        .wrapper .site-branding .custom-logo {
+            max-height: 200px;
+            width: auto;
+        }
+
+        nav[id="primary-navigation"] > div > ul > li > a {
+            padding: 10px 20px;
+        }
+    }
+}
+
+
+
 header[id="masthead"]{
     position: sticky;
     top: 0;
-    // width: calc(100% + 40px);
-    // margin-left: -20px;
-
-    padding: 10px 20px;
+    // padding: 10px 20px;
     background: $light-opacity2;
     z-index: 100; 
     border-bottom:5px solid var(--theme-color);
+    @include basic-transition;
     
     &.darkHeader {
         background: $dark-opacity;
@@ -16,22 +32,8 @@ header[id="masthead"]{
         nav[id="top-header"] > div > ul > li > a {
             color:white;
         }
-    }
-
-    &.small {
-        /* site header for scrolling, small version */
-        padding: 5px 20px;
-
-        .custom-logo {
-            height: 50px;
-            width: auto;
-        }
-
-        nav[id="primary-navigation"] > div > ul > li > a {
-            padding: 10px 20px;
-        }
-    }
-
+    }    
+        
     .wrapper{
         @include display-flex;
         @include justify-content-between;
@@ -44,15 +46,18 @@ header[id="masthead"]{
             max-width: 200px;
 
             .custom-logo {
+                max-height:75px;
+                width: auto;
                 @include basic-transition;
             }
         }
-        
+
         .nav-container{
             @include display-flex;
             @include justify-content-end;
             @include align-items-end;
             flex-direction: column;
+ 
         }
     }
 }
@@ -62,6 +67,8 @@ header[id="masthead"]{
         padding: 0;
     }
 }
+
+
 nav[id="primary-navigation"]{
     @include display-flex;
     @include align-items-center;
@@ -81,7 +88,7 @@ nav[id="primary-navigation"]{
                 text-transform: $uppercase;
                 font-size: $font-size;
                 font-weight: $bold;
-                padding: 30px 20px;
+                padding: 10px 20px;
                 font-family: $main-font-family;
                 display: block;
             }
