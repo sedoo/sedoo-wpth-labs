@@ -19,6 +19,16 @@ get_header();
 					<div class="sedoo_404">
 						<h1>404</h1>
 						<p> <?php  esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'labs-by-sedoo' ); ?></p>
+						<div class="searchform_404">
+							<?php 
+								get_search_form();
+								if(!is_user_logged_in()) {
+							?>
+								<a href="<?php echo wp_login_url(); ?>"> Connexion </a>
+							<?php 
+								}
+							?>
+						</div>
 					</div>
 					<hr />
 					<div class="row row_404">
