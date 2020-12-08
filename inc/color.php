@@ -7,7 +7,7 @@
  */
 
 //////////////////
-// REGISTER COLORS IN GUTENBERG PALETTE
+// REGISTER COLORS IN GUTENBERG PALETTE FOR PAGE AND POST EDITION
 //////
 if(function_exists('get_field')) {
 
@@ -76,8 +76,12 @@ function sedoo_colorgeneration_theme_colors() {
 	$color3 = '#'.$_POST['color3'];
 	$color4 = '#'.$_POST['color4'];
 	$color5 = '#'.$_POST['color5'];
-	$siteid = $_POST['siteid'];
-	
+
+	if($_POST['siteid']) {
+		$siteid = $_POST['siteid'];
+	} else {
+		$siteid = get_current_blog_id();
+	}
     ////////////
     // change blog to be able to save options
     /////
@@ -96,6 +100,14 @@ function sedoo_colorgeneration_theme_colors() {
 		add_option('_options_theme_palet_color_3_added_theme_color', 'field_5efd959407a00', '', 'no');
 		add_option('options_theme_palet_color_4_added_theme_color', $color5);
 		add_option('_options_theme_palet_color_4_added_theme_color', 'field_5efd959407a00', '', 'no');
+	} else {
+		var_dump(get_option('options_theme_palet_color_0_added_theme_color'));
+		update_option('options_theme_palet_color_0_added_theme_color', $color1);
+		var_dump(get_option('options_theme_palet_color_0_added_theme_color'));
+		update_option('options_theme_palet_color_1_added_theme_color', $color2);
+		update_option('options_theme_palet_color_2_added_theme_color', $color3);
+		update_option('options_theme_palet_color_3_added_theme_color', $color4);
+		update_option('options_theme_palet_color_4_added_theme_color', $color5);
 	}
 	wp_die();
 }
@@ -110,9 +122,8 @@ function labs_by_sedoo_ajax_get_main_color(){
 	wp_die(); // this is required to terminate immediately and return a proper response
 }
 
-
 ////////////////
-// hook before the form in theme informations to embed colorwheel.js (calculate colors)
+// hook before the form in theme informations to embed colorwheel.js (used for calculate colors)
 /////////
 function acf_load_color_field_choices( $field ) {
 	wp_enqueue_script( 'labs-by-sedoo-load-colorwheel', get_template_directory_uri() . '/js/colorwheel.js' );
@@ -120,7 +131,6 @@ function acf_load_color_field_choices( $field ) {
 }
 
 add_filter('acf/load_field/name=theme_palet_color', 'acf_load_color_field_choices');
-
 
 ////////////////
 // get color for css in inc/color.php  (numcolor is the numero of the color (from 0 to 4))
