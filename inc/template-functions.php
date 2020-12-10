@@ -202,8 +202,8 @@ function sedoo_wpth_labs_get_queried_content($tax_layout, $args) {
 		<section role="listNews" class="<?php echo $listingClass;?>">
 		<?php
 		/* Start the Loop */
-		while ( have_posts() ) :
-			the_post();
+		while ( $the_query->have_posts() ) :
+			$the_query->the_post();
 			
 			/*
 			* Include the Post-Type-specific template for the content.
