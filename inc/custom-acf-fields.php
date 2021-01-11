@@ -1448,60 +1448,18 @@ acf_add_local_field_group(array(
 	'location' => array(
 		array(
 			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'all',
+			),
+		),
+		array(
+			array(
 				'param' => 'page_template',
 				'operator' => '==',
 				'value' => 'default',
 			),
-		),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'any',
-			),
-		),
-		// array(
-		// 	array(
-		// 		'param' => 'post_type',
-		// 		'operator' => '==',
-		// 		'value' => 'sedoo-research-team',
-		// 	),
-		// ),
-		// array(
-		// 	array(
-		// 		'param' => 'post_type',
-		// 		'operator' => '==',
-		// 		'value' => 'sedoo-platform',
-		// 	),
-		// ),
-		// array(
-		// 	array(
-		// 		'param' => 'post_type',
-		// 		'operator' => '==',
-		// 		'value' => 'ces',
-		// 	),
-		// ),
-		// array(
-		// 	array(
-		// 		'param' => 'post_type',
-		// 		'operator' => '==',
-		// 		'value' => 'sedoo-sno',
-		// 	),
-		// ),
-		// array(
-		// 	array(
-		// 		'param' => 'post_type',
-		// 		'operator' => '==',
-		// 		'value' => 'sedoo-axe',
-		// 	),
-		// ),
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'sedoo-project',
-			),
-		),
+		),		
 	),
 	'menu_order' => 0,
 	'position' => 'side',
