@@ -14,4 +14,7 @@ form:not(.v-form) {
         background: var(--theme-color);
         color:var(--hover-textcolor);
     }
+    input.search-field:focus {
+        outline: none;
+    }
 }

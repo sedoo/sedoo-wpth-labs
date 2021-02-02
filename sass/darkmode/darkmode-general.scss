@@ -36,7 +36,8 @@
         color: $light-typo;
     }
 
-    header[id="masthead"] {
+    header[id="masthead"],
+    .overlay {
         background: $dark-opacity;
     }
 
@@ -52,10 +53,6 @@
         background: $dark-background-light;
     }
 
-    .single-post main article {
-        background-color: #222;
-    }
-
     .infos-pratiques .row-infos::after,
     h1::after {
         background: $light-typo;
@@ -68,10 +65,13 @@
         color: $light-typo;
     }
 
+    &.single-post main article,
+    .post,
     .wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) {
         background-color: #222;
     }
 
+    /* TRIBE EVENTS */
     article.tribe_events {
         background:$dark-background-light;
         padding:10px;
@@ -90,4 +90,31 @@
         background:transparent;
     }
     
+    /* Tag cloud */
+    a.tag-cloud-link, span.tag-cloud-link {
+        background: $dark-background-light;
+        color:$light-typo;
+    }
+
+    /* OVERLAY */
+    .search-form .search-field {
+        border-color: var(--theme-color);
+        color:$light-typo;
+    }
+    .close {
+        label {
+            color:$light-typo;
+        }
+        button span {
+            background: $light-typo;
+        }
+    }
+
+    /* TEAM Manager */
+    input[id^="aeris_team_manager_member_info"]:not(:checked) ~ header > div > p {
+        color:$light-typo;
+    }
+    .aeris_team_manager_membersEmbed a {
+        color:var(--theme-color);
+    }
 }

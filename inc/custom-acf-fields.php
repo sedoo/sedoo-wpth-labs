@@ -510,8 +510,8 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'lightmode' => 'lightmode: Light',
-				'darkmode' => 'darkmode: Dark',
+				'lightmode' => 'Light',
+				'darkmode' => 'Dark',
 			),
 			'default_value' => array(
 				0 => 'lightmode',
