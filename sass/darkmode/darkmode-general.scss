@@ -117,4 +117,24 @@
     .aeris_team_manager_membersEmbed a {
         color:var(--theme-color);
     }
+
+    /* SEARCH plugin */
+    .sedoo_search_buttons div {
+        background: $light-dark;
+    }
+    .sedoo_search_buttons div:hover, 
+    .sedoo_search_buttons div.active {
+        background:var(--theme-color);
+    }
+    .sedoo_search_results h2 a {
+        color:var(--theme-color);
+    }
+    .sedoo_search_results .entry-content {
+        color: $dark-typo;
+    }
+
+    /* PORTFOLIO plugin */
+    #button_for_page_load {
+        background: $light-dark;
+    }
 }
