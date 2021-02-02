@@ -201,12 +201,13 @@ function labs_by_sedoo_color_style() {
     } else {
         $hover_text_color=get_theme_mod('labs_by_sedoo_text_color_code');
     }
-    
+
 	?>
          <style type="text/css">
              
              :root {
                 --theme-color:<?php echo $code_color;?>;
+                --second-theme-color:<?php echo $code_color_sec;?>;
                 --hover-textcolor:<?php echo $hover_text_color;?>;
             }
 
@@ -260,7 +261,8 @@ function labs_by_sedoo_color_style() {
             .ui-widget-header,
             .page-links span.current,
             .wrapper-layout .social-list a:hover::before, 
-            .cn-button  , .btn_footer_local:hover   
+            .cn-button, 
+            .btn_footer_local:hover
             {
                 background: <?php echo $code_color;?>;
 			}
