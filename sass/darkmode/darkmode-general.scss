@@ -137,4 +137,13 @@
     #button_for_page_load {
         background: $light-dark;
     }
+
+    /* Bloc FAQ */
+    .faq-tabs label {
+        background: $light-dark;
+    }
+    .faq-tabs article {
+        background: $light;
+        color: $dark-typo;
+    }
 }
