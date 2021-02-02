@@ -313,29 +313,6 @@ ul li ol {
     margin-top: 20px;;
 }
 
-/* template with big image */
-.page-template-homepage_second #cover{
-    top: 0;
-    left: 0;
-    padding-top: 10%;
-    margin-top: -90px;
-}
-
-.page-template-homepage_second #primary-menu>li a {
-    color: white !important;
-}
-.page-template-homepage_second #page {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-
-.page-template-homepage_second .site-header {
-    background:rgba(0, 0, 0, 0.7);
-}
-
-/* end template with big image */
-
 // button in footer if more than 1 adress 
 .btn_footer_local {
     padding: 5px;
@@ -376,13 +353,6 @@ ul li ol {
         }
     }
 }
-
-/* fix for components (css conflics */
-// .sedoo-component table tr ,
-// .sedoo-component table thead {
-//     background: white;
-// }
-
 
 /* 404 page */
 .sedoo_404 {

@@ -49,6 +49,29 @@
         padding-bottom: 10px;
     }
 }
+/* LINKS */
+#tribe-events-content {
+    a{
+        text-decoration: underline;
+        color:var(--theme-color);
+    
+        &:hover{
+            color: $light-full;
+            text-decoration: none;
+            background: var(--theme-color);
+        }
+    }
+    .tribe-events-sub-nav {
+        a {
+            text-decoration: none;
+            color:$dark;
+        }
+        a:hover {
+            background:transparent;
+            color:var(--theme-color);
+        }
+    }
+}
 
 @media (max-width:768px) {
     [id="flex-single-tribe-event"] {

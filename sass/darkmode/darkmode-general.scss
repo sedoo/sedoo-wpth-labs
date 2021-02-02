@@ -1,0 +1,149 @@
+.darkmode {
+    background: $dark-background;
+    color: $light-typo;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    nav > div > ul:first-of-type > li > a,
+    &.page .tag a, 
+    &.page .tag span, 
+    &.single .tag a, 
+    &.single .tag span, 
+    .tribe-events-calendar-list .tag a, 
+    .tribe-events-calendar-list .tag span, 
+    .tribe-events-calendar-latest-past .tag a, 
+    .tribe-events-calendar-latest-past .tag span,
+    .copyright .wrapper.site-info p, 
+    .copyright .site-info.wrapper-content p, 
+    .copyright .archive .site-content .site-info.site-branding p, 
+    .archive .site-content .copyright .site-info.site-branding p,
+    aside[id="stickyMenu"] [id="tocList"] li > a,
+    .tribe-common .tribe-common-b2,
+    .tribe-common .tribe-common-h2,
+    .tribe-common .tribe-common-h3,
+    .tribe-common .tribe-common-h4,
+    .tribe-common .tribe-common-h5,
+    .tribe-common .tribe-common-h6,
+    .tribe-common .tribe-common-h7,
+    .tribe-common a,
+    .tribe-events .tribe-events-calendar-latest-past__event-date-tag-month,
+    .tribe-events .tribe-events-calendar-list__event-date-tag-weekday,
+    .contextual-sidebar h2  {
+        color: $light-typo;
+    }
+
+    header[id="masthead"],
+    .overlay {
+        background: $dark-opacity;
+    }
+
+    .partners-list,
+    aside[id="stickyMenu"],
+    .copyright,
+    section.sedoo-labtools-listCPT .isNotPost.post {
+        background: $dark-background;
+    }
+
+    .post-wrapper .post,
+    .search-annuaire {
+        background: $dark-background-light;
+    }
+
+    .infos-pratiques .row-infos::after,
+    h1::after {
+        background: $light-typo;
+    }
+
+    [data-role="list-platformTag"] .tag a, 
+    [data-role="list-platformTag"] .tag span,
+    aside[id="stickyMenu"] [id="tocList"] li:not(:last-child) > a {
+        border-color: $light-typo;
+        color: $light-typo;
+    }
+
+    &.single-post main article,
+    .post,
+    .wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) {
+        background-color: #222;
+    }
+
+    /* TRIBE EVENTS */
+    article.tribe_events {
+        background:$dark-background-light;
+        padding:10px;
+    }
+
+    .tribe-common .tribe-common-c-btn-border-small, 
+    .tribe-common a.tribe-common-c-btn-border-small {
+        color: $dark-typo;
+    }
+
+    .tribe-events .tribe-events-c-messages__message {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    .tribe-events .tribe-events-c-ical__link {
+        background:transparent;
+    }
+    
+    /* Tag cloud */
+    a.tag-cloud-link, span.tag-cloud-link {
+        background: $dark-background-light;
+        color:$light-typo;
+    }
+
+    /* OVERLAY */
+    .search-form .search-field {
+        border-color: var(--theme-color);
+        color:$light-typo;
+    }
+    .close {
+        label {
+            color:$light-typo;
+        }
+        button span {
+            background: $light-typo;
+        }
+    }
+
+    /* TEAM Manager */
+    input[id^="aeris_team_manager_member_info"]:not(:checked) ~ header > div > p {
+        color:$light-typo;
+    }
+    .aeris_team_manager_membersEmbed a {
+        color:var(--theme-color);
+    }
+
+    /* SEARCH plugin */
+    .sedoo_search_buttons div {
+        background: $light-dark;
+    }
+    .sedoo_search_buttons div:hover, 
+    .sedoo_search_buttons div.active {
+        background:var(--theme-color);
+    }
+    .sedoo_search_results h2 a {
+        color:var(--theme-color);
+    }
+    .sedoo_search_results .entry-content {
+        color: $dark-typo;
+    }
+
+    /* PORTFOLIO plugin */
+    #button_for_page_load {
+        background: $light-dark;
+    }
+
+    /* Bloc FAQ */
+    .faq-tabs label {
+        background: $light-dark;
+    }
+    .faq-tabs article {
+        background: $light;
+        color: $dark-typo;
+    }
+}
