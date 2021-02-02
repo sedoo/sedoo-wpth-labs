@@ -3,8 +3,8 @@
 if( function_exists('acf_add_options_page') ) {
 
     acf_add_options_page(array(
-    'page_title' 	=> 'Theme Informations',
-    'menu_title'	=> 'Theme Informations',
+    'page_title' 	=> 'Theme settings',
+    'menu_title'	=> 'Theme settings',
     'menu_slug' 	=> 'theme-informations',
     'capability'	=> 'edit_posts',
     'redirect'		=> false,
@@ -13,6 +13,15 @@ if( function_exists('acf_add_options_page') ) {
     
     $options_theme = get_field('ajout_options', 'option');
 
+    // Actif par défaut
+    // if( $options_theme && in_array('options', $options_theme) ) {
+    	acf_add_options_sub_page(array(
+            'page_title' 	=> 'Theme options',
+            'menu_title'	=> 'Theme options',
+            'parent_slug'	=> 'theme-informations',
+        ));
+    // }
+    
     if( $options_theme && in_array('contact', $options_theme) ) {    
         acf_add_options_sub_page(array(
             'page_title' 	=> 'Theme Contact and Location Settings',
@@ -52,12 +61,4 @@ if( function_exists('acf_add_options_page') ) {
             'parent_slug'	=> 'theme-informations',
         ));
     }   
-    // Actif par défaut
-    // if( $options_theme && in_array('options', $options_theme) ) {
-    	acf_add_options_sub_page(array(
-            'page_title' 	=> 'Theme options',
-            'menu_title'	=> 'Theme options',
-            'parent_slug'	=> 'theme-informations',
-        ));
-    // }
 }

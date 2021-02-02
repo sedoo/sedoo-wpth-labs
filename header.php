@@ -31,6 +31,12 @@ if (get_field('sedoo_labs_header_appearance', 'option')) {
     $classesHeader = "whiteHeader";
 }
 
+if (get_field('sedoo_labs_theme_ambiance', 'option')) {
+    $ambiance=get_field('sedoo_labs_theme_ambiance', 'option');
+} else {
+    $ambiance="lightmode";
+}
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -44,7 +50,7 @@ if (get_field('sedoo_labs_header_appearance', 'option')) {
     <script src="<?php echo get_template_directory_uri() . '/assets/MultiLevelPushMenu/js/modernizr.custom.js';?>"></script>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class($ambiance); ?>>
 <div id="page" class="site <?php if ( wp_is_mobile() ) {echo "mobile";}?>">
 <?php
 if ( wp_is_mobile() ) {
