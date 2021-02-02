@@ -21,13 +21,25 @@
     .copyright .site-info.wrapper-content p, 
     .copyright .archive .site-content .site-info.site-branding p, 
     .archive .site-content .copyright .site-info.site-branding p,
-    aside[id="stickyMenu"] [id="tocList"] > li > a  {
+    aside[id="stickyMenu"] [id="tocList"] li > a,
+    .tribe-common .tribe-common-b2,
+    .tribe-common .tribe-common-h2,
+    .tribe-common .tribe-common-h3,
+    .tribe-common .tribe-common-h4,
+    .tribe-common .tribe-common-h5,
+    .tribe-common .tribe-common-h6,
+    .tribe-common .tribe-common-h7,
+    .tribe-common a,
+    .tribe-events .tribe-events-calendar-latest-past__event-date-tag-month,
+    .tribe-events .tribe-events-calendar-list__event-date-tag-weekday,
+    .contextual-sidebar h2  {
         color: $light-typo;
     }
 
     header[id="masthead"] {
         background: $dark-opacity;
     }
+
     .partners-list,
     aside[id="stickyMenu"],
     .copyright,
@@ -40,6 +52,10 @@
         background: $dark-background-light;
     }
 
+    .single-post main article {
+        background-color: #222;
+    }
+
     .infos-pratiques .row-infos::after,
     h1::after {
         background: $light-typo;
@@ -47,8 +63,31 @@
 
     [data-role="list-platformTag"] .tag a, 
     [data-role="list-platformTag"] .tag span,
-    aside[id="stickyMenu"] [id="tocList"] > li:not(:last-child) > a {
+    aside[id="stickyMenu"] [id="tocList"] li:not(:last-child) > a {
         border-color: $light-typo;
         color: $light-typo;
     }
+
+    .wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) {
+        background-color: #222;
+    }
+
+    article.tribe_events {
+        background:$dark-background-light;
+        padding:10px;
+    }
+
+    .tribe-common .tribe-common-c-btn-border-small, 
+    .tribe-common a.tribe-common-c-btn-border-small {
+        color: $dark-typo;
+    }
+
+    .tribe-events .tribe-events-c-messages__message {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    .tribe-events .tribe-events-c-ical__link {
+        background:transparent;
+    }
+    
 }

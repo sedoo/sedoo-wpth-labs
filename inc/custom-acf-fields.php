@@ -8,7 +8,7 @@ if( function_exists('acf_add_local_field_group') ):
 // activation des options
 acf_add_local_field_group(array(
 	'key' => 'group_5d6e44395feac',
-	'title' => 'Theme informations',
+	'title' => 'Theme settings',
 	'fields' => array(
 		array(
 			'key' => 'field_5d6e446cc090d',
@@ -478,6 +478,52 @@ acf_add_local_field_group(array(
 	'key' => 'group_5eff161ad0d6b',
 	'title' => 'Colors',
 	'fields' => array(
+		//TAB
+		array(
+			'key' => 'field_5fae57bagbag5',
+			'label' => 'Theme ambiance',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_60192e5ca5ae7',
+			'label' => 'Theme ambiance',
+			'name' => 'sedoo_labs_theme_ambiance',
+			'type' => 'select',
+			'instructions' => 'choose between light or dark ambiance<br>
+<img src="https://cdn.obs-mip.fr/share/lightmode.png" width="300px"> <img src="https://cdn.obs-mip.fr/share/darkmode.png" width="300px">',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'lightmode' => 'lightmode: Light',
+				'darkmode' => 'darkmode: Dark',
+			),
+			'default_value' => array(
+				0 => 'lightmode',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 1,
+			'ajax' => 0,
+			'return_format' => 'value',
+			'placeholder' => '',
+		),
+		//TAB
 		array(
 			'key' => 'field_5fae57bag7fe5',
 			'label' => 'Complementary Colors',
@@ -494,7 +540,6 @@ acf_add_local_field_group(array(
 			'placement' => 'top',
 			'endpoint' => 0,
 		),
-		//TAB
 		array(
 			'key' => 'field_5efd9539079ff',
 			'label' => 'Add color to theme palette',
@@ -580,6 +625,7 @@ acf_add_local_field_group(array(
 			'layout' => 'horizontal',
 			'return_format' => 'value',
 		),
+		//TAB
 		array(
 			'key' => 'field_5fae57bah7fe5',
 			'label' => 'Custom colors',
@@ -632,6 +678,7 @@ acf_add_local_field_group(array(
 				),
 			),
 		),
+		//TAB
 		array(
 			'key' => 'field_5fae57bai7fe5',
 			'label' => 'Messages colors',

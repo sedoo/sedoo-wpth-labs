@@ -232,9 +232,9 @@ function labs_by_sedoo_color_style() {
             .single-event .wrapper-layout header .post-meta,
             .posts-navigation a:hover,
             .wpfc-calendar-wrapper .fc .ui-state-active,
-            .post-wrapper .event-post:hover h3,
-            .summary #ez-toc-container .ez-toc-list li a:hover,
-            .summary #ez-toc-container .ez-toc-title-container .ez-toc-title-toggle a:hover i
+            .post-wrapper .event-post:hover h3
+            /* .summary #ez-toc-container .ez-toc-list li a:hover,
+            .summary #ez-toc-container .ez-toc-title-container .ez-toc-title-toggle a:hover i */
 			{
 				color: <?php echo $code_color;?>;
 			}
@@ -255,7 +255,7 @@ function labs_by_sedoo_color_style() {
             div[id="em-wrapper"] h2,
             .author-card > div:first-child > div:not(.img-author),
             .search-annuaire button,
-            .overlay.location .wrapper .slick-dots .slick-active button::after,
+            /* .overlay.location .wrapper .slick-dots .slick-active button::after, */
             .wp-block-button .wp-block-button__link,
             .posts-navigation a,
             .ui-widget-header,
@@ -369,26 +369,5 @@ function labs_by_sedoo_color_style() {
     <?php
 }
 add_action( 'wp_head', 'labs_by_sedoo_color_style');
-
-// Fonction renvoyant les valeurs du customizer "Options du thème / Ambiance & Display mode
-function labs_by_sedoo_bodyAttribute() {
-    
-    if( get_theme_mod( 'labs_by_sedoo_ambiance' ) == "dark") {
-        // wp_enqueue_style('labs_by_sedoo_ambiance', get_bloginfo('template_directory') . '/css/dark.css');
-        $classes['ambiance'] = "darkTheme";
-    } else {
-        $classes['ambiance'] = "lightTheme";
-    }
-
-	// le if == "value1" est une vieillerie, non supprimable !! tous les vieux sites sont parametrés avec cette valeur... bref, j'avais codé comme un con...
-	if(( get_theme_mod( 'labs_by_sedoo_box' ) == "value1") || (get_theme_mod( 'labs_by_sedoo_box' ) == "box")) {
-        $classes['box'] = "boxes";
-	    // wp_enqueue_style('theme-aeris-box', get_bloginfo('template_directory') . '/css/boxes.css');
-    }else {
-        $classes['box'] = "nobox";
-    }
-    return $classes;
-}
-
 
 ?>
