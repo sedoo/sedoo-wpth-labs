@@ -65,6 +65,7 @@
         color: $light-typo;
     }
 
+    .wrapper-content,
     &.single-post main article,
     .post,
     .wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) {
@@ -145,5 +146,18 @@
     .faq-tabs article {
         background: $light;
         color: $dark-typo;
+    }
+
+    /** IF BACKGROUND IMAGE */
+    &.custom-background {
+        .wrapper-content,
+        &.single-post main article,
+        &.home main > .home-content
+        .post,
+        .wp-block-table.is-style-stripes tbody tr:nth-child(2n+1),
+        .post-wrapper .post,
+        .search-annuaire {
+            background-color: $dark-opacity;
+        }
     }
 }
