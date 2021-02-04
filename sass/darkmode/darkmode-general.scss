@@ -159,5 +159,9 @@
         .search-annuaire {
             background-color: $dark-opacity;
         }
+
+        &.home .wrapper-content {
+            background:transparent;
+        }
     }
 }
