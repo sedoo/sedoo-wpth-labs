@@ -164,4 +164,9 @@
             background:transparent;
         }
     }
+
+    .wp-block-image figcaption {
+        background: $dark-typo;
+        color: $light-grey;
+    }
 }
