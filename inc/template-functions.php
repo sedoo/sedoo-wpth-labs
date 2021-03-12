@@ -86,18 +86,18 @@ function labs_by_sedoo_catch_that_image() {
   // check file size if not local
   // 
   if (($srcURL['host']!==$current_siteurl['host']) && (!empty($getIMG)) ) {
-    $extIMG=$srcURL['scheme']."://".$srcURL['host'].$srcURL['path'];
-    $extIMGsize=labs_by_sedoo_remote_filesize($extIMG);
+    // $extIMG=$srcURL['scheme']."://".$srcURL['host'].$srcURL['path'];
+    //$extIMGsize=labs_by_sedoo_remote_filesize($extIMG);
     // if < 300000 > Ok let's display it
-    if ($extIMGsize<300000) {
-        $getIMG=$extIMG;
-    } else {
-        $extFileToBig="TRUE";
-    }
+    // if ($extIMGsize<300000) {
+    //     $getIMG=$extIMG;
+    // } else {
+        $extFile="TRUE";
+    // }
   }
 
   // if no image or external image too big, load default SVG
-  if((empty($getIMG))||($extFileToBig=="TRUE")) {
+  if((empty($getIMG))||($extFile=="TRUE")) {
     $getIMG = get_template_directory_uri() .'/images/empty-mode-'.$postType.'.svg';
   }
   $imgToShow='<img src="'.$getIMG.'" alt="" />';
