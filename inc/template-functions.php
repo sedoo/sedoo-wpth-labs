@@ -58,19 +58,19 @@ add_filter('the_content_feed', 'labs_by_sedoo_rss_post_thumbnail');
 
  // GET REMOTE FILESIZE
  // source : https://www.php.net/manual/fr/function.filesize.php#114952 
-function labs_by_sedoo_remote_filesize($url) {
-    static $regex = '/^Content-Length: *+\K\d++$/im';
-    if (!$fp = @fopen($url, 'rb')) {
-        return false;
-    }
-    if (
-        isset($http_response_header) &&
-        preg_match($regex, implode("\n", $http_response_header), $matches)
-    ) {
-        return (int)$matches[0];
-    }
-    return strlen(stream_get_contents($fp));
-}
+// function labs_by_sedoo_remote_filesize($url) {
+//     static $regex = '/^Content-Length: *+\K\d++$/im';
+//     if (!$fp = @fopen($url, 'rb')) {
+//         return false;
+//     }
+//     if (
+//         isset($http_response_header) &&
+//         preg_match($regex, implode("\n", $http_response_header), $matches)
+//     ) {
+//         return (int)$matches[0];
+//     }
+//     return strlen(stream_get_contents($fp));
+// }
 
 function labs_by_sedoo_catch_that_image() {
   global $post, $posts;
@@ -82,10 +82,13 @@ function labs_by_sedoo_catch_that_image() {
   $getIMG = $matches[1][0];
 
   $current_siteurl = parse_url(get_site_url());
-  $srcURL=parse_url($getIMG);
+  $srcURL = parse_url($getIMG);
+
+  $networkURL = parse_url(network_site_url());
+  echo "<span style=\"display:none\">".$networkURL['host']."</span>";
   // check file size if not local
   // 
-  if (($srcURL['host']!==$current_siteurl['host']) && (!empty($getIMG)) ) {
+  if ((($srcURL['host']!==$current_siteurl['host']) || ($srcURL['host']!==$networkURL['host'])) && (!empty($getIMG)) ) {
     // $extIMG=$srcURL['scheme']."://".$srcURL['host'].$srcURL['path'];
     //$extIMGsize=labs_by_sedoo_remote_filesize($extIMG);
     // if < 300000 > Ok let's display it
@@ -96,7 +99,7 @@ function labs_by_sedoo_catch_that_image() {
     // }
   }
 
-  // if no image or external image too big, load default SVG
+  // if no image or external image, load default SVG
   if((empty($getIMG))||($extFile=="TRUE")) {
     $getIMG = get_template_directory_uri() .'/images/empty-mode-'.$postType.'.svg';
   }
