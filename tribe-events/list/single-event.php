@@ -49,8 +49,10 @@ $organizer = tribe_get_organizer();
 		<div class="event-categories">
 			<?php
 			$terms = get_the_terms( get_the_id(), 'tribe_events_cat');
-			foreach ($terms as $term) {
-				echo "<a href='".get_term_link($term->term_id)."' class=\"tag-cloud-link ".$term->slug."\">".$term->name."</a>";
+			if($terms) {	
+				foreach ($terms as $term) {
+					echo "<a href='".get_term_link($term->term_id)."' class=\"tag-cloud-link ".$term->slug."\">".$term->name."</a>";
+				}
 			}
 			?>
 		</div>
