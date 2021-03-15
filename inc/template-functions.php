@@ -85,10 +85,10 @@ function labs_by_sedoo_catch_that_image() {
   $srcURL = parse_url($getIMG);
 
   $networkURL = parse_url(network_site_url());
-  echo "<span style=\"display:none\">".$networkURL['host']."</span>";
+  
   // check file size if not local
   // 
-  if ((($srcURL['host']!==$current_siteurl['host']) || ($srcURL['host']!==$networkURL['host'])) && (!empty($getIMG)) ) {
+  if (($srcURL['host']!==$current_siteurl['host']) && ($srcURL['host']!==$networkURL['host']) && (!empty($getIMG)) ) {
     // $extIMG=$srcURL['scheme']."://".$srcURL['host'].$srcURL['path'];
     //$extIMGsize=labs_by_sedoo_remote_filesize($extIMG);
     // if < 300000 > Ok let's display it
