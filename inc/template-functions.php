@@ -154,8 +154,7 @@ function sedoo_show_categories($categories, $slugRewrite) {
 function sedoo_wpth_labs_get_queried_content_arguments($post_type, $taxonomy, $term_slug, $tax_layout, $paged) {
      
     $args = array(
-		'post_type' => $post_type,
-		// 'post_type' 			=> 'sfdsd',
+		'post_type'             => $post_type,
 		'post_status'           => array( 'publish' ),
 		'posts_per_page'        => 9,            // -1 pour liste sans limite
 		'paged'					=> $paged,
