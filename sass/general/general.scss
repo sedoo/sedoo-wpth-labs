@@ -313,17 +313,6 @@ ul li ol {
     margin-top: 20px;;
 }
 
-// button in footer if more than 1 adress 
-.btn_footer_local {
-    padding: 5px;
-    border-radius: 2px;
-    text-decoration: none !important;
-    svg {
-        transform: translateY(4px);
-    }
-}
-// end button in footer if more than 1 adress 
-
 // nav header (top , over the main menu */
 [id="ul-top-menu"] {
     display: flex;
