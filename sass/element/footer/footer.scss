@@ -23,7 +23,7 @@ footer[id="colophon"]{
                 flex: 0 1 900px;
             }
             > :last-child {
-                flex: 0 1 200px;
+                flex: 0 1 250px;
                 display: flex;
                 flex-flow: column;
                 justify-content: space-between;
@@ -96,7 +96,26 @@ footer[id="colophon"]{
                 display: none;
             }
         }
+
+        > div > p {
+            text-align: left;
+        }
     }
+    a.btn_footer_local {
+        padding: 5px;
+        border-radius: 2px;
+        text-decoration: none;
+        svg {
+            fill: var(--theme-color);
+        }
+
+        &:hover {
+            svg {
+                fill:var(--hover-textcolor);
+            }
+        }
+    }
+    
 }
 
 .social-partenaires{

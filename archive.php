@@ -12,7 +12,11 @@ get_header();
 // get the current taxonomy term
 $term = get_queried_object();
 $code_color=labs_by_sedoo_main_color();
-$tax_layout = get_field('tax_layout', $term);
+if (get_field('tax_layout', $term)) {
+	$tax_layout = get_field('tax_layout', $term);
+} else {
+	$tax_layout="grid";
+}
 $cover = get_field( 'tax_image', $term);
 $no_result_text = get_field('no_results_text_tax');	
 $affichage_portfolio = get_field('sedoo_affichage_en_portfolio', $term);
