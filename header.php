@@ -43,9 +43,12 @@ if (get_field('sedoo_labs_theme_ambiance', 'option')) {
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">    
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="description" content="<?php if ( get_field('sedoo_labs_metadescription', 'option') ) {
+        the_field('sedoo_labs_metadescription', 'option');
+    } 
+    ?>">
     <?php wp_head(); ?>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">  -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="<?php echo get_template_directory_uri() . '/assets/MultiLevelPushMenu/js/modernizr.custom.js';?>"></script>
 </head>

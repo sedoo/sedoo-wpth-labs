@@ -26,10 +26,8 @@ acf_add_local_field_group(array(
 			'choices' => array(
 				'contact' => 'Contact & Location',
 				'reseaux' => 'Social networks',
-				'partenaires' => 'Partners',
 				'annuaire' => 'Directory',
 				'calendar' => 'Calendar',
-				'options'	=> 'Theme advanced option'
 			),
 			'allow_custom' => 0,
 			'default_value' => array(
@@ -38,6 +36,31 @@ acf_add_local_field_group(array(
 			'toggle' => 0,
 			'return_format' => 'value',
 			'save_custom' => 0,
+		),
+		array(
+			'key' => 'field_607ea77cb5e27',
+			'label' => 'Meta description',
+			'name' => 'sedoo_labs_metadescription',
+			'type' => 'text',
+			'instructions' => '<p>The meta description tag is the tag that appears in search engine results pages below the title tag. It corresponds to the few lines of text that indicate what the page is about.<p>
+<ul>
+<li>a meta description must not exceed 158 characters,</li>
+<li>Focus on the main idea with important keywords in the first 120 characters of your meta description to ensure it will be suitable for mobile.</li>
+</ul>
+<p><strong>It has no weight in SEO: this means that the keywords placed in the tag are not taken into account by Google as criteria for SEO<strong></p>
+<p><a href="https://optimiz.me/metadonnee-description-2/" title="more info on meta description"> Find out more (FR)</a> </p>',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => 158,
 		),
 	),
 	'location' => array(
