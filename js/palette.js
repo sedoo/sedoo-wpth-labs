@@ -33,7 +33,7 @@ jQuery(document).ready(function(){
                 // Calculate color palette from the first one
                 /////
                 var scheme = new ColorScheme;
-                scheme.from_hex(data.substr(1))         
+                scheme.from_hex(data.replace(/\s/g, '').substr(1))         
                     .scheme(calculmethod)   
                     .variation('soft')
                     .distance(0.5);
