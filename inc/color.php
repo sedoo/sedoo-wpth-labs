@@ -125,14 +125,14 @@ function labs_by_sedoo_ajax_get_main_color(){
 ////////////////
 // hook before the form in theme informations to embed colorwheel.js (used for calculate colors)
 /////////
-function sedoo_load_color_javascript_good_hook() {
-	function acf_load_color_field_choices( $field ) {
-		wp_enqueue_script( 'labs-by-sedoo-load-colorwheel', get_template_directory_uri() . '/js/colorwheel.js' );
-		return $field;
-	}
+function sedoo_load_color_javascript() {
+	wp_enqueue_script( 'labs-by-sedoo-load-colorwheel', get_template_directory_uri() . '/js/colorwheel.js' );
+}
+add_action( 'admin_enqueue_scripts', 'sedoo_load_color_javascript' );
+function acf_load_color_field_choices( $field ) {
+	return $field;
 }
 add_filter('acf/load_field/name=theme_palet_color', 'acf_load_color_field_choices');
-add_action( 'admin_enqueue_scripts', 'sedoo_load_color_javascript_good_hook' );
 ////////////////
 // get color for css in inc/color.php  (numcolor is the numero of the color (from 0 to 4))
 /////////
