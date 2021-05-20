@@ -340,7 +340,7 @@ function labs_by_sedoo_color_style() {
 
             <?php
             if ($mainMenuLayout = "grid") {
-                if ( get_field('sedoo_labs_grid_menu_color', 'option') == "coloredGrid" ) {                    
+                if (( function_exists( 'get_field' ) ) && ( get_field('sedoo_labs_grid_menu_color', 'option') == "coloredGrid" )) {                    
                 ?>
                     nav[id="primary-navigation"].grid.coloredGrid ul li a:hover,
                     .grid.coloredGrid ul[id="primary-menu"] .menu-item:hover .sub-menu
@@ -355,7 +355,7 @@ function labs_by_sedoo_color_style() {
                 <?php
                 }
             
-                if (get_field('sedoo_labs_grid_menu_columns', 'option') !== 5) {
+                if (( function_exists( 'get_field' ) ) &&(get_field('sedoo_labs_grid_menu_columns', 'option') !== 5)) {
                 ?>
                 .grid ul[id="primary-menu"] .menu-item .sub-menu {
                     grid-template-columns: repeat(<?php echo get_field('sedoo_labs_grid_menu_columns', 'option');?>, 1fr);       

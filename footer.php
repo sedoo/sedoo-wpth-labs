@@ -11,10 +11,10 @@
 $options_list_footer = get_field('list_choice', 'option');
 
 $footerStyle = "style=\"";
-if (get_field('footer_background_svg', 'option')) { 
+if (( function_exists( 'get_field' ) ) &&(get_field('footer_background_svg', 'option'))) { 
     $footerStyle .= "background-image:url(".get_field('footer_background_svg', 'option').");";
 }
-if (get_field('footer_color', 'option')) { 
+if (( function_exists( 'get_field' ) ) &&(get_field('footer_color', 'option'))) { 
     $footerStyle .="background:".get_field('footer_color', 'option').";";
 }
 $footerStyle .= "\"";
@@ -27,7 +27,7 @@ $footerStyle .= "\"";
    footer[id="colophon"] * {
         color:
         <?php
-        if (get_field('footer_text_color', 'option')) {
+        if (( function_exists( 'get_field' ) ) &&(get_field('footer_text_color', 'option'))) {
             the_field('footer_text_color', 'option');            
         } else {
             echo "#222222";
@@ -226,11 +226,11 @@ $footerStyle .= "\"";
 
                     <?php 
                     // show copyright
-                    if (get_field('footer_show_copyright', 'option')) {
+                    if (( function_exists( 'get_field' ) ) && (get_field('footer_show_copyright', 'option'))) {
                         ?>
                         <p>
                         <?php 
-                        if (get_field('footer_copyright_text', 'option')) {
+                        if (( function_exists( 'get_field' ) ) && (get_field('footer_copyright_text', 'option'))) {
                         echo get_field('footer_copyright_text', 'option')." - ";
                         }
                         ?>

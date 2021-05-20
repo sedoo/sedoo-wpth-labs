@@ -12,7 +12,7 @@ get_header();
 // get the current taxonomy term
 $term = get_queried_object();
 $code_color=labs_by_sedoo_main_color();
-if (get_field('tax_layout', $term)) {
+if (( function_exists( 'get_field' ) ) && (get_field('tax_layout', $term))) {
 	$tax_layout = get_field('tax_layout', $term);
 } else {
 	$tax_layout="grid";
