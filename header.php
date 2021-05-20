@@ -8,7 +8,7 @@
  *
  * @package labs_by_Sedoo
  */
-if (get_field('sedoo_labs_main_menu_layout', 'option')) {
+if (( function_exists( 'get_field' ) ) && (get_field('sedoo_labs_main_menu_layout', 'option'))) {
     $mainMenuLayout = get_field('sedoo_labs_main_menu_layout', 'option'); //field_5f6da0eb5ac37
 } else {
     $mainMenuLayout = "grid";
@@ -16,22 +16,21 @@ if (get_field('sedoo_labs_main_menu_layout', 'option')) {
 $classesMainMenu = $mainMenuLayout;
 
 if ($mainMenuLayout = "grid") {
-    if (get_field('sedoo_labs_grid_menu_color', 'option')) {
+    if (( function_exists( 'get_field' ) ) && (get_field('sedoo_labs_grid_menu_color', 'option'))) {
         $sedoo_labs_grid_menu_color = get_field('sedoo_labs_grid_menu_color', 'option');
     } else {
         $sedoo_labs_grid_menu_color = "coloredGrid";
     }
-
     $classesMainMenu .= " ".$sedoo_labs_grid_menu_color;
 }
 
-if (get_field('sedoo_labs_header_appearance', 'option')) {
+if (( function_exists( 'get_field' ) ) && (get_field('sedoo_labs_header_appearance', 'option'))) {
     $classesHeader = get_field('sedoo_labs_header_appearance', 'option');
 } else {
     $classesHeader = "whiteHeader";
 }
 
-if (get_field('sedoo_labs_theme_ambiance', 'option')) {
+if (( function_exists( 'get_field' ) ) && (get_field('sedoo_labs_theme_ambiance', 'option'))) {
     $ambiance=get_field('sedoo_labs_theme_ambiance', 'option');
 } else {
     $ambiance="lightmode";
@@ -44,7 +43,7 @@ if (get_field('sedoo_labs_theme_ambiance', 'option')) {
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-    <meta name="description" content="<?php if ( get_field('sedoo_labs_metadescription', 'option') ) {
+    <meta name="description" content="<?php if (( function_exists( 'get_field' ) ) && ( get_field('sedoo_labs_metadescription', 'option') )) {
         the_field('sedoo_labs_metadescription', 'option');
     } 
     ?>">
