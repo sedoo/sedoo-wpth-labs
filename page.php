@@ -40,13 +40,13 @@ $title = get_the_title($page_id);
         </header>
     <?php 
     // Show title first on mobile
-    if (get_field( 'table_content' )) {
+    if (( function_exists( 'get_field' ) ) && (get_field( 'table_content' ))) {
         sedoo_wpth_labs_display_title_on_top_on_mobile();
     }
     ?>
-	<div id="primary" class="content-area wrapper <?php if (get_field( 'table_content' )) {echo " tocActive";}?>">
+	<div id="primary" class="content-area wrapper <?php if (( function_exists( 'get_field' ) ) && (get_field( 'table_content' ))) {echo " tocActive";}?>">
         <?php // table_content ( value ) 
-        if (get_field( 'table_content' )) {
+        if (( function_exists( 'get_field' ) ) && (get_field( 'table_content' ))) {
             sedoo_wpth_labs_display_sommaire('Sommaire');
         } ?>
         <main id="main" class="site-main">

@@ -23,7 +23,7 @@ function sedoo_labs_wp_nav_menu_objects( $items, $args ) {
 	
 	// check Main menu layout
 	// choice : classic (default), flyout
-	if (get_field('sedoo_labs_main_menu_layout', 'option')) {
+	if (( function_exists( 'get_field' ) ) && (get_field('sedoo_labs_main_menu_layout', 'option'))) {
 		$mainMenuLayout = get_field('sedoo_labs_main_menu_layout', 'option'); //field_5f6da0eb5ac37
 	} else {
 		$mainMenuLayout = "grid";

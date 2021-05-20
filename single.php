@@ -50,7 +50,7 @@ $themeSlugRewrite = "category";
                     <section>
                         <?php the_content(); ?>
                     </section>
-                    <?php if (get_field("sources")){ ?>
+                    <?php if (( function_exists( 'get_field' ) ) && (get_field("sources"))){ ?>
                     <footer class="sources">
                         <h2><?php echo __('Sources', 'sedoo-wpth-labs'); ?> :</h2>
                         <p><?php the_field("sources") ?></p>
