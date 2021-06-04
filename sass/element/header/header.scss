@@ -21,7 +21,7 @@ header[id="masthead"]{
     top: 0;
     // padding: 10px 20px;
     background: $light-opacity2;
-    z-index: 2000; 
+    z-index: 100; 
     border-bottom:5px solid var(--theme-color);
     @include basic-transition;
     
