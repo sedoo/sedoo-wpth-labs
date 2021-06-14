@@ -72,6 +72,10 @@
         background-color: #222;
     }
 
+    &.page main > .wrapper-content {
+        padding: 35px 40px;
+    }
+
     /* TRIBE EVENTS */
     article.tribe_events {
         background:$dark-background-light;
