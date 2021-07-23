@@ -24,30 +24,7 @@ header[id="cover"]{
         padding: 90px 0;
         min-height: 25vh;
         max-width: 100%;
-        // max-width: calc(100% + 40px);
-        // margin-left: -20px;
         height: auto;
-
-        // &::before, &::after{
-        //     content: "";
-        //     border: none;//1px solid $light-full;
-        //     position: absolute;
-        //     top: 20px;
-        //     left: 20px;
-        //     width: calc(100% - 40px);
-        //     height: calc(100% - 40px);
-        // }
-
-        // &::after{
-        //     // border-style: dotted;
-        //     // border-width: 2px;
-        //     border:none;
-        //     top: 25px;
-        //     left: 25px;
-        //     width: calc(100% - 50px);
-        //     height: calc(100% - 50px);
-        //     background: radial-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0));
-        // }
 
         .wrapper{
             max-width: 720px;
