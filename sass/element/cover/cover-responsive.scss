@@ -48,19 +48,6 @@
         header[id="cover"]{
             padding: 50px 0;
             
-            &::before{
-                top: 10px;
-                left: 10px;
-                width: calc(100% - 20px);
-                height: calc(100% - 20px);
-            }
-            &::after{
-                top: 15px;
-                left: 15px;
-                width: calc(100% - 30px);
-                height: calc(100% - 30px);          
-            }
-            
             .wrapper{
                 max-width: 500px;
                 
