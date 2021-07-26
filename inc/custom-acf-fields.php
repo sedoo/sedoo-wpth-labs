@@ -1053,7 +1053,7 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_5ebab36e2427e',
-			'label' => 'Images & colors',
+			'label' => 'Footer colored area',
 			'name' => '',
 			'type' => 'tab',
 			'instructions' => '',
@@ -1068,13 +1068,41 @@ acf_add_local_field_group(array(
 			'endpoint' => 0,
 		),
 		array(
+			'key' => 'field_60fe9474a61d3',
+			'label' => 'Hide footer area ?',
+			'name' => 'sedoo_labs_footer_display',
+			'type' => 'true_false',
+			'instructions' => '<strong>Footer is displayed by default.</strong>
+If not needed, you can hide the colored footer area, by clicking this option.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
 			'key' => 'field_5f1197056d8fc',
 			'label' => 'Replace footer logo by another image ?',
 			'name' => 'sedoo_labs_footer_replace_logo',
 			'type' => 'true_false',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_60fe9474a61d3',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -1149,7 +1177,15 @@ acf_add_local_field_group(array(
 			'type' => 'image',
 			'instructions' => 'Only SVG format allowed',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_60fe9474a61d3',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -1173,7 +1209,15 @@ acf_add_local_field_group(array(
 			'type' => 'color_picker',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_60fe9474a61d3',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -1189,7 +1233,15 @@ acf_add_local_field_group(array(
 			'instructions' => 'If you choose a colored background, please choose a light color for you typography.
 Please refer to those <a href="https://material.io/design/color/text-legibility.html#text-types">Guide lines</a>.',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_60fe9474a61d3',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',

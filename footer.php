@@ -36,7 +36,11 @@ $footerStyle .= "\"";
         ;
     }
         </style>    
-        <div class="wrapper-layout">
+        <?php
+        if(get_field('sedoo_labs_footer_display', 'option') !== true) {
+            echo get_field('sedoo_labs_footer_display', 'option');
+        ?>
+        <div class="wrapper-layout"> 
             <div id="footer-menu"><!--footer menus-->
                 <?php if (has_nav_menu('footer-menu-1')) { 
                 ?>
@@ -177,7 +181,9 @@ $footerStyle .= "\"";
                 </figure>
             </div>
         </div>
-
+        <?php 
+        } //end if footer area (menu + location + logo) not hidden
+        ?>
         <?php if( have_rows('partenaires', 'option') ){ ?>
         <div class="partners-list">
             <ul id="partners-sidebar" class="inline-list wrapper-layout" role="complementary">
