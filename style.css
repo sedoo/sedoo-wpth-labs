@@ -102,7 +102,6 @@ body {
   line-height: 1.4;
   color: #222;
   font-size: 0.875rem;
-  letter-spacing: 3px;
   hyphens: none; }
   body.menu-expanded nav[id="primary-navigation"] > div {
     transform: none;
@@ -218,9 +217,6 @@ button {
   box-shadow: 0;
   border: none;
   background: none; }
-
-p, a, td, th, address, li, figcaption {
-  letter-spacing: 1px; }
 
 .quote {
   font-size: calc(1.25rem * 1.8); }
@@ -1762,7 +1758,6 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
   .mp-menu.mp-cover h2 {
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 1px;
     font-size: 0.875rem;
     color: #222;
     background: #FFF; }
@@ -1810,7 +1805,6 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
     outline: none;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 1px;
     font-weight: 700;
     display: block;
     font-size: 0.8em;
@@ -2394,8 +2388,7 @@ iframe.sedoo_blocks_iframe.alignfull {
     font-size: 0.875rem;
     background: #000;
     cursor: pointer;
-    transition: 0.5s ease all;
-    letter-spacing: 1px; }
+    transition: 0.5s ease all; }
     .search-annuaire button:hover {
       color: #000;
       background: #fff;
