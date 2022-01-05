@@ -9,25 +9,13 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="post grid-item">
-    <a href="<?php the_permalink(); ?>"></a>
-	<header class="entry-header">
-        <figure>
-            <?php 
-            if (get_the_post_thumbnail()) {
-                the_post_thumbnail(array(400, 235));
-            } ?>
-        </figure>
-        <p>
-        <?php     $categories = get_the_category();
-            if ( ! empty( $categories ) ) {
-            echo esc_html( $categories[0]->name );   
-        }; ?>
-        </p>
-	</header><!-- .entry-header -->
+<article id="post-<?php the_ID(); ?>" class="post">
+    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     <div class="group-content">
         <div class="entry-content">
-            <h2><?php the_title(); ?></h2>
+            
+            <?php the_excerpt(); ?>
+            <p class="date"><?php the_date('M / d / Y') ?>
         </div><!-- .entry-content -->
     </div>
 </article><!-- #post-->
