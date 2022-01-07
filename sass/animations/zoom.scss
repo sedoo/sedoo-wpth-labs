@@ -1,0 +1,38 @@
+.slow-zoom-out {
+    animation: slow_zoom_out 6s linear 1 alternate;
+  }
+
+.fast-zoom-in {
+  animation: zoom_in 2s linear 1 alternate;
+}
+
+// .fast-zoom-in {
+//   animation: slide_in_left 1s linear 1 alternate;
+// }
+
+@keyframes slow_zoom_out {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom_in {
+  from {
+    transform: scale(1.1) translateX(40px) translateY(20px);
+  }
+  to {
+    transform: scale(1) translateX(0) translateY(0);
+  }
+}
+
+@keyframes slide_in_left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

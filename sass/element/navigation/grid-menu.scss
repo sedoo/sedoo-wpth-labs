@@ -112,7 +112,17 @@
 }
 
 .grid.whiteGrid {
-    ul[id="primary-menu"] .menu-item .sub-menu .menu-item a::after {
+    ul[id="primary-menu"] .menu-item .sub-menu {
+        top: 100%;
+
+        .menu-item a::after {
         background: var(--theme-color);
+        }
+    }
+}
+
+.grid.coloredGrid {
+    ul[id="primary-menu"] .menu-item .sub-menu {
+        top: 87%;
     }
 }

@@ -28,7 +28,9 @@ $themeSlugRewrite = "category";
             if ( has_post_thumbnail() ) {
         ?>
             <header id="cover">
-                <?php the_post_thumbnail('cover'); ?>
+                <figure class="fast-zoom-in">
+                    <?php the_post_thumbnail('cover'); ?>
+                </figure>
             </header>
         <?php 
         }
@@ -54,6 +56,7 @@ $themeSlugRewrite = "category";
                     <footer class="sources">
                         <h2><?php echo __('Sources', 'sedoo-wpth-labs'); ?> :</h2>
                         <p><?php the_field("sources") ?></p>
+                        
                     </footer>
                     <?php } ?>
                 </article>
