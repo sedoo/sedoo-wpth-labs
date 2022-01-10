@@ -163,7 +163,7 @@ img{
 /* TYPOGRAPHIC ELEMENT & CLASSES */
 h1, .h1{
     font-size: $h1-size;
-    text-transform: $uppercase;
+    text-transform: uppercase;
     font-family: $main-title-family;
     
     &::after{
@@ -247,7 +247,7 @@ small{
         a, span{
             text-decoration: none;
             color: $dark;
-            text-transform: $uppercase;
+            text-transform: uppercase;
             font-weight: $bold;
             font-family: $main-font-family;
             font-size: $tiny-size;

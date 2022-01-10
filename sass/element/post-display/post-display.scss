@@ -61,7 +61,7 @@
             background: $dark;
             color: $light-full;
             font-weight: $semi-bold;
-            text-transform: $uppercase;
+            text-transform: uppercase;
             font-size: $tiny-size;
             margin-bottom: 0;
             font-family: $main-font-family;
@@ -82,7 +82,7 @@
                 -webkit-line-clamp: 4;
                 // -webkit-box-orient: vertical;  
                 overflow: hidden;
-                text-transform: $uppercase;
+                text-transform: uppercase;
                 margin-top: 0;
             }
             p{
