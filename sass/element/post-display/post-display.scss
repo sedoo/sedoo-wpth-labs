@@ -64,7 +64,7 @@
             text-transform: $uppercase;
             font-size: $tiny-size;
             margin-bottom: 0;
-            font-family: $main-title-family;
+            font-family: $main-font-family;
             text-align: left;
         }
     }
@@ -86,7 +86,8 @@
                 margin-top: 0;
             }
             p{
-                font-size: calc(#{$font-size} / 1.2);
+                // font-size: calc(#{$font-size} / 1.2);
+                font-size: $tiny-size;
                 // display: -webkit-box;
                 -webkit-line-clamp: 3;
                 // -webkit-box-orient: vertical;  
