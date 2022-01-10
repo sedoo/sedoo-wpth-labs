@@ -6,6 +6,9 @@
   animation: zoom_in 2s linear 1 alternate;
 }
 
+.cover-homepage {
+  animation: cover_homepage 2s linear 1 alternate;
+}
 // .fast-zoom-in {
 //   animation: slide_in_left 1s linear 1 alternate;
 // }
@@ -34,5 +37,14 @@
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes cover_homepage {
+  from {
+    background-position:center -5%;
+  }
+  to {
+    background-position:center;
   }
 }
