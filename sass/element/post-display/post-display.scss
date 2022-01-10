@@ -60,7 +60,7 @@
             padding: 5px 10px;
             background: $dark;
             color: $light-full;
-            font-weight: $bold;
+            font-weight: $semi-bold;
             text-transform: $uppercase;
             font-size: $tiny-size;
             margin-bottom: 0;
@@ -106,7 +106,7 @@
             box-sizing: border-box;
 
             p, a {
-                font-size: calc(#{$font-size} / 1.2);
+                font-size: $tiny-size;
             }
             p{
                 margin: 0;
