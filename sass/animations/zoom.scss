@@ -31,15 +31,6 @@
   }
 }
 
-@keyframes slide_in_left {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
 @keyframes cover_homepage {
   from {
     background-position:center -5%;
