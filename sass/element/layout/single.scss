@@ -55,7 +55,7 @@
                     }
                     .post-category{
                         order: 1;
-                        text-transform: $uppercase;
+                        text-transform: uppercase;
                         font-weight: $bold;
                         font-family: $main-title-family;
                         font-size: $tiny-size;
@@ -186,7 +186,7 @@
             width: calc(50% - 10px);
 
             h3{
-                text-transform: $uppercase;
+                text-transform: uppercase;
                 overflow: hidden;
                 height: 62px;
                 margin-bottom: 10px;

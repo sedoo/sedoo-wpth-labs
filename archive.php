@@ -34,7 +34,7 @@ $affichage_portfolio = get_field('sedoo_affichage_en_portfolio', $term);
 			// }
 			?>
 			
-			<header id="cover" class="page-header" style="<?php echo $coverStyle;?>">
+			<header id="cover" class="page-header" style="<?php echo $coverStyle;?>;animation: cover_homepage 2s linear 1 alternate;">
 				
 			</header><!-- .page-header -->
 			<?php
