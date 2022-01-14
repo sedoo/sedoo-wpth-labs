@@ -21,19 +21,29 @@ $title = get_the_title($page_id);
 ?>
         <?php 
             if(get_field('sedoo_img_defaut_yesno', 'option') == true) { // if default cover is in option
-                echo '<header id="cover">';
-                if (get_the_post_thumbnail()) {// if default cover but cover special for this page
-                    the_post_thumbnail('cover'); 
-                }
-                else {
-                    echo '<img src="'.get_field('sedoo_labs_default_cover_url', 'option').'" class="attachment-cover size-cover wp-post-image">';
-                }
-                echo '</header>';
+                ?><header id="cover">
+                    <figure class="fast-zoom-in">
+                    <?php
+                    if (get_the_post_thumbnail()) {// if default cover but cover special for this page
+                        the_post_thumbnail('cover'); 
+                    }
+                    else {
+                        echo '<img src="'.get_field('sedoo_labs_default_cover_url', 'option').'" class="attachment-cover size-cover wp-post-image">';
+                    }
+                    ?>
+                    </figure>
+                </header>
+                <?php
             } else { // if no default
                 if (get_the_post_thumbnail()) {  // if no default cover but special cover for this one
-                    echo '<header id="cover">';
+                    ?><header id="cover">
+                        <figure class="fast-zoom-in">
+                        <?php
                         the_post_thumbnail('cover'); 
-                    echo '</header>';
+                        ?>
+                        </figure>
+                    </header>
+                    <?php
                 }
             }
         ?>

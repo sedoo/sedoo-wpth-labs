@@ -39,7 +39,7 @@
         </div>
         <div>
            <a href="<?php echo get_author_posts_url($select_lauteur_array['ID'], $select_lauteur_array['user_nicename'] ); ?>">
-                <p><b><?php echo $select_lauteur_array['user_firstname']; ?> <?php echo $select_lauteur_array['user_lastname']; ?></b></p>
+                <h2><?php echo $select_lauteur_array['user_firstname']; ?> <?php echo $select_lauteur_array['user_lastname']; ?></h2>
            </a>
             <p><?php the_field('poste', 'user_'.$select_lauteur_array['ID']) ?></p>
             <?php 

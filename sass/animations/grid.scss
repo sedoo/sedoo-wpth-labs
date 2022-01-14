@@ -1,0 +1,11 @@
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+$bg-width: 50px;
+$bg-height: 50px;
+
+@keyframes bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+
+@keyframes bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}

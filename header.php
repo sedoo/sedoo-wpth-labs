@@ -48,7 +48,9 @@ if (( function_exists( 'get_field' ) ) && (get_field('sedoo_labs_theme_ambiance'
     } 
     ?>">
     <?php wp_head(); ?>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="<?php echo get_template_directory_uri() . '/assets/MultiLevelPushMenu/js/modernizr.custom.js';?>"></script>
 </head>
 

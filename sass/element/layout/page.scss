@@ -3,52 +3,17 @@
     article {
 
         > header {
-            // @include display-flex;
-            // @include flex-column;
             margin-bottom:30px;
 
-            > div {
-                padding:20px;
-                border-bottom:1px solid #CCC;
+            // > div {
+            //     padding:20px;
+            //     border-bottom:1px solid #CCC;
                 
-            }
+            // }
         }
     }
 
     .post-thumbnail{
         display: none;
-    }
-    
-    &:not(.home){
-        .post-wrapper{
-            // grid-template-columns: repeat(2, 1fr);
-
-            .post{
-
-                // &:nth-child(4n), &:nth-child(8n){
-                //     grid-column: auto;
-                //     display: block;
-                //     height: auto;
-
-                //     .entry-header{
-                //         width: 100%;
-                //         height: 235px;
-                //         margin-left: 0;
-                //     }
-                //     .group-content{
-                //         width: 100%;
-                //         position: initial;
-
-                //         .entry-content{
-                //             text-align: left;
-                //         }
-                //     }
-
-                //     &::before{
-                //         display: none;
-                //     }
-                // }
-            }
-        }
     }
 }

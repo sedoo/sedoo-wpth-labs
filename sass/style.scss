@@ -4,7 +4,7 @@ Theme URI:    https://github.com/sedoo/sedoo-wpth-labs
 Author: Sedoo - Pierre Vert - Nicolas Gruwe
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 1.16.0
+Version: 2.0.0
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -31,6 +31,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "general/general-typography-layout.scss";
 @import "general/general-responsive.scss";
 @import "element/element.scss";
+@import "animations/animations.scss";
 @import "plugins/tribe-events.scss";
 
 //#wpadminbar{

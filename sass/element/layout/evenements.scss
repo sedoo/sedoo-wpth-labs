@@ -38,7 +38,7 @@ div[id="em-wrapper"]{
     }
     h3{
         font-size: $h4-size;
-        text-transform: $uppercase;
+        text-transform: uppercase;
         margin-bottom: 10px;
         @include basic-transition;
         height: 70px;
