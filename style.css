@@ -5,7 +5,7 @@ Theme URI:    https://github.com/sedoo/sedoo-wpth-labs
 Author: Sedoo - Pierre Vert - Nicolas Gruwe
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 2.0.1
+Version: 2.0.2
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -563,11 +563,6 @@ img {
 
 .home header[id="masthead"] {
   padding: 10px 20px; }
-  .home header[id="masthead"] .wrapper .site-branding .custom-logo, .home header[id="masthead"] .wrapper-content .site-branding .custom-logo, .home header[id="masthead"] .archive .site-content .site-branding .site-branding .custom-logo, .archive .site-content .home header[id="masthead"] .site-branding .site-branding .custom-logo {
-    max-height: 200px;
-    width: auto; }
-  .home header[id="masthead"] nav[id="primary-navigation"] > div > ul > li > a {
-    padding: 10px 20px; }
 
 header[id="masthead"] {
   position: sticky;
@@ -1888,7 +1883,7 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
     border-top: 2px solid var(--theme-color);
     border-bottom: 2px solid var(--theme-color);
     left: 0;
-    top: 100%;
+    top: 87%;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -1941,14 +1936,6 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
           .grid ul[id="primary-menu"] .menu-item .sub-menu .menu-item .sub-menu .menu-item .sub-menu {
             padding-left: 20px;
             top: 0; }
-
-.grid.whiteGrid ul[id="primary-menu"] .menu-item .sub-menu {
-  top: 100%; }
-  .grid.whiteGrid ul[id="primary-menu"] .menu-item .sub-menu .menu-item a::after {
-    background: var(--theme-color); }
-
-.grid.coloredGrid ul[id="primary-menu"] .menu-item .sub-menu {
-  top: 87%; }
 
 .flyout ul[id="primary-menu"] > .menu-item {
   position: relative; }
