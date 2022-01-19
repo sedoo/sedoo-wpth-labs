@@ -33,7 +33,7 @@
                 // background: $dark;
                 // background: var(--theme-color);
                 left: 0;
-                top: 100%;
+                top: 87%;
                 padding: 20px;
                 @include display-grid;
                 @include grid-template-column(repeat(5, 1fr));
@@ -108,21 +108,5 @@
                 }
             }
         }
-    }
-}
-
-.grid.whiteGrid {
-    ul[id="primary-menu"] .menu-item .sub-menu {
-        top: 100%;
-
-        .menu-item a::after {
-        background: var(--theme-color);
-        }
-    }
-}
-
-.grid.coloredGrid {
-    ul[id="primary-menu"] .menu-item .sub-menu {
-        top: 87%;
     }
 }
