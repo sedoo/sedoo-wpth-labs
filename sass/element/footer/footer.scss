@@ -191,6 +191,10 @@ footer[id="colophon"]{
             &[href*="researchgate"]::after {
                 background-image: url("images/logo_researchgate.svg");
             }
+
+            &[href*="scoop"]::after {
+                background-image: url("images/logo_scoop-it.svg");
+            }
             
             &:hover{
                 background:none;

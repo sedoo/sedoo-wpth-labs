@@ -82,7 +82,7 @@ nav[id="primary-navigation"]{
 
             a{
                 text-transform: uppercase;
-                font-size: $font-size;
+                font-size: $tiny-size;
                 font-weight: $bold;
                 padding: 10px 20px;
                 font-family: $main-font-family;
@@ -91,12 +91,8 @@ nav[id="primary-navigation"]{
             
             &:hover{
                 a{
-                    // // font-size: $tiny-size;
-                    // color: $light-full;
-                    // background: $dark;
-                    // background: var(--theme-color);
                     &+ul a {
-                        font-size: $tiny-size;
+                        font-size: $mini-size;
                     }
                 }
                 
@@ -111,6 +107,11 @@ ul[id="primary-menu"] {
     padding-left: 0;
     list-style: none;
     // position: relative; 
+}
+
+nav[id="top-header"] ul li a{
+    font-size: $tiny-size;
+
 }
 
 @media screen and (min-width: 37.5em) {

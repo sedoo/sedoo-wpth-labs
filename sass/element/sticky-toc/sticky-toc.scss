@@ -27,26 +27,26 @@ aside[id="stickyMenu"]{
     p{
         font-family: $main-title-family;
         text-transform: uppercase;
-        font-size: $font-size;
-        padding-left: 5px;            
+        font-size: $font-size;      
     }
 
     [id="tocList"]{
-        padding: 0 20px;
-        li{
+        padding: 0 20px 0 0;
+        li {
+            padding-bottom:10px;
+
             a{
                 font-family: $main-title-family;
-                font-size: $font-size;
-                padding: 10px 0;
+                font-size: $tiny-size;
+                padding: 10px 0 0;
                 display: block;
-                margin-bottom: 10px;
             }
 
             li{ 
                 padding: 3px 10px;
                 a{
                     font-family: $main-font-family;
-                    font-size: $tiny-size;
+                    font-size: $mini-size;
                     border: 0;
                     padding: 0;
                     margin-bottom: 0;
@@ -57,9 +57,10 @@ aside[id="stickyMenu"]{
                 }
             }            
         }
-        > li:not(:last-child) > a {
-            border-bottom: dotted 1px $dark;
-        }        
+
+        // > li:not(:first-child) > a {
+        //     border-top: dotted 1px $dark;
+        // }        
     }
     
     ::-webkit-scrollbar{
