@@ -233,10 +233,8 @@ function labs_by_sedoo_color_style() {
             .posts-navigation a:hover,
             .wpfc-calendar-wrapper .fc .ui-state-active,
             .post-wrapper .event-post:hover h3
-            /* .summary #ez-toc-container .ez-toc-list li a:hover,
-            .summary #ez-toc-container .ez-toc-title-container .ez-toc-title-toggle a:hover i */
 			{
-				color: <?php echo $code_color;?>;
+				color: var(--theme-color);
 			}
 
             ul[id="shortcuts"] li,
@@ -264,19 +262,18 @@ function labs_by_sedoo_color_style() {
             .cn-button, 
             .btn_footer_local:hover
             {
-                background: <?php echo $code_color;?>;
+                background: var(--theme-color);
 			}
             
             .social-list li a:hover::before,
             .search-form .search-field:focus,
             .search-form .search-field:active,
-            aside[id="stickyMenu"],
             .bobinette,
             .search-annuaire input[type="search"]:focus,
             .ui-widget-header,
             .page-links span.current
             {
-                 border-color: <?php echo $code_color;?>;
+                 border-color: var(--theme-color);
             }
 
             a:hover,
@@ -284,7 +281,7 @@ function labs_by_sedoo_color_style() {
             a:active,
             aside[id="stickyMenu"] [id="tocList"] li.active a,
             .post-wrapper.sedoo-labtools-listCPT article > a:hover {
-				color: <?php echo $code_color;?>;
+				color:  var(--theme-color);
 			}
 
             #desc_overlay {
@@ -294,10 +291,10 @@ function labs_by_sedoo_color_style() {
             ul[id="shortcuts"] li:hover path, 
             ul[id="shortcuts"] li:hover rect:not(.size), 
             ul[id="shortcuts"] li:hover line{
-                fill: <?php echo $code_color;?>!important;
+                fill:  var(--theme-color)!important;
             }
              .bobinette svg polyline{
-                 stroke: <?php echo $code_color; ?>;
+                 stroke:  var(--theme-color);
              }
             
 
@@ -316,12 +313,12 @@ function labs_by_sedoo_color_style() {
             .tribe-events .tribe-events-c-ical__link:focus,
             .tribe-events .tribe-events-c-ical__link:hover,
             .tribe-events .tribe-events-c-view-selector__button::before {
-                background : <?php echo $code_color;?>;
+                background: var(--theme-color);
             }
             
             .tribe-common .tribe-common-c-btn:active, .tribe-common a.tribe-common-c-btn:active,
             .tribe-common .tribe-common-c-btn:focus, .tribe-common .tribe-common-c-btn:hover, .tribe-common a.tribe-common-c-btn:focus, .tribe-common a.tribe-common-c-btn:hover {
-                background:<?php echo $code_color_sec; ?>;
+                background: var(--second-theme-color);
             }
 
             .tribe-events .tribe-events-c-ical__link::before {
@@ -329,12 +326,12 @@ function labs_by_sedoo_color_style() {
             }
 
             .tribe-events .tribe-events-c-ical__link {
-                color:<?php echo $code_color;?>;
-                border-color: <?php echo $code_color;?>;
+                color: var(--theme-color);
+                border-color: var(--theme-color);
             }
             @keyframes a {
                 50% {
-                    background-color:<?php echo $code_color;?>
+                    background-color: var(--theme-color)
                 }
             }
 
