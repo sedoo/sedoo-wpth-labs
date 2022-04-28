@@ -16,7 +16,7 @@
     }
     
     &:hover{
-        a{
+        > a{
             background: none;
             color:var(--theme-color);
         }
@@ -29,6 +29,16 @@
         }
     }
     
+}
+[role="listNews"] {
+    .post {
+        &:hover{
+            > a{
+                background: none;
+                color:var(--theme-color);
+            }
+        } 
+    }
 }
 
 .post, .post-horizontal{
