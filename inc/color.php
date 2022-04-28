@@ -35,6 +35,7 @@ if(function_exists('get_field')) {
 				// if yes then I add them to the color table I created in this file ($couleurs)
 				$ligne_couleur = array( 'name' => 'Couleur selectionnée '.$numero_couleur, 'slug'  => 'couleur_selectionnee_'.$numero_couleur, 'color' => $couleur['sedoo_select_custom_color'] );
 				array_push($couleurs, $ligne_couleur);
+				update_option('options_ajout_de_couleurs_'.$numero_couleur.'_color', $couleur['sedoo_select_custom_color'], '', 'no');
 				$numero_couleur++;
 			}
 		}
@@ -49,6 +50,7 @@ if(function_exists('get_field')) {
 				// if yes then I add them to the color table I created in this file ($couleurs)
 				$ligne_couleur = array( 'name' => 'Couleur palette '.$numero_couleur, 'slug'  => 'couleur_ajoutee_'.$numero_couleur, 'color' => $couleur['added_theme_color'] );
 				array_push($couleurs, $ligne_couleur);
+				
 				$numero_couleur++;
 			}
 		}
@@ -248,46 +250,49 @@ function labs_sedoo_add_color_to_theme() {
 			}
 	
 			/* CUSTOM COLORS CHOOSED BY USER */
+
+			/******   LOOP  */
+
 			.has-couleur_selectionnee_1-color,
 			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_1-color {
-				color : <?php echo get_site_color_custom(0); ?>;
+				color : <?php echo get_site_color_custom(1); ?>;
 			}
 			.has-couleur_selectionnee_2-color,
 			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_2-color {
-				color : <?php echo get_site_color_custom(1); ?>;
+				color : <?php echo get_site_color_custom(2); ?>;
 			}
 			.has-couleur_selectionnee_3-color,
 			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_3-color {
-				color : <?php echo get_site_color_custom(2); ?>;
+				color : <?php echo get_site_color_custom(3); ?>;
 			}
 			.has-couleur_selectionnee_4-color,
 			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_4-color {
-				color : <?php echo get_site_color_custom(3); ?>;
+				color : <?php echo get_site_color_custom(4); ?>;
 			}
 			.has-couleur_selectionnee_5-color,
 			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_5-color {
-				color : <?php echo get_site_color_custom(4); ?>;
+				color : <?php echo get_site_color_custom(5); ?>;
 			}
 						
 			.has-couleur_selectionnee_1-background-color,
 			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_1-background-color {
-				background-color : <?php echo get_site_color_custom(0); ?>;
+				background-color : <?php echo get_site_color_custom(1); ?>;
 			}
 			.has-couleur_selectionnee_2-background-color,
 			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_2-background-color {
-				background-color : <?php echo get_site_color_custom(1); ?>;
+				background-color : <?php echo get_site_color_custom(2); ?>;
 			}
 			.has-couleur_selectionnee_3-background-color,
 			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_3-background-color {
-				background-color : <?php echo get_site_color_custom(2); ?>;
+				background-color : <?php echo get_site_color_custom(3); ?>;
 			}
 			.has-couleur_selectionnee_4-background-color,
 			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_4-background-color {
-				background-color : <?php echo get_site_color_custom(3); ?>;
+				background-color : <?php echo get_site_color_custom(4); ?>;
 			}
 			.has-couleur_selectionnee_5-background-color,
 			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_5-background-color {
-				background-color : <?php echo get_site_color_custom(4); ?>;
+				background-color : <?php echo get_site_color_custom(5); ?>;
 			}
 	
 		</style>
