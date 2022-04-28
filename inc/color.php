@@ -248,45 +248,45 @@ function labs_sedoo_add_color_to_theme() {
 			}
 	
 			/* CUSTOM COLORS CHOOSED BY USER */
-			.has-couleur-selectionnee-1-color,
-			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-1-color {
+			.has-couleur_selectionnee_1-color,
+			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_1-color {
 				color : <?php echo get_site_color_custom(0); ?>;
 			}
-			.has-couleur-selectionnee-2-color,
-			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-2-color {
+			.has-couleur_selectionnee_2-color,
+			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_2-color {
 				color : <?php echo get_site_color_custom(1); ?>;
 			}
-			.has-couleur-selectionnee-3-color,
-			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-3-color {
+			.has-couleur_selectionnee_3-color,
+			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_3-color {
 				color : <?php echo get_site_color_custom(2); ?>;
 			}
-			.has-couleur-selectionnee-4-color,
-			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-4-color {
+			.has-couleur_selectionnee_4-color,
+			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_4-color {
 				color : <?php echo get_site_color_custom(3); ?>;
 			}
-			.has-couleur-selectionnee-5-color,
-			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-5-color {
+			.has-couleur_selectionnee_5-color,
+			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_5-color {
 				color : <?php echo get_site_color_custom(4); ?>;
 			}
 						
-			.has-couleur-selectionnee-1-background-color,
-			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-1-background-color {
+			.has-couleur_selectionnee_1-background-color,
+			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_1-background-color {
 				background-color : <?php echo get_site_color_custom(0); ?>;
 			}
-			.has-couleur-selectionnee-2-background-color,
-			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-2-background-color {
+			.has-couleur_selectionnee_2-background-color,
+			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_2-background-color {
 				background-color : <?php echo get_site_color_custom(1); ?>;
 			}
-			.has-couleur-selectionnee-3-background-color,
-			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-3-background-color {
+			.has-couleur_selectionnee_3-background-color,
+			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_3-background-color {
 				background-color : <?php echo get_site_color_custom(2); ?>;
 			}
-			.has-couleur-selectionnee-4-background-color,
-			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-4-background-color {
+			.has-couleur_selectionnee_4-background-color,
+			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_4-background-color {
 				background-color : <?php echo get_site_color_custom(3); ?>;
 			}
-			.has-couleur-selectionnee-5-background-color,
-			[class^="wp-block"].has-background-dim.has-couleur-selectionnee-5-background-color {
+			.has-couleur_selectionnee_5-background-color,
+			[class^="wp-block"].has-background-dim.has-couleur_selectionnee_5-background-color {
 				background-color : <?php echo get_site_color_custom(4); ?>;
 			}
 	
