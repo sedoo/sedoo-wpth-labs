@@ -1,0 +1,29 @@
+/**
+* Colors generate by customizer + theme options
+**********/
+@import "custom-colors.scss";
+@import "generated-palette.scss";
+@import "global-colors.scss";
+@import "message-colors.scss";
+
+/* Main colors from customizer */
+
+// TEXT
+.has-main-color-color,
+[class^="wp-block"].has-background-dim.has-main-color-color {
+    color : var(--theme-color);
+}
+.has-secondary-color-color,
+[class^="wp-block"].has-background-dim.has-secondary-color-color {
+    color :var(--second-theme-color);;
+}
+
+// BACKGROUND
+.has-main_color-background-color, 
+[class^="wp-block"].has-background-dim.has-main_color-background-color {
+    background-color : var(--theme-color);
+}
+.has-secondary_color-background-color,
+[class^="wp-block"].has-background-dim.has-secondary_color-background-color {
+    background-color : var(--second-theme-color);
+}
