@@ -206,135 +206,26 @@ function labs_by_sedoo_color_style() {
          <style type="text/css">
              
              :root {
-                --theme-color:<?php echo $code_color;?>;
-                --second-theme-color:<?php echo $code_color_sec;?>;
-                --hover-textcolor:<?php echo $hover_text_color;?>;
-            }
-
-            .post:hover .group-content .entry-content h2,
-            ul[id="shortcuts"] li:hover button,
-            ul[id="shortcuts"] li:hover a,
-            .footer-menu ul[id="primary-menu"] .menu-item a,
-            .footer-categories li a:hover,
-            .read-more-article .post-loop .post-preview:hover h3,
-            .wrapper-content a, 
-            .wrapper-layout a,
-            .fullwidth a,
-            .copyright .wrapper.site-info a,
-            .search-form .search-submit:hover,
-            .search-form .search-field:focus,
-            .search-form .search-field:active,
-            body a.btn:hover,
-            .page-template-template-evenements .event-post:hover,
-            .author-card > div:first-child > div:last-child p a:hover,
-            .search-annuaire input[type="search"]:focus,
-            .search-annuaire button:hover,
-            .single-event .wrapper-layout header .post-meta,
-            .posts-navigation a:hover,
-            .wpfc-calendar-wrapper .fc .ui-state-active,
-            .post-wrapper .event-post:hover h3
-			{
-				color: var(--theme-color);
-			}
-
-            ul[id="shortcuts"] li,
-            .post .entry-header p,
-            .post-horizontal .entry-header p,
-            .social-list li a:hover::before,
-            .read-more-article h2,
-            .nav-box .nav-box-chevron,
-            .wrapper-content a:hover,
-            .wrapper-layout a:hover,
-            ::selection,
-            -moz-::selection,
-            .copyright .wrapper.site-info a:hover,
-            body a.btn,
-            .search-form .search-submit,
-            div[id="em-wrapper"] h2,
-            .author-card > div:first-child > div:not(.img-author),
-            .search-annuaire button,
-            /* .overlay.location .wrapper .slick-dots .slick-active button::after, */
-            .wp-block-button .wp-block-button__link,
-            .posts-navigation a,
-            .ui-widget-header,
-            .page-links span.current,
-            .wrapper-layout .social-list a:hover::before, 
-            .cn-button, 
-            .btn_footer_local:hover
-            {
-                background: var(--theme-color);
-			}
-            
-            .social-list li a:hover::before,
-            .search-form .search-field:focus,
-            .search-form .search-field:active,
-            .bobinette,
-            .search-annuaire input[type="search"]:focus,
-            .ui-widget-header,
-            .page-links span.current
-            {
-                 border-color: var(--theme-color);
-            }
-
-            a:hover,
-			a:focus,
-            a:active,
-            aside[id="stickyMenu"] [id="tocList"] li.active a,
-            .post-wrapper.sedoo-labtools-listCPT article > a:hover {
-				color:  var(--theme-color);
-			}
-
-            #desc_overlay {
-                background-color: rgba(<?php echo $rgb_color[0].",".$rgb_color[1].",".$rgb_color[2].",.8)"; ?>;
-            }
-             
-            ul[id="shortcuts"] li:hover path, 
-            ul[id="shortcuts"] li:hover rect:not(.size), 
-            ul[id="shortcuts"] li:hover line{
-                fill:  var(--theme-color)!important;
-            }
-             .bobinette svg polyline{
-                 stroke:  var(--theme-color);
-             }
-            
-
-            /* AGENDA */
-            .tribe-common .tribe-common-c-btn, .tribe-common a.tribe-common-c-btn, .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-view-selector--tabs .tribe-events-c-view-selector__list-item--active .tribe-events-c-view-selector__list-item-link::after, .tribe-events .datepicker .day.active, .tribe-events .datepicker .day.active.focused, .tribe-events .datepicker .day.active:focus,
-            .tribe-events .datepicker .day.active:hover,
-            .tribe-events .datepicker .month.active,
-            .tribe-events .datepicker .month.active.focused,
-            .tribe-events .datepicker .month.active:focus,
-            .tribe-events .datepicker .month.active:hover,
-            .tribe-events .datepicker .year.active,
-            .tribe-events .datepicker .year.active.focused,
-            .tribe-events .datepicker .year.active:focus,
-            .tribe-events .datepicker .year.active:hover,
-            .tribe-events .tribe-events-c-ical__link:active,
-            .tribe-events .tribe-events-c-ical__link:focus,
-            .tribe-events .tribe-events-c-ical__link:hover,
-            .tribe-events .tribe-events-c-view-selector__button::before {
-                background: var(--theme-color);
+                --theme-color: <?php echo $code_color;?>;
+                --theme-color-rgba: rgba(<?php echo $rgb_color[0].",".$rgb_color[1].",".$rgb_color[2].",.8)"; ?>);
+                --second-theme-color: <?php echo $code_color_sec;?>;
+                --hover-textcolor: <?php echo $hover_text_color;?>;
+                --green-color: <?php echo get_field('green_color', 'option'); ?>;
+                --blue-color: <?php echo get_field('blue_color', 'option'); ?>;
+                --orange-color: <?php echo get_field('orange_color', 'option'); ?>;
+                --red-color: <?php echo get_field('red_color', 'option'); ?>;
+                --palette-color-1: <?php echo get_site_color(0); ?>;
+                --palette-color-2: <?php echo get_site_color(1); ?>;
+                --palette-color-3: <?php echo get_site_color(2); ?>;
+                --palette-color-4: <?php echo get_site_color(3); ?>;
+                --palette-color-5: <?php echo get_site_color(4); ?>;
+                --custom-color-1: <?php echo get_site_color_custom(1); ?>;
+                --custom-color-2: <?php echo get_site_color_custom(2); ?>;
+                --custom-color-3: <?php echo get_site_color_custom(3); ?>;
+                --custom-color-4: <?php echo get_site_color_custom(4); ?>;
+                --custom-color-5: <?php echo get_site_color_custom(5); ?>;
             }
             
-            .tribe-common .tribe-common-c-btn:active, .tribe-common a.tribe-common-c-btn:active,
-            .tribe-common .tribe-common-c-btn:focus, .tribe-common .tribe-common-c-btn:hover, .tribe-common a.tribe-common-c-btn:focus, .tribe-common a.tribe-common-c-btn:hover {
-                background: var(--second-theme-color);
-            }
-
-            .tribe-events .tribe-events-c-ical__link::before {
-                background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M6 1v10m5-5H1' fill='none' fill-rule='evenodd' stroke='rgb(<?php echo $rgb_color[0].",".$rgb_color[1].",".$rgb_color[2].")" ?>' stroke-linecap='square' stroke-width='1.5'/%3E%3C/svg%3E");
-            }
-
-            .tribe-events .tribe-events-c-ical__link {
-                color: var(--theme-color);
-                border-color: var(--theme-color);
-            }
-            @keyframes a {
-                50% {
-                    background-color: var(--theme-color)
-                }
-            }
-
             <?php
             if ($mainMenuLayout = "grid") {
                 if (( function_exists( 'get_field' ) ) && ( get_field('sedoo_labs_grid_menu_color', 'option') == "coloredGrid" )) {                    
