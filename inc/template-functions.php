@@ -155,7 +155,7 @@ function sedoo_wpth_labs_get_queried_content_arguments($post_type, $taxonomy, $t
      
     $args = array(
 		'post_type'             => $post_type,
-		'post_status'           => array( 'publish' ),
+		'post_status'           => array( 'publish', 'private' ),
 		'posts_per_page'        => 9,            // -1 pour liste sans limite
 		'paged'					=> $paged,
 		// 'post__not_in'          => array($postID),    //exclu le post courant
