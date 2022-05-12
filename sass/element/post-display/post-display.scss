@@ -130,7 +130,7 @@
 .post-wrapper{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     &.noimage .post {
         .entry-header{
@@ -146,7 +146,7 @@
 
     .post {
         width: auto;
-        flex:1 1 350px;
+        flex:1 1 400px;
         padding: 20px;
         margin:0 10px 20px;
         -webkit-box-shadow: 0 0px 3px rgba(0, 0, 0, 0.5);
@@ -154,8 +154,13 @@
         position: relative;
         background:#fff;
     }
-
-
+    
+    &.sedoo_blocks_listepages {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
+    
 
     .event-post{
         text-decoration: none;
@@ -227,9 +232,22 @@
         
     }
     
-    
 }
 
+@media (min-width:600px) {
+    .post-wrapper {
+        &.sedoo_blocks_listepages {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+@media (min-width:800px) {
+    .post-wrapper {
+        &.sedoo_blocks_listepages {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
 .archive .post-wrapper {
     &.noimage .post {
         .entry-header{
