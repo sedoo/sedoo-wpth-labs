@@ -247,6 +247,11 @@
             grid-template-columns: repeat(3, 1fr);
         }
     }
+    .home .post-wrapper {
+        &.sedoo_blocks_listepages {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
 }
 .archive .post-wrapper {
     &.noimage .post {
