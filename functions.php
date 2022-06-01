@@ -151,7 +151,7 @@ add_action( 'widgets_init', 'labs_by_sedoo_widgets_init' );
  */
 function labs_by_sedoo_scripts() {
 	wp_enqueue_style( 'labs-by-sedoo-style', get_stylesheet_uri(), array(), filemtime(get_template_directory() . '/style.css'), false );
-
+    wp_enqueue_style( 'labs-by-sedoo-material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
 	wp_enqueue_script( 'labs-by-sedoo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'labs-by-sedoo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
