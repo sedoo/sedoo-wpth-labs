@@ -31,6 +31,7 @@ $title = get_the_title($page_id);
                         echo '<img src="'.get_field('sedoo_labs_default_cover_url', 'option').'" class="attachment-cover size-cover wp-post-image">';
                     }
                     ?>
+                        <figcaption><?php the_post_thumbnail_caption();?></figcaption>
                     </figure>
                 </header>
                 <?php
@@ -38,9 +39,10 @@ $title = get_the_title($page_id);
                 if (get_the_post_thumbnail()) {  // if no default cover but special cover for this one
                     ?><header id="cover">
                         <figure class="fast-zoom-in">
-                        <?php
-                        the_post_thumbnail('cover'); 
-                        ?>
+                            <?php
+                            the_post_thumbnail('cover'); 
+                            ?>
+                            <figcaption><?php the_post_thumbnail_caption();?></figcaption>
                         </figure>
                     </header>
                     <?php
@@ -61,7 +63,7 @@ $title = get_the_title($page_id);
         } ?>
         <main id="main" class="site-main">
             
-            <div class="wrapper-content">
+            <!-- <div class="wrapper-content"> -->
                 <?php
                 while ( have_posts() ) :
                     the_post();
@@ -75,7 +77,7 @@ $title = get_the_title($page_id);
 
                 endwhile; // End of the loop.
                 ?>
-            </div>
+            <!-- </div> -->
 		</main><!-- #main -->
         
 	</div><!-- #primary -->
