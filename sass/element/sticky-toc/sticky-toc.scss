@@ -1,7 +1,7 @@
 
 .wrapper.tocActive {
-    @include display-flex;
-    @include flex-wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .tocActive {
@@ -77,10 +77,10 @@ aside[id="stickyMenu"]{
     width: 40px;
     padding: 10px;
     box-shadow: 4px 0 2px rgba(0,0,0,0.3);
-    @include display-flex;
-    @include flex-column;
-    @include justify-content-center;
-    @include align-items-center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     @include basic-transition;
     border: 3px solid $dark;
     border-left: 0;

@@ -5,8 +5,8 @@
     }
     
     .wrapper-layout{
-        @include display-flex;
-        @include justify-content-between;
+        display: flex;
+        justify-content: space-between;
     }
     
     main{
@@ -37,14 +37,14 @@
                 }
 
                 div{
-                    @include display-flex;
-                    @include align-items-center;
-                    @include justify-content-between;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
 
                     > div{
-                        @include display-flex;
-                        @include justify-content-start;
-                        @include flex-wrap;
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
                         width: 70%;
                         
                         .tag{
@@ -81,8 +81,8 @@
 .contextual-sidebar{
     width: calc(33.3% - 20px);
     margin-left: 10px;
-    @include display-flex;
-    @include flex-column;
+    display: flex;
+    flex-direction: column;
     padding: 155px 0;
     
     .btn{
@@ -111,9 +111,9 @@
             height: 200px;
             margin-bottom: 10px;
             overflow: hidden;
-            @include display-flex;
-            @include flex-column;
-            @include justify-content-center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             background-position: center;
             background-size: cover;
 
@@ -179,8 +179,8 @@
     }
     .post-loop{
         margin-top: 30px;
-        @include display-flex;
-        @include justify-content-between;
+        display: flex;
+        justify-content: space-between;
 
         .post-preview{
             width: calc(50% - 10px);
@@ -197,9 +197,9 @@
                 height: 240px;
                 width: 100%;
                 overflow: hidden;
-                @include display-flex;
-                @include justify-content-center;
-                @include flex-column;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
 
                 img{
                     object-fit: cover;

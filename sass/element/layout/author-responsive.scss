@@ -26,7 +26,7 @@
 }
 @media screen and (max-width:767px){
     .author-card{
-        @include flex-column;
+        flex-direction: column;
         
         > div{
             width: 100%;

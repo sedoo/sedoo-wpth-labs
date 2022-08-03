@@ -27,12 +27,11 @@
 }
 
 .posts-navigation{
-    width: 100% !important;
-    flex:none !important;
+    width: 100%;
 
     .nav-links{
-        @include display-flex;
-        @include justify-content-around;
+        display: flex;
+        justify-content: space-evenly;
     }
     
     a{

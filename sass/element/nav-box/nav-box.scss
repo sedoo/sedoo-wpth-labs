@@ -86,10 +86,10 @@
         font-size: 2.3125rem;
         margin: 0;
         text-align: center;
-        @include display-flex;
-        @include justify-content-center;
-        @include flex-column;
-        @include align-items-center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         background: $dark;
     }
     .label{
@@ -131,8 +131,8 @@
         
     }
     .nav-box-img{
-        @include display-flex;
-        @include align-items-center;
+        display: flex;
+        align-items: center;
         width: 100%;
         height: 120px;
         overflow: hidden;

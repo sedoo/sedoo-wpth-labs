@@ -43,8 +43,8 @@ ul[id="shortcuts"]{
             border-radius: 0;
             border: none;
             padding: 0;
-            @include display-flex;
-            @include align-items-center;
+            display: flex;
+            align-items: center;
             width: 100%;
             
             svg{
