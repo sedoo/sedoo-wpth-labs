@@ -56,8 +56,7 @@ div[id="em-wrapper"] h2,
 .cn-button, 
 .btn_footer_local:hover,
 a.tag-cloud-link:hover, 
-span.tag-cloud-link:hover
-{
+span.tag-cloud-link:hover {
     background: var(--theme-color);
 }
 
@@ -65,10 +64,9 @@ a.tag-cloud-link:hover,
 span.tag-cloud-link:hover,
 .wrapper-content a:hover,
 .wrapper-layout a:hover,
-.entry-content a,
-p a,
-main article section a,
-{
+.entry-content a:hover,
+p a:hover,
+main article section a:hover {
     color: var(--hover-textcolor);
 }
 
@@ -78,8 +76,7 @@ main article section a,
 .bobinette,
 .search-annuaire input[type="search"]:focus,
 .ui-widget-header,
-.page-links span.current
-{
+.page-links span.current {
      border-color: var(--theme-color);
 }
 
