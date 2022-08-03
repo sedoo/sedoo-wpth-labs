@@ -11,7 +11,6 @@ ul[id="shortcuts"] li:hover a,
 .entry-content a,
 p a,
 main article section a,
-.fullwidth a,
 .copyright .wrapper.site-info a,
 .search-form .search-submit:hover,
 .search-form .search-field:focus,
@@ -63,7 +62,12 @@ span.tag-cloud-link:hover
 }
 
 a.tag-cloud-link:hover, 
-span.tag-cloud-link:hover
+span.tag-cloud-link:hover,
+.wrapper-content a:hover,
+.wrapper-layout a:hover,
+.entry-content a,
+p a,
+main article section a,
 {
     color: var(--hover-textcolor);
 }
