@@ -1,6 +1,6 @@
 @media screen and (max-width: 1024px) and (orientation: portrait){
     .wp-block-columns{
-        @include flex-column;
+        flex-direction: column;
         
         .wp-block-column{
             margin-left: 0;
@@ -9,7 +9,7 @@
 }
 @media screen and (max-width: 767px){
     .wp-block-columns{
-        @include flex-column;
+        flex-direction: column;
         
         .wp-block-column{
             margin-left: 0;

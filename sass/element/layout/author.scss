@@ -21,8 +21,8 @@
     }
 }
 .author-card{
-    @include display-flex;
-    @include justify-content-between;
+    display: flex;
+    justify-content: space-between;
     
     > div {
         width: calc(50% - 20px);

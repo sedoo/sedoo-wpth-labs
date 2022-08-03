@@ -31,9 +31,9 @@ header[id="masthead"]{
     }    
         
     .wrapper{
-        @include display-flex;
-        @include justify-content-between;
-        @include align-items-center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding: 0;
         position: relative;
         
@@ -49,9 +49,9 @@ header[id="masthead"]{
         }
 
         .nav-container{
-            @include display-flex;
-            @include justify-content-end;
-            @include align-items-end;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
             flex-direction: column;
  
         }
@@ -66,8 +66,8 @@ header[id="masthead"]{
 
 
 nav[id="primary-navigation"]{
-    @include display-flex;
-    @include align-items-center;
+    display: flex;
+    align-items: center;
     
     > div{
         @include basic-transition;
