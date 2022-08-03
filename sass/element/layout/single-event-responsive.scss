@@ -5,15 +5,15 @@
                 margin-bottom: 50px;
 
                 >div{
-                    @include display-flex;
-                    @include align-items-center;
+                    display: flex;
+                    align-items: center;
                 }
 
                 .btn{
                     height: 200px;
-                    @include display-flex;
-                    @include flex-column;
-                    @include justify-content-center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                     margin: 0 20px 0 0;
 
                     &::before{
@@ -65,7 +65,7 @@
         .contextual-sidebar{
             .event{
                 >div{
-                    @include flex-column;
+                    flex-direction: column;
                     
                     .btn{
                         width: 100%;

@@ -4,7 +4,7 @@
             height: 30vh;
         }
         .wrapper-layout{
-            @include flex-wrap;
+            flex-wrap: wrap;
         }
         main{
             width: 100%;
@@ -22,8 +22,8 @@
                 margin-top: 0;
             }
             > div{
-                @include display-flex;
-                @include justify-content-between;
+                display: flex;
+                justify-content: space-between;
 
                 div{
                     &:first-child{
@@ -51,28 +51,29 @@
         }
     }
 }
-@media screen and (max-width:1024px) and (orientation:portrait){
-    .read-more-article{
-        .post-loop{
-            .post-preview{
-                .post-img{
-                    height: 180px;
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width:767px){
-    .read-more-article{
-        .post-loop{
-            .post-preview{
-                .post-img{
-                    height: 180px;
-                }
-            }
-        }
-    }
-}
+
+// @media screen and (max-width:1024px) and (orientation:portrait){
+//     .read-more-article{
+//         .post-loop{
+//             .post-preview{
+//                 .post-img{
+//                     height: 180px;
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width:767px){
+//     .read-more-article{
+//         .post-loop{
+//             .post-preview{
+//                 .post-img{
+//                     height: 180px;
+//                 }
+//             }
+//         }
+//     }
+// }
 @media screen and (max-width: 767px) and (orientation:portrait){
     .single-post, .single-event{
         main{
@@ -81,17 +82,17 @@
             }
         }
     }
-    .read-more-article{
-        .post-loop{
-            .post-preview{
-                width: 100%;
+    // .read-more-article{
+    //     .post-loop{
+    //         .post-preview{
+    //             width: 100%;
                 
-                h3{
-                    height: auto;
-                }
-            }
-        }
-    }
+    //             h3{
+    //                 height: auto;
+    //             }
+    //         }
+    //     }
+    // }
     .contextual-sidebar{
         .post-author{
             > div{
@@ -122,17 +123,17 @@
             }
         }
     }
-    .read-more-article{
-        .post-loop{
-            @include flex-column;
-            .post-preview{
-                width: 100%;
-                margin-bottom: 50px;
+    // .read-more-article{
+    //     .post-loop{
+    //         flex-direction: column;
+    //         .post-preview{
+    //             width: 100%;
+    //             margin-bottom: 50px;
                 
-                h3{
-                    height: auto;
-                }
-            }
-        }
-    }
+    //             h3{
+    //                 height: auto;
+    //             }
+    //         }
+    //     }
+    // }
 }

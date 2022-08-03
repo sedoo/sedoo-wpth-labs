@@ -56,7 +56,7 @@ body a.btn{
 
 /* COLONES */
 .wp-block-columns{
-    @include justify-content-between;
+    justify-content: space-between;
     
     &.has-2-columns{
         .wp-block-column{
