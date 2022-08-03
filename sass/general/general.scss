@@ -126,19 +126,19 @@ body{
     @extend .wrapper;
     max-width: $max-typographic-width;
 }
-.fullwidth{
-    max-width: 1800px;
-    @include center-block;
-    padding: 20px 0;
-    a {
-        text-decoration: underline;
+// .fullwidth{
+//     max-width: 1800px;
+//     @include center-block;
+//     padding: 20px 0;
+//     a {
+//         text-decoration: underline;
     
-        &:hover{
-            color: $light-full;
-            text-decoration: none;
-        }
-    }
-}
+//         &:hover{
+//             color: $light-full;
+//             text-decoration: none;
+//         }
+//     }
+// }
 /* IMAGE */
 img{
     max-width: 100%;
