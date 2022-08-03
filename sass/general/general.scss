@@ -218,13 +218,7 @@ button{
 .quote{
     font-size: calc(#{$h3-size} * 1.8);
 }
-a{
-    color: $dark;
-    text-decoration: none;
-    cursor: pointer;
-    @include basic-transition;
-    
-}
+
 strong, b{
     font-weight: $bold;
 }
@@ -240,6 +234,19 @@ small{
     font-family: $main-font-family;
     font-style: normal;
 }
+/** LINKS **/
+a{
+    color: $dark;
+    text-decoration: none;
+    cursor: pointer;
+    @include basic-transition;
+    
+}
+
+p a {
+    color: var(--theme-color);
+}
+
 .page, .single, .archive, .tribe-events-calendar-list, .tribe-events-calendar-latest-past{
     .tag {
         margin: 0;
@@ -268,10 +275,6 @@ small{
     }
 }
 
-.footer_img {
-    background-color: transparent !important;
-}
-
 [data-role="list-platformTag"]{
     .tag{
         // margin-bottom: 40px;
@@ -293,6 +296,8 @@ small{
         }
     }
 }
+
+/*********/
 
 ul li ol {
     margin-top: 15px;
