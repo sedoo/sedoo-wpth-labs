@@ -11,9 +11,9 @@
 
 iframe.sedoo_blocks_iframe {
     &.alignwide {
-        width: 60vw;
-        margin-left: calc(25% - 20vw);
-        margin-right: calc(25% - 20vw);
+        // width: 60vw;
+        margin-left: calc(25% - 15vw);
+        margin-right: calc(25% - 15vw);
     }
     &.alignfull {
         width: 100vw;
