@@ -10,20 +10,24 @@
 
 // TEXT
 .has-main-color-color,
-[class^="wp-block"].has-background-dim.has-main-color-color {
+[class^="wp-block"].has-background-dim.has-main-color-color,
+[class^="wp-block"].has-background.has-main-color-color {
     color : var(--theme-color);
 }
 .has-secondary-color-color,
-[class^="wp-block"].has-background-dim.has-secondary-color-color {
+[class^="wp-block"].has-background-dim.has-secondary-color-color,
+[class^="wp-block"].has-background.has-secondary-color-color {
     color :var(--second-theme-color);;
 }
 
 // BACKGROUND
-.has-main_color-background-color, 
-[class^="wp-block"].has-background-dim.has-main_color-background-color {
+.has-main-color-background-color, 
+[class^="wp-block"].has-background-dim.has-main-color-background-color,
+[class^="wp-block"].has-background-dim.has-main-color-background-color  {
     background-color : var(--theme-color);
 }
-.has-secondary_color-background-color,
-[class^="wp-block"].has-background-dim.has-secondary_color-background-color {
+.has-secondary-color-background-color,
+[class^="wp-block"].has-background-dim.has-secondary-color-background-color,
+[class^="wp-block"].has-background.has-secondary-color-background-color {
     background-color : var(--second-theme-color);
 }
