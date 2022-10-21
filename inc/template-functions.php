@@ -73,38 +73,40 @@ function labs_by_sedoo_remote_filesize($url) {
 }
 
 function labs_by_sedoo_catch_that_image() {
-  global $post, $posts;
-  $postType=get_post_type();
-  $getIMG = '';
-  ob_start();
-  ob_end_clean();
-  $output = preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $post->post_content, $matches);
-  $getIMG = $matches[1][0];
+    global $post, $posts;
+    $postType=get_post_type();
+    $getIMG = '';
+    // ob_start();
+    // ob_end_clean();
+    $output = preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $post->post_content, $matches);
+    $getIMG = $matches[1][0];
 
-  $current_siteurl = parse_url(get_site_url());
-  $srcURL = parse_url($getIMG);
+    $current_siteurl = parse_url(get_site_url());
+    $srcURL = parse_url($getIMG);
 
-  $networkURL = parse_url(network_site_url());
-  
-  // check file size if not local
-  // 
-  if (($srcURL['host']!==$current_siteurl['host']) && ($srcURL['host']!==$networkURL['host']) && (!empty($getIMG)) ) {
-    $extIMG=$srcURL['scheme']."://".$srcURL['host'].$srcURL['path'];
-    $extIMGsize=labs_by_sedoo_remote_filesize($extIMG);
-    // if < 300000 > Ok let's display it
-    if ($extIMGsize<300000) {
-        $getIMG=$extIMG;
-    } else {
-        $extFile="TRUE";
+    $networkURL = parse_url(network_site_url());
+    
+    // check file size if not local
+    // 
+    if (!empty($getIMG)) {
+        if (($srcURL['host']!==$current_siteurl['host']) && ($srcURL['host']!==$networkURL['host']) && (!empty($getIMG)) ) {
+            $extIMG=$srcURL['scheme']."://".$srcURL['host'].$srcURL['path'];
+            $extIMGsize=labs_by_sedoo_remote_filesize($extIMG);
+            // if < 300000 > Ok let's display it
+            if ($extIMGsize<300000) {
+                $getIMG=$extIMG;
+            } else {
+                $extFile="TRUE";
+            }
+        }
     }
-  }
 
-  // if no image or external image, load default SVG
-  if((empty($getIMG))||($extFile=="TRUE")) {
-    $getIMG = get_template_directory_uri() .'/images/empty-mode-'.$postType.'.svg';
-  }
-  $imgToShow='<img src="'.$getIMG.'" alt="" />';
-  echo $imgToShow;
+    // if no image or external image, load default SVG
+    if((empty($getIMG))||($extFile=="TRUE")) {
+        $getIMG = get_template_directory_uri() .'/images/empty-mode-'.$postType.'.svg';
+    }
+    $imgToShow='<img src="'.$getIMG.'" alt="" />';
+    echo $imgToShow;
 }
 
 add_action( 'after_setup_theme', 'prefix_default_image_settings' );
