@@ -47,5 +47,10 @@ function sedoo_labs_wp_nav_menu_objects( $items, $args ) {
 	// return
 	return $items;
 }
+/**
+ * SECURITY
+ */
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'wlwmanifest_link');
 
 ?>
