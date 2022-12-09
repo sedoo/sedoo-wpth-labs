@@ -210,6 +210,8 @@ function labs_by_sedoo_color_style() {
                 --theme-color-rgba: rgba(<?php echo $rgb_color[0].",".$rgb_color[1].",".$rgb_color[2].",.8)"; ?>);
                 --second-theme-color: <?php echo $code_color_sec;?>;
                 --hover-textcolor: <?php echo $hover_text_color;?>;
+                --catalogue-color: <?php echo $code_color;?>;
+                --hover-text-catalogue-color: <?php echo $hover_text_color;?>;
                 --green-color: <?php echo get_field('green_color', 'option'); ?>;
                 --blue-color: <?php echo get_field('blue_color', 'option'); ?>;
                 --orange-color: <?php echo get_field('orange_color', 'option'); ?>;
