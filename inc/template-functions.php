@@ -149,18 +149,26 @@ function sedoo_show_categories($categories, $slugRewrite) {
       } 
   }
 
+/**
+* Fix pagination on archive pages
+*/
+function sedoo_wpth_labs_content_before_posts() {
+    global $wp_query;
+    if ( is_archive () )
+        $wp_query->set( 'posts_per_page', '1' );
+    };
+add_action('pre_get_posts', 'sedoo_wpth_labs_content_before_posts');
+
   /**
  * Prepare WP_Query for related content 
  * 
  */
 function sedoo_wpth_labs_get_queried_content_arguments($post_type, $taxonomy, $term_slug, $tax_layout, $paged) {
-     
     $args = array(
 		'post_type'             => $post_type,
 		'post_status'           => array( 'publish', 'private' ),
-		'posts_per_page'        => 9,            // -1 pour liste sans limite
-		'paged'					=> $paged,
-		// 'post__not_in'          => array($postID),    //exclu le post courant
+		'posts_per_page'        => 9, // -1 pour liste sans limite
+        'paged'                 => $paged, 
 		'tax_query' => array(
 			array(
 				'taxonomy' => $taxonomy,
@@ -177,58 +185,60 @@ function sedoo_wpth_labs_get_queried_content_arguments($post_type, $taxonomy, $t
  * 
  */
 function sedoo_wpth_labs_get_queried_content($tax_layout, $args) {
-	$the_query = new WP_Query( $args );
-	// var_dump($the_query);
-	// The Loop
-	if ( $the_query->have_posts() ) { 
-        switch ($tax_layout) {
-            case "grid":
-                $listingClass = "post-wrapper";
-                break;
+    $the_query = new WP_Query( $args );
+    
+    // Pagination fix
+    $temp_query = $GLOBALS['wp_query'];
+    $GLOBALS['wp_query'] = NULL;
+    $GLOBALS['wp_query'] = $the_query;
+    
+    switch ($tax_layout) {
+        case "grid":
+            $listingClass = "post-wrapper";
+            break;
 
-            case "grid-noimage":
-                $listingClass = "post-wrapper noimage";
-                break;
-            
-            case "list":
-                $listingClass = "content-list";
-                break;
-            
-            case "list-full":
-                $listingClass = "content-list";
-                break;
-                 
-            default:
-                $listingClass = "post-wrapper";
-        }
-
-		?>
+        case "grid-noimage":
+            $listingClass = "post-wrapper noimage";
+            break;
+        
+        case "list":
+            $listingClass = "content-list";
+            break;
+        
+        case "list-full":
+            $listingClass = "content-list";
+            break;
+             
+        default:
+            $listingClass = "post-wrapper";
+    }
+    
+    ?>
 		<section role="listNews" class="<?php echo $listingClass;?>">
-		<?php
+            <?php
+    if ( $the_query->have_posts() ) { 
 		/* Start the Loop */
-		while ( $the_query->have_posts() ) :
-			$the_query->the_post();
-			
-			/*
-			* Include the Post-Type-specific template for the content.
-			* If you want to override this in a child theme, then include a file
-			* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-			*/
-			get_template_part( 'template-parts/content', $tax_layout );
-
-
-		endwhile;
-
-		the_posts_navigation();
-
+        while ( $the_query->have_posts() ) :
+            $the_query->the_post();
+            /*
+            * Include the Post-Type-specific template for the content.
+            * If you want to override this in a child theme, then include a file
+            * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+            */
+            get_template_part( 'template-parts/content', $tax_layout );
+        endwhile;
+        the_posts_navigation();
 	} else {
-		$no_result_text = get_field('no_results_text_tax', get_the_id());	
-		// get_template_part( 'template-parts/content', 'none' );
-		?>
-		<p><?php echo $no_result_text; ?></p>
-		<?php
-
+        $the_query->set_404();
+        status_header( 404 );
+        nocache_headers();
+        include( get_query_template( '404' ) );
+        die();
 	}
+    // Reset main query object
+    wp_reset_postdata();
+    $GLOBALS['wp_query'] = NULL;
+    $GLOBALS['wp_query'] = $temp_query;
 	?>
 	</section>
 	<?php
