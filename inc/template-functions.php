@@ -154,7 +154,7 @@ function sedoo_show_categories($categories, $slugRewrite) {
 */
 function sedoo_wpth_labs_content_before_posts() {
     global $wp_query;
-    if ( is_archive () )
+    if ( (is_archive ()) && (!is_admin()) )
         $wp_query->set( 'posts_per_page', '1' );
     };
 add_action('pre_get_posts', 'sedoo_wpth_labs_content_before_posts');
