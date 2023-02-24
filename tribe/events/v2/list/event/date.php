@@ -27,8 +27,10 @@ $event_date_attr = $event->dates->start->format( Dates::DBDATEFORMAT );
 	<div class="tag">
 		<?php
 		$terms = get_the_terms( get_the_id(), 'tribe_events_cat');
-		foreach ($terms as $term) {
-			echo "<a href='".get_term_link($term->term_id)."' class=\"".$term->slug."\">".$term->name."</a>";
+		if ($terms) {
+			foreach ($terms as $term) {
+				echo "<a href='".get_term_link($term->term_id)."' class=\"".$term->slug."\">".$term->name."</a>";
+			}
 		}
 		?>
 	</div>
