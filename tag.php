@@ -8,6 +8,7 @@
  */
 $term = get_queried_object();
 $cover = get_field( 'tax_image', $term);
+$affichage_portfolio = get_field('sedoo_affichage_en_portfolio', $term);
 get_header();
 ?>
 
@@ -40,32 +41,35 @@ get_header();
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				}
 			?>
-            
-            <section role="listNews" class="content-list">
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			// if portfolio then display it, if not just do the normal script
+			if($affichage_portfolio != true) { 
+			?>
+				<section role="listNews" class="content-list">
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content-list', get_post_type() );
+					get_template_part( 'template-parts/content-list', get_post_type() );
 
+				endwhile;
 
-			endwhile;
+				the_posts_navigation();
 
-			the_posts_navigation();
-
+				?>
+				</section>
+			<?php
+			} else {
+				// LOAD PORTFOLIO DISPLAY FUNCTION FROM PLUGIN
+				archive_do_portfolio_display($term);
+			}
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
 		?>
-            </section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
