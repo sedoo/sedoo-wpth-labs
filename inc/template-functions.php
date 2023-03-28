@@ -76,10 +76,13 @@ function labs_by_sedoo_catch_that_image() {
     global $post, $posts;
     $postType=get_post_type();
     $getIMG = '';
+    $extFile="";
     // ob_start();
     // ob_end_clean();
     $output = preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $post->post_content, $matches);
+    if (array_key_exists(0, $matches[1])) {
     $getIMG = $matches[1][0];
+    }
 
     $current_siteurl = parse_url(get_site_url());
     $srcURL = parse_url($getIMG);
