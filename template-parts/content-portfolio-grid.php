@@ -30,10 +30,13 @@
                 <div class="entry-content">
                     <h3><?php the_title(); ?></h3>
                     <?php
-                    if ( has_excerpt( $post->ID ) ) {
+                    if ( has_excerpt( get_the_ID() ) ) {
                     ?>
                     <?php the_excerpt(); ?>
-                    <?php } ?>
+                    <?php 
+                    } 
+                    ?>
+                    
                 </div><!-- .entry-content -->
                 <?php
                 if ( 'post' === get_post_type() ) {
