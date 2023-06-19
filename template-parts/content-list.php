@@ -24,7 +24,7 @@
     <div class="group-content">
         <div class="entry-content">
             
-            <?php the_excerpt(); ?>
+            <?php //the_excerpt(); ?>
             <p class="date"><?php the_date('M / d / Y') ?>
             
         </div><!-- .entry-content -->
