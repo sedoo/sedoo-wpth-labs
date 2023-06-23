@@ -18,7 +18,7 @@ $themeSlugRewrite = "sedoo-theme-labo";
 			
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php 
-			if ( (function_exists('sedoo_labtools_show_categories')) && ($themes)){
+			if ( (function_exists('sedoo_labtools_show_categories')) && (isset($themes))){
 			?>
 			<div>
 				<?php
