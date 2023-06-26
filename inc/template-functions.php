@@ -131,9 +131,7 @@ function sedoo_show_categories($categories, $slugRewrite) {
     <div class="tag">
     <?php
         foreach( $categories as $categorie ) { 
-            if (function_exists('pll_default_language')) {
-                $defaultLanguage= pll_default_language();
-            }            
+        
             if ($categorie->slug !== "non-classe") {
                 if ( (function_exists('pll_current_language')) && (pll_default_language() !== pll_current_language()) ) {
                     echo '<a href="'.site_url().'/'.pll_current_language().'/'.$slugRewrite.'/'.$categorie->slug.'" class="'.$categorie->slug.'">';
@@ -143,7 +141,7 @@ function sedoo_show_categories($categories, $slugRewrite) {
                 echo $categorie->name; 
                 ?>
             </a>
-    <?php 
+        <?php 
             }
         }
     ?>
