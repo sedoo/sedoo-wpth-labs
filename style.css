@@ -187,7 +187,7 @@ h2, .h2 {
   color: #000;
   margin: 20px 0 5px; }
 
-h3, .h3, .post .group-content .entry-content h2, .post .group-content .entry-content h3 {
+h3, .h3, .post .group-content .entry-content h2, .post .group-content .entry-content h3, .post .group-content .entry-content h4 {
   font-family: "Next", sans-serif;
   font-size: 1.25rem;
   margin-bottom: 10px; }
@@ -545,7 +545,7 @@ img {
   h2, .h2 {
     font-size: 0.9375rem; }
 
-  h3, .h3, .post .group-content .entry-content h2, .post .group-content .entry-content h3 {
+  h3, .h3, .post .group-content .entry-content h2, .post .group-content .entry-content h3, .post .group-content .entry-content h4 {
     font-size: 0.8125rem; }
 
   h4 {
@@ -2384,7 +2384,7 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
     text-align: left; }
 .post .group-content .entry-content {
   margin-bottom: 40px; }
-  .post .group-content .entry-content h2, .post .group-content .entry-content h3 {
+  .post .group-content .entry-content h2, .post .group-content .entry-content h3, .post .group-content .entry-content h4 {
     margin-bottom: 10px;
     -webkit-transition: 0.5s ease all;
     transition: 0.5s ease all;

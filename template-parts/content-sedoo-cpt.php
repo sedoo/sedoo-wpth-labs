@@ -9,6 +9,7 @@
 
 $titleItem=mb_strimwidth(get_the_title(), 0, 70, '...');  
 $postType=get_post_type();
+$layout=$args['layout'];
 if ( get_post_type() !== 'post') { $classParameter="isNotPost";} else { $classParameter="post";};
 
 if($layout == 'grid' || $layout == "grid-noimage"){
@@ -41,7 +42,7 @@ if($layout == 'grid' || $layout == "grid-noimage"){
         </header><!-- .entry-header -->
         <div class="group-content">
             <div class="entry-content">
-                <h3><?php the_title(); ?></h3>
+                <h4><?php the_title(); ?></h4>
                 <?php
                 if ( 'post' === get_post_type() ) :
                 ?>
@@ -66,7 +67,7 @@ elseif($layout == 'list') {
 ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('post '.$classParameter.''); ?>>
         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"> 
-            <h3><?php echo $titleItem; ?></h3>
+            <h4><?php echo $titleItem; ?></h4>
         </a>
     </article>
 <?php 

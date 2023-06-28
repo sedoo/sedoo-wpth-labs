@@ -84,7 +84,7 @@
         .entry-content{
             margin-bottom: 40px;
 
-            h2, h3{
+            h2, h3, h4{
                 @extend .h3;
                 margin-bottom: 10px;
                 @include basic-transition;
