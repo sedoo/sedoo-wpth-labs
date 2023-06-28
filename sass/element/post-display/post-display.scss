@@ -207,9 +207,12 @@
 .content-list {
     .post {
         box-shadow:none;
-
-        a:hover {
-            color:$dark-typo;
+        
+        a {
+            position: static;
+            &:hover {
+                color:$dark-typo;
+            }
         }
 
         .entry-header{

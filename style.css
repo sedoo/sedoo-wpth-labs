@@ -2487,8 +2487,10 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
 .content-list .post {
   -webkit-box-shadow: none;
           box-shadow: none; }
-  .content-list .post a:hover {
-    color: #222; }
+  .content-list .post a {
+    position: static; }
+    .content-list .post a:hover {
+      color: #222; }
   .content-list .post .entry-header {
     height: auto;
     padding: 0; }
