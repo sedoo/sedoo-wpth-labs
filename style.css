@@ -2474,15 +2474,10 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
             justify-content: flex-start; }
     .post-wrapper.sedoo-labtools-listCPT.content-list article {
       width: 100%; }
-    .post-wrapper.sedoo-labtools-listCPT article {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 390px;
-              flex: 0 1 390px;
-      margin: 0 20px 20px 0; }
-      .post-wrapper.sedoo-labtools-listCPT article > a {
-        text-decoration: none; }
-        .post-wrapper.sedoo-labtools-listCPT article > a:hover {
-          color: #999; }
+    .post-wrapper.sedoo-labtools-listCPT article > a {
+      text-decoration: none; }
+      .post-wrapper.sedoo-labtools-listCPT article > a:hover {
+        color: #999; }
 
 .content-list .post {
   -webkit-box-shadow: none;
