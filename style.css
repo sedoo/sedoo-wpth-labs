@@ -2495,8 +2495,6 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
       top: -20px; }
   .content-list .post .entry-content {
     margin-bottom: 0; }
-    .content-list .post .entry-content .date {
-      font-weight: bold; }
 
 @media (min-width: 600px) {
   .post-wrapper.sedoo_blocks_listepages {
