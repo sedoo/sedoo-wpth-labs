@@ -69,7 +69,7 @@ $affichage_portfolio = get_field('sedoo_affichage_en_portfolio', $term);
 					<section role="listNews" class="post-wrapper noimage">
 					<?php
 						while ( have_posts() ) : the_post();
-							get_template_part( 'template-parts/content', 'grid-noimage' );
+							get_template_part( 'template-parts/content-archives', 'grid-noimage' );
 						?>
 						<?php
 						endwhile; // End of the loop.

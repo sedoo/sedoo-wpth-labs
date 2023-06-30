@@ -2481,7 +2481,8 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
 
 .content-list .post {
   -webkit-box-shadow: none;
-          box-shadow: none; }
+          box-shadow: none;
+  padding: 10px; }
   .content-list .post a {
     position: static; }
     .content-list .post a:hover {
@@ -2494,7 +2495,12 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
     .content-list .post .entry-header p {
       top: -20px; }
   .content-list .post .entry-content {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding-left: 10px;
+    border-left: 2px solid var(--theme-color); }
+    .content-list .post .entry-content .date {
+      font-style: italic;
+      font-size: 0.75rem; }
 
 @media (min-width: 600px) {
   .post-wrapper.sedoo_blocks_listepages {

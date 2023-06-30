@@ -207,6 +207,7 @@
 .content-list {
     .post {
         box-shadow:none;
+        padding: 10px;
         
         a {
             position: static;
@@ -228,9 +229,12 @@
         }
         .entry-content {
             margin-bottom:0;
-            // .date {
-            //     font-weight: bold;
-            // }
+            padding-left: 10px;
+            border-left: 2px solid var(--theme-color);
+            .date {
+                font-style: italic;
+                font-size: $mini-size;
+            }
         }
         
     }
