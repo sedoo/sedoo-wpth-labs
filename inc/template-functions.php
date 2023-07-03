@@ -131,9 +131,7 @@ function sedoo_show_categories($categories, $slugRewrite) {
     <div class="tag">
     <?php
         foreach( $categories as $categorie ) { 
-            if (function_exists('pll_default_language')) {
-                $defaultLanguage= pll_default_language();
-            }            
+        
             if ($categorie->slug !== "non-classe") {
                 if ( (function_exists('pll_current_language')) && (pll_default_language() !== pll_current_language()) ) {
                     echo '<a href="'.site_url().'/'.pll_current_language().'/'.$slugRewrite.'/'.$categorie->slug.'" class="'.$categorie->slug.'">';
@@ -143,7 +141,7 @@ function sedoo_show_categories($categories, $slugRewrite) {
                 echo $categorie->name; 
                 ?>
             </a>
-    <?php 
+        <?php 
             }
         }
     ?>
@@ -229,7 +227,7 @@ function sedoo_wpth_labs_get_queried_content($tax_layout, $args) {
             * If you want to override this in a child theme, then include a file
             * called content-___.php (where ___ is the Post Type name) and that will be used instead.
             */
-            get_template_part( 'template-parts/content', $tax_layout );
+            get_template_part( 'template-parts/content-archives', $tax_layout );
         endwhile;
         the_posts_navigation();
 	} else {

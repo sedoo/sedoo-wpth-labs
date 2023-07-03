@@ -29,9 +29,6 @@ $affichage_portfolio = get_field('sedoo_affichage_en_portfolio', $term);
 		if ( !empty($cover)) {
 				$coverStyle = "background-image:url(".$cover['url'].")";
 			 
-			// else {
-			// 	$coverStyle = "border-top:5px solid ".$code_color.";height:auto;";
-			// }
 			?>
 			
 			<header id="cover" class="page-header" style="<?php echo $coverStyle;?>;animation: cover_homepage 2s linear 1 alternate;">
@@ -72,7 +69,7 @@ $affichage_portfolio = get_field('sedoo_affichage_en_portfolio', $term);
 					<section role="listNews" class="post-wrapper noimage">
 					<?php
 						while ( have_posts() ) : the_post();
-							get_template_part( 'template-parts/content', 'grid-noimage' );
+							get_template_part( 'template-parts/content-archives', 'grid-noimage' );
 						?>
 						<?php
 						endwhile; // End of the loop.

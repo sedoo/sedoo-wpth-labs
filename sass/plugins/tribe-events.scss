@@ -86,9 +86,6 @@
     }
 }
 
-
-
-
 @media (max-width:768px) {
     [id="flex-single-tribe-event"] {
         .post-author {
@@ -97,4 +94,22 @@
     }
 }
 
+/** SPECIF CASE FOR ARCHIVES */
+.archives article.tribe_events > header.entry-header::after {
+    content: "Event";
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    z-index: 1;
+    padding: 5px 10px;
+    background: #000;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin-bottom: 0;
+    font-family: "Open Sans", sans-serif;
+    text-align: left;
+    background: var(--theme-color);
+}
 
