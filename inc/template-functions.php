@@ -227,7 +227,7 @@ function sedoo_wpth_labs_get_queried_content($tax_layout, $args) {
             * If you want to override this in a child theme, then include a file
             * called content-___.php (where ___ is the Post Type name) and that will be used instead.
             */
-            get_template_part( 'template-parts/content', $tax_layout );
+            get_template_part( 'template-parts/content-archives', $tax_layout );
         endwhile;
         the_posts_navigation();
 	} else {

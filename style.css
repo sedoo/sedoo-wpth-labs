@@ -187,7 +187,7 @@ h2, .h2 {
   color: #000;
   margin: 20px 0 5px; }
 
-h3, .h3, .post .group-content .entry-content h2, .post .group-content .entry-content h3 {
+h3, .h3, .post .group-content .entry-content h2, .post .group-content .entry-content h3, .post .group-content .entry-content h4 {
   font-family: "Next", sans-serif;
   font-size: 1.25rem;
   margin-bottom: 10px; }
@@ -545,7 +545,7 @@ img {
   h2, .h2 {
     font-size: 0.9375rem; }
 
-  h3, .h3, .post .group-content .entry-content h2, .post .group-content .entry-content h3 {
+  h3, .h3, .post .group-content .entry-content h2, .post .group-content .entry-content h3, .post .group-content .entry-content h4 {
     font-size: 0.8125rem; }
 
   h4 {
@@ -2384,7 +2384,7 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
     text-align: left; }
 .post .group-content .entry-content {
   margin-bottom: 40px; }
-  .post .group-content .entry-content h2, .post .group-content .entry-content h3 {
+  .post .group-content .entry-content h2, .post .group-content .entry-content h3, .post .group-content .entry-content h4 {
     margin-bottom: 10px;
     -webkit-transition: 0.5s ease all;
     transition: 0.5s ease all;
@@ -2474,21 +2474,19 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
             justify-content: flex-start; }
     .post-wrapper.sedoo-labtools-listCPT.content-list article {
       width: 100%; }
-    .post-wrapper.sedoo-labtools-listCPT article {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 390px;
-              flex: 0 1 390px;
-      margin: 0 20px 20px 0; }
-      .post-wrapper.sedoo-labtools-listCPT article > a {
-        text-decoration: none; }
-        .post-wrapper.sedoo-labtools-listCPT article > a:hover {
-          color: #999; }
+    .post-wrapper.sedoo-labtools-listCPT article > a {
+      text-decoration: none; }
+      .post-wrapper.sedoo-labtools-listCPT article > a:hover {
+        color: #999; }
 
 .content-list .post {
   -webkit-box-shadow: none;
-          box-shadow: none; }
-  .content-list .post a:hover {
-    color: #222; }
+          box-shadow: none;
+  padding: 10px; }
+  .content-list .post a {
+    position: static; }
+    .content-list .post a:hover {
+      color: #222; }
   .content-list .post .entry-header {
     height: auto;
     padding: 0; }
@@ -2497,9 +2495,12 @@ https://codepen.io/tonkec/pen/aRMaWR?editors=1100
     .content-list .post .entry-header p {
       top: -20px; }
   .content-list .post .entry-content {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding-left: 10px;
+    border-left: 2px solid var(--theme-color); }
     .content-list .post .entry-content .date {
-      font-weight: bold; }
+      font-style: italic;
+      font-size: 0.75rem; }
 
 @media (min-width: 600px) {
   .post-wrapper.sedoo_blocks_listepages {
