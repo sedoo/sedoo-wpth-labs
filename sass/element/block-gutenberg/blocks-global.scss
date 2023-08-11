@@ -176,3 +176,17 @@ body a.btn{
         padding: 10px;
     }
 }
+
+/* FILES */
+
+.wp-block-file {
+    &:not(.wp-element-button) {
+        margin-bottom: 5px;
+    }
+    a.wp-block-file__button.wp-element-button {
+        background: var(--theme-color);
+        padding: 1px 5px;
+        color: var(--hover-textcolor);
+        text-decoration: none;
+    }
+}
