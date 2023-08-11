@@ -5,7 +5,7 @@ Theme URI:    https://github.com/sedoo/sedoo-wpth-labs
 Author: Sedoo - Pierre Vert - Nicolas Gruwe
 Author URI: https://github.com/sedoo 
 Description: Custom theme: Labs, developed by Sedoo
-Version: 2.9.1
+Version: 2.9.2
 License: Creative Commons, CC-by-nc-sa
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
 Text Domain: sedoo-wpth-labs
@@ -715,6 +715,15 @@ body a.btn {
 
 .wp-block-table td {
   padding: 10px; }
+
+/* FILES */
+.wp-block-file:not(.wp-element-button) {
+  margin-bottom: 5px; }
+.wp-block-file a.wp-block-file__button.wp-element-button {
+  background: var(--theme-color);
+  padding: 1px 5px;
+  color: var(--hover-textcolor);
+  text-decoration: none; }
 
 .wp-block-group {
   padding: 20px; }
